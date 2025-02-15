@@ -1,28 +1,47 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { solutions } from "@/data/solution-section/v1";
-import Image from "next/image";
 import { CustomLink } from "@/src/components/custom-link";
+import { Card } from "@/src/components/ui/card";
+import { useScreenSize } from "@/src/hooks/use-screen-size";
+import { motion } from "framer-motion";
+import { AppWindowIcon } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 interface CategoryButtonProps {
  title: string;
  isActive: boolean;
  onClick: () => void;
+ icon?: React.ReactNode;
 }
 
 function CategoryButton({ title, isActive, onClick }: CategoryButtonProps) {
  return (
   <button
    onClick={onClick}
-   className={`w-full p-4 rounded-lg transition-all text-left ${isActive ? "bg-blue-600 text-white" : "bg-white text-zinc-900 hover:bg-zinc-100"
+   className={`w-full p-4 rounded-lg transition-all text-left ${isActive ? "bg-primary text-white" : "bg-white text-zinc-900 hover:bg-zinc-100"
     }`}
   >
    {title}
   </button>
  );
 }
+
+
+function CategoryCard({ title, isActive, onClick }: CategoryButtonProps) {
+ return (
+  <Card
+   onClick={onClick}
+   className={`p-2 rounded-lg h-16 transition-all flex w-[33%] justify-center items-center   text-center ${isActive ? "bg-primary text-white" : "bg-white text-zinc-900 "}`}
+  >
+   <p className="text-xs text-center">
+    {title}
+   </p>
+  </Card>
+ );
+}
+
 
 interface SolutionCardProps {
  title: string;
@@ -38,7 +57,7 @@ function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
     <div className="relative w-16 h-16 mb-4">
      <Image src={icon || "/placeholder.svg"} alt={title} height={70} width={70} className="object-contain" />
     </div>
-    <h3 className="text-xl font-semibold text-white">{title}</h3>
+    <h3 className="text-xl font-semibold leading-[1.2] text-white">{title}</h3>
     <p className="text-zinc-400 leading-relaxed">{description}</p>
    </div>
   </CustomLink>
@@ -47,6 +66,7 @@ function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
 
 export default function SolutionsSection() {
  const [activeCategory, setActiveCategory] = useState("on-demand");
+ const screenSize = useScreenSize();
  const sectionRefs = {
   "on-demand": useRef<HTMLDivElement>(null),
   erp: useRef<HTMLDivElement>(null),
@@ -90,20 +110,20 @@ export default function SolutionsSection() {
  };
 
  const categories = [
-  { id: "on-demand", title: "On-Demand Applications", },
-  { id: "erp", title: "ERP Systems", icon: '/assets/images/our-solutions/2.png' },
-  { id: "analytics", title: "Data Analytics", icon: '/assets/images/our-solutions/3.png' },
+  { id: "on-demand", title: "On-Demand Applications", icon: <AppWindowIcon /> },
+  { id: "erp", title: "ERP Systems", icon: <AppWindowIcon /> },
+  { id: "analytics", title: "Data Analytics", icon: <AppWindowIcon /> },
  ];
 
  return (
-  <div className="min-h-screen bg-[#141416] p-4 md:p-8">
+  <div className="min-h-screen bg-[#141416] p-4  py-20">
    <div className="max-w-7xl mx-auto">
-    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xs:mt-10">
      {/* Solutions Info - Reordered for mobile */}
      <div className="lg:sticky lg:top-8 h-max space-y-6 order-1 lg:order-2">
       <div>
        <h2 className="text-xl md:text-2xl font-bold text-white mb-2">
-        Our <span className="text-blue-500">Solutions</span>
+        Our <span className="text-primary">Solutions</span>
        </h2>
        <p className="text-zinc-400 mb-8">
         Quick and customizable software solutions designed for businesses requiring immediate deployment and
@@ -112,11 +132,17 @@ export default function SolutionsSection() {
        </p>
       </div>
 
-      <div className="space-y-2">
-       {categories.map(({ id, title }) => (
-        <CategoryButton
+      <div className="flex md:flex-col gap-4 ">
+       {categories.map(({ id, title, icon }) => (
+        !screenSize.equals('xs') ? <CategoryButton
          key={id}
          title={title}
+         isActive={activeCategory === id}
+         onClick={() => scrollToSection(id)}
+        /> : <CategoryCard
+         key={id}
+         title={title}
+         icon={icon}
          isActive={activeCategory === id}
          onClick={() => scrollToSection(id)}
         />
@@ -126,7 +152,7 @@ export default function SolutionsSection() {
 
      {/* Solutions Cards - Reordered for mobile */}
      <div className="order-2 lg:order-1">
-      <div className="space-y-6 max-h-[60vh] lg:max-h-[70vh] overflow-y-auto pr-4 scroll-smooth">
+      <div className="space-y-6 scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-primary max-h-[60vh] lg:max-h-[70vh] overflow-y-auto pr-4 scroll-smooth">
        {categories.map(({ id }) => (
         <div key={id} ref={sectionRefs[id as keyof typeof sectionRefs]} className="space-y-4">
          {solutions
@@ -147,7 +173,7 @@ export default function SolutionsSection() {
      </div>
     </div>
    </div>
-  </div>
+  </div >
  );
 }
 

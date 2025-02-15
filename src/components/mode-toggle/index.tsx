@@ -11,12 +11,18 @@ import {
   DropdownMenuTrigger,
 } from 'src/components/ui/dropdown-menu';
 import { cn } from '@/src/utils/shadcn';
+import { footerSectionData } from '@/data/layout/footer/v1';
+import { CustomLink } from '../custom-link';
 
 const activeClasses = cn('bg-primary text-white');
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
-
+  const { about } =
+    footerSectionData;
+  const socialIconClasses = cn(
+    'text-base/[1.75] transition-transform duration-350 hover:-translate-y-1 block px-4'
+  );
   return (
     <div className="fixed right-2 top-1/2 z-99">
       <DropdownMenu>
@@ -53,6 +59,8 @@ export function ModeToggle() {
             System
           </DropdownMenuItem>
         </DropdownMenuContent>
+
+
       </DropdownMenu>
     </div>
   );

@@ -119,7 +119,7 @@ export function ProjectSection({
 
                     // Add this line to conditionally apply styles for the active filter
                     activeFilter === category.value &&
-                      'text-white after:left-0 after:w-full'
+                    'text-white after:left-0 after:w-full'
                   )}
                 >
                   <span className="relative z-1">{category.label}</span>

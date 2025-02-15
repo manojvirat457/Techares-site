@@ -2,15 +2,6 @@
 
 import { methodologies } from "@/data/methodology/v1";
 import { motion } from "framer-motion";
-import { Clock, Users, Code2, Crown, Calendar } from "lucide-react";
-
-const icons = {
- [Clock.name]: Clock,
- [Users.name]: Users,
- [Code2.name]: Code2,
- [Crown.name]: Crown,
- [Calendar.name]: Calendar,
-};
 
 function MethodologyCard({
  number,
@@ -60,15 +51,15 @@ function MethodologyCard({
 
 export default function MethodologiesSection() {
  return (
-  <section className="bg-zinc-950 py-20  md:px-8">
+  <section className="bg-zinc-950 py-20">
    <div className="max-w-7xl mx-auto">
     <div className="text-center mb-16">
-     <h2 className="text-xl md:text-2xl font-bold mb-4 ">
-      Our Development <span className="text-blue-500">Methodologies</span>
+     <h2 className="text-xl md:text-2xl font-bold mb-2">
+      Our Development <span className="text-primary-light">Methodologies</span>
      </h2>
     </div>
 
-    <div className="gap-6 flex flex-wrap content-start justify-center">
+    <div className="gap-6 flex flex-wrap content-start justify-center mx-5">
      {methodologies.map((methodology, index) => (
       <MethodologyCard
        key={methodology.id}

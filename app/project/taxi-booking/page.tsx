@@ -1,3 +1,4 @@
+import { faqSectionData } from '@/data/faq-section/v1';
 import { projectDetails } from '@/data/project-section/taxi-booking';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
@@ -11,18 +12,18 @@ import IndustriesSection from '@/src/sections/industries/v1';
 import { ProjectSection } from '@/src/sections/project/v3';
 import { ServiceSection } from '@/src/sections/service/v1';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
+import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn';
 import { ArrowRight, Code2, Cog, LayoutDashboard, MapPin, Navigation, Star, Timer, Users } from 'lucide-react';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import { latestUpdate, ourWorkFlowData, solutions, whyChooseSectionData } from './-data';
 import styles from "./taxi-booking.module.css";
-import { faqSectionData } from '@/data/faq-section/v1';
 
-export const metadata: Metadata = {
- title: 'Techlab | Taxi App Development Company',
+
+export const metadata = basicMetadata({
+ title: 'TechAres | Taxi App Development Company',
  description: 'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
-};
+});
 
 export default function Page() {
  return (
@@ -43,7 +44,7 @@ export default function Page() {
       {/* Main content  */}
       <div
        className={cn(
-        "relative z-10 mx-auto  max-w-[800px] text-center text-accent-900 dark:text-white lg:mt-[60px]",
+        "relative z-10 mx-auto  max-w-[800px] text-center text-white lg:mt-[60px]",
         styles["hero-content"],
        )}
       >
@@ -83,24 +84,68 @@ export default function Page() {
    {/* <StatisticsSection /> */}
    {/* Solution We offer */}
    <section className="py-20 px-4">
-    <div className="container mx-auto">
-     <h2 className="text-xl md:text-2xl font-bold text-center mb-16">Solutions We Offer:</h2>
-     <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
-      {solutions.map((solution, index) => (
-       <div key={index} className="flex-1 bg-zinc-950 relative">
-        <Image className="w-20 h-20 absolute -top-6 left-8 z-10" src='/assets/images/about/about-1.png' alt='icon' width={80} height={80} />
-        {/* <div  /> */}
-        <Card className=" border-none h-full">
-         <CardContent className="p-8 pt-16">
-          <h3 className="text-xl text-zinc-200 font-bold mb-4 ">{solution.title}</h3>
-          <p className="leading-relaxed text-gray-400">{solution.description}</p>
-         </CardContent>
-        </Card>
-       </div>
-      ))}
+    <Container>
+     <div className="container mx-auto ">
+      <h2 className="text-xl md:text-2xl text-white font-bold text-center mb-16">Solutions We Offer:</h2>
+      <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+       {solutions.map((solution, index) => (
+        <div key={index} className="flex-1 bg-zinc-950 relative">
+         <Image className="w-20 h-20 absolute -top-6 left-8 z-10" src='/assets/images/about/about-1.png' alt='icon' width={80} height={80} />
+         {/* <div  /> */}
+         <Card className=" border-none h-full">
+          <CardContent className="p-8 pt-16">
+           <h3 className="text-xl font-bold mb-4 text-white">{solution.title}</h3>
+           <p className="leading-relaxed text-accent-800 dark:text-body">{solution.description}</p>
+          </CardContent>
+         </Card>
+        </div>
+       ))}
+      </div>
      </div>
-    </div>
-   </section>;
+    </Container>
+   </section>
+   {/* Development Method */}
+   <section className="py-20 px-4">
+    <Container>
+     <div className="container mx-auto max-w-7xl">
+      <div className="text-center max-w-4xl mx-auto mb-16">
+       <h2 className="text-xl md:text-2xl text-white font-bold mb-6">Development Methods – Choose the Best Approach for Your Business</h2>
+       <p className="text-accent-800 dark:text-body">
+        At TechAres, we offer two distinct development approaches to help you launch a taxi booking app that aligns
+        with your business needs. Whether you require a fully customized solution or a fast, ready-to- deploy
+        platform, we have the right option for you.
+       </p>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-12">
+       {/* Left side - Image */}
+       <div className="lg:w-1/2">
+        <div className="aspect-square bg-[#E5E5E5] relative">
+         <Image src="/placeholder.svg" alt="Development Methods" fill className="object-cover" />
+        </div>
+       </div>
+
+       {/* Right side - Content */}
+       <div className="lg:w-1/2 md:space-y-12 space-y-8 xs:text-center">
+        {[1, 2].map((item) => (
+         <div key={item} className="relative">
+          {/* Decorative square */}
+          <div className="md:pl-12 px-2">
+           <h3 className="text-xl md:text-2xl font-bold mb-2">Development from scratch</h3>
+           <p className="text-gray-600">
+            Our &quot;From Scratch&quot; Development method is ideal for businesses looking for a fully customized taxi
+            app tailored to their brand identity, specific features, and unique operational needs. This approach
+            gives you complete control over the app&apos;s design, functionality, and scalability, ensuring that your
+            solution stands out in the competitive ride-hailing market.
+           </p>
+          </div>
+         </div>
+        ))}
+       </div>
+      </div>
+     </div>
+    </Container>
+   </section>
    {/* {ket feature} */}
    <section className="py-16 px-4 md:px-6" >
     <div className="container mx-auto">
@@ -110,7 +155,7 @@ export default function Page() {
        Comprehensive features for drivers, users, and administrators
       </p>
      </div>
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto md:mx-32 gap-8">
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto lg:mx-32 gap-8">
       {[
        {
         title: "Driver Features",
@@ -145,12 +190,12 @@ export default function Page() {
       ].map((item, index) => (
        <Card key={index} className="bg-zinc-900 border-zinc-800">
         <CardContent className="p-6">
-         <div className="mb-4 text-blue-500">{item.icon}</div>
+         <div className="mb-4 text-primary">{item.icon}</div>
          <h3 className="text-lg font-semibold mb-4">{item.title}</h3>
          <ul className="space-y-2">
           {item.features.map((feature, idx) => (
            <li key={idx} className="flex items-center text-gray-400">
-            <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+            <ArrowRight className="h-4 w-4 mr-2 text-primary" />
             {feature}
            </li>
           ))}
@@ -160,50 +205,22 @@ export default function Page() {
       ))}
      </div>
     </div>
-   </section >;
-   {/* Development Method */}
-   <section className="py-20 px-4">
-    <div className="container mx-auto max-w-7xl">
-     <div className="text-center max-w-4xl mx-auto mb-16">
-      <h2 className="text-xl md:text-2xl font-bold mb-6">Development Methods – Choose the Best Approach for Your Business</h2>
-      <p className="text-gray-600">
-       At TechAres, we offer two distinct development approaches to help you launch a taxi booking app that aligns
-       with your business needs. Whether you require a fully customized solution or a fast, ready-to- deploy
-       platform, we have the right option for you.
-      </p>
-     </div>
-
-     <div className="flex flex-col lg:flex-row gap-12">
-      {/* Left side - Image */}
-      <div className="lg:w-1/2">
-       <div className="aspect-square bg-[#E5E5E5] relative">
-        <Image src="/placeholder.svg" alt="Development Methods" fill className="object-cover" />
-       </div>
-      </div>
-
-      {/* Right side - Content */}
-      <div className="lg:w-1/2 space-y-12">
-       {[1, 2].map((item) => (
-        <div key={item} className="relative">
-         {/* Decorative square */}
-         <div className="w-12 h-12 bg-[#E5E5E5] absolute -left-6 top-0" />
-
-         <div className="pl-12">
-          <h3 className="text-xl md:text-2xl font-bold mb-4">Development from scratch</h3>
-          <p className="text-gray-600">
-           Our "From Scratch" Development method is ideal for businesses looking for a fully customized taxi
-           app tailored to their brand identity, specific features, and unique operational needs. This approach
-           gives you complete control over the app's design, functionality, and scalability, ensuring that your
-           solution stands out in the competitive ride-hailing market.
-          </p>
-         </div>
-        </div>
-       ))}
-      </div>
-     </div>
-    </div>
    </section>
+   {/* Latest Updates  */}
+   <section>
+    <Container>
+     <div className="text-center text-white  mb-12">
+      <h2 className="text-3xl font-bold mb-4">Latest Updates</h2>
+      <p className="text-gray-300 max-w-2xl mx-auto">Continuous enhancements for better security, efficiency, and insights</p>
+     </div>
+     <ServiceSection className="!pt-0" {...latestUpdate} />
+    </Container>
+   </section>
+   <TestimonialSection />
    {/* <AboutSectionTwo /> */}
+   <IndustriesSection industriesSectionData={ourWorkFlowData} itemsPerRow={3} />
+   <AboutSection aboutSectionData={whyChooseSectionData} />
+   <FAQSection faqSectionData={faqSectionData} />
    <section className="relative overflow-hidden  py-20">
     <Container>
      <div className="container mx-auto z-99">
@@ -214,7 +231,7 @@ export default function Page() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 z-1">
        <Card className="bg-zinc-800 border-zinc-700">
         <CardContent className="p-6">
-         <div className="mb-4 text-blue-500">
+         <div className="mb-4 text-primary">
           <Code2 className="h-8 w-8" />
          </div>
          <h3 className="text-xl font-bold mb-3">Development from scratch</h3>
@@ -223,15 +240,15 @@ export default function Page() {
          </p>
          <ul className="space-y-2 mb-6">
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Complete control over design
           </li>
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Custom functionality
           </li>
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Scalable solution
           </li>
          </ul>
@@ -243,7 +260,7 @@ export default function Page() {
        </Card>
        <Card className="bg-zinc-800 border-zinc-700">
         <CardContent className="p-6">
-         <div className="mb-4 text-blue-500">
+         <div className="mb-4 text-primary">
           <Timer className="h-8 w-8" />
          </div>
          <h3 className="text-xl font-bold mb-3">White Label Taxi App</h3>
@@ -252,15 +269,15 @@ export default function Page() {
          </p>
          <ul className="space-y-2 mb-6">
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Quick deployment
           </li>
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Cost-effective
           </li>
           <li className="flex items-center text-gray-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-blue-500" />
+           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
            Market-ready solution
           </li>
          </ul>
@@ -282,16 +299,6 @@ export default function Page() {
      />
     </Container>
    </section>
-   <div className="text-center text-white  mb-12">
-    <h2 className="text-3xl font-bold mb-4">Latest Updates</h2>
-    <p className="text-gray-300 max-w-2xl mx-auto">Continuous enhancements for better security, efficiency, and insights</p>
-   </div>
-
-   <ServiceSection className="!pt-0" {...latestUpdate} />
-   <TestimonialSection />
-   <IndustriesSection industriesSectionData={ourWorkFlowData} itemsPerRow={3} />
-   <AboutSection aboutSectionData={whyChooseSectionData} />
-   <FAQSection faqSectionData={faqSectionData} />;
    {/* <WorkprocessSection /> */}
    <Footer />
   </>

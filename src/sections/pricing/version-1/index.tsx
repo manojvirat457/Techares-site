@@ -17,16 +17,16 @@ export function PricingSection() {
     <section className="section-padding-primary !pt-0">
       <Container>
         <div
-          className="mx-auto max-w-[630px]"
+          className="mx-auto max-w-[1000px]"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <SectionHeading
-            {...sectionHeading}
-            alignment="center"
-            hasBottomSpacing
-          />
+          <SectionHeading {...sectionHeading} alignment="center" />
         </div>
+        <p className="text-center">
+          As a full-stack software development agency, we make extraordinary
+          things that engage your users.
+        </p>
         {cards && cards.length > 0 && (
           <div className="grid gap-30px">
             {cards.map((card, index) => (

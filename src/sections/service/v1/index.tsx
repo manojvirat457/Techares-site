@@ -4,12 +4,12 @@ import { cn } from '@/src/utils/shadcn';
 import { ClassValue } from 'clsx';
 import { ServiceCard, ServiceProps } from 'src/components/cards/service/v1';
 
-export interface ServiceSectionProps {
+export interface ServiceSectionPropss {
   services: ServiceProps[];
   className?: ClassValue;
 }
 
-export function ServiceSection({ services, className }: ServiceSectionProps) {
+export function ServiceSection({ services, className }: ServiceSectionPropss) {
   return (
     <section className={cn('section-padding-primary', className)}>
       <Container>

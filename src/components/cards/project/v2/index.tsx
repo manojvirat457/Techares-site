@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { FaPlus } from 'react-icons/fa6';
 
 export interface PortfolioCardProps {
-  slug: string;
+  slug?: string;
   image: Omit<ImageProps, 'width' | 'height'>;
   title: string;
   description: string;
@@ -64,12 +64,16 @@ export function ProjectCard({
       {/* Content  */}
       <div className="mt-5">
         <h3 className="h3">
-          <CustomLink
-            href={slug}
-            className="text-accent-700 transition-colors duration-350 hover:text-primary dark:text-white dark:hover:text-primary"
-          >
-            {title}
-          </CustomLink>
+          {
+            slug && (
+              <CustomLink
+                href={slug}
+                className="text-accent-700 transition-colors duration-350 hover:text-primary dark:text-white dark:hover:text-primary"
+              >
+                {title}
+              </CustomLink>
+            )
+          }
         </h3>
         <p
           className="mt-1 

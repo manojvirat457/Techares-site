@@ -74,6 +74,17 @@ export const serviceSectionData: ServiceSectionProps = {
     },
     {
       image: {
+        src: '/assets/images/service/service-2.png',
+        alt: 'Data Guard Sentinel',
+      },
+      icon: <Icon2 />,
+      title: 'Data Guard Sentinel',
+      description:
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/service-details',
+    },
+    {
+      image: {
         src: '/assets/images/service/service-3.png',
         alt: 'App Swift DevOps',
       },

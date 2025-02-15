@@ -69,8 +69,8 @@ export function Carousel({
         instanceRef.current?.slides.length;
       paginationDots = Math.ceil(
         instanceRef.current?.slides.length -
-          instanceRef.current?.options.slides.perView +
-          1
+        instanceRef.current?.options.slides.perView +
+        1
       );
     }
   }
@@ -114,7 +114,7 @@ export function Carousel({
               isDisabled={
                 !loop &&
                 currentSlide ===
-                  instanceRef.current.track.details.slides.length - slidePerView
+                instanceRef.current.track.details.slides.length - slidePerView
               }
               navigationNextBtnClassName={navigationNextBtnClassName}
             />

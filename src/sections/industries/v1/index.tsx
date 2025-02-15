@@ -11,16 +11,14 @@ function IndustryCard({ title, icon, index, description }: { title: string; icon
    initial={{ opacity: 0, y: 20 }}
    animate={{ opacity: 1, y: 0 }}
    transition={{ delay: index * 0.1 }}
-   className="flex flex-col items-center justify-center  md:w-[23.5%] w-full h-auto  transition-transform hover:scale-105"
+   className="flex flex-col items-center justify-center md:w-[45%] lg:w-[23.5%] w-full h-auto  transition-transform hover:scale-105"
   >
-   <Card key={index} className="bg-zinc-900  border-zinc-800 h-full w-full">
-    <CardContent className="p-6">
-     {/* <div className="mb-4 text-blue-500">
+   <Card key={index} className="bg-zinc-900  border-zinc-800 h-full w-full  justify-center text-center items-center">
+    <CardContent className="p-6 flex  gap-5 flex-col  justify-center items-center">
+     {/* <div className="mb-4 text-primary">
       {icon}
       </div> */}
-     <div className="relative w-16 h-16 mb-4">
-      <Image src={icon || "/placeholder.svg"} alt={title} height={70} width={70} className="object-contain" />
-     </div>
+     <Image src={icon || "/placeholder.svg"} alt={title} height={70} width={70} className="object-contain" />
      <h3 className="mb-2 text-md font-bold leading-[1.25] text-accent-900 dark:text-white md:text-lg">{title}</h3>
      {description &&
       <p className="text-gray-400 text-sm">{description}</p>
@@ -33,24 +31,21 @@ function IndustryCard({ title, icon, index, description }: { title: string; icon
 
 type IndustriesSectionData = typeof industriesSectionData;
 
-export default function IndustriesSection({ industriesSectionData, itemsPerRow }: {
+export default function IndustriesSection({ industriesSectionData }: {
  industriesSectionData: IndustriesSectionData;
  itemsPerRow: number;
 }) {
  // Calculate the number of items in the last row
- const totalItems = industriesSectionData.data.length;
  // const itemsPerRow = 4; // On desktop
- const itemsInLastRow = totalItems % itemsPerRow;
- const shouldCenter = itemsInLastRow > 0;
 
  return (
-  <section className="bg-zinc-950 py-20 px-4 md:px-8">
+  <section className="bg-zinc-950 py-20 px-4">
    <div className="max-w-screen-2xl mx-auto">
     <div className="text-center mb-16">
-     <h2 className="text-xl md:text-2xl font-bold">
-      <span className="text-blue-500">{industriesSectionData.highlightTitle}</span> <span className="text-white">{industriesSectionData.title}</span>
+     <h2 className="text-xl md:text-2xl font-bold ">
+      <span className="text-primary">{industriesSectionData.highlightTitle}</span> <span className="text-white">{industriesSectionData.title}</span>
      </h2>
-     <p className="text-zinc-400 max-w-2xl mx-auto">
+     <p className="text-zinc-400 max-w-2xl mx-auto mb-6">
       {industriesSectionData.description}
      </p>
      {
@@ -63,7 +58,7 @@ export default function IndustriesSection({ industriesSectionData, itemsPerRow }
     </div>
 
     <div
-     className={`flex flex-wrap  gap-7 content-start justify-center`}
+     className={`flex flex-wrap  gap-7 content-start justify-center mt-10`}
     >
      {industriesSectionData.data.map((industry, index) => (
       <IndustryCard title={industry.title} icon={industry.icon} index={index} description={industry?.description} key={index} />

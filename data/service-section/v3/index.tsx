@@ -46,7 +46,7 @@ export const servicesData: ServiceData = {
    {
     title: "Legacy System Modernization",
     description:
-     "Upgrade outdated systems to improve performance, security, and compatibility with modern technologies, ensuring a smooth transition without business disruption.",
+     "Upgrade outdated systems to improve performance, security, and compatibility with modern technologies, ensuring a smooth transition.",
    },
   ],
  },
@@ -60,22 +60,22 @@ export const servicesData: ServiceData = {
    {
     title: "Tech Roadmap Design",
     description:
-     "Collaborate with our experts to identify technological gaps and opportunities, creating a clear strategy that aligns IT capabilities with your business objectives.",
+     "Collaborate with our experts to identify technological gaps and opportunities, creating a clear strategy that aligns IT capabilities.",
    },
    {
     title: "Cloud Migration Services",
     description:
-     "Transition your systems and data to secure cloud environments with minimal downtime, ensuring enhanced collaboration, scalability, and cost-efficiency.",
+     "Transition your systems and data to secure cloud environments ensuring enhanced collaboration, scalability, and cost-efficiency.",
    },
    {
     title: "Cybersecurity Solutions",
     description:
-     "Protect your digital assets with customized security frameworks, including threat detection, data encryption, and regular vulnerability assessments.",
+     "Protect your digital assets with security frameworks, including threat detection, data encryption, and regular vulnerability assessments.",
    },
    {
     title: "Infrastructure Optimization",
     description:
-     "Assess and enhance your IT infrastructure for maximum efficiency, reliability, and cost savings while ensuring scalability for future needs.",
+     "Assess and enhance your IT infrastructure for maximum efficiency, reliability, and cost savings while ensuring scalability.",
    },
    {
     title: "Custom IT Solutions",
@@ -94,7 +94,7 @@ export const servicesData: ServiceData = {
    {
     title: "SEO Optimization",
     description:
-     " Improve search engine rankings by optimizing your website's structure, content, and keywords, ensuring better visibility and organic traffic growth",
+     "Improve search engine rankings by optimizing your website's structure, content, and keywords, ensuring better visibility and organic traffic growth",
    },
    {
     title: "Social Media Management",
@@ -107,7 +107,7 @@ export const servicesData: ServiceData = {
      "Craft compelling blogs, videos, and infographics that educate, entertain, and convert your audience into loyal customers.",
    },
    {
-    title: "Pay-Per-Click Advertising",
+    title: "Google & Bing Ads",
     description: "Launch targeted ad campaigns with precise audience segmentation to maximize return on investment and drive high-quality leads.",
    },
    {

@@ -2,44 +2,151 @@ import { WorkprocessSectionProps } from '@/src/sections/work-process/v1';
 
 export const workprocessSectionData: WorkprocessSectionProps = {
   texts: [
-    'Work process',
-    'IT Sloution',
-    'Work process',
-    'agency',
-    'Work process',
-    'Tech',
+    'Custom Software Development',
+    'IT Consulting',
+    'IT Outsourcing',
+    'Mobile App Development',
+    'Web Development',
+    'Blockchain Development',
+    'UI/UX Design',
+    'Quality Assurance and Testing',
+    'Cloud Application Development',
+    'E-commerce Solutions',
+    'Database Development and Integration',
+    'Enterprise Software Solutions',
+    'IoT (Internet of Things) Development'
   ],
   cards: [
     {
       icon: <Icon1 />,
-      title: 'Cyber Scape Defend',
+      title: 'ERP',
+      subtitleone: 'ERP Implementation',
       description:
+        'Seamless integration of ERP systems.',
+      subtitletwo: 'ERP Implementation',
+      descriptiontwo:
         'Corporate restructuring refers to the design process of reorganizing a man company won as out Corporate',
       count: '01',
       link: '',
     },
     {
       icon: <Icon2 />,
-      title: 'SmartTech Integrations',
+      title: 'CRM',
+      subtitleone: 'CRM Development',
       description:
-        'Corporate restructuring refers to the design process of reorganizing a man company won as out Corporate',
+        'Custom CRM solutions to manage customer relationships.',
+      subtitletwo: 'CRM Integration',
+      descriptiontwo:
+        'Integrating CRM with existing systems.',
+      subtitlethree: 'CRM Support',
+      descriptionthree:
+        'Ensuring your CRM system is always up-to-date.',
       count: '02',
       link: '',
     },
     {
       icon: <Icon3 />,
-      title: 'Data Vista Analytics',
+      title: 'Inventory',
+      subtitleone: 'Inventory Management Systems',
       description:
-        'Corporate restructuring refers to the design process of reorganizing a man company won as out Corporate',
+        'Efficiently track and manage inventory.',
+      subtitletwo: 'Automated Inventory Solutions',
+      descriptiontwo:
+        'Reducing manual errors with automation.',
+      subtitlethree: 'Real-time Inventory Tracking',
+      descriptionthree:
+        'Keeping track of inventory in real-time.',
       count: '03',
       link: '',
     },
     {
       icon: <Icon4 />,
-      title: 'Data Vista Analytics',
+      title: 'Enterprise Applications',
+      subtitleone: 'Enterprise Resource Planning',
       description:
-        'Corporate restructuring refers to the design process of reorganizing a man company won as out Corporate',
+        'Comprehensive ERP solutions.',
+      subtitletwo: 'Customer Relationship Management',
+      descriptiontwo:
+        'Effective CRM systems.',
+      subtitlethree: 'Human Resource Management',
+      descriptionthree:
+        'Streamlining HR processes.',
       count: '04',
+      link: '',
+    },
+    {
+      icon: <Icon4 />,
+      title: 'Data Analytics',
+      subtitleone: 'Business Intelligence',
+      description:
+        'Turning data into actionable insights.',
+      subtitletwo: 'Predictive Analytics',
+      descriptiontwo:
+        'Forecasting future trends and behaviors.',
+      subtitlethree: 'Big Data Solutions',
+      descriptionthree:
+        'Managing and analyzing large data sets.',
+      count: '05',
+      link: '',
+    },
+    {
+      icon: <Icon4 />,
+      title: 'IT Service Management',
+      subtitleone: 'Service Desk Solutions',
+      description:
+        'Efficiently managing IT support',
+      subtitletwo: 'IT Asset Management',
+      descriptiontwo:
+        'Tracking and managing IT assets.',
+      subtitlethree: 'Change Management',
+      descriptionthree:
+        'Managing changes in IT infrastructure.',
+      count: '06',
+      link: '',
+    },
+    {
+      icon: <Icon4 />,
+      title: 'Ecommerce',
+      subtitleone: 'Ecommerce Platform Development',
+      description:
+        'Building robust online stores',
+      subtitletwo: 'Payment Gateway Integration',
+      descriptiontwo:
+        'Secure and reliable payment solutions.',
+      subtitlethree: 'Ecommerce Optimization',
+      descriptionthree:
+        'Enhancing performance and user experience.',
+      count: '07',
+      link: '',
+    },
+    {
+      icon: <Icon4 />,
+      title: 'Digital Twin',
+      subtitleone: 'Digital Twin Development',
+      description:
+        'Creating virtual replicas of physical assets.',
+      subtitletwo: 'Simulation and Modeling',
+      descriptiontwo:
+        'Testing and optimizing processes.',
+      subtitlethree: 'Real-time Monitoring',
+      descriptionthree:
+        'Keeping track of real-world assets in real-time.',
+      count: '08',
+      link: '',
+    },
+    {
+      icon: <Icon4 />,
+      title: 'Web Portals',
+      subtitleone: 'Customer Portals',
+      description:
+        'Enhancing customer engagement and satisfaction.',
+      subtitletwo: 'Employee Portals',
+      descriptiontwo:
+        'Streamlining internal communications and processes.',
+      subtitlethree: 'Vendor Portals',
+      descriptionthree:
+        'Efficiently managing vendor relationships.',
+      count: '09',
       link: '',
     },
   ],

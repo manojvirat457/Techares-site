@@ -31,8 +31,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#0475ce',
-          DEFAULT: '#0475ce',
+          light: '#fcba03',
+          DEFAULT: '#2403fc',
         },
         accent: {
           100: '#F5F4FA',
@@ -42,8 +42,8 @@ module.exports = {
           800: '#616670',
           900: '#141416',
         },
-        highlight: '#0475ce',
         body: '#BEBEBE',
+        'custom-blue': '#264B68',
       },
       backgroundImage: {
         'gradient-1': 'linear-gradient(180deg,var(--tw-gradient-stops))',

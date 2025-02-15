@@ -32,7 +32,7 @@ export function Shapes() {
             width="58"
             height="59"
             viewBox="0 0 58 59"
-            fill="#003e6f"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -53,7 +53,7 @@ export function Shapes() {
           width={136}
           height={869}
           viewBox="0 0 136 869"
-          fill="003e6f"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -69,7 +69,7 @@ export function Shapes() {
             width="58"
             height="59"
             viewBox="0 0 58 59"
-            fill="003e6f"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

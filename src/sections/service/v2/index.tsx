@@ -36,7 +36,7 @@ export function ServiceSection({
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={getStaggeredDelay([200, 400, 600], index)}
-                className="w-full px-4 md:w-1/2 md:px-[15px] lg:w-1/3"
+                className="w-full px-14 sm:w-[100%] md:w-1/4 md:px-[15px] lg:w-1/4"
               >
                 <ServiceCard {...service} />
               </div>

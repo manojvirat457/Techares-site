@@ -12,8 +12,8 @@ import { WorkprocessSectionProps } from '..';
 SwiperCore.use([Autoplay]);
 
 export function WorkCardsCaraousl({
-  cards,
-}: Pick<WorkprocessSectionProps, 'cards'>) {
+  cards, className
+}: WorkprocessSectionProps) {
   const isDomReady = useDomReady();
 
   return (
@@ -23,7 +23,7 @@ export function WorkCardsCaraousl({
           {cards && cards.length > 0 && (
             <div className="mt-[60px]">
               <Swiper
-                className="!overflow-visible"
+                className={className ? `!overflow-visible ${className}` : "!overflow-visible"}
                 speed={400}
                 loop
                 spaceBetween={30}

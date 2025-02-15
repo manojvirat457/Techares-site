@@ -1,20 +1,11 @@
+import { techCategory } from '@/data/technologies/v1/index';
 import { SectionProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
-import { Layout, Code2, Smartphone, Database } from "lucide-react";
-import { techCategory } from '@/data/technologies/v1';
 export interface CtaSectionProps {
  title: string;
 }
-
-const icons = {
- [Layout.name]: Layout,
- [Code2.name]: Code2,
- [Smartphone.name]: Smartphone,
- [Database.name]: Database,
-};
-
 const ctaSectionData: CtaSectionProps = {
  title: 'Technologies We Use',
 };
@@ -26,18 +17,17 @@ function TechnologyCard({
  technologies,
 }: {
  title: string;
- icon: string;
+ icon: React.ReactNode;
  technologies: string[];
  index: number;
 }) {
- const Icon = icons[icon as keyof typeof icons];
 
  return (
   <div className="bg-blue-800/20 backdrop-blur-sm rounded-2xl p-6 hover:bg-blue-800/30 transition-colors">
    <div className="space-y-4">
     <div className="flex items-center gap-4">
      <div className="w-12 h-12 rounded-lg bg-blue-600/20 grid place-items-center">
-      <Icon className="w-6 h-6 text-white" />
+      {icon}
      </div>
      <h3 className="text-xl font-semibold text-white">{title}</h3>
     </div>
@@ -67,7 +57,7 @@ export function TechnologiesSection({ className }: SectionProps) {
       <h2 className="mx-auto max-w-[490px] pb-16 font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
        {title}
       </h2>
-      <div className="grid gap-6 mx-auto md:mx-40 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:mx-20 sm:grid-cols-2 lg:grid-cols-4">
        {techCategory.map((category, index) => (
         <TechnologyCard
          key={category.id}
