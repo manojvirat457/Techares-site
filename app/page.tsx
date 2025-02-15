@@ -1,4 +1,7 @@
-import { aboutSectionData, whyChooseSectionDataTwo } from '@/data/about-section/v1';
+import {
+  aboutSectionData,
+  whyChooseSectionDataTwo,
+} from '@/data/about-section/v1';
 import { industriesSectionData } from '@/data/industries/v1';
 import { Footer } from '@/src/layout/footer/v1';
 import { MainHeader } from '@/src/layout/header';
@@ -17,21 +20,24 @@ import { basicMetadata } from '@/src/utils/metadata';
 export const metadata = basicMetadata({});
 
 export default function Page() {
- return (
-  <>
-   <MainHeader version="1" />
-   <Hero />
-   <AboutSection aboutSectionData={aboutSectionData} />
-   <ServicesSection />
-   <SolutionsSection />
-   <CtaSection />
-   <IndustriesSection industriesSectionData={industriesSectionData} itemsPerRow={4} />
-   <TestimonialSection />
-   <MethodologiesSection />
-   <TechnologiesSection />
-   <ProjectSection projectDetails={whyChooseSectionDataTwo} />
-   <ContactSection />
-   <Footer />
-  </>
- );
+  return (
+    <>
+      <MainHeader version="1" />
+      <Hero />
+      <AboutSection aboutSectionData={aboutSectionData} />
+      <ServicesSection />
+      <SolutionsSection />
+      <CtaSection />
+      <IndustriesSection
+        industriesSectionData={industriesSectionData}
+        itemsPerRow={4}
+      />
+      <TestimonialSection />
+      <MethodologiesSection />
+      <TechnologiesSection />
+      <ProjectSection projectDetails={whyChooseSectionDataTwo} />
+      <ContactSection />
+      <Footer />
+    </>
+  );
 }

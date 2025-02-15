@@ -1,4 +1,4 @@
-# TechAres | IT Solutions And Services 
+# TechAres | IT Solutions And Services
 
 #### Commit Prefixes
 
