@@ -1,4 +1,4 @@
-# Techlab | IT Solutions And Services Nextjs Template
+# TechAres | IT Solutions And Services 
 
 #### Commit Prefixes
 

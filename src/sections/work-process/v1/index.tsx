@@ -4,14 +4,12 @@ import { workprocessSectionData } from '@/data/work-process/v1';
 import { WorkCardsCaraousl } from './cards-carousel';
 
 export interface WorkprocessSectionProps {
-  texts?: string[];
+  texts: string[];
   cards: WorkprocessCardProps[];
-  className?: string
 }
 
 export function WorkprocessSection() {
   const { texts, cards } = workprocessSectionData;
-  const className = "h-96"
   return (
     <section className="section-padding-primary overflow-hidden !pt-0">
       {texts && texts.length > 0 && (
@@ -21,7 +19,7 @@ export function WorkprocessSection() {
           </div>
         </div>
       )}
-      <WorkCardsCaraousl cards={cards} className={className} />
+      <WorkCardsCaraousl cards={cards} />
     </section>
   );
 }

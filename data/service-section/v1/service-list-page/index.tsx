@@ -1,4 +1,4 @@
-import { ServiceSectionPropss } from '@/src/sections/service/v1';
+import { ServiceSectionProps } from '@/src/sections/service/v1';
 
 function Icon1() {
   return (
@@ -89,98 +89,49 @@ function Icon6() {
   );
 }
 
-export const serviceSectionData: ServiceSectionPropss = {
+export const serviceSectionData: ServiceSectionProps = {
   services: [
     {
       icon: <Icon1 />,
-      title: 'Blockchain Development',
+      title: 'Net Connect Plus',
       description:
-        'Elevate your business operations with our innovative blockchain solutions designed to enhance security, transparency, and efficiency.',
-      slug: '/services/blockchain',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
     {
       icon: <Icon2 />,
-      title: 'Cloud Application Development',
+      title: 'Data Guard Sentinel',
       description:
-        'Transform your business with our cutting-edge cloud application development services, designed to deliver scalable, secure, and high-performance cloud solutions.',
-      slug: '/services/cloud-app',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
     {
       icon: <Icon3 />,
-      title: 'Custom Software Development',
+      title: 'App Swift DevOps',
       description:
-        'Upscale your business with our innovative and unique software solutions to gain the competitive advantage that enables new efficiencies and improves ROI.',
-      slug: '/services/custom-software',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
     {
       icon: <Icon4 />,
-      title: 'Database Development and Integration',
+      title: 'Data Guard Sentinels',
       description:
-        'Enhance your business operations with our advanced database development and integration services, designed to deliver scalable, secure, and high-performance data solutions',
-      slug: '/services/database-integration',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
     {
       icon: <Icon5 />,
-      title: 'E-commerce Solutions',
+      title: 'App Swift DevOps',
       description:
-        'Transform your online business with our comprehensive and innovative e-commerce solutions, designed to deliver seamless, scalable, and high-performance digital commerce experiences.',
-      slug: '/services/ecommerce',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
     {
       icon: <Icon6 />,
-      title: 'Enterprise Software Solutions',
+      title: 'Net Connect Plus',
       description:
-        'Revolutionize your business operations with our cutting-edge enterprise software solutions, designed to boost efficiency, productivity, and profitability.',
-      slug: '/services/enterprise-software',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'IoT Development Services',
-      description:
-        'Transform your business operations and unlock new opportunities with our cutting-edge IoT development services, designed to enhance efficiency, productivity, and connectivity.',
-      slug: '/services/IOT-development',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'IT Outsourcing Services',
-      description:
-        'Transform your business operations and achieve new efficiencies with our comprehensive IT outsourcing services, designed to meet your unique needs and drive growth.',
-      slug: '/services/IT-outsourcing',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'Mobile App Development',
-      description:
-        'Transform your business with our state-of-the-art mobile app development solutions designed to enhance user engagement, improve functionality, and drive growth.',
-      slug: '/services/mobile-app',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'Quality Assurance and Testing',
-      description:
-        'Ensure the highest quality of your software products with our comprehensive and meticulous QA and testing services, designed to deliver flawless and reliable solutions.',
-      slug: '/services/quality-assurance',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'Software Consulting',
-      description:
-        'Transform your business with our expert software consulting services, designed to provide strategic guidance, innovative solutions, and measurable results.',
-      slug: '/services/software-consult',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'UI/UX Design',
-      description:
-        'Elevate your business with our innovative and user-centric UI/UX design solutions, crafted to provide exceptional user experiences and drive business growth.',
-      slug: '/services/ui-ux',
-    },
-    {
-      icon: <Icon6 />,
-      title: 'Web Development',
-      description:
-        'Elevate your business with our cutting-edge web development solutions designed to enhance user engagement, improve functionality, and drive business growth.',
-      slug: '/services/web-dev',
+        'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+      slug: '/services/single',
     },
   ],
 };

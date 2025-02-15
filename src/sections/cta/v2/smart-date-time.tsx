@@ -1,20 +1,18 @@
 "use client";
 
-import React from "react";
-import { parseDate } from "chrono-node";
+import { cn } from "@/lib/utils";
+import { Button, buttonVariants } from "@src/components/ui/button";
+import { Calendar, CalendarProps } from "@src/components/ui/calendar";
+import { Input } from "@src/components/ui/input";
 import {
  Popover,
  PopoverContent,
  PopoverTrigger,
 } from "@src/components/ui/popover";
-import { ActiveModifiers } from "react-day-picker";
-import { Calendar, CalendarProps } from "@src/components/ui/calendar";
-import { Input } from "@src/components/ui/input";
-import { Button, buttonVariants } from "@src/components/ui/button";
-import { Calendar as CalendarIcon, LucideTextCursorInput } from "lucide-react";
 import { ScrollArea } from "@src/components/ui/scroll-area";
-import { format } from "date-fns";
-import { cn } from "@/lib/utils";
+import { parseDate } from "chrono-node";
+import { Calendar as CalendarIcon } from "lucide-react";
+import React from "react";
 
 /* -------------------------------------------------------------------------- */
 /*                               Inspired By:                                 */
@@ -97,8 +95,8 @@ const inputBase =
 
 // @source: https://www.perplexity.ai/search/in-javascript-how-RfI7fMtITxKr5c.V9Lv5KA#1
 // use this pattern to validate the transformed date string for the natural language input
-const naturalInputValidationPattern =
- "^[A-Z][a-z]{2}sd{1,2},sd{4},sd{1,2}:d{2}s[AP]M$";
+// const naturalInputValidationPattern =
+//  "^[A-Z][a-z]{2}sd{1,2},sd{4},sd{1,2}:d{2}s[AP]M$";
 
 const DEFAULT_SIZE = 96;
 
@@ -559,8 +557,6 @@ const DateTimeLocalInput = ({
   (
    date: Date | undefined,
    selectedDate: Date,
-   m: ActiveModifiers,
-   e: React.MouseEvent,
   ) => {
    // if fully disabled, do nothing
    if (typeof disabled === "boolean" && disabled) return;

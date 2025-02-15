@@ -51,6 +51,6 @@ export const industriesSectionData = {
  highlightTitle: "Industries",
  title: " We Serve",
  description: "Empowering businesses across various sectors with innovative solutions",
- detailedDescription: null || '',
+ detailedDescription: '',
  data: industries,
 };

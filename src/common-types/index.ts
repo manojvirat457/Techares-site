@@ -1,5 +1,4 @@
 import { ClassValue } from 'clsx';
-import { SectionHeadingWithoutStylingProps } from '../components/section-heading/interface';
 
 export interface ImageProps {
   /** Specifies the path to the image */
@@ -37,7 +36,6 @@ export interface SocialItemProps {
 
 export interface SectionProps {
   className?: ClassValue;
-  sectionHeading?: Pick<SectionHeadingWithoutStylingProps, 'subtitle' | 'title'>;
 }
 
 /**

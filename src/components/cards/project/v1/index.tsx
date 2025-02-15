@@ -8,29 +8,19 @@ export interface PortfolioCardProps {
   slug: string;
   image: Omit<ImageProps, 'width' | 'height'>;
   title: string;
-  titleOne: string;
-  titleTwo: string;
-  titleThree: string;
   description: string;
-  descriptionTwo: string;
-  descriptionThree: string;
 }
 
 export function ProjectCard({
   slug,
   image,
   title,
-  titleOne,
-  titleTwo,
-  titleThree,
   description,
-  descriptionTwo,
-  descriptionThree,
 }: PortfolioCardProps) {
   return (
     <CustomLink
       href={slug}
-      className="group/portfolio relative z-1 block aspect-[640/716] overflow-hidden rounded-5 p-6 md:p-[1.875rem]"
+      className="group/portfolio relative z-1 block aspect-[640/916] overflow-hidden rounded-5 p-6 md:p-[1.875rem]"
     >
       <span
         className={cn(
@@ -60,34 +50,9 @@ export function ProjectCard({
               {title}
             </span>
           </h3>
-          <p className="mt-[13px] overflow-hidden pt-[16px] text-body">
+          <p className="mt-[13px] overflow-hidden pt-[11px] text-body">
             <span className="block [transition-delay:500ms] [transition:all_.9s_ease] md:[transform:translateY(100%)] md:group-hover/portfolio:[transform:translateY(0)]">
-              <ul>
-                <li className="mb-6">
-                  <div>
-                    <h4 className=" block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-sky-300 md:text-md">
-                      {titleOne}
-                    </h4>
-                    <p className="leading-5">{description}</p>
-                  </div>
-                </li>
-                <li className="mb-6">
-                  <div>
-                    <h4 className=" block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-sky-300 md:text-md">
-                      {titleTwo}
-                    </h4>
-                    <p className="leading-5">{descriptionTwo}</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <h4 className=" block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-sky-300 md:text-md">
-                      {titleThree}
-                    </h4>
-                    <p className="leading-5">{descriptionThree}</p>
-                  </div>
-                </li>
-              </ul>
+              {description}
             </span>
           </p>
         </div>

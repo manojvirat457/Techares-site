@@ -49,7 +49,7 @@ export default function IndustriesSection({ industriesSectionData }: {
       {industriesSectionData.description}
      </p>
      {
-      industriesSectionData.detailedDescription && <>
+      industriesSectionData?.detailedDescription && <>
        <p className="mt-11 mx-auto">
         {industriesSectionData.detailedDescription}
        </p>

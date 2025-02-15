@@ -11,17 +11,17 @@
   h6 {
     @apply font-secondary;
   }
-
   .h1 {
     @apply text-2xl font-bold leading-[1.15] md:text-3xl;
   }
-
   .h2 {
-    @apply text-xl font-bold leading-[1.25] md:text-2xl;
+    @apply text-xl font-bold leading-[1.25]  md:text-2xl;
   }
-
   .h3 {
     @apply text-md font-bold leading-[1.25] md:text-lg;
+  }
+  :root {
+    --radius: 0.5rem;
   }
 }
 
@@ -32,70 +32,4 @@
 ::selection {
   text-shadow: none;
   @apply bg-primary text-white;
-}
-
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 116 224);
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.tab-header {
-  display: flex;
-}
-
-.tab-header button {
-  flex: 1;
-  padding: 10px 20px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-  outline: none;
-}
-
-.tab-header button:hover {
-  background-color: #f0f0f0;
-}
-
-.tab-header button.active {
-  background-color: #e0e0e0;
-  border-bottom: 2px solid #333;
-}
-
-.tab-content {
-  padding: 20px;
-  border-top: 1px solid #ccc;
-}
-
-.tab-content p {
-  margin-bottom: 10px;
-}
-
-.tab-content > div {
-  display: none;
-}
-
-.tab-content > div.active {
-  display: block;
-}
-
-/* Custom scrollbar styles */
-.custom-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
 }

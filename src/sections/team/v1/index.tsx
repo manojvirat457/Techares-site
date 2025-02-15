@@ -32,8 +32,8 @@ export function TeamSection() {
               sm: 1.2,
               md: 2,
               lg: 2.5,
-              xl: 4,
-              '2xl': 4,
+              xl: 3,
+              '2xl': 3,
             }}
             itemGap={{
               initial: 30,

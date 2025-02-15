@@ -6,38 +6,50 @@ import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 
 export interface CtaSectionProps {
-  title: string;
+ title: string;
 }
 
 const ctaSectionData: CtaSectionProps = {
-  title: 'Technologies',
+ title: 'Have question? Feel Free To Ask',
 };
 
 export function CtaSection({ className }: SectionProps) {
-  const { title } = ctaSectionData;
-  return (
-    <section className={cn(className)}>
-      <Container>
-        <div className="relative overflow-hidden rounded-5 bg-primary px-6 py-14">
-          <div className="relative z-10 mx-auto max-w-[630px] rounded-5  text-center">
-            <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
-              {title}
-            </h2>
-            <p className="font-secondary text-white">
-              Huge Spectrum of Next-Gen Technologies Under One Roof Leverage our
-              in-depth technical expertise to bring your stunning ideas to life.
-            </p>
-          </div>
-          <Image
-            src="/assets/images/cta/pattern-1.png"
-            alt="cta section bg pattern"
-            width={520}
-            height={316}
-            className="pointer-events-none absolute -right-30px bottom-0 z-1 h-full animate-float-bob-x object-cover opacity-60"
-            sizes="100vw"
-          />
-        </div>
-      </Container>
-    </section>
-  );
+ const { title } = ctaSectionData;
+ return (
+  <section className={cn(className)}>
+   <Container isFluid={true}>
+    <div className="relative overflow-hidden rounded-5 bg-primary px-6 py-14">
+     <div className="relative z-10 mx-auto max-w-[630px] rounded-5  text-center">
+      <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
+       {title}
+      </h2>
+      <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] md:flex-row">
+       <TextInput
+        placeholder="Enter Email"
+        className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
+       />
+       <Button
+        type="submit"
+        className={cn(
+         'min-w-[190px] flex-none text-white max-md:w-full',
+         'bg-primary-light',
+         'after:bg-white hover:text-accent-700 dark:hover:text-accent-700'
+        )}
+       >
+        <span>SUSCRIBE</span>
+       </Button>
+      </form>
+     </div>
+     <Image
+      src="/assets/images/cta/pattern-1.png"
+      alt="cta section bg pattern"
+      width={520}
+      height={316}
+      className="pointer-events-none absolute -right-30px bottom-0 z-1 h-full animate-float-bob-x object-cover opacity-60"
+      sizes="100vw"
+     />
+    </div>
+   </Container>
+  </section>
+ );
 }
