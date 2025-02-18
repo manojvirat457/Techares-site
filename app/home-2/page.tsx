@@ -15,27 +15,28 @@ import { TestimonialSection } from '@/src/sections/testimonial/v2';
 import { WorkprocessSection } from '@/src/sections/work-process/v1';
 import { basicMetadata } from '@/src/utils/metadata';
 
+
 export const metadata = basicMetadata({
-  title: 'TechAres | Home verion two',
-  description: 'TechAres - IT Solutions and Services React Nextjs Template',
+ title: 'TechAres | Home verion two',
+ description: 'TechAres - IT Solutions and Services React Nextjs Template',
 });
 
 export default function Page() {
-  return (
-    <>
-      <MainHeader version="2" />
-      <HeroSection />
-      <ServiceSection className="!pt-0" {...serviceSectionData} />
-      <CtaSection />
-      <PricingSection />
-      <AboutSection />
-      <WorkprocessSection />
-      <ProjectSection {...projectSectionData} />
-      <TeamSection />
-      <TestimonialSection />
-      <StatisticsSection />
-      <BlogSection />
-      <Footer className="dark:bg-accent-900" footerTopClassName="dark:!pt-0" />
-    </>
-  );
+ return (
+  <>
+   <MainHeader version="2" />
+   <HeroSection />
+   <ServiceSection className="!pt-0" {...serviceSectionData} />
+   <CtaSection />
+   <PricingSection />
+   <AboutSection />
+   <WorkprocessSection />
+   <ProjectSection {...projectSectionData} />
+   <TeamSection />
+   <TestimonialSection />
+   <StatisticsSection />
+   <BlogSection />
+   <Footer className="dark:bg-accent-900" footerTopClassName="dark:!pt-0" />
+  </>
+ );
 }

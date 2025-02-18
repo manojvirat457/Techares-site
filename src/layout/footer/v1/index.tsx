@@ -5,128 +5,132 @@ import { CustomLink } from '@/src/components/custom-link';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 import { BrandLogo } from 'src/layout/brand-logo';
-import { FaChevronRight } from 'react-icons/fa6';
+import {
+ FaChevronRight,
+} from 'react-icons/fa6';
 import { FaCalendarDays } from 'react-icons/fa6';
 import { TextInput } from '@/src/components/inputs/text-input';
 import { Button } from '@/src/components/button';
 
 interface RecentBlog {
-  slug: string;
-  image: Omit<ImageProps, 'width' | 'height'>;
-  date: string;
-  title: string;
+ slug: string;
+ image: Omit<ImageProps, 'width' | 'height'>;
+ date: string;
+ title: string;
 }
 
 interface SocialLinkProps {
-  icon: React.ReactNode;
-  href: string;
+ icon: React.ReactNode;
+ href: string;
 }
 
 export interface FooterSectionProps {
-  about: {
-    description: string;
-    socialLinks: SocialLinkProps[];
-  };
-  columnOne: {
-    title: string;
-    links: LinkProps[];
-  };
-  columnTwo: {
-    title: string;
-    location: string;
-    mails: string[];
-    phoneNumbers: string[];
-  };
-  columnThree: {
-    title: string;
-    blogs: RecentBlog[];
-  };
-  footerBottom: {
-    copyrightTextPartOne: string;
-    copyrightTextPartTwo: string;
-    links: LinkProps[];
-  };
+ about: {
+  description: string;
+  socialLinks: SocialLinkProps[];
+ };
+ columnOne: {
+  title: string;
+  links: LinkProps[];
+ };
+ columnTwo: {
+  title: string;
+  location: string;
+  mails: string[];
+  phoneNumbers: string[];
+ };
+ columnThree: {
+  title: string;
+  blogs: RecentBlog[];
+ };
+ footerBottom: {
+  copyrightTextPartOne: string;
+  copyrightTextPartTwo: string;
+  links: LinkProps[];
+ };
 }
 
 const socialIconClasses = cn(
-  'text-base/[1.75] transition-transform duration-350 hover:-translate-y-1 block px-4'
+ 'text-base/[1.75] transition-transform duration-350 hover:-translate-y-1 block px-4'
 );
 const titleClasses = cn(
-  'text-gray-900 dark:text-white  text-md font-bold  leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
+ 'text-gray-900 dark:text-white  text-md font-bold  leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
 );
 // const addressIconParentClasses = cn(
 //  'w-10 h-10 rounded-5 inline-grid place-items-center dark:bg-accent-700 border border-accent-800 dark:border-transparent text-primary flex-none'
 // );
 // const addressItemClasses = cn('flex items-center gap-5');
 const textColor = cn(
-  'transition-colors duration-300 hover:text-primary dark:hover:text-white'
+ 'transition-colors duration-300 hover:text-primary dark:hover:text-white'
 );
 
 export function Footer({ className }: SectionProps) {
-  const { about, columnOne, columnThree, footerBottom } = footerSectionData;
-  return (
-    <footer
-      className={cn(
-        'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
-        className
-      )}
-    >
-      <div className="py-8 md:py-20">
-        <Container>
-          <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-4">
-            {/* About  */}
-            <div data-aos="fade-up" data-aos-delay="200">
-              <BrandLogo />
-              <p className="mb-7 mt-3">{about.description}</p>
-              {about.socialLinks && about.socialLinks.length > 0 && (
-                <nav aria-label="social links">
-                  <ul className="inline-flex min-h-[50px] items-center divide-x rounded-5 bg-primary  text-white">
-                    {about.socialLinks.map((socialLink, index) => (
-                      <li key={index}>
-                        <CustomLink
-                          aria-label={socialLink.href}
-                          className={socialIconClasses}
-                          href={socialLink.href}
-                          openNewTab
-                        >
-                          <span>{socialLink.icon}</span>
-                        </CustomLink>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              )}
-            </div>
+ const { about, columnOne, columnThree, footerBottom } =
+  footerSectionData;
+ return (
+  <footer
+   className={cn(
+    'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
+    className
+   )}
+  >
+   <div className="py-8 md:py-20">
+    <Container>
+     <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-4">
+      {/* About  */}
+      <div data-aos="fade-up" data-aos-delay="200">
+       <BrandLogo />
+       <p className="mb-7 mt-3">{about.description}</p>
+       {about.socialLinks && about.socialLinks.length > 0 && (
+        <nav aria-label="social links">
+         <ul className="inline-flex min-h-[50px] items-center divide-x rounded-5 bg-primary  text-white">
+          {about.socialLinks.map((socialLink, index) => (
+           <li key={index}>
+            <CustomLink
+             aria-label={socialLink.href}
+             className={socialIconClasses}
+             href={socialLink.href}
+             openNewTab
+            >
+             <span>{socialLink.icon}</span>
+            </CustomLink>
+           </li>
+          ))}
+         </ul>
+        </nav>
+       )}
+      </div>
 
-            {/* Column one  */}
-            <div data-aos="fade-up" data-aos-delay="400">
-              <h3 className={titleClasses}>{columnOne.title}</h3>
-              {columnOne.links && columnOne.links.length > 0 && (
-                <nav aria-label="footer links navigation">
-                  <ul className="grid gap-2">
-                    {columnOne.links.map((link) => (
-                      <li
-                        key={link.label}
-                        className="flex items-center gap-2.5"
-                      >
-                        <span className="flex-none text-sm/[1] text-gray-900 dark:text-white">
-                          <FaChevronRight />
-                        </span>
-                        <CustomLink
-                          href={link.href}
-                          openNewTab={link.openNewTab}
-                          className={textColor}
-                        >
-                          {link.label}
-                        </CustomLink>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              )}
-            </div>
+      {/* Column one  */}
+      <div data-aos="fade-up" data-aos-delay="400">
+       <h3 className={titleClasses}>{columnOne.title}</h3>
+       {columnOne.links && columnOne.links.length > 0 && (
+        <nav aria-label="footer links navigation">
+         <ul className="grid gap-2">
+          {columnOne.links.map((link) => (
+           <li
+            key={link.label}
+            className="flex items-center gap-2.5"
+           >
+            <span className="flex-none text-sm/[1] text-gray-900 dark:text-white">
+             <FaChevronRight />
+            </span>
+            <CustomLink
+             href={link.href}
+             openNewTab={link.openNewTab}
+             className={textColor}
+            >
+             {link.label}
+            </CustomLink>
+           </li>
+          ))}
+         </ul>
+        </nav>
+       )}
+      </div>
 
-            {/* <div data-aos="fade-up" data-aos-delay="600">
+
+      {/* <div data-aos="fade-up" data-aos-delay="600">
               <h3 className={titleClasses}>{columnTwo.title}</h3>
               <ul aria-label="addresses" className="grid gap-5">
                 <li className={addressItemClasses}>
@@ -175,103 +179,103 @@ export function Footer({ className }: SectionProps) {
               </ul>
             </div> */}
 
-            {/* Column two  */}
-            <div data-aos="fade-up" data-aos-delay="800">
-              <h3 className={titleClasses}>{columnThree.title}</h3>
-              {columnThree.blogs && columnThree.blogs.length > 0 && (
-                <div className="grid gap-6">
-                  {columnThree.blogs.map((blog, index) => (
-                    <article
-                      key={index}
-                      className="group flex items-center gap-4 text-accent-800  dark:text-white"
-                    >
-                      <div className="flex-none overflow-hidden rounded-5">
-                        <Image
-                          {...blog.image}
-                          alt={blog.image.alt}
-                          width={80}
-                          height={80}
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                      </div>
-                      <div>
-                        <p className="flex items-center gap-2.5 dark:text-body">
-                          <span className="text-primary">
-                            <FaCalendarDays />
-                          </span>
-                          <span>{blog.date}</span>
-                        </p>
-                        <h4 className="text-md font-bold leading-normal">
-                          <CustomLink
-                            href={blog.slug}
-                            className="transition-colors duration-300 hover:text-primary"
-                          >
-                            {blog.title}
-                          </CustomLink>
-                        </h4>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              )}
-            </div>
-            {/* Column Two  */}
-            {
-              <div className="relative z-10 mx-auto max-w-[630px] rounded-5 ">
-                <h3 className={titleClasses}>{'Get Instant Updates'}</h3>
-                <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] ">
-                  <TextInput
-                    placeholder="Enter Email"
-                    className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
-                  />
-                  <Button
-                    type="button"
-                    className={cn(
-                      'min-w-[250px] flex-none text-white max-md:w-full',
-                      'bg-primary-light',
-                      'after:bg-white hover:text-accent-700 dark:hover:text-accent-700'
-                    )}
-                  >
-                    <CustomLink
-                      aria-label={`Go to page thank-you page`}
-                      href={'/thank-you'}
-                      openNewTab={false}
-                      className={textColor}
-                    >
-                      <span>SUSCRIBE</span>
-                    </CustomLink>
-                  </Button>
-                </form>
-              </div>
-            }
-          </div>
-        </Container>
+      {/* Column two  */}
+      <div data-aos="fade-up" data-aos-delay="800">
+       <h3 className={titleClasses}>{columnThree.title}</h3>
+       {columnThree.blogs && columnThree.blogs.length > 0 && (
+        <div className="grid gap-6">
+         {columnThree.blogs.map((blog, index) => (
+          <article
+           key={index}
+           className="group flex items-center gap-4 text-accent-800  dark:text-white"
+          >
+           <div className="flex-none overflow-hidden rounded-5">
+            <Image
+             {...blog.image}
+             alt={blog.image.alt}
+             width={80}
+             height={80}
+             className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+           </div>
+           <div>
+            <p className="flex items-center gap-2.5 dark:text-body">
+             <span className="text-primary">
+              <FaCalendarDays />
+             </span>
+             <span>{blog.date}</span>
+            </p>
+            <h4 className="text-md font-bold leading-normal">
+             <CustomLink
+              href={blog.slug}
+              className="transition-colors duration-300 hover:text-primary"
+             >
+              {blog.title}
+             </CustomLink>
+            </h4>
+           </div>
+          </article>
+         ))}
+        </div>
+       )}
       </div>
-      <div className="flex min-h-[90px] items-center border-t border-accent-800 border-opacity-20 py-5 dark:border-body dark:border-opacity-20">
-        <Container>
-          <div className="flex flex-wrap-reverse items-center  justify-center gap-x-8 gap-y-4 text-center md:flex-wrap md:justify-between md:gap-x-10">
-            <p>{`${footerBottom.copyrightTextPartOne} ${new Date().getFullYear()} ${footerBottom.copyrightTextPartTwo}`}</p>
-            {footerBottom.links && footerBottom.links.length > 0 && (
-              <nav aria-label="footer bottom navigation">
-                <ul className="flex flex-wrap items-center justify-center gap-x-4 text-center md:gap-x-7">
-                  {footerBottom.links.map((link) => (
-                    <li key={link.label}>
-                      <CustomLink
-                        aria-label={`Go to page ${link.label}`}
-                        href={link.href}
-                        openNewTab={link.openNewTab}
-                        className={textColor}
-                      >
-                        {link.label}
-                      </CustomLink>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            )}
-          </div>
-        </Container>
-      </div>
-    </footer>
-  );
+      {/* Column Two  */}
+      {
+       <div className="relative z-10 mx-auto max-w-[630px] rounded-5 ">
+        <h3 className={titleClasses}>{'Get Instant Updates'}</h3>
+        <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] ">
+         <TextInput
+          placeholder="Enter Email"
+          className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
+         />
+         <Button
+          type="button"
+          className={cn(
+           'min-w-[250px] flex-none text-white max-md:w-full',
+           'bg-primary-light',
+           'after:bg-white hover:text-accent-700 dark:hover:text-accent-700'
+          )}
+         >
+          <CustomLink
+           aria-label={`Go to page thank-you page`}
+           href={'/thank-you'}
+           openNewTab={false}
+           className={textColor}
+          >
+           <span>SUSCRIBE</span>
+          </CustomLink>
+         </Button>
+        </form>
+       </div>
+      }
+     </div>
+    </Container>
+   </div>
+   <div className="flex min-h-[90px] items-center border-t border-accent-800 border-opacity-20 py-5 dark:border-body dark:border-opacity-20">
+    <Container>
+     <div className="flex flex-wrap-reverse md:flex-wrap  items-center md:justify-between text-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
+      <p>{`${footerBottom.copyrightTextPartOne} ${new Date().getFullYear()} ${footerBottom.copyrightTextPartTwo}`}</p>
+      {footerBottom.links && footerBottom.links.length > 0 && (
+       <nav aria-label="footer bottom navigation">
+        <ul className="flex flex-wrap items-center gap-x-4 text-center justify-center md:gap-x-7">
+         {footerBottom.links.map((link) => (
+          <li key={link.label}>
+           <CustomLink
+            aria-label={`Go to page ${link.label}`}
+            href={link.href}
+            openNewTab={link.openNewTab}
+            className={textColor}
+           >
+            {link.label}
+           </CustomLink>
+          </li>
+         ))}
+        </ul>
+       </nav>
+      )}
+     </div>
+    </Container>
+   </div>
+  </footer>
+ );
 }
