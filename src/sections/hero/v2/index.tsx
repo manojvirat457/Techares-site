@@ -150,9 +150,7 @@ export function HeroSection() {
                 blurDataURL={blurDataUrl}
               />
             </div>
-            <p className="mb-[75px] text-accent-800 dark:text-body">
-              {description}
-            </p>
+            <p className="mb-[75px] text-accent-200">{description}</p>
             <div
               className={cn(
                 // General

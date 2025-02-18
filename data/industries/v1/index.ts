@@ -47,7 +47,15 @@ export const industries: Industry[] = [
   },
 ];
 
-export const industriesSectionData = {
+export interface IndustriesSectionData {
+  highlightTitle: string;
+  title: string;
+  description: string;
+  detailedDescription?: string;
+  data: Industry[];
+}
+
+export const industriesSectionData: IndustriesSectionData = {
   highlightTitle: 'Industries',
   title: ' We Serve',
   description:

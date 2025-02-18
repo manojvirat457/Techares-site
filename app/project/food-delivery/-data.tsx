@@ -5,6 +5,7 @@ import { FAQSectionProps } from '@/src/sections/faq';
 import { TeamSectionProps } from '@/src/sections/team/v2';
 import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import { ImageProps } from 'next/image';
+import { ServiceData } from '@/data/service-section/v3';
 
 export const whyChooseSectionData: AboutSectionProps = {
   images: {
@@ -35,31 +36,29 @@ export const whyChooseSectionData: AboutSectionProps = {
   },
   sectionHeading: {
     subtitle: 'WHY US',
-    title: ' Why Techares?',
+    title: ' Why Choose TechAres',
     description:
-      'At TechAres, we are committed to delivering innovative and reliable solutions that empower businesses to thrive in an ever-evolving digital world. Our expertise spans mobility solutions, flexible customization, and scalable architecture, all backed by round-the-clock support. Here’s why TechAres is the perfect partner for your business',
+      "At TechAres, we specialize in developing custom food delivery apps tailored to your business needs. With years of expertise, we craft feature-rich, scalable, and secure solutions using the latest technologies. Our end-to-end services cover everything from app design to deployment and ongoing support. We focus on delivering high-quality user experiences and business efficiency, ensuring long-term value and growth for your food delivery platform. Whether you're a startup or an established brand, we collaborate closely with you to create solutions that drive success and exceed expectations.",
   },
   isCard: false,
   keyPoints: [
     {
-      title: 'Expertise in Mobility Solutions',
+      title: 'Experienced Developers',
       description:
-        'With years of experience in mobility, we deliver innovative solutions designed to meet the dynamic needs of businesses, enhancing user engagement and accessibility.',
+        'Our team has expertise in developing high-performing food delivery apps.',
     },
     {
-      title: 'Expertise in Mobility Solutions',
-      description:
-        'With years of experience in mobility, we deliver innovative solutions designed to meet the dynamic needs of businesses, enhancing user engagement and accessibility.',
+      title: 'End-to-End Solutions',
+      description: 'From design to launch, we handle everything.',
     },
     {
       title: 'Scalable Architecture',
       description:
-        'Our solutions are built with scalability in mind, ensuring they grow alongside your business without compromising on performance or reliability.',
+        'Grow your business without worrying about technology limitations.',
     },
     {
-      title: '24/7 Technical Support',
-      description:
-        'Our dedicated support team is available around the clock, ready to assist with any challenges, ensuring smooth operations and optimal performance at all times.',
+      title: 'Cost-Effective Development',
+      description: 'Affordable plans with high ROI.',
     },
   ],
 };
@@ -69,40 +68,38 @@ export const ourWorkFlow: Industry[] = [
     title: 'Requirement Analysis',
     icon: 'https://placehold.co/64x64',
     description:
-      'We begin by understanding your business needs, target audience, and key functionalities to define the project scope.',
+      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements to define the app’s scope and features. This ensures a tailored solution that aligns with your business objectives.',
   },
   {
-    title: 'UI/UX Design',
+    title: 'UI/UX Design & Prototyping',
     icon: 'https://placehold.co/64x64',
     description:
-      'Our design team creates intuitive, user-friendly interfaces for passengers, drivers, and administrators, ensuring smooth navigation and engagement.',
+      'Our designers create intuitive wireframes and prototypes for a seamless user experience. We focus on smooth navigation, appealing visuals, and easy ordering to enhance customer engagement. The design is optimized for both iOS and Android platforms.',
   },
   {
     title: 'App Development',
     icon: 'https://placehold.co/64x64',
     description:
-      'Our developers bring the design to life by coding and integrating essential features like ride booking, real-time tracking, and secure payments.',
+      'Our developers build the frontend, backend, and integrate third-party APIs using the latest technologies. We follow an agile development approach, ensuring high performance, scalability, and security. The app is developed to support seamless ordering, tracking, and payments.',
   },
   {
     title: 'Testing & Quality Assurance',
     icon: 'https://placehold.co/64x64',
     description:
-      'We conduct rigorous testing to identify and fix bugs, optimize performance, and ensure seamless functionality across devices and platforms.',
+      'We conduct rigorous testing to ensure the app is bug-free, secure, and responsive. Our QA team performs functional, performance, and security tests for a flawless user experience. The goal is to deliver a stable and reliable application.',
   },
   {
-    title: 'Deployment & Support',
+    title: 'Deployment & Maintenance',
     icon: 'https://placehold.co/64x64',
     description:
-      'Once the app is tested and approved, we deploy it on app stores and provide ongoing maintenance, updates, and technical support for optimal performance.',
+      'Once tested, we launch the app on Google Play Store and Apple App Store. Post-launch, we provide regular updates, bug fixes, and performance optimizations. Our team ensures continuous support to keep your app running smoothly. 🚀',
   },
 ];
 
 export const ourWorkFlowData = {
   highlightTitle: 'Our ',
   title: 'Workflow',
-  description: 'A Strategic Approach to Taxi App Development',
-  detailedDescription:
-    'At TechAres, we follow a well-structured development process to ensure the successful delivery of a high-performing taxi app. Our approach is designed to meet business objectives while providing a seamless user experience.',
+  description: 'How We Develop Your Food Delivery App',
   data: ourWorkFlow,
 };
 
@@ -175,15 +172,15 @@ export const latestUpdate: ServiceSectionProps = {
 
 export const solutions = [
   {
-    title: 'Standard Taxi App',
+    title: 'From Scratch',
     description:
-      'A reliable platform for everyday commuters. At TechAres, we offer tailored taxi app solutions to meet the diverse needs of both individual commuters and businesses. Our Standard Taxi App is designed for everyday riders, providing a seamless and reliable ride-booking experience with real-time tracking, multiple payment options, and safety features like SOS alerts. This solution ensures quick access to transportation, making daily commutes more convenient and hassle-free.',
+      'For businesses looking for a unique solution, we develop custom food delivery apps from scratch, ensuring complete control over features, UI/UX, and integrations.',
     icon: <Icon3 />,
   },
   {
-    title: 'Corporate Taxi Solutions',
+    title: 'White Label Food Delivery App',
     description:
-      'A reliable platform for everyday commuters. At TechAres, we offer tailored taxi app solutions to meet the diverse needs of both individual commuters and businesses. Our Standard Taxi App is designed for everyday riders, providing a seamless and reliable ride-booking experience with real-time tracking, multiple payment options, and safety features like SOS alerts. This solution ensures quick access to transportation, making daily commutes more convenient and hassle-free.',
+      'Our ready-made white-label food delivery app solutions help businesses launch faster with pre-built features, customized branding, and seamless integrations.',
     icon: <Icon3 />,
   },
 ];
@@ -195,24 +192,22 @@ export const faqSectionData: FAQSectionProps = {
   },
   faqItems: [
     {
-      question: 'How long does it take to develop a taxi app?',
-      answer: 'Typically, 4-6 months, depending on complexity.',
+      question: ' How long does it take to develop a food delivery app?',
+      answer:
+        'The development timeline depends on features, customization, and integrations. On average, it takes 3-6 months.',
     },
     {
-      question: 'Can the app be customized for specific needs',
-      answer: 'Yes, we offer fully tailored solutions.',
+      question: 'Can I integrate third-party payment gateways?',
+      answer:
+        'Yes, we integrate secure payment gateways like PayPal, Stripe, and Razorpay.',
     },
     {
-      question: 'Do you provide post-launch support?',
-      answer: 'Absolutely, we offer ongoing maintenance and updates.',
+      question: ' Do you provide post-launch support?',
+      answer: 'Absolutely! We offer maintenance, updates, and 24/7 support.',
     },
     {
       question: 'What payment options can be integrated?',
       answer: 'Credit/debit cards, wallets, UPI, and more.',
-    },
-    {
-      question: 'Can I integrate multiple cities into one app?',
-      answer: 'Yes, we build multi-city & multi-country solutions.',
     },
   ],
 };
@@ -239,14 +234,162 @@ export interface ProjectDetailsProps {
 }
 export const projectDetails: ProjectDetailsProps = {
   sectionHeading: {
-    subtitle: 'Taxi App for All',
-    title: 'Taxi App Development Company',
+    subtitle: ' High Performing Food Delivery App',
+    title: 'Our Expertise in Food Delivery App Development',
     description:
-      "Our taxi app solutions cater to various needs, whether you're an individual rider, a fleet owner, or a corporate entity. We develop robust, feature-rich apps designed for seamless user experiences. At TechAres, we design taxi booking applications that cater to diverse user groups, ensuring a smooth, reliable, and feature-rich experience. Whether you're an individual commuter, a taxi fleet owner, or a corporate organization, our solutions are built to optimize efficiency, enhance user satisfaction, and streamline business operations.",
+      "TechAres specializes in creating robust and scalable food delivery app development solutions that streamline restaurant operations, enhance customer experience, and drive business growth. With our expertise, we craft highly functional and engaging apps tailored to your business needs. Our solutions ensure seamless order management, real-time tracking, and secure payments, helping businesses grow with efficiency and innovation. Whether you're a startup or an enterprise, we tailor apps to your unique needs.",
   },
   keyPoints: [],
   image: {
     src: '/assets/images/about/about-5.png',
     alt: 'about image five',
+  },
+};
+
+export const servicesData: ServiceData = {
+  'Customer App': {
+    title: 'Customer App',
+    description: 'Tailored software solutions for your business needs',
+    icon: '/assets/images/service/custom-software.png',
+    mainDescription:
+      'We specialize in creating tailored software solutions to meet your unique business requirements. Our process focuses on delivering secure, scalable, and feature-rich products designed to adapt to your growth.',
+    cards: [
+      {
+        title: 'User-friendly interface for quick ordering',
+        description:
+          ' Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more',
+      },
+      {
+        title: 'Real-time order tracking',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Secure multiple payment options',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Personalized recommendations',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+    ],
+  },
+  'Driver App': {
+    title: 'Driver App',
+    description: 'Expert guidance and development solutions',
+    icon: '/assets/images/service/consulting-service.png',
+    mainDescription:
+      'Our IT consulting services help businesses leverage technology to achieve their goals. From strategic planning to execution, we offer solutions tailored to your specific challenges and growth opportunities.',
+    cards: [
+      {
+        title: 'Optimized navigation for efficient deliveries',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Instant order notifications',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Earnings and performance tracking',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Secure communication with customers',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+    ],
+  },
+  'Restaurant App': {
+    title: 'Restaurant App',
+    description: 'Expert developers for your projects',
+    icon: '/assets/images/service/hire-developer.png',
+    mainDescription:
+      'Techares provides access to a pool of skilled developers to meet your project requirements. Our exper ts work seamlessly as part of your team to ensure high-quality results.',
+    cards: [
+      {
+        title: 'Order and menu management',
+        description:
+          'Design and implement user interfaces with a focus on responsiveness, aesthetics, and functionality to deliver immersive user experiences.',
+      },
+      {
+        title: 'Inventory tracking',
+        description:
+          'Build robust and secure server-side architectures that ensure your applications run efficiently and scale effortlessly with business growth.',
+      },
+      {
+        title: 'Analytics and reporting',
+        description:
+          'Manage end-to-end development projects with experts skilled in both frontend and backend technologies for seamless integration.',
+      },
+      {
+        title: 'Integration with third-party services',
+        description:
+          'Optimize the software development lifecycle by combining development and operations for faster, more reliable deployments.',
+      },
+    ],
+  },
+  'Admin Panel': {
+    title: 'Admin Panel',
+    description: 'Innovative blockchain solutions',
+    icon: '/assets/images/service/bitcoin.png',
+    mainDescription:
+      'Harness the transformative power of blockchain technology to create secure, transparent, and efficient solutions for your business. Our expertise spans across various blockchain applications tailored to your needs.',
+    cards: [
+      {
+        title: 'Centralized dashboard for complete control',
+        description:
+          'Automate transactions with self-executing agreements that reduce risks, eliminate intermediaries, and enhance trust in business dealings.',
+      },
+      {
+        title: 'Customer and restaurant management',
+        description:
+          'Build decentralized applications that operate on secure, peer-to-peer networks, offering greater transparency and user autonomy.',
+      },
+      {
+        title: 'Payment and revenue tracking',
+        description:
+          ' Design and manage blockchain tokens for fundraising, rewards programs, or custom cryptocurrency solutions.',
+      },
+      {
+        title: 'Data analytics for business insights',
+        description:
+          'Develop secure wallets for managing digital assets with advanced features like multi-currency support and enhanced encryption.',
+      },
+    ],
+  },
+  'Unique Features': {
+    title: 'Unique Features',
+    description: 'Comprehensive digital marketing solutions',
+    icon: '/assets/images/service/marketing.png',
+    mainDescription:
+      'Our digital marketing services are designed to boost your online visibility, attract the right audience, and generate measurable results through innovative, data-driven strategies.',
+    cards: [
+      {
+        title: 'AI-based order recommendations',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Multi-language support',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Geo-fencing for better delivery zones',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+      {
+        title: 'Loyalty programs and referral rewards',
+        description:
+          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+      },
+    ],
   },
 };

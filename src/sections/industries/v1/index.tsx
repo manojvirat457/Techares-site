@@ -1,6 +1,6 @@
 'use client';
 
-import { industriesSectionData } from '@/data/industries/v1';
+import { IndustriesSectionData } from '@/data/industries/v1';
 import { Card, CardContent } from '@/src/components/ui/card';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -50,8 +50,6 @@ function IndustryCard({
   );
 }
 
-type IndustriesSectionData = typeof industriesSectionData;
-
 export default function IndustriesSection({
   industriesSectionData,
 }: {
@@ -71,7 +69,7 @@ export default function IndustriesSection({
             </span>{' '}
             <span className="text-white">{industriesSectionData.title}</span>
           </h2>
-          <p className="mx-auto mb-6 max-w-2xl text-zinc-400">
+          <p className="mx-auto mb-6 max-w-2xl text-accent-200">
             {industriesSectionData.description}
           </p>
           {industriesSectionData?.detailedDescription && (

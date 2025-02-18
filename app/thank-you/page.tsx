@@ -37,13 +37,13 @@ export default function ThankYou() {
             priority
           />
           <section>
-            <h1 className="text-2xl font-bold leading-[1.11] text-zinc-100 lg:text-4xl">
+            <h1 className="text-2xl font-bold leading-[1.11] text-accent-100 lg:text-4xl">
               Thank You
             </h1>
             <p className="mt-6 text-md font-medium leading-[1.4] text-primary ">
               We have Received Your enquiry
             </p>
-            <p className="mt-6 text-md font-medium leading-[1.4] text-zinc-100 ">
+            <p className="mt-6 text-md font-medium leading-[1.4] text-accent-100 ">
               Our Business experts will contact you soon
             </p>
             <div className="mt-8 pt-4 lg:mt-10">

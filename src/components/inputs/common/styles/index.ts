@@ -10,7 +10,7 @@ export function inputFieldCommonClassesGenerator({
     'flex items-center min-h-[3.5rem]  md:min-h-[3.75rem] w-full rounded-5 px-4 md:px-5 py-2',
 
     // General styles
-    ' bg-transparent text-accent-800 placeholder:text-accent-800 dark:text-body dark:placeholder:text-body',
+    ' bg-transparent text-accent-800 placeholder:text-accent-200 dark:placeholder:text-body',
 
     // Border styles
     ' border border-solid border-accent-900 border-opacity-20 dark:border-opacity-20 dark:border-accent-200',

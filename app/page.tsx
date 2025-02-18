@@ -3,6 +3,7 @@ import {
   whyChooseSectionDataTwo,
 } from '@/data/about-section/v1';
 import { industriesSectionData } from '@/data/industries/v1';
+import { servicesData } from '@/data/service-section/v3';
 import { Footer } from '@/src/layout/footer/v1';
 import { MainHeader } from '@/src/layout/header';
 import { AboutSection } from '@/src/sections/about/v1';
@@ -25,7 +26,7 @@ export default function Page() {
       <MainHeader version="1" />
       <Hero />
       <AboutSection aboutSectionData={aboutSectionData} />
-      <ServicesSection />
+      <ServicesSection servicesData={servicesData} />
       <SolutionsSection />
       <CtaSection />
       <IndustriesSection

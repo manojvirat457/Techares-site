@@ -1,8 +1,10 @@
 import { faqSectionData } from '@/data/faq-section/v1';
 import { Button } from '@/src/components/button';
+import { ServiceCard } from '@/src/components/cards/service/v1';
 import { Container } from '@/src/components/container';
 import { CustomLink } from '@/src/components/custom-link';
 import { Card, CardContent } from '@/src/components/ui/card';
+import { H1, H2 } from '@/src/components/ui/doc/h-tag';
 import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { AboutSection } from '@/src/sections/about/v1';
@@ -10,19 +12,18 @@ import FAQSection from '@/src/sections/faq';
 import IndustriesSection from '@/src/sections/industries/v1';
 import { ProjectSection } from '@/src/sections/project/v3';
 import { ServiceSection } from '@/src/sections/service/v1';
+import ServicesSection from '@/src/sections/service/v3';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
 import { basicMetadata } from '@/src/utils/metadata';
+import { getStaggeredDelay } from '@/src/utils/set-staggered-delay';
 import { cn } from '@/src/utils/shadcn';
 import {
   ArrowRight,
-  Code2,
   Cog,
-  Icon,
   LayoutDashboard,
   MapPin,
   Navigation,
   Star,
-  Timer,
   Users,
 } from 'lucide-react';
 import Image from 'next/image';
@@ -30,13 +31,11 @@ import {
   latestUpdate,
   ourWorkFlowData,
   projectDetails,
+  servicesData,
   solutions,
   whyChooseSectionData,
 } from './-data';
-import styles from './taxi-booking.module.css';
-import { H1, H2 } from '@/src/components/ui/doc/h-tag';
-import { ServiceCard } from '@/src/components/cards/service/v1';
-import { getStaggeredDelay } from '@/src/utils/set-staggered-delay';
+import styles from './food-devliery.module.css';
 
 export const metadata = basicMetadata({
   title: 'TechAres | Taxi App Development Company',
@@ -71,11 +70,11 @@ export default function Page() {
             >
               <div className="space-y-6 py-52 md:space-y-8">
                 <H1 className="font-secondary text-2xl font-semibold uppercase leading-[1.1] md:text-3xl">
-                  Taxi App Development Company
+                  Food Delivery App Development Company
                 </H1>
                 <p className="text-accent-200">
-                  Revolutionizing Ride-Hailing Solutions with Cutting-Edge
-                  Technology
+                  Transform Your Food Business with a Powerful, Custom-Built
+                  App!
                 </p>
                 <Button asChild className={cn('rounded-full')}>
                   <CustomLink
@@ -83,7 +82,7 @@ export default function Page() {
                     href={''}
                     openNewTab={true}
                   >
-                    <span>{'Get Free quote'}</span>
+                    <span>{'Get started today!'}</span>
                     <svg
                       width={24}
                       height={9}
@@ -107,9 +106,7 @@ export default function Page() {
       <section className="px-4 py-20">
         <Container>
           <div className="container mx-auto ">
-            <h2 className="mb-16 text-center text-xl font-bold text-white md:text-2xl">
-              Solutions We Offer
-            </h2>
+            <h2 className="mb-16 text-center text-xl font-bold text-white md:text-2xl"></h2>
             <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row">
               {solutions && solutions.length > 0 && (
                 <div className="-mx-4 flex flex-wrap justify-center gap-y-30px">
@@ -133,6 +130,7 @@ export default function Page() {
           </div>
         </Container>
       </section>
+      <ServicesSection servicesData={servicesData} />
       {/* Development Method */}
       <section className="px-4 py-20">
         <Container>
@@ -177,25 +175,23 @@ export default function Page() {
 
               {/* Right side - Content */}
               <div className="xs:text-center space-y-8 md:space-y-12 lg:w-1/2">
-                {[
-                  {
-                    title: 'Development from scratch',
-                    description:
-                      'Our "From Scratch" Development method is ideal for businesses looking for a fully customized taxi app tailored to their brand identity, specific features, and unique operational needs. This approach gives you complete control over the app’s design, functionality, and scalability, ensuring that your solution stands out in the competitive ride-hailing market.',
-                  },
-                  {
-                    title: 'White Label Taxi App',
-                    description:
-                      'On the other hand, our White-Label Taxi App offers a faster, cost-effective solution with pre-built features that can be customized with your branding. This ready-made platform allows for quick deployment, making it an excellent choice for startups and businesses that want to enter the market swiftly without extensive development time. Both approaches come with robust security, seamless integrations, and scalability to support business growth.',
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="relative">
+                {[1, 2].map((item) => (
+                  <div key={item} className="relative">
                     {/* Decorative square */}
                     <div className="px-2 md:pl-12">
                       <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                        {item.title}
+                        Development from scratch
                       </h3>
-                      <p className="text-accent-200">{item.description}</p>
+                      <p className="text-accent-200">
+                        Our &quot;From Scratch&quot; Development method is ideal
+                        for businesses looking for a fully customized taxi app
+                        tailored to their brand identity, specific features, and
+                        unique operational needs. This approach gives you
+                        complete control over the app&apos;s design,
+                        functionality, and scalability, ensuring that your
+                        solution stands out in the competitive ride-hailing
+                        market.
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -288,7 +284,9 @@ export default function Page() {
       <section>
         <Container>
           <div className="mb-12 text-center  text-white">
-            <h2 className="mb-4 text-3xl font-bold">Latest Updates</h2>
+            <h2 className="mb-4 text-3xl font-bold">
+              Latest Updates of Our Food Delivery App
+            </h2>
             <p className="mx-auto max-w-2xl text-zinc-300">
               Continuous enhancements for better security, efficiency, and
               insights

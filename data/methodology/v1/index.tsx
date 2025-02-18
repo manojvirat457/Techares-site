@@ -32,7 +32,7 @@ export const methodologies: Methodology[] = [
       'Mapping user journeys and selecting optimal technologies to build the right solutions.',
     icon: <Users size={30} />,
     color: {
-      number: 'text-blue-400',
+      number: 'text-primary',
       iconBg: 'bg-blue-900/50',
     },
   },

@@ -1,15 +1,15 @@
 'use client';
 
-import { cn } from '@/lib/utils';
-import { Button, buttonVariants } from '@src/components/ui/button';
-import { Calendar, CalendarProps } from '@src/components/ui/calendar';
-import { Input } from '@src/components/ui/input';
+import { cn } from '@/src/utils/shadcn';
+import { Button, buttonVariants } from '@components/ui/button';
+import { Calendar, CalendarProps } from '@components/ui/calendar';
+import { Input } from '@components/ui/input';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@src/components/ui/popover';
-import { ScrollArea } from '@src/components/ui/scroll-area';
+} from '@components/ui/popover';
+import { ScrollArea } from '@components/ui/scroll-area';
 import { parseDate } from 'chrono-node';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import React from 'react';

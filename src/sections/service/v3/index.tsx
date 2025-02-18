@@ -1,6 +1,10 @@
 'use client';
 
-import { ServiceDetail, servicesData } from '@/data/service-section/v3';
+import {
+  ServiceData,
+  ServiceDetail,
+  servicesData,
+} from '@/data/service-section/v3';
 import { Container } from '@/src/components/container';
 import { Card } from '@/src/components/ui/card';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -26,7 +30,7 @@ function ServiceCard({ title, description }: ServiceCardProps) {
           <h3 className="text-md font-bold leading-[1.25] text-accent-900 dark:text-white md:text-lg">
             {title}
           </h3>
-          <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+          <p className="text-sm leading-relaxed text-zinc-500">{description}</p>
         </div>
       </Card>
     </motion.div>
@@ -65,7 +69,7 @@ function ServiceItem({
         </h2>
         <span
           className={`${
-            isActive ? 'text-zinc-100 ' : 'text-zinc-300'
+            isActive ? 'text-accent-100 ' : 'text-accent-300'
           } hidden text-sm md:block`}
         >
           {description}
@@ -75,11 +79,16 @@ function ServiceItem({
   );
 }
 
-export default function ServicesSection() {
+export default function ServicesSection({
+  servicesData,
+}: {
+  servicesData: ServiceData;
+}) {
   const [activeService, setActiveService] = useState<string>(
     'Custom Software Development'
   );
-  const currentService: ServiceDetail = servicesData[activeService];
+  const firstEntry = Object.entries(servicesData)[0];
+  const currentService: ServiceDetail = servicesData[firstEntry[0]];
 
   return (
     <div className="min-h-screen bg-zinc-950  py-20">
@@ -116,7 +125,7 @@ export default function ServicesSection() {
                 className="space-y-6"
               >
                 {/* <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{currentService.title}</h2> */}
-                <p className="mb-8 text-zinc-400">
+                <p className="mb-8 text-accent-800">
                   {currentService.mainDescription}
                 </p>
                 {/*

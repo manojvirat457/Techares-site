@@ -15,6 +15,7 @@ import ContactUsDialog from '@/src/sections/contact/v3';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import { H1 } from '@/src/components/ui/doc/h-tag';
 
 export interface HeroProps {
   items: {
@@ -77,10 +78,10 @@ export function Hero() {
                     )}
                   >
                     <div className="space-y-6 md:space-y-8">
-                      <h1 className="font-secondary text-2xl font-semibold uppercase leading-[1.1] md:text-3xl">
+                      <H1 className="font-secondary text-2xl font-semibold uppercase leading-[1.1] md:text-3xl">
                         {item.title}
-                      </h1>
-                      <p className="text-accent-800 dark:text-body">
+                      </H1>
+                      <p className="text-accent-200">
                         Transform your business with our cutting-edge cloud
                         application development services, designed to deliver
                         scalable, secure, and high-performance cloud solutions

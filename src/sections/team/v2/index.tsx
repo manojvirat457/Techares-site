@@ -7,11 +7,12 @@ import { teamSectionData } from '@/data/team-section/v2';
 export interface TeamSectionProps {
   sectionHeading: SectionHeadingWithoutStylingProps;
   description: string;
-  cards: TeamCardProps[];
+  cards?: TeamCardProps[];
 }
 
 export function TeamSection() {
   const { sectionHeading, cards, description } = teamSectionData;
+
   return (
     <section className="section-padding-primary !pb-0">
       <Container>

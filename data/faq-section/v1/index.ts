@@ -7,35 +7,24 @@ export const faqSectionData: FAQSectionProps = {
   },
   faqItems: [
     {
-      question: 'What services do you offer?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
+      question: 'How long does it take to develop a taxi app?',
+      answer: 'Typically, 4-6 months, depending on complexity.',
     },
     {
-      question: 'How can IT solutions benefit my business?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
+      question: 'Can the app be customized for specific needs?',
+      answer: 'Yes, we offer fully tailored solutions.',
     },
     {
-      question: 'What industries do you serve?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
+      question: 'Do you provide post-launch support?',
+      answer: 'Absolutely, we offer ongoing maintenance and updates.',
     },
     {
-      question: 'Are your services customizable?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
+      question: 'What payment options can be integrated?',
+      answer: 'Credit/debit cards, wallets, UPI, and more.',
     },
     {
-      question: 'How do you ensure data privacy in your solutions?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
-    },
-    {
-      question:
-        'Lorem Ipsum is simply ready to Ipsum is simplyprint print antype ?',
-      answer:
-        'Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loboAliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis  viverra laoreet augue mattis fmentum ullamcorper viverra laoreet Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros rti viverra laoreet matti ullamcorper posuere viverra ullamcorper posuere viverra .Aliquam eros ',
+      question: 'Can I integrate multiple cities into one app?',
+      answer: 'Yes, we build multi-city & multi-country solutions.',
     },
   ],
 };

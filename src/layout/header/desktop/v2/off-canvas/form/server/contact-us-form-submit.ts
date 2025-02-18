@@ -8,6 +8,7 @@ export async function contactUsFormSubmit(
   values: ContactUsSchemaType
 ): Promise<ServerActionResponse<boolean>> {
   const { name, email, subject, message } = values;
+
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST!, // SMTP server hostname

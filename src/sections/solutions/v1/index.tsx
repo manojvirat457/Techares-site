@@ -23,7 +23,7 @@ function CategoryButton({ title, isActive, onClick }: CategoryButtonProps) {
       className={`w-full rounded-lg p-4 text-left transition-all ${
         isActive
           ? 'bg-primary text-white'
-          : 'bg-white text-zinc-900 hover:bg-zinc-100'
+          : 'bg-white text-accent-900 hover:bg-zinc-100'
       }`}
     >
       {title}
@@ -35,7 +35,7 @@ function CategoryCard({ title, isActive, onClick }: CategoryButtonProps) {
   return (
     <Card
       onClick={onClick}
-      className={`flex h-16 w-[33%] items-center justify-center rounded-lg p-2 text-center   transition-all ${isActive ? 'bg-primary text-white' : 'bg-white text-zinc-900 '}`}
+      className={`flex h-16 w-[33%] items-center justify-center rounded-lg p-2 text-center   transition-all ${isActive ? 'bg-primary text-white' : 'bg-white text-accent-900 '}`}
     >
       <p className="text-center text-xs">{title}</p>
     </Card>
