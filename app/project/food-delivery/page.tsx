@@ -17,11 +17,12 @@ import { basicMetadata } from '@/src/utils/metadata';
 import { getStaggeredDelay } from '@/src/utils/set-staggered-delay';
 import { cn } from '@/src/utils/shadcn';
 import {
- faqSectionData, latestUpdate,
+ faqSectionData,
+ latestUpdate,
  projectDetails,
  servicesData,
  solutions,
- whyChooseSectionData
+ whyChooseSectionData,
 } from './-data';
 import styles from './food-devliery.module.css';
 
@@ -66,11 +67,11 @@ export default function Page() {
         </p>
         <Button asChild className={cn('rounded-full')}>
          <CustomLink
-          aria-label={'Get Free quote'}
+          aria-label={'Get Quote'}
           href={''}
           openNewTab={true}
          >
-          <span>{'Get started today!'}</span>
+          <span>{'Get Quote'}</span>
          </CustomLink>
         </Button>
        </div>
@@ -83,8 +84,15 @@ export default function Page() {
    <section className="px-4 py-20">
     <Container>
      <div className="container mx-auto ">
-      <h2 className="mb-8 text-center text-xl font-bold text-white md:text-2xl">{solutions.title}</h2>
-      <p className='text-center m mb-8'>{solutions.description}</p>
+      <h2 className="text-xl text-center font-bold text-white md:text-2xl">
+       {solutions?.title}{' '}
+       {solutions?.highlightedTitle && (
+        <span className="text-primary">
+         {solutions?.highlightedTitle}
+        </span>
+       )}
+      </h2>
+      <p className="m mb-8 text-center">{solutions.description}</p>
       <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row">
        {solutions && solutions.solutionCard.length > 0 && (
         <div className="-mx-4 flex flex-wrap justify-center gap-y-30px">
@@ -96,9 +104,7 @@ export default function Page() {
            className="w-full px-4 md:w-1/2 md:px-[15px]"
           >
            <ServiceCard
-            title={solution.title}
-            description={solution.description}
-            icon={solution.icon}
+            {...solution}
            />
           </div>
          ))}
@@ -108,20 +114,33 @@ export default function Page() {
      </div>
     </Container>
    </section>
-   <ServicesSection servicesData={servicesData} title={{ title: 'Features - Core Features of Our Food Delivery App' }} />
+   <ServicesSection
+    servicesData={servicesData}
+    title={{ title: 'Features -', highlightedTitle: " Core Features of Our Food Delivery App" }}
+   />
    {/* Latest Updates  */}
    <section>
     <Container>
      <div className="my-12 text-center  text-white">
-      <h2 className="mb-4 text-3xl font-bold">
-       Unique Features of Our Food Delivery App
+      <h2 className="text-xl text-center font-bold text-white md:text-2xl">
+       <span className="text-primary">
+        {"Unique Features "}
+       </span>{' '}
+       {"of Our Food Delivery App"}
       </h2>
+
      </div>
      <ServiceSection className="!pt-0" {...latestUpdate} />
     </Container>
    </section>
    <TestimonialSection />
-   <MethodologiesSection methodologies={methodologies} heading={{ title: 'Our Development', highlightedTitle: "Methodologies" }} />
+   <MethodologiesSection
+    methodologies={methodologies}
+    heading={{
+     title: 'Our Development',
+     highlightedTitle: 'Methodologies',
+    }}
+   />
    <AboutSection aboutSectionData={whyChooseSectionData} />
    <FAQSection faqSectionData={faqSectionData} />
    <Footer />

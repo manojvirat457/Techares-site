@@ -6,7 +6,17 @@ import { AboutSectionProps } from '@/src/sections/about/v1';
 import { FAQSectionProps } from '@/src/sections/faq';
 import { ServiceSectionProps } from '@/src/sections/service/v1';
 import { TeamSectionProps } from '@/src/sections/team/v2';
-import { Calendar, Clock, Code2, Crown, HandCoins, Scale3d, SendToBack, UserPlus, Users } from 'lucide-react';
+import {
+ Calendar,
+ Clock,
+ Code2,
+ Crown,
+ HandCoins,
+ Scale3d,
+ SendToBack,
+ UserPlus,
+ Users,
+} from 'lucide-react';
 import { ImageProps } from 'next/image';
 
 export const whyChooseSectionData: AboutSectionProps = {
@@ -38,7 +48,8 @@ export const whyChooseSectionData: AboutSectionProps = {
  },
  sectionHeading: {
   subtitle: 'WHY US',
-  title: ' Why Choose TechAres',
+  title: ' TechAres',
+  highlighttitle: "Why Choose",
   description:
    "At TechAres, we specialize in developing custom food delivery apps tailored to your business needs. With years of expertise, we craft feature-rich, scalable, and secure solutions using the latest technologies. Our end-to-end services cover everything from app design to deployment and ongoing support. We focus on delivering high-quality user experiences and business efficiency, ensuring long-term value and growth for your food delivery platform. Whether you're a startup or an established brand, we collaborate closely with you to create solutions that drive success and exceed expectations.",
  },
@@ -48,29 +59,29 @@ export const whyChooseSectionData: AboutSectionProps = {
    title: 'Experienced Developers',
    description:
     'Our team has expertise in developing high-performing food delivery apps.',
-   icon: <UserPlus />
+   icon: <UserPlus />,
   },
   {
    title: 'End-to-End Solutions',
    description: 'From design to launch, we handle everything.',
-   icon: <SendToBack />
+   icon: <SendToBack />,
   },
   {
    title: 'Scalable Architecture',
    description:
     'Grow your business without worrying about technology limitations.',
-   icon: <Scale3d />
+   icon: <Scale3d />,
   },
   {
    title: 'Cost-Effective Development',
    description: 'Affordable plans with high ROI.',
-   icon: <HandCoins />
+   icon: <HandCoins />,
   },
  ],
  button: {
-  href: "/contact-us",
-  label: "Talk to Experts",
- }
+  href: '/contact-us',
+  label: 'Talk to Experts',
+ },
 };
 
 export const ourWorkFlow: Industry[] = [
@@ -163,7 +174,7 @@ export const latestUpdate: ServiceSectionProps = {
    icon: <Icon1 />,
    title: 'AI-Powered Order Recommendations',
    description:
-    "Enhance user experience with AI-driven suggestions based on past orders, preferences, and trending items. This smart feature boosts customer engagement and increases order value.",
+    'Enhance user experience with AI-driven suggestions based on past orders, preferences, and trending items. This smart feature boosts customer engagement and increases order value.',
   },
   {
    icon: <Icon2 />,
@@ -181,28 +192,34 @@ export const latestUpdate: ServiceSectionProps = {
 };
 
 export const solutions = {
- title: 'Development Methods',
- description: "At TechAres, we provide two flexible approaches to food delivery app development, catering to different business needs and goals. Whether you're looking for a fully customized solution or a quick-to-market option, we have the right development method for you",
+ title: 'Development ',
+ highlightedTitle: "Methods",
+ description:
+  "At TechAres, we provide two flexible approaches to food delivery app development, catering to different business needs and goals. Whether you're looking for a fully customized solution or a quick-to-market option, we have the right development method for you",
  solutionCard: [
   {
    title: 'From Scratch',
    description:
     'For businesses seeking a unique and highly tailored solution, we develop food delivery apps from the ground up. This approach ensures complete control over features, UI/UX design, and third-party integrations, allowing you to create a truly distinctive platform that aligns with your vision.',
    icon: <Icon3 />,
+   slug: '/service-details',
+   btnText: "Get Quote"
   },
   {
    title: 'White Label Food Delivery App',
    description:
     'If speed to market is a priority, our white-label food delivery app is the perfect solution. This ready-made platform comes with essential pre-built features, customizable branding, and seamless integrations, allowing businesses to launch quickly with minimal development time while maintaining flexibility for future enhancements.',
    icon: <Icon3 />,
+   slug: '/service-details',
+   btnText: "Get Demo"
   },
- ]
+ ],
 };
 
 export const faqSectionData: FAQSectionProps = {
  sectionHeading: {
   subtitle: 'Our faq',
-  title: 'Frequently asked question',
+  title: 'Frequently Asked Questions',
  },
  faqItems: [
   {
@@ -245,7 +262,8 @@ export interface ProjectDetailsProps {
 export const projectDetails: ProjectDetailsProps = {
  sectionHeading: {
   subtitle: ' High Performing Food Delivery App',
-  title: 'Our Expertise in Food Delivery App Development',
+  title: ' in Food Delivery App Development',
+  highlighttitle: "Our Expertise",
   description:
    "TechAres specializes in creating robust and scalable food delivery app development solutions that streamline restaurant operations, enhance customer experience, and drive business growth. With our expertise, we craft highly functional and engaging apps tailored to your business needs. Our solutions ensure seamless order management, real-time tracking, and secure payments, helping businesses grow with efficiency and innovation. Whether you're a startup or an enterprise, we tailor apps to your unique needs.",
  },
@@ -374,10 +392,6 @@ export const servicesData: ServiceData = {
   ],
  },
 };
-
-
-
-
 
 export const methodologies: Methodology[] = [
  {

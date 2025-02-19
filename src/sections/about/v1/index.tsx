@@ -91,6 +91,19 @@ export function AboutSection({
          ))}
        </ul>
       }
+      <div className='flex flex-1 justify-center items-center'>
+       {button && (
+        <Button asChild className={cn('mt-20 rounded-full')}>
+         <CustomLink
+          aria-label={button.label}
+          href={button.href}
+          openNewTab={button.openNewTab}
+         >
+          <span>{button.label}</span>
+         </CustomLink>
+        </Button>
+       )}
+      </div>
      </div>
 
      {images && !screenSize.equals('xs') ? (
@@ -180,17 +193,6 @@ export function AboutSection({
           </div>
          </div>
         </div>
-        {button && (
-         <Button asChild className={cn('mt-20 rounded-full')}>
-          <CustomLink
-           aria-label={button.label}
-           href={button.href}
-           openNewTab={button.openNewTab}
-          >
-           <span>{button.label}</span>
-          </CustomLink>
-         </Button>
-        )}
        </div>
       </>
      ) : (

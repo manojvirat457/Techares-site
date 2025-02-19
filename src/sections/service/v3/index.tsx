@@ -79,7 +79,7 @@ export default function ServicesSection({
 }: {
  servicesData: ServiceData;
  title: {
-  title: string,
+  title?: string;
   highlightedTitle?: string;
  };
 }) {
@@ -96,8 +96,12 @@ export default function ServicesSection({
       {/* Left Column */}
       <div className="space-y-4">
        <h2 className="text-xl font-bold text-white md:text-2xl">
-        {title.title}{' '}
-        {title.highlightedTitle && <span className="text-primary-light">{title.highlightedTitle}</span>}
+        {title.title && title.title}{' '}
+        {title.highlightedTitle && (
+         <span className="text-primary">
+          {title.highlightedTitle}
+         </span>
+        )}
        </h2>
        <div className="space-y-2">
         {Object.entries(servicesData).map(([key, service]) => (

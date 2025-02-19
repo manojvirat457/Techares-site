@@ -27,7 +27,10 @@ export default function Page() {
    <MainHeader version="1" />
    <Hero />
    <AboutSection aboutSectionData={aboutSectionData} />
-   <ServicesSection servicesData={servicesData} title={{ title: "Techares&apos;", highlightedTitle: 'Services' }} />
+   <ServicesSection
+    servicesData={servicesData}
+    title={{ title: "Techares's", highlightedTitle: 'Services' }}
+   />
    <SolutionsSection />
    <CtaSection />
    <IndustriesSection
@@ -35,7 +38,13 @@ export default function Page() {
     itemsPerRow={4}
    />
    <TestimonialSection />
-   <MethodologiesSection methodologies={methodologies} heading={{ title: 'Our Development', highlightedTitle: "Methodologies" }} />
+   <MethodologiesSection
+    methodologies={methodologies}
+    heading={{
+     title: 'Our Development',
+     highlightedTitle: 'Methodologies',
+    }}
+   />
    <TechnologiesSection />
    <ProjectSection projectDetails={whyChooseSectionDataTwo} />
    <ContactSection />

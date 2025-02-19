@@ -293,6 +293,28 @@ export default function Page() {
    />
    <AboutSection aboutSectionData={whyChooseSectionData} />
    <FAQSection faqSectionData={faqSectionData} />
+   <section className={cn(
+    'bg-accent-700 bg-cover bg-no-repeat bg-blend-luminosity [background-position:top_center] [transform:scale(1)] [transition:7000ms_ease,opacity_1500ms_ease-in]',
+    // before
+    'before:absolute before:inset-0 before:bg-[#EDF8FE] before:opacity-80  dark:before:bg-accent-900',
+    // after
+    'after:absolute after:inset-0  after:[background:linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]  dark:after:[background:linear-gradient(180deg,rgba(20,20,22,0.00)_0%,#141416_100%)]'
+   )}
+    style={{
+     backgroundImage: `url(${'/assets/images/hero/hero-1.png'})`,
+    }}>
+    <Container>
+     <div className="container mx-auto h-96">
+      <h2 className="text-xl text-center font-bold text-white md:text-2xl">
+       <span className="text-primary">
+        {"Unique Features - "}
+       </span>{' '}
+       {"Enhancing the Ride- Experience"}
+      </h2>
+      <p className="m mb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa rem id debitis, aliquid exercitationem illo repellendus accusantium? Veritatis maxime, repudiandae unde recusandae blanditiis quo soluta eveniet. Rerum officiis dolor fugiat! Voluptatem nemo praesentium excepturi nulla error quos, eos, deleniti doloremque temporibus necessitatibus quas consectetur accusantium veniam similique voluptatibus numquam aliquid!</p>
+     </div>
+    </Container>
+   </section>
    {/* <section className="relative overflow-hidden  py-20">
     <Container>
      <div className="container mx-auto z-99">
@@ -372,7 +394,6 @@ export default function Page() {
     </Container>
    </section> */}
    {/* Unique Feature Section Here */}
-
    {/* <WorkprocessSection /> */}
    <Footer />
   </>
