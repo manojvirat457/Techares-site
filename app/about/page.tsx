@@ -1,5 +1,4 @@
 import { aboutSectionData } from '@/data/about-section/v1';
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { AboutSection } from '@/src/sections/about/v1';
 import { AboutSection as AboutSectionTwo } from '@/src/sections/about/v2';
@@ -11,32 +10,32 @@ import { WorkprocessSection } from '@/src/sections/work-process/v1';
 import { basicMetadata } from '@/src/utils/metadata';
 
 export const metadata = basicMetadata({
- title: 'TechAres | About',
- description: 'TechAres - IT Solutions and Services React Nextjs Template',
+  title: 'TechAres | About',
+  description: 'TechAres - IT Solutions and Services React Nextjs Template',
 });
 
 export default function Page() {
- return (
-  <>
-   <MainHeader version="2" />
-   <HeroSection
-    title="About Us"
-    breadcrumbItems={[
-     {
-      label: 'Home',
-      href: '/',
-     },
-     {
-      label: 'About',
-     },
-    ]}
-   />
-   <AboutSection aboutSectionData={aboutSectionData} />
-   <CtaSection />
-   <TestimonialSection />
-   <StatisticsSection />
-   <AboutSectionTwo />
-   <WorkprocessSection />
-  </>
- );
+  return (
+    <>
+      <MainHeader version="2" />
+      <HeroSection
+        title="About Us"
+        breadcrumbItems={[
+          {
+            label: 'Home',
+            href: '/',
+          },
+          {
+            label: 'About',
+          },
+        ]}
+      />
+      <AboutSection aboutSectionData={aboutSectionData} />
+      <CtaSection />
+      <TestimonialSection />
+      <StatisticsSection />
+      <AboutSectionTwo />
+      <WorkprocessSection />
+    </>
+  );
 }

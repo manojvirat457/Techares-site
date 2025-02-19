@@ -138,8 +138,8 @@ export const SmartDatetimeInput = React.forwardRef<
 >(({ className, value, onValueChange, placeholder, disabled }, ref) => {
   // ? refactor to be only used with controlled input
   /*  const [dateTime, setDateTime] = React.useState<Date | undefined>(
-   value ?? undefined
- ); */
+  value ?? undefined
+); */
 
   const [Time, setTime] = React.useState<string>('');
 
