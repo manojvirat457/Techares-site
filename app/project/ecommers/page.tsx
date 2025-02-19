@@ -1,8 +1,6 @@
 import { methodologies } from '@/data/methodology/v1';
 import { ServiceCard } from '@/src/components/cards/service/v1';
 import { Container } from '@/src/components/container';
-import { Footer } from '@/src/layout/footer/v2';
-import { MainHeader } from '@/src/layout/header';
 import { AboutSection } from '@/src/sections/about/v1';
 import FAQSection from '@/src/sections/faq';
 import { HeroSection } from '@/src/sections/hero/v4/index.tsx';
@@ -31,9 +29,10 @@ export const metadata = basicMetadata({
 export default function Page() {
  return (
   <>
-   <MainHeader version="1" />
-   <HeroSection backgroundImage={'/assets/images/hero/hero-1.png'} description='Leverage the latest technologies and platforms like Shopify and WooCommerce to ensure your ecommerce solution is robust, scalable, and user-friendly.'
-    title='Ecommerce App Development Company'
+   <HeroSection
+    backgroundImage={'/assets/images/hero/hero-1.png'}
+    description="Leverage the latest technologies and platforms like Shopify and WooCommerce to ensure your ecommerce solution is robust, scalable, and user-friendly."
+    title="Ecommerce App Development Company"
     button={{
      href: '',
      label: 'Get Quote',
@@ -88,7 +87,11 @@ export default function Page() {
        <span className="text-primary">{'Advanced Features '}</span>{' '}
        {'of Our Ecommerce Platform'}
       </h2>
-      <p>{"Our Advanced Mobile E-Commerce App Development Features To 10X Your Business Growth"}</p>
+      <p>
+       {
+        'Our Advanced Mobile E-Commerce App Development Features To 10X Your Business Growth'
+       }
+      </p>
      </div>
      <ServiceSection className="!pt-0" {...latestUpdate} />
     </Container>
@@ -103,7 +106,7 @@ export default function Page() {
    />
    <AboutSection aboutSectionData={whyChooseSectionData} />
    <FAQSection faqSectionData={faqSectionData} />
-   <Footer />
+
   </>
  );
 }
