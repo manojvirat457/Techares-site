@@ -1,6 +1,6 @@
 import {
-  aboutSectionData,
-  whyChooseSectionDataTwo,
+ aboutSectionData,
+ whyChooseSectionDataTwo,
 } from '@/data/about-section/v1';
 import { industriesSectionData } from '@/data/industries/v1';
 import { methodologies } from '@/data/methodology/v1';
@@ -20,31 +20,31 @@ import { basicMetadata } from '@/src/utils/metadata';
 export const metadata = basicMetadata({});
 
 export default function Page() {
-  return (
-    <>
-      <Hero />
-      <AboutSection aboutSectionData={aboutSectionData} />
-      <ServicesSection
-        servicesData={servicesData}
-        title={{ title: "Techares's", highlightedTitle: 'Services' }}
-      />
-      <SolutionsSection />
-      <CtaSection />
-      <IndustriesSection
-        industriesSectionData={industriesSectionData}
-        itemsPerRow={4}
-      />
-      <TestimonialSection />
-      <MethodologiesSection
-        methodologies={methodologies}
-        heading={{
-          title: 'Our Development',
-          highlightedTitle: 'Methodologies',
-        }}
-      />
-      <TechnologiesSection />
-      <ProjectSection projectDetails={whyChooseSectionDataTwo} />
-      <ContactSection />
-    </>
-  );
+ return (
+  <>
+   <Hero />
+   <AboutSection aboutSectionData={aboutSectionData} />
+   <ServicesSection
+    servicesData={servicesData}
+    title={{ title: "Techares's", highlightedTitle: 'Services' }}
+   />
+   <SolutionsSection />
+   <CtaSection />
+   <IndustriesSection
+    industriesSectionData={industriesSectionData}
+    itemsPerRow={4}
+   />
+   <TestimonialSection />
+   <MethodologiesSection
+    methodologies={methodologies}
+    heading={{
+     title: 'Our Development',
+     highlightedTitle: 'Methodologies',
+    }}
+   />
+   <TechnologiesSection />
+   <ProjectSection projectDetails={whyChooseSectionDataTwo} />
+   <ContactSection />
+  </>
+ );
 }
