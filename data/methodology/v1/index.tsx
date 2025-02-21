@@ -15,9 +15,9 @@ export const methodologies: Methodology[] = [
   {
     id: 'discovery',
     number: '01',
-    title: 'Discovery and Requirement Gathering',
+    title: 'Requirement Analysis',
     description:
-      'In-depth analysis of your business needs to set clear, actionable goals.',
+      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements to define the app’s scope and features. This ensures a tailored solution that aligns with your business objectives.',
     icon: <Clock size={30} />,
     color: {
       number: 'text-emerald-400',
@@ -27,21 +27,21 @@ export const methodologies: Methodology[] = [
   {
     id: 'planning',
     number: '02',
-    title: 'Planning and Strategy',
+    title: 'UI/UX Design & Prototyping',
     description:
-      'Mapping user journeys and selecting optimal technologies to build the right solutions.',
+      'Our designers create intuitive wireframes and prototypes for a seamless user experience. We focus on smooth navigation, appealing visuals, and easy ordering to enhance customer engagement. The design is optimized for both iOS and Android platforms.',
     icon: <Users size={30} />,
     color: {
-      number: 'text-blue-400',
+      number: 'text-primary',
       iconBg: 'bg-blue-900/50',
     },
   },
   {
     id: 'development',
     number: '03',
-    title: 'Development and Coding',
+    title: 'App Development',
     description:
-      'Delivering robust, scalable solutions with innovative coding practices.',
+      'Our developers build the frontend, backend, and integrate third-party APIs using the latest technologies. We follow an agile development approach, ensuring high performance, scalability, and security. The app is developed to support seamless ordering, tracking, and payments',
     icon: <Code2 size={30} />,
     color: {
       number: 'text-cyan-400',
@@ -51,9 +51,9 @@ export const methodologies: Methodology[] = [
   {
     id: 'testing',
     number: '04',
-    title: 'Testing and Quality Assurance',
+    title: 'Testing & Quality Assurance',
     description:
-      'Ensuring flawless performance through rigorous, end-to-end testing.',
+      'We conduct rigorous testing to ensure the app is bug-free, secure, and responsive. Our QA team performs functional, performance, and security tests for a flawless user experience. The goal is to deliver a stable and reliable application.',
     icon: <Crown size={30} />,
     color: {
       number: 'text-yellow-400',
@@ -63,9 +63,9 @@ export const methodologies: Methodology[] = [
   {
     id: 'deployment',
     number: '05',
-    title: 'Deployment and Launch',
+    title: 'Deployment & Maintenance',
     description:
-      'Seamlessly deploying your product, ensuring optimal functionality and readiness for users.',
+      'Once tested, we launch the app on Google Play Store and Apple App Store. Post-launch, we provide regular updates, bug fixes, and performance optimizations. Our team ensures continuous support to keep your app running smoothly.',
     icon: <Calendar size={30} />,
     color: {
       number: 'text-red-400',

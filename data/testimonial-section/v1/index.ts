@@ -16,7 +16,7 @@ export const testimonialSectionData: TestimonialSectionProps = {
         about: 'Media and Entertainment',
       },
       speech:
-        'Techares truly understand the fast-paced media landscape. Their team delivered a high-performance streaming platform with seamless content management. What impressed me most was their ability to listen to our unique needs and provide a scalable, cost-effective solution. Their tech expertise and friendly business approach made the entire process smooth and efficient.',
+        'Techares built a high-performance streaming platform tailored to our needs. Their expertise, scalability, and seamless execution made the process smooth and efficient!',
       rating: 4,
     },
     {
@@ -29,7 +29,7 @@ export const testimonialSectionData: TestimonialSectionProps = {
         about: 'Fintech',
       },
       speech:
-        'Security, speed, and reliability are crucial in fintech, and Techares nailed it! They developed a robust trading analytics system that exceeded our expectations. Their team was highly responsive, understood our compliance requirements, and provided innovative solutions at an affordable cost. A true tech partner for scaling businesses!',
+        'Techares delivered a secure, fast, and reliable trading analytics system. Their compliance knowledge and innovative approach make them a true fintech partner!',
       rating: 5,
     },
     {
@@ -42,7 +42,7 @@ export const testimonialSectionData: TestimonialSectionProps = {
         about: 'E-Commerce and Retail',
       },
       speech:
-        'From UI/UX to backend performance, Techares optimized our e-commerce platform for maximum efficiency. Their experts took the time to understand our business needs, ensuring a seamless shopping experience for our customers. The affordability and technical excellence they bring to the table are unmatched. Highly recommended!',
+        'Techares optimized our e-commerce platform for a seamless shopping experience. Their technical excellence and affordability are unmatched!',
       rating: 4,
     },
     {
@@ -55,7 +55,7 @@ export const testimonialSectionData: TestimonialSectionProps = {
         about: 'On-Demand Solutions',
       },
       speech:
-        "We needed a scalable on-demand platform, and Techares delivered beyond expectations. Their ability to translate our vision into a user-friendly, high-performing application was remarkable. The team was approachable, proactive, and always open to feedback. If you're looking for a tech partner who listens and delivers, Techares is the answer!",
+        'Techares transformed our vision into a user-friendly, high-performing app. A proactive team that truly listens and delivers!',
       rating: 5,
     },
   ],

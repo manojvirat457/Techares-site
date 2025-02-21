@@ -1,4 +1,3 @@
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { CtaSection } from '@/src/sections/cta/v1';
 import { HeroSection } from '@/src/sections/hero/v3';
@@ -28,7 +27,6 @@ export default function Page() {
       />
       <TestimonialSection />
       <CtaSection className="section-padding-primary !pt-0" />
-      <Footer />
     </>
   );
 }

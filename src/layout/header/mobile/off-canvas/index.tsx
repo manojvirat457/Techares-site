@@ -9,7 +9,7 @@ import {
 import { cn } from '@/src/utils/shadcn';
 import { X } from 'lucide-react';
 import Image from 'next/image';
-import logoLight from 'public/assets/images/brand/logo.png';
+import logoLight from 'public/assets/images/brand/logo.webp';
 import {
   FaEnvelope,
   FaFacebookF,
@@ -146,33 +146,7 @@ export function OffCanvas({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                     {contactInfo.mail}
                   </a>
                 </li>
-                {/* <li className={addressItemClasses}>
-         <span className={addressIconParentClasses}>
-          <FaMapMarkerAlt />
-         </span>
-         <address className={cn(textColor, 'not-italic')}>
-          {contactInfo.location}
-         </address>
-        </li> */}
               </ul>
-              {/* {socialLinks && socialLinks.length > 0 && (
-        <nav aria-label="social links">
-         <ul className="mt-8 inline-flex items-center gap-2.5 pb-10">
-          {socialLinks.map((socialLink, index) => (
-           <li key={index}>
-            <CustomLink
-             aria-label={socialLink.href}
-             className={socialIconClasses}
-             href={socialLink.href}
-             openNewTab
-            >
-             <span>{socialLink.icon}</span>
-            </CustomLink>
-           </li>
-          ))}
-         </ul>
-        </nav>
-       )} */}
             </div>
           </div>
         </ScrollArea>

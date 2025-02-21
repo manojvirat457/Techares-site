@@ -141,7 +141,7 @@ export function CtaSection() {
         </div>
       </Container>
       <Image
-        src="/assets/images/cta/pattern-2.png"
+        src="/assets/images/cta/pattern-2.webp"
         alt="cta section bg pattern"
         width={429}
         height={359}

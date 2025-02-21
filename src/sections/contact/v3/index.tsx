@@ -46,8 +46,10 @@ export default function ContactUsDialog({
           {/* Right side - Form */}
           <div className="bg-black p-8">
             <DialogHeader className="mb-6">
-              <div className="mb-2 font-medium text-blue-500">TALK TO US</div>
-              <DialogTitle className="mb-2 text-xl font-bold text-white">
+              <div className="mb-2 font-medium text-primary-light">
+                TALK TO US
+              </div>
+              <DialogTitle className="mb-2 text-xl  font-bold">
                 Unleash the Power of Technology
               </DialogTitle>
               <DialogDescription className="mb-6 text-gray-400">

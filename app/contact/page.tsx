@@ -1,5 +1,3 @@
-import { Footer } from '@/src/layout/footer/v2';
-import { MainHeader } from '@/src/layout/header';
 import { ContactSection } from '@/src/sections/contact/v2';
 import { HeroSection } from '@/src/sections/hero/v3';
 import { MapSection } from '@/src/sections/map-section';
@@ -14,7 +12,6 @@ export default function Page() {
   return (
     <>
       {/* <MainHeader version="2" /> */}
-      <MainHeader version="1" />
       <HeroSection
         title="Contact Us"
         breadcrumbItems={[
@@ -29,7 +26,6 @@ export default function Page() {
       />
       <ContactSection />
       <MapSection />
-      <Footer />
     </>
   );
 }

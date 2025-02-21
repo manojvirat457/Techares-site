@@ -77,7 +77,7 @@ export function ServiceCard({
             {title}
           </CustomLink>
         </h3>
-        <p className="mb-2.5 text-accent-800 dark:text-body">{description}</p>
+        <p className="mb-2.5 text-accent-200">{description}</p>
         <CustomLink
           href={slug}
           className={cn(

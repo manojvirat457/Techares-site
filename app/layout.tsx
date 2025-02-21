@@ -1,12 +1,14 @@
 import { primary, secondary } from '@/fonts';
 import { ScrollToTopButton } from '@/src/components/scroll-to-top';
 import { ThemeProvider } from '@/src/components/theme-provider';
+import { Footer } from '@/src/layout/footer/v1';
+import { MainHeader } from '@/src/layout/header';
 import { AOSInit } from '@/src/utils/aos';
 import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Toaster } from 'sonner';
 import './globals.css';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 interface Props {
   children: React.ReactNode;
@@ -39,7 +41,9 @@ export default async function RootLayout({ children }: Props) {
               'bg-white text-accent-800 dark:bg-accent-900 dark:text-body'
             )}
           >
+            <MainHeader />
             <main>{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
         <Toaster

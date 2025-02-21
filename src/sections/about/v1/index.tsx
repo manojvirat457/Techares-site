@@ -9,7 +9,7 @@ import { useScreenSize } from '@/src/hooks/use-screen-size';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 
-import patternOne from 'public/assets/images/about/pattern-1.png';
+import patternOne from 'public/assets/images/about/pattern-1.webp';
 import { FaCircleCheck } from 'react-icons/fa6';
 
 export interface AboutSectionProps {
@@ -76,7 +76,7 @@ export function AboutSection({
                     <li className="lg:order-2" key={index}>
                       <h3 className="flex items-center gap-3 lg:gap-4">
                         <span className="text-lg text-primary">
-                          <FaCircleCheck />
+                          {keyPoint.icon ? keyPoint.icon : <FaCircleCheck />}
                         </span>
                         <span className="block font-secondary text-md font-bold leading-[1] text-accent-900 dark:text-white">
                           {keyPoint.title}
@@ -91,6 +91,19 @@ export function AboutSection({
                   ))}
               </ul>
             }
+            <div className="flex flex-1 items-center justify-center">
+              {button && (
+                <Button asChild className={cn('mt-20 rounded-full')}>
+                  <CustomLink
+                    aria-label={button.label}
+                    href={button.href}
+                    openNewTab={button.openNewTab}
+                  >
+                    <span>{button.label}</span>
+                  </CustomLink>
+                </Button>
+              )}
+            </div>
           </div>
 
           {images && !screenSize.equals('xs') ? (
@@ -180,26 +193,6 @@ export function AboutSection({
                     </div>
                   </div>
                 </div>
-                {button && (
-                  <Button asChild className={cn('mt-20 rounded-full')}>
-                    <CustomLink
-                      aria-label={button.label}
-                      href={button.href}
-                      openNewTab={button.openNewTab}
-                    >
-                      <span>{button.label}</span>
-                      <svg
-                        width={24}
-                        height={9}
-                        viewBox="0 0 28 9"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M27.7911 5.02543C27.9863 4.83016 27.9863 4.51358 27.7911 4.31832L24.6091 1.13634C24.4138 0.941077 24.0972 0.941077 23.902 1.13634C23.7067 1.3316 23.7067 1.64818 23.902 1.84345L26.7304 4.67187L23.902 7.5003C23.7067 7.69556 23.7067 8.01214 23.902 8.20741C24.0972 8.40267 24.4138 8.40267 24.6091 8.20741L27.7911 5.02543ZM0.4375 5.17188L27.4375 5.17187L27.4375 4.17187L0.4375 4.17188L0.4375 5.17188Z" />
-                      </svg>
-                    </CustomLink>
-                  </Button>
-                )}
               </div>
             </>
           ) : (

@@ -1,7 +1,7 @@
 import { CustomLink } from '@/src/components/custom-link';
 import Image from 'next/image';
 
-import logoDark from 'public/assets/images/brand/logo-dark.png';
+import logoDark from 'public/assets/images/brand/logo-dark.webp';
 
 export function BrandLogo() {
   return (
@@ -11,11 +11,10 @@ export function BrandLogo() {
         src={logoDark.src}
         width={logoDark.width}
         height={120}
-        // placeholder="blur"
-        // blurDataURL={logoDark.blurDataURL}
+        placeholder="blur"
+        blurDataURL={logoDark.blurDataURL}
         alt={`${process.env.NEXT_PUBLIC_SITE_NAME} brand logo`}
         sizes="100vw"
-        priority
       />
     </CustomLink>
   );

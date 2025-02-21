@@ -1,5 +1,4 @@
 import { aboutSectionData } from '@/data/about-section/v1';
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { AboutSection } from '@/src/sections/about/v1';
 import { AboutSection as AboutSectionTwo } from '@/src/sections/about/v2';
@@ -37,7 +36,6 @@ export default function Page() {
       <StatisticsSection />
       <AboutSectionTwo />
       <WorkprocessSection />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { faqSectionData } from '@/data/faq-section/v1';
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import FAQSection from '@/src/sections/faq';
 import { HeroSection } from '@/src/sections/hero/v3';
@@ -27,7 +26,6 @@ export default function Page() {
         ]}
       />
       <FAQSection faqSectionData={faqSectionData} />
-      <Footer />
     </>
   );
 }

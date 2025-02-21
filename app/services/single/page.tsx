@@ -1,4 +1,3 @@
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { HeroSection } from '@/src/sections/hero/v3';
 import { ServiceDetailsSection } from '@/src/sections/service-details/v1';
@@ -26,7 +25,6 @@ export default function Page() {
         ]}
       />
       <ServiceDetailsSection />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 'use client';
-import { ProjectDetailsProps } from '@/data/project-section/taxi-booking';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
@@ -7,6 +6,9 @@ import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 import { FaCircleCheck } from 'react-icons/fa6';
 import styles from './project-v3.module.css';
+import { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
+import { Button } from '@/src/components/button';
+import { CustomLink } from '@/src/components/custom-link';
 const cursorStyle = cn(`cursor-pointer`);
 export function ProjectSection({
   projectDetails,
@@ -121,6 +123,11 @@ export function ProjectSection({
                   ))}
               </ul>
             }
+            <Button asChild className={cn('rounded-full')}>
+              <CustomLink aria-label={'Get Demo'} href={''} openNewTab={true}>
+                <span>{'Get Demo'}</span>
+              </CustomLink>
+            </Button>
           </div>
         </div>
       </Container>

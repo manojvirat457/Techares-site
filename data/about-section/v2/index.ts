@@ -16,7 +16,7 @@ export const aboutSectionData: AboutSectionProps = {
     'Knew About Fonts',
   ],
   image: {
-    src: '/assets/images/about/about-5.png',
+    src: '/assets/images/about/about-5.webp',
     alt: 'about image five',
   },
   videoUrl: 'https://www.youtube.com/embed/SxVmSQaPc4E',

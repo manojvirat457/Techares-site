@@ -1,29 +1,29 @@
-import { ProjectDetailsProps } from '@/data/project-section/taxi-booking';
+import { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
 import { AboutSectionProps } from '@/src/sections/about/v1';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
 
 export const aboutSectionData: AboutSectionProps = {
   images: {
     image1: {
-      src: '/assets/images/about/about-1.png',
+      src: '/assets/images/about/about-1.webp',
       alt: 'about one',
       width: 195,
       height: 132,
     },
     image2: {
-      src: '/assets/images/about/about-2.png',
+      src: '/assets/images/about/about-2.webp',
       alt: 'about two',
       width: 312,
       height: 304,
     },
     image3: {
-      src: '/assets/images/about/about-3.png',
+      src: '/assets/images/about/about-3.webp',
       alt: 'about three',
       width: 250,
       height: 265,
     },
     image4: {
-      src: '/assets/images/about/about-4.png',
+      src: '/assets/images/about/about-4.webp',
       alt: 'about four',
       width: 250,
       height: 265,
@@ -148,7 +148,7 @@ export const whyChooseSectionDataTwo: ProjectDetailsProps = {
     },
   ],
   image: {
-    src: '/assets/images/about/whychoose.png',
+    src: '/assets/images/about/whychoose.webp',
     alt: 'about image five',
   },
   description:

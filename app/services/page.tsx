@@ -1,5 +1,4 @@
 import { serviceSectionData } from '@/data/service-section/v1/service-list-page';
-import { Footer } from '@/src/layout/footer/v2';
 import { MainHeader } from '@/src/layout/header';
 import { HeroSection } from '@/src/sections/hero/v3';
 import { ServiceSection } from '@/src/sections/service/v1';
@@ -27,7 +26,6 @@ export default function Page() {
         ]}
       />
       <ServiceSection {...serviceSectionData} />
-      <Footer />
     </>
   );
 }

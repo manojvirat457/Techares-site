@@ -41,7 +41,7 @@ export function CtaSection({ className }: SectionProps) {
             </form>
           </div>
           <Image
-            src="/assets/images/cta/pattern-1.png"
+            src="/assets/images/cta/pattern-1.webp"
             alt="cta section bg pattern"
             width={520}
             height={316}

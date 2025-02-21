@@ -2,29 +2,32 @@ import { Industry } from '@/data/industries/v1';
 import { AboutSectionProps } from '@/src/sections/about/v1';
 import { ServiceSectionProps } from '@/src/sections/service/v1';
 import { FAQSectionProps } from '@/src/sections/faq';
+import { TeamSectionProps } from '@/src/sections/team/v2';
+import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import { ImageProps } from 'next/image';
 
 export const whyChooseSectionData: AboutSectionProps = {
   images: {
     image1: {
-      src: '/assets/images/about/about-1.png',
+      src: '/assets/images/about/about-1.webp',
       alt: 'about one',
       width: 195,
       height: 132,
     },
     image2: {
-      src: '/assets/images/about/about-2.png',
+      src: '/assets/images/about/about-2.webp',
       alt: 'about two',
       width: 312,
       height: 304,
     },
     image3: {
-      src: '/assets/images/about/about-3.png',
+      src: '/assets/images/about/about-3.webp',
       alt: 'about three',
       width: 250,
       height: 265,
     },
     image4: {
-      src: '/assets/images/about/about-4.png',
+      src: '/assets/images/about/about-4.webp',
       alt: 'about four',
       width: 250,
       height: 265,
@@ -175,11 +178,13 @@ export const solutions = [
     title: 'Standard Taxi App',
     description:
       'A reliable platform for everyday commuters. At TechAres, we offer tailored taxi app solutions to meet the diverse needs of both individual commuters and businesses. Our Standard Taxi App is designed for everyday riders, providing a seamless and reliable ride-booking experience with real-time tracking, multiple payment options, and safety features like SOS alerts. This solution ensures quick access to transportation, making daily commutes more convenient and hassle-free.',
+    icon: <Icon3 />,
   },
   {
     title: 'Corporate Taxi Solutions',
     description:
       'A reliable platform for everyday commuters. At TechAres, we offer tailored taxi app solutions to meet the diverse needs of both individual commuters and businesses. Our Standard Taxi App is designed for everyday riders, providing a seamless and reliable ride-booking experience with real-time tracking, multiple payment options, and safety features like SOS alerts. This solution ensures quick access to transportation, making daily commutes more convenient and hassle-free.',
+    icon: <Icon3 />,
   },
 ];
 
@@ -210,4 +215,38 @@ export const faqSectionData: FAQSectionProps = {
       answer: 'Yes, we build multi-city & multi-country solutions.',
     },
   ],
+};
+
+export const uniquFeature: TeamSectionProps = {
+  sectionHeading: {
+    subtitle: 'Unique Features',
+    title: 'Enhancing the Ride-Hailing Experience',
+  },
+  description:
+    'At TechAres, we integrate cutting-edge technology to provide a superior taxi app experience with unique features that set us apart. Our AI-based route optimization ensures drivers take the most efficient routes, reducing travel time and fuel costs. We support multi-payment options, including credit/debit cards, wallets, and digital payments, offering users a seamless and flexible checkout process. To enhance safety, our app includes SOS & emergency features, allowing passengers to send instant alerts to emergency contacts and authorities in case of distress. Additionally, our dynamic surge pricing system adjusts fares based on real-time demand, ensuring fair pricing for drivers while optimizing earnings during peak hours.',
+};
+
+export interface ProjectDetailsProps {
+  sectionHeading: SectionHeadingWithoutStylingProps;
+  // aboutUsPoints: string[];
+  keyPoints: {
+    icon?: React.ReactNode;
+    title: string;
+    description?: string;
+  }[];
+  image: Omit<ImageProps, 'width' | 'height'>;
+  description?: string;
+}
+export const projectDetails: ProjectDetailsProps = {
+  sectionHeading: {
+    subtitle: 'Taxi App for All',
+    title: 'Taxi App Development Company',
+    description:
+      "Our taxi app solutions cater to various needs, whether you're an individual rider, a fleet owner, or a corporate entity. We develop robust, feature-rich apps designed for seamless user experiences. At TechAres, we design taxi booking applications that cater to diverse user groups, ensuring a smooth, reliable, and feature-rich experience. Whether you're an individual commuter, a taxi fleet owner, or a corporate organization, our solutions are built to optimize efficiency, enhance user satisfaction, and streamline business operations.",
+  },
+  keyPoints: [],
+  image: {
+    src: '/assets/images/about/whychoose.webp',
+    alt: 'about image five',
+  },
 };

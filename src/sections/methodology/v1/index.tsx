@@ -1,6 +1,6 @@
 'use client';
 
-import { methodologies } from '@/data/methodology/v1';
+import { Methodology } from '@/data/methodology/v1';
 import { motion } from 'framer-motion';
 
 function MethodologyCard({
@@ -50,14 +50,27 @@ function MethodologyCard({
   );
 }
 
-export default function MethodologiesSection() {
+export default function MethodologiesSection({
+  methodologies,
+  heading,
+}: {
+  methodologies: Methodology[];
+  heading: {
+    title: string;
+    highlightedTitle?: string;
+  };
+}) {
   return (
     <section className="bg-zinc-950 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mb-2 text-xl font-bold md:text-2xl">
-            Our Development{' '}
-            <span className="text-primary-light">Methodologies</span>
+            {heading.title}{' '}
+            {heading.highlightedTitle && (
+              <span className="text-primary-light">
+                {heading.highlightedTitle}
+              </span>
+            )}
           </h2>
         </div>
 
