@@ -41,7 +41,7 @@ export default function Page() {
  return (
   <>
    <HeroSection
-    backgroundImage={'/assets/images/hero/hero-1.png'}
+    backgroundImage={'/assets/images/hero/hero-1.webp'}
     description=" Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology"
     title="Taxi App Development Company"
     button={{
@@ -253,7 +253,7 @@ export default function Page() {
      'before:absolute before:inset-0 before:bg-black/50'
     )}
     style={{
-     backgroundImage: `url(${'/assets/images/hero/hero-1.png'})`,
+     backgroundImage: `url(${'/assets/images/hero/hero-1.webp'})`,
     }}
    >
     <Container>
