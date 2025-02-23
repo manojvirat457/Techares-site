@@ -2,7 +2,7 @@ export interface ServiceDetail {
   title: string;
   description: string;
   icon: string;
-  mainDescription: string;
+  mainDescription?: string;
   cards: {
     title: string;
     description: string;

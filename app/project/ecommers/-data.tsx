@@ -24,7 +24,7 @@ export const projectDetails: ProjectDetailsProps = {
   },
   keyPoints: [],
   image: {
-    src: '/assets/images/about/whychoose.webp',
+    src:'/assets/images/about/whychoose.webp',
     alt: 'ecommerce app development',
   },
 };

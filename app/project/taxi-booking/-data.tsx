@@ -1,9 +1,11 @@
 import { Industry } from '@/data/industries/v1';
-import { AboutSectionProps } from '@/src/sections/about/v1';
-import { ServiceSectionProps } from '@/src/sections/service/v1';
-import { FAQSectionProps } from '@/src/sections/faq';
-import { TeamSectionProps } from '@/src/sections/team/v2';
+import { Methodology } from '@/data/methodology/v1';
 import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import { AboutSectionProps } from '@/src/sections/about/v1';
+import { FAQSectionProps } from '@/src/sections/faq';
+import { ServiceSectionProps } from '@/src/sections/service/v1';
+import { TeamSectionProps } from '@/src/sections/team/v2';
+import { Code2, PenTool, Rocket, Search, TestTube2 } from 'lucide-react';
 import { ImageProps } from 'next/image';
 
 export const whyChooseSectionData: AboutSectionProps = {
@@ -250,3 +252,61 @@ export const projectDetails: ProjectDetailsProps = {
     alt: 'about image five',
   },
 };
+
+export const methodologies: Methodology[] = [
+  {
+    id: 'requirement-analysis',
+    number: '01',
+    title: 'Requirement Analysis',
+    description: 'We begin by understanding your business needs, target audience, and key functionalities to define the project scope.',
+    icon: <Search size={30} />,
+    color: {
+      number: 'text-emerald-400',
+      iconBg: 'bg-emerald-900/50',
+    },
+  },
+  {
+    id: 'design',
+    number: '02',
+    title: 'UI/UX Design',
+    description: 'Our design team creates intuitive, user-friendly interfaces for passengers, drivers, and administrators, ensuring smooth navigation and engagement.',
+    icon: <PenTool size={30} />,
+    color: {
+      number: 'text-primary',
+      iconBg: 'bg-blue-900/50',
+    },
+  },
+  {
+    id: 'development',
+    number: '03',
+    title: 'App Development',
+    description: 'Our developers bring the design to life by coding and integrating essential features like ride booking, real-time tracking, and secure payments.',
+    icon: <Code2 size={30} />,
+    color: {
+      number: 'text-cyan-400',
+      iconBg: 'bg-cyan-900/50',
+    },
+  },
+  {
+    id: 'testing',
+    number: '04',
+    title: 'Testing & Quality Assurance',
+    description: 'We conduct rigorous testing to identify and fix bugs, optimize performance, and ensure seamless functionality across devices and platforms.',
+    icon: <TestTube2 size={30} />,
+    color: {
+      number: 'text-yellow-400',
+      iconBg: 'bg-yellow-900/50',
+    },
+  },
+  {
+    id: 'deployment',
+    number: '05',
+    title: 'Deployment & Support',
+    description: 'Once the app is tested and approved, we deploy it on app stores and provide ongoing maintenance, updates, and technical support for optimal performance.',
+    icon: <Rocket size={30} />,
+    color: {
+      number: 'text-red-400',
+      iconBg: 'bg-red-900/50',
+    },
+  },
+];

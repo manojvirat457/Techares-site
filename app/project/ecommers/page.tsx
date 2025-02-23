@@ -28,7 +28,7 @@ export const metadata = basicMetadata({
 
 export default function Page() {
   return (
-    <>
+    <main>
       <HeroSection
         backgroundImage={'/assets/images/hero/hero-1.webp'}
         description="Leverage the latest technologies and platforms like Shopify and WooCommerce to ensure your ecommerce solution is robust, scalable, and user-friendly."
@@ -106,6 +106,6 @@ export default function Page() {
       />
       <AboutSection aboutSectionData={whyChooseSectionData} />
       <FAQSection faqSectionData={faqSectionData} />
-    </>
+    </main>
   );
 }
