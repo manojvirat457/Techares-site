@@ -57,10 +57,15 @@ export function Hero() {
                       <h1 className="font-secondary text-2xl font-semibold uppercase leading-tight md:text-3xl">
                         {item.title}
                       </h1>
-                      <p className="text-accent-200 text-base md:text-lg" suppressHydrationWarning>
+                      <p
+                        className="text-base text-accent-200 md:text-lg"
+                        suppressHydrationWarning
+                      >
                         {item.description}
                       </p>
-                      <Button className="rounded-full">{item.button.label}</Button>
+                      <Button className="rounded-full">
+                        {item.button.label}
+                      </Button>
                     </div>
                   </div>
                 </div>

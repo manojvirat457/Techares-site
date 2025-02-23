@@ -5,15 +5,10 @@ import Head from 'next/head';
 import logoDark from 'public/assets/images/brand/logo-dark.webp';
 
 export function BrandLogo() {
-
   return (
     <>
       <Head>
-        <link
-          rel="preload"
-          href={logoDark.src}
-          as="image"
-        />
+        <link rel="preload" href={logoDark.src} as="image" />
       </Head>
       <CustomLink href="/">
         <Image

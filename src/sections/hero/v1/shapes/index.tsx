@@ -89,10 +89,7 @@ export function Shapes() {
 
       {/* Bottom  */}
       <div
-        className={cn(
-          commonClasses,
-          'bottom-0 left-0 right-0 mx-auto'
-        )}
+        className={cn(commonClasses, 'bottom-0 left-0 right-0 mx-auto')}
         data-aos="fade-up"
         data-aos-delay="450"
       >

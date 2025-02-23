@@ -8,7 +8,7 @@ export const heroData: HeroProps = {
         alt: 'hero 1',
       },
       title: 'On-demand Development Solutions',
-      description: 
+      description:
         'We specialize in on-demand development, delivering scalable and high-performance solutions tailored to your business needs.',
       button: {
         label: 'Explore',
