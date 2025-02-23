@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 export interface HeroProps {
   items: {
     title: string;
+    description?: string;
     image: Omit<ImageProps, 'width' | 'height'>;
     button: LinkProps;
   }[];
@@ -46,35 +47,36 @@ export function Hero() {
           {items.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="relative flex items-center justify-center overflow-hidden py-20 lg:min-h-screen">
-                <div className="absolute inset-0 -z-10">
-                  <Image
-                    src={item.image.src || '/placeholder.svg'}
-                    alt={item.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="bg-accent-700 bg-blend-luminosity"
-                    priority={index === 0}
-                  />
-                  <div className="absolute inset-0 bg-[#EDF8FE] opacity-80 dark:bg-accent-900" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-accent-900" />
-                </div>
-
-                <div className="container">
-                  <div className="relative z-10 mx-auto max-w-[800px] text-center text-accent-900 dark:text-white lg:mt-[60px]">
-                    <div className="space-y-6 md:space-y-8">
+                <div className="container relative z-10">
+                  <div className="mx-auto max-w-3xl text-center">
+                    <div
+                      className="space-y-6"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
                       <h1 className="font-secondary text-2xl font-semibold uppercase leading-tight md:text-3xl">
                         {item.title}
                       </h1>
-                      <p className="text-accent-200">
-                        Transform your business with our cutting-edge cloud
-                        application development services, designed to deliver
-                        scalable, secure, and high-performance cloud solutions
+                      <p className="text-accent-200 text-base md:text-lg" suppressHydrationWarning>
+                        {item.description}
                       </p>
-                      <Button className="rounded-full">
-                        {item.button.label}
-                      </Button>
+                      <Button className="rounded-full">{item.button.label}</Button>
                     </div>
                   </div>
+                </div>
+
+                {/* Background elements moved after content */}
+                <div className="absolute inset-0 -z-10 bg-accent-900/90 lg:bg-transparent">
+                  <Image
+                    src={item.image.src || '/placeholder.svg'}
+                    alt={item.image.alt || ''}
+                    fill
+                    priority={index === 0}
+                    className="hidden object-cover lg:block"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                  <div className="absolute inset-0 bg-[#EDF8FE] opacity-80 dark:bg-accent-900" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-accent-900" />
                 </div>
               </div>
             </SwiperSlide>

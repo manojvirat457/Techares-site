@@ -239,7 +239,7 @@ export const faqSectionData: FAQSectionProps = {
   ],
 };
 
-export const uniquFeature: TeamSectionProps = {
+export const uniqueFeature: TeamSectionProps = {
   sectionHeading: {
     subtitle: 'Unique Features',
     title: 'Enhancing the Ride-Hailing Experience',
@@ -338,7 +338,7 @@ export const servicesData: ServiceData = {
     description: 'Expert developers for your projects',
     icon: '/assets/images/service/hire-developer.png',
     mainDescription:
-      'Techares provides access to a pool of skilled developers to meet your project requirements. Our exper ts work seamlessly as part of your team to ensure high-quality results.',
+      'Techares provides access to a pool of skilled developers to meet your project requirements. Our experts work seamlessly as part of your team to ensure high-quality results.',
     cards: [
       {
         title: 'Order and menu management',

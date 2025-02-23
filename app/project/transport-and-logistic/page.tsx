@@ -81,8 +81,8 @@ export default function Page() {
       {/* Solution We offer */}
       <section>
         <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
-          <span className="text-primary-light">{'Solution'}</span>
-          {'We Offer'}
+          <span className="text-primary-light">{'Solution '}</span>
+          {' We Offer'}
         </h2>
         <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
@@ -95,7 +95,10 @@ export default function Page() {
       <section>
         <Container>
           <div className="mb-12 text-center  text-white">
-            <h2 className="mb-4 text-3xl font-bold">Latest Updates</h2>
+          <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
+          {'Latest '}
+          <span className="text-primary-light">{'Updates '}</span>
+        </h2>
             <p className="mx-auto max-w-2xl text-zinc-300">
               Continuous enhancements for better security, efficiency, and
               insights

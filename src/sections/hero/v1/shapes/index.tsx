@@ -1,14 +1,21 @@
 import { cn } from '@/src/utils/shadcn';
+import { useIsDesktop } from '@/src/hooks/useIsDesktop';
 import Image from 'next/image';
 
 const commonClasses = cn('pointer-events-none absolute z-1');
 
 export function Shapes() {
+  const isDesktop = useIsDesktop();
+
+  if (!isDesktop) {
+    return null;
+  }
+
   return (
     <>
       {/* Top left  */}
       <span
-        className={cn(commonClasses, 'left-0 top-0 hidden lg:block')}
+        className={cn(commonClasses, 'left-0 top-0')}
         data-aos="fade-right"
         data-aos-delay="200"
       >
@@ -45,7 +52,7 @@ export function Shapes() {
 
       {/* Bottom right  */}
       <span
-        className={cn(commonClasses, 'right-0 top-[60px] hidden lg:block')}
+        className={cn(commonClasses, 'right-0 top-[60px]')}
         data-aos="fade-left"
         data-aos-delay="350"
       >
@@ -84,7 +91,7 @@ export function Shapes() {
       <div
         className={cn(
           commonClasses,
-          'bottom-0 left-0 right-0 mx-auto hidden lg:block'
+          'bottom-0 left-0 right-0 mx-auto'
         )}
         data-aos="fade-up"
         data-aos-delay="450"

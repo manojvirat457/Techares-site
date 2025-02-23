@@ -219,7 +219,7 @@ export const faqSectionData: FAQSectionProps = {
   ],
 };
 
-export const uniquFeature: TeamSectionProps = {
+export const uniqueFeature: TeamSectionProps = {
   sectionHeading: {
     subtitle: 'Unique Features',
     title: 'Enhancing the Ride-Hailing Experience',
