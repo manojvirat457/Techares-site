@@ -11,7 +11,7 @@ import {
   methodologies,
   projectDetails,
   servicesData,
-  whyChooseSectionData
+  whyChooseSectionData,
 } from './-data.tsx';
 
 export const metadata = basicMetadata({
@@ -35,7 +35,10 @@ export default function Page() {
       />
       <ProjectSection projectDetails={projectDetails} />
       {/* Services Section */}
-      <ServicesSection title={{ title: 'Steps to Developing A Next Gen Fantasy Sports App' }} servicesData={servicesData} />
+      <ServicesSection
+        title={{ title: 'Steps to Developing A Next Gen Fantasy Sports App' }}
+        servicesData={servicesData}
+      />
 
       {/* Why Choose Us Section */}
       <AboutSection aboutSectionData={whyChooseSectionData} />

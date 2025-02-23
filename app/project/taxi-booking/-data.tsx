@@ -258,7 +258,8 @@ export const methodologies: Methodology[] = [
     id: 'requirement-analysis',
     number: '01',
     title: 'Requirement Analysis',
-    description: 'We begin by understanding your business needs, target audience, and key functionalities to define the project scope.',
+    description:
+      'We begin by understanding your business needs, target audience, and key functionalities to define the project scope.',
     icon: <Search size={30} />,
     color: {
       number: 'text-emerald-400',
@@ -269,7 +270,8 @@ export const methodologies: Methodology[] = [
     id: 'design',
     number: '02',
     title: 'UI/UX Design',
-    description: 'Our design team creates intuitive, user-friendly interfaces for passengers, drivers, and administrators, ensuring smooth navigation and engagement.',
+    description:
+      'Our design team creates intuitive, user-friendly interfaces for passengers, drivers, and administrators, ensuring smooth navigation and engagement.',
     icon: <PenTool size={30} />,
     color: {
       number: 'text-primary',
@@ -280,7 +282,8 @@ export const methodologies: Methodology[] = [
     id: 'development',
     number: '03',
     title: 'App Development',
-    description: 'Our developers bring the design to life by coding and integrating essential features like ride booking, real-time tracking, and secure payments.',
+    description:
+      'Our developers bring the design to life by coding and integrating essential features like ride booking, real-time tracking, and secure payments.',
     icon: <Code2 size={30} />,
     color: {
       number: 'text-cyan-400',
@@ -291,7 +294,8 @@ export const methodologies: Methodology[] = [
     id: 'testing',
     number: '04',
     title: 'Testing & Quality Assurance',
-    description: 'We conduct rigorous testing to identify and fix bugs, optimize performance, and ensure seamless functionality across devices and platforms.',
+    description:
+      'We conduct rigorous testing to identify and fix bugs, optimize performance, and ensure seamless functionality across devices and platforms.',
     icon: <TestTube2 size={30} />,
     color: {
       number: 'text-yellow-400',
@@ -302,7 +306,8 @@ export const methodologies: Methodology[] = [
     id: 'deployment',
     number: '05',
     title: 'Deployment & Support',
-    description: 'Once the app is tested and approved, we deploy it on app stores and provide ongoing maintenance, updates, and technical support for optimal performance.',
+    description:
+      'Once the app is tested and approved, we deploy it on app stores and provide ongoing maintenance, updates, and technical support for optimal performance.',
     icon: <Rocket size={30} />,
     color: {
       number: 'text-red-400',

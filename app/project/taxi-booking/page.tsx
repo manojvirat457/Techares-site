@@ -28,7 +28,7 @@ import {
   methodologies,
   projectDetails,
   solutions,
-  whyChooseSectionData
+  whyChooseSectionData,
 } from './-data';
 
 export const metadata = basicMetadata({
@@ -283,7 +283,7 @@ export default function Page() {
         heading={{
           title: 'Our ',
           highlightedTitle: 'Workflow',
-          description : 'A Strategic Approach to Taxi App Development'
+          description: 'A Strategic Approach to Taxi App Development',
         }}
       />
       <AboutSection aboutSectionData={whyChooseSectionData} />
