@@ -5,7 +5,7 @@ import { H2 } from '@/src/components/ui/doc/h-tag';
 import { AboutSection } from '@/src/sections/about/v1';
 import FAQSection from '@/src/sections/faq';
 import { HeroSection } from '@/src/sections/hero/v4';
-import IndustriesSection from '@/src/sections/industries/v1';
+import MethodologiesSection from '@/src/sections/methodology/v1';
 import { ProjectSection } from '@/src/sections/project/v3';
 import { ServiceSection } from '@/src/sections/service/v1';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
@@ -25,7 +25,7 @@ import Image from 'next/image';
 import {
   faqSectionData,
   latestUpdate,
-  ourWorkFlowData,
+  methodologies,
   projectDetails,
   solutions,
   whyChooseSectionData,
@@ -39,7 +39,7 @@ export const metadata = basicMetadata({
 
 export default function Page() {
   return (
-    <>
+    <main>
       <HeroSection
         backgroundImage={'/assets/images/hero/hero-1.webp'}
         description=" Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology"
@@ -51,9 +51,6 @@ export default function Page() {
         }}
       />
       <ProjectSection projectDetails={projectDetails} />;
-      {/* <AboutSection aboutSectionData={aboutSectionData} /> */}
-      {/* <StatisticsSection /> */}
-      {/* Solution We offer */}
       <section className="px-4 py-20">
         <Container>
           <div className="container mx-auto ">
@@ -281,92 +278,16 @@ export default function Page() {
       </section>
       <TestimonialSection />
       {/* <AboutSectionTwo /> */}
-      <IndustriesSection
-        industriesSectionData={ourWorkFlowData}
-        itemsPerRow={3}
+      <MethodologiesSection
+        methodologies={methodologies}
+        heading={{
+          title: 'Our ',
+          highlightedTitle: 'Workflow',
+          description: 'A Strategic Approach to Taxi App Development',
+        }}
       />
       <AboutSection aboutSectionData={whyChooseSectionData} />
       <FAQSection faqSectionData={faqSectionData} />
-      {/* <section className="relative overflow-hidden  py-20">
-    <Container>
-     <div className="container mx-auto z-99">
-      <div className="text-center text-white  mb-12">
-       <h2 className="text-3xl font-bold mb-4">Solutions We Offer</h2>
-       <p className="text-zinc-300 max-w-2xl mx-auto">Tailored taxi app solutions for diverse needs</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 z-1">
-       <Card className="bg-zinc-800 border-zinc-700">
-        <CardContent className="p-6">
-         <div className="mb-4 text-primary">
-          <Code2 className="h-8 w-8" />
-         </div>
-         <h3 className="text-xl font-bold mb-3">Development from scratch</h3>
-         <p className="text-zinc-400 mb-4">
-          Fully customized taxi app tailored to your brand identity and specific operational needs.
-         </p>
-         <ul className="space-y-2 mb-6">
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Complete control over design
-          </li>
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Custom functionality
-          </li>
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Scalable solution
-          </li>
-         </ul>
-         <Button className="group">
-          Learn More
-          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-         </Button>
-        </CardContent>
-       </Card>
-       <Card className="bg-zinc-800 border-zinc-700">
-        <CardContent className="p-6">
-         <div className="mb-4 text-primary">
-          <Timer className="h-8 w-8" />
-         </div>
-         <h3 className="text-xl font-bold mb-3">White Label Taxi App</h3>
-         <p className="text-zinc-400 mb-4">
-          Ready-made platform with pre-built features that can be customized with your branding.
-         </p>
-         <ul className="space-y-2 mb-6">
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Quick deployment
-          </li>
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Cost-effective
-          </li>
-          <li className="flex items-center text-zinc-400">
-           <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-           Market-ready solution
-          </li>
-         </ul>
-         <Button className="group">
-          Learn More
-          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-         </Button>
-        </CardContent>
-       </Card>
-      </div>
-     </div>
-     <Image
-      src="/assets/images/cta/pattern-2.webp"
-      alt="cta section bg pattern"
-      width={429}
-      height={359}
-      className="pointer-events-none absolute bottom-0 right-0 -z-1 animate-float-bob-x object-cover max-[1650px]:hidden"
-      sizes="100vw"
-     />
-    </Container>
-   </section> */}
-      {/* Unique Feature Section Here */}
-      {/* <WorkprocessSection /> */}
-    </>
+    </main>
   );
 }

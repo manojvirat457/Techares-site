@@ -58,6 +58,7 @@ export default function MethodologiesSection({
   heading: {
     title: string;
     highlightedTitle?: string;
+    description?: string;
   };
 }) {
   return (
@@ -70,6 +71,11 @@ export default function MethodologiesSection({
               <span className="text-primary-light">
                 {heading.highlightedTitle}
               </span>
+            )}
+            {heading.description && (
+              <p className="mx-auto mt-3 text-sm text-accent-200">
+                {heading.description}
+              </p>
             )}
           </h2>
         </div>
