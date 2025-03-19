@@ -56,9 +56,11 @@ const ContactUsSchema = Yup.object().shape({
 
 export type ContactUsSchemaType = Yup.InferType<typeof ContactUsSchema>;
 
-const fieldCommonClasses = cn('!pr-[44px]');
+const fieldCommonClasses = cn(
+  '!pr-[44px] bg-white dark:bg-accent-900 border-zinc-200 dark:border-accent-700 text-accent-900 dark:text-white placeholder:text-zinc-500 dark:placeholder:text-accent-400'
+);
 const errorClasses = cn('!border-red-600 border');
-const errorMessageClasses = cn('sr-only');
+const errorMessageClasses = cn('text-red-600 dark:text-red-400 text-sm mt-1');
 
 export function Form() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -187,7 +189,7 @@ export function Form() {
               >
                 <SelectTrigger
                   className={cn(
-                    'h-16 border-zinc-200',
+                    'h-16 border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white',
                     errors.message && touched.message && errorClasses
                   )}
                 >
@@ -196,7 +198,7 @@ export function Form() {
                     onBlur={handleBlur}
                   />
                 </SelectTrigger>
-                <SelectContent className="border-zinc-600 bg-zinc-900">
+                <SelectContent className="border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white">
                   <SelectGroup>
                     <SelectLabel>Select a Service</SelectLabel>
                     <SelectItem value="custom-software-development">

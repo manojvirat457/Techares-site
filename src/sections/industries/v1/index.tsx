@@ -25,7 +25,7 @@ function IndustryCard({
     >
       <Card
         key={index}
-        className="h-full  w-full items-center justify-center  border-zinc-800 bg-zinc-900 text-center"
+        className="h-full w-full items-center justify-center border-zinc-200 bg-white text-center shadow-sm dark:border-zinc-700 dark:bg-zinc-800"
       >
         <CardContent className="flex flex-col  items-center justify-center  gap-5 p-6">
           {/* <div className="mb-4 text-primary">
@@ -38,11 +38,13 @@ function IndustryCard({
             width={70}
             className="object-contain"
           />
-          <h3 className="mb-2 text-md font-bold leading-[1.25] text-accent-900 dark:text-white md:text-lg">
+          <h3 className="mb-2 text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </h3>
           {description && (
-            <p className="text-sm text-gray-400">{description}</p>
+            <p className="text-sm text-zinc-600 dark:text-zinc-300">
+              {description}
+            </p>
           )}
         </CardContent>
       </Card>
@@ -60,16 +62,18 @@ export default function IndustriesSection({
   // const itemsPerRow = 4; // On desktop
 
   return (
-    <section className="bg-zinc-950 px-4 py-20">
+    <section className="bg-zinc-50 px-4 py-20 dark:bg-zinc-900">
       <div className="mx-auto max-w-screen-2xl">
         <div className="mb-16 text-center">
           <h2 className="text-xl font-bold md:text-2xl ">
-            <span className="text-primary">
+            <span className="text-primary dark:text-primary-light">
               {industriesSectionData.highlightTitle}
             </span>{' '}
-            <span className="text-white">{industriesSectionData.title}</span>
+            <span className="text-zinc-900 dark:text-white">
+              {industriesSectionData.title}
+            </span>
           </h2>
-          <p className="mx-auto mb-6 max-w-2xl text-accent-200">
+          <p className="mx-auto mb-6 max-w-2xl text-zinc-600 dark:text-zinc-300">
             {industriesSectionData.description}
           </p>
           {industriesSectionData?.detailedDescription && (

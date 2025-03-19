@@ -54,11 +54,11 @@ export function Hero() {
                       data-aos="fade-up"
                       data-aos-delay="100"
                     >
-                      <h1 className="font-secondary text-2xl font-semibold uppercase leading-tight md:text-3xl">
+                      <h1 className="font-secondary text-2xl font-semibold uppercase leading-tight text-accent-900 dark:text-white md:text-3xl">
                         {item.title}
                       </h1>
                       <p
-                        className="text-base text-accent-200 md:text-lg"
+                        className="text-base text-accent-900 dark:text-accent-200 md:text-lg"
                         suppressHydrationWarning
                       >
                         {item.description}

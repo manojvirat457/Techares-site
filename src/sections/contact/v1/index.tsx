@@ -15,7 +15,7 @@ export interface ContactSectionProps {
 export function ContactSection() {
   const { sectionHeading, image } = contactSectionData;
   return (
-    <section className="section-padding-primary">
+    <section className="section-padding-primary bg-gray-50 dark:bg-accent-900">
       <div className="relative py-[60px]">
         {/* Image area  */}
         <div className="absolute left-0 top-0 z-1 h-full w-full overflow-hidden bg-red-500 md:w-[56%] md:rounded-r-5">
@@ -32,7 +32,7 @@ export function ContactSection() {
 
         <Container>
           <div className="ml-auto md:w-1/2">
-            <div className="relative z-[2] rounded-5 bg-white p-10 shadow-1 dark:bg-accent-700 lg:p-[60px]">
+            <div className="relative z-[2] rounded-5 bg-white p-10 shadow-1 dark:bg-accent-700 dark:shadow-accent-800 lg:p-[60px]">
               <div className="mb-30px">
                 <SectionHeading {...sectionHeading} />
               </div>

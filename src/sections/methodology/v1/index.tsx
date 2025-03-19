@@ -26,7 +26,7 @@ function MethodologyCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="group  relative overflow-hidden rounded-2xl bg-zinc-900/50 p-6 backdrop-blur-sm transition-colors hover:bg-zinc-900/70 sm:w-full md:w-[32%]"
+      className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 backdrop-blur-sm transition-colors hover:bg-white dark:bg-zinc-800/50 dark:hover:bg-zinc-800/70 sm:w-full md:w-[32%]"
     >
       <div className="space-y-4">
         <div className="flex items-center gap-4">
@@ -39,13 +39,17 @@ function MethodologyCard({
           <span className={`text-3xl font-bold ${color.number}`}>{number}</span>
         </div>
         <div className="space-y-2 leading-9">
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-          <p className="leading-relaxed text-zinc-400">{description}</p>
+          <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+            {title}
+          </h3>
+          <p className="leading-relaxed text-zinc-600 dark:text-zinc-300">
+            {description}
+          </p>
         </div>
       </div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-1000 group-hover:translate-x-full dark:via-zinc-300/5" />
     </motion.div>
   );
 }
@@ -62,18 +66,18 @@ export default function MethodologiesSection({
   };
 }) {
   return (
-    <section className="bg-zinc-950 py-20">
+    <section className="bg-zinc-100 py-20 dark:bg-zinc-900">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mb-2 text-xl font-bold md:text-2xl">
             {heading.title}{' '}
             {heading.highlightedTitle && (
-              <span className="text-primary-light">
+              <span className="text-primary-light dark:text-primary">
                 {heading.highlightedTitle}
               </span>
             )}
             {heading.description && (
-              <p className="mx-auto mt-3 text-sm text-accent-200">
+              <p className="mx-auto mt-3 text-sm text-accent-200 dark:text-accent-300">
                 {heading.description}
               </p>
             )}

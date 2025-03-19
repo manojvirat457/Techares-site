@@ -52,7 +52,7 @@ interface SolutionCardProps {
 function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
   return (
     <CustomLink href={href ?? '/'}>
-      <div className="space-y-2 rounded-lg bg-zinc-900/50 p-6">
+      <div className="space-y-2 rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900/50">
         <div className="relative mb-4 h-16 w-16">
           <Image
             src={icon || '/placeholder.svg'}
@@ -62,10 +62,12 @@ function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
             className="object-contain"
           />
         </div>
-        <h3 className="text-xl font-semibold leading-[1.2] text-white">
+        <h3 className="text-xl font-semibold leading-[1.2] text-zinc-900 dark:text-white">
           {title}
         </h3>
-        <p className="leading-relaxed text-zinc-400">{description}</p>
+        <p className="leading-relaxed text-zinc-600 dark:text-zinc-400">
+          {description}
+        </p>
       </div>
     </CustomLink>
   );
@@ -127,16 +129,16 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#141416] p-4  py-20">
+    <div className="min-h-screen bg-white p-4 py-20 dark:bg-[#141416]">
       <div className="mx-auto max-w-7xl">
         <div className="xs:mt-10 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Solutions Info - Reordered for mobile */}
           <div className="order-1 h-max space-y-6 lg:sticky lg:top-8 lg:order-2">
             <div>
-              <h2 className="mb-2 text-xl font-bold text-white md:text-2xl">
+              <h2 className="mb-2 text-xl font-bold text-zinc-900 dark:text-white md:text-2xl">
                 Our <span className="text-primary">Solutions</span>
               </h2>
-              <p className="mb-8 text-zinc-400">
+              <p className="mb-8 text-zinc-600 dark:text-zinc-400">
                 Quick and customizable software solutions designed for
                 businesses requiring immediate deployment and scalability. Our
                 on-demand applications cater to a variety of industries with a

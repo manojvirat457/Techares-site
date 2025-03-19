@@ -12,6 +12,7 @@ import { BrandLogo } from '../../../brand-logo';
 import { useStickyHeader } from '../../utils/use-sticky-header';
 import { Navigation } from '../common/navigation';
 import { ContactBoxProps } from './contact-box';
+import { ModeToggle } from '@/src/components/mode-toggle';
 
 interface SubMenu {
   title: string;
@@ -51,6 +52,7 @@ export function Header() {
           {/* Contact box  */}
           {/* <ContactBox {...contactInfo} /> */}
           <section className="flex items-center justify-center gap-4">
+            <ModeToggle />
             <Link
               href="https://web.whatsapp.com/send?phone=9363537370&text=Hi%20there!%20I%20am%20looking%20for%20your%20Services.%20Can%20you%20send%20me%20the%20Product%20Demo%20of%20https%3A%2F%2Fwww.coinsclone.com%2F"
               target="_blank"
