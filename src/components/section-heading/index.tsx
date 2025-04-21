@@ -1,4 +1,4 @@
-import { SectionHeadingProps } from './interface';
+import type { SectionHeadingProps } from './interface';
 import { cn } from '@/src/utils/shadcn';
 
 /**
@@ -8,46 +8,52 @@ import { cn } from '@/src/utils/shadcn';
  * @returns JSX.Element
  */
 export function SectionHeading({
-  subtitle,
-  title,
-  description,
-  alignment = 'start',
-  hasBottomSpacing = false,
-  highlighttitle,
-  className,
-  additionalDesc,
+ subtitle,
+ title,
+ description,
+ alignment = 'start',
+ hasBottomSpacing = false,
+ highlighttitle,
+ className,
+ additionalDesc,
+ size,
 }: SectionHeadingProps) {
-  const wrapperClasses = cn(
-    alignment === 'start' && 'text-left',
-    alignment === 'center' && 'text-center',
-    alignment === 'end' && 'text-right',
-    { 'mb-10 md:mb-[3.75rem]': hasBottomSpacing },
-    className
-  );
+ const wrapperClasses = cn(
+  alignment === 'start' && 'text-left',
+  alignment === 'center' && 'text-center',
+  alignment === 'end' && 'text-right',
+  { 'mb-10 md:mb-[3.75rem]': hasBottomSpacing },
+  className
+ );
 
-  return (
-    <div className={wrapperClasses}>
-      {subtitle && (
-        <>
-          <p
-            className={
-              'mb-[.625rem] block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-primary md:text-md'
-            }
-          >
-            {subtitle}
-          </p>
-        </>
-      )}
-      <h3 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
-        {highlighttitle && (
-          <span className="text-primary">{highlighttitle}</span>
-        )}
-        {title}
-      </h3>
-      {description && (
-        <p className={'mt-5 whitespace-pre-line'}>{description}</p>
-      )}
-      {additionalDesc && <p className="mt-2">{additionalDesc}</p>}
-    </div>
-  );
+ return (
+  <div className={wrapperClasses}>
+   {subtitle && (
+    <p
+     className={
+      'mb-[.625rem] block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-primary md:text-md'
+     }
+    >
+     {subtitle}
+    </p>
+   )}
+   <h3 className={cn(
+    'font-secondary font-bold whitespace-pre-line leading-none text-accent-900 dark:text-white',
+    size === 'sm' && 'text-lg md:text-xl',
+    size === 'md' && 'text-xl md:text-2xl',
+    size === 'lg' && 'text-2xl md:text-3xl',
+    size === 'xl' && 'text-3xl md:text-4xl',
+    !size && 'text-xl md:text-2xl'
+   )}>
+    {highlighttitle && (
+     <span className="text-primary">{highlighttitle}</span>
+    )}
+    {title}
+   </h3>
+   {description && (
+    <p className={'whitespace-pre-line font-semibold'}>{description}</p>
+   )}
+   {additionalDesc && <p className="mt-2">{additionalDesc}</p>}
+  </div>
+ );
 }
