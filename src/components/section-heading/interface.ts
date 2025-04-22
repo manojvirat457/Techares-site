@@ -4,18 +4,18 @@ type Alignment = 'start' | 'center' | 'end';
 type TitleSize = 'sm' | 'md' | 'lg' | 'xl';
 
 export interface SectionHeadingProps {
- subtitle?: string;
- highlighttitle?: string;
- title: string;
- description?: string;
- alignment?: Alignment;
- hasBottomSpacing?: boolean;
- className?: ClassValue;
- additionalDesc?: string;
- size?: TitleSize;
+  subtitle?: string;
+  highlighttitle?: string;
+  title: string;
+  description?: string;
+  alignment?: Alignment;
+  hasBottomSpacing?: boolean;
+  className?: ClassValue;
+  additionalDesc?: string;
+  size?: TitleSize;
 }
 
 export type SectionHeadingWithoutStylingProps = Omit<
- SectionHeadingProps,
- 'alignment' | 'hasBottomSpacing'
+  SectionHeadingProps,
+  'alignment' | 'hasBottomSpacing'
 >;
