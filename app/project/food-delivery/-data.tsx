@@ -10,15 +10,12 @@ import type { TeamSectionProps } from '@/src/sections/team/v2';
 
 import {
   Calendar,
-  CircleUser,
   Clock,
   Code2,
-  CreditCard,
   Crown,
   HandCoins,
   Scale3d,
   SendToBack,
-  Sparkles,
   UserPlus,
   Users,
 } from 'lucide-react';
@@ -286,8 +283,8 @@ export const uniqueFeatures: ProjectDetailsProps = {
   image: {
     src: '/assets/images/food-delivery/hero-4.png',
     alt: 'about image five',
-    width: 400,
-    height: 428,
+    width: 300,
+    height: 328,
   },
 };
 
@@ -736,7 +733,7 @@ export const tabContent = {
           'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
       },
     ],
-    image: '/assets/images/food-delivery/admin.png',
+    image: '/assets/images/food-delivery/m1.png',
   },
   customer: {
     title: 'Customer App',
@@ -798,7 +795,7 @@ export const tabContent = {
           'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
       },
     ],
-    image: '/assets/images/food-delivery/admin.png',
+    image: '/assets/images/food-delivery/m2.png',
   },
   driver: {
     title: 'Driver App',
@@ -860,7 +857,7 @@ export const tabContent = {
           'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
       },
     ],
-    image: '/assets/images/food-delivery/admin.png',
+    image: '/assets/images/food-delivery/m3.png',
   },
   restaurant: {
     title: 'Restaurant App',
@@ -922,6 +919,6 @@ export const tabContent = {
           'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
       },
     ],
-    image: '/assets/images/food-delivery/admin.png',
+    image: '/assets/images/food-delivery/m4.png',
   },
 };

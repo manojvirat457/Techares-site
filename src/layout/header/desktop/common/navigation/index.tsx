@@ -1,14 +1,14 @@
 import ContactUsDialog from '@/src/sections/contact/v3';
 import { cn } from '@/src/utils/shadcn';
 import { FaChevronDown } from 'react-icons/fa6';
-import { HeaderProps } from '../../v1';
+import type { HeaderProps } from '../../v1';
 
 const menuTriggerClasses = cn([
   // Group hover
   'group-hover/menu-item:text-primary',
 
   // General
-  'text-base leading-[1.3] capitalize py-4 min-h-[3.5rem] font-medium dark:text-white text-accent-900  dark:hover:text-primary hover:text-primary transition-colors duration-200',
+  'text-base capitalize py-4 min-h-[3.5rem] font-medium dark:text-white text-accent-900  dark:hover:text-primary hover:text-primary transition-colors duration-200',
 
   // Layout
   'inline-flex items-center justify-center gap-1.5',
@@ -54,7 +54,7 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                   >
                     <ul className="grid divide-y divide-white/5">
                       {menuItem.subMenuItems.map((subMenuItem, index) => (
-                        <li key={index} className="pl-2 leading-none">
+                        <li key={index} className="pl-2 ">
                           {/* <CustomLink
               href={subMenuItem.href}
               openNewTab={subMenuItem.openNewTab}

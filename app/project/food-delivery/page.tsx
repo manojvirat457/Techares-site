@@ -36,8 +36,9 @@ export default function Page() {
           <div className="relative z-10 flex flex-col items-center lg:flex-row">
             <div className="mb-12 lg:mb-0 lg:w-1/2">
               <SectionHeading
-                title="App Development Company"
+                title={<span>App <br /> Development <br /> Company</span>}
                 highlighttitle="Food Delivery  "
+                size='lg'
               />
               <br className="my-2" />
               <ContactUsDialog>
@@ -70,7 +71,7 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden pb-16">
+      <section className="relative overflow-hidden py-16">
         <Container>
           <div className="my-12 text-center">
             <SectionHeading
@@ -81,7 +82,7 @@ export default function Page() {
             />
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="rounded-lg border border-neutral-800 bg-white p-8 transition-all duration-300 hover:border-primary/50 dark:bg-zinc-900">
+            <div className="rounded-lg border border-neutral-300 bg-white p-8 transition-all duration-300 hover:border-primary/50 dark:bg-zinc-900">
               <div className="mb-6 flex justify-center">
                 <Image
                   src="/assets/images/food-delivery/from-scratch.png"
@@ -105,7 +106,7 @@ export default function Page() {
                 </ContactUsDialog>
               </div>
             </div>
-            <div className="rounded-lg border border-neutral-800 bg-white p-8 transition-all duration-300 hover:border-primary/50 dark:bg-zinc-900">
+            <div className="rounded-lg border border-neutral-300 bg-white p-8 transition-all duration-300 hover:border-primary/50 dark:bg-zinc-900">
               <div className="mb-6 flex justify-center">
                 <Image
                   src="/assets/images/food-delivery/white-label.png"
@@ -133,35 +134,31 @@ export default function Page() {
         </Container>
       </section>
       <ProjectSectionV4 projectDetails={projectDetails} />
-      <section className="mx-auto my-12  max-w-6xl">
+      <section className="mx-auto py-16 max-w-6xl">
         <Container>
           <SectionHeading
             title="Core Features of Our Food Delivery App"
             alignment="center"
             subtitle="FEATURES"
+            className="mb-12"
           />
           {/* Tabs */}
           <div className="relative mb-8 pb-1">
             {' '}
-            {/* Added pb-1 to ensure space for the absolute line */}
-            {/* Button container - keep z-10 */}
-            <div className="relative z-10 flex justify-center space-x-4">
+            <div className="relative z-10 flex justify-center space-x-16">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   type="button"
-                  // Removed translate-y-[4px]
-                  className={`relative transform rounded-t-full px-6 py-1 text-sm font-medium transition-colors duration-200 md:text-base ${activeTab === tab.id ? 'bg-primary' : 'bg-white dark:bg-zinc-900'}`}
+                  className={`relative transform rounded-t-full px-6 py-1 text-sm font-medium transition-colors duration-200 md:text-base ${activeTab === tab.id ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-400 dark:hover:bg-zinc-700'}`}
                 >
                   {tab.label}
                 </button>
               ))}
             </div>
-            {/* Line container - positioned absolutely */}
             <div className="absolute bottom-0 left-0 right-0 z-20 h-px translate-y-[-4px] bg-gray-200 dark:bg-gray-700" />
           </div>
-          {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -177,7 +174,6 @@ export default function Page() {
                   alignment="start"
                   size="sm"
                 />
-                {/* <h3 className="text-xl text-black font-bold">{tabContent[activeTab].title}</h3> */}
                 <div className="space-y-4">
                   {tabContent[activeTab].features.map((feature, index) => (
                     <motion.div
@@ -219,11 +215,9 @@ export default function Page() {
           </AnimatePresence>
         </Container>
       </section>
-      <section>
-        <ProjectSectionV4 projectDetails={uniqueFeatures} alignment="left" />
-      </section>
+      <ProjectSectionV4 projectDetails={uniqueFeatures} alignment="left" padding='secondary' />
       {/* Latest Updates  */}
-      <section className="container mx-auto py-12">
+      <section className="container mx-auto py-16">
         <div className="mx-9 flex flex-col items-start justify-between md:flex-row ">
           <div className="max-w-4xl">
             <SectionHeading
@@ -325,7 +319,7 @@ export default function Page() {
                 <div className="z-10 flex flex-col items-center justify-center">
                   <span className="bg-white py-4 dark:bg-accent-700">
                     <span
-                      className="text-[44px] font-extrabold leading-none md:text-[50px]"
+                      className="text-[44px] font-extrabold  md:text-[50px]"
                       style={{
                         background:
                           'linear-gradient(180deg, #0364af 25%, #B1C4DB 100%)',
@@ -349,7 +343,7 @@ export default function Page() {
                     <h3 className="mb-2 text-md font-extrabold  md:text-lg">
                       {step.title}
                     </h3>
-                    <p className="text-[1.05rem] font-[400] leading-relaxed">
+                    <p className="text-[1.05rem] font-[400]">
                       {step.description}
                     </p>
                   </div>

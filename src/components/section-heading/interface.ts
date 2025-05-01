@@ -6,7 +6,7 @@ type TitleSize = 'sm' | 'md' | 'lg' | 'xl';
 export interface SectionHeadingProps {
   subtitle?: string;
   highlighttitle?: string;
-  title: string;
+  title: string | JSX.Element;
   description?: string;
   alignment?: Alignment;
   hasBottomSpacing?: boolean;

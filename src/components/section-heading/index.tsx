@@ -31,7 +31,7 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={
-            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase leading-[1] tracking-widest text-primary md:text-md'
+            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase  tracking-widest text-primary md:text-md'
           }
         >
           {subtitle}
@@ -39,7 +39,7 @@ export function SectionHeading({
       )}
       <h3
         className={cn(
-          'whitespace-pre-line font-secondary font-bold leading-none text-accent-900 dark:text-white',
+          'whitespace-pre-line font-secondary font-extrabold  text-accent-900 dark:text-white',
           size === 'sm' && 'text-lg md:text-xl',
           size === 'md' && 'text-xl md:text-2xl',
           size === 'lg' && 'text-2xl md:text-3xl',
@@ -53,7 +53,7 @@ export function SectionHeading({
         {title}
       </h3>
       {description && (
-        <p className={'whitespace-pre-line font-semibold'}>{description}</p>
+        <p className={'whitespace-pre-line my-2 font-semibold'}>{description}</p>
       )}
       {additionalDesc && <p className="mt-2">{additionalDesc}</p>}
     </div>
