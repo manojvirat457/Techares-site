@@ -34,17 +34,19 @@ export function ProjectSectionV4({
   alignment = 'center',
   imagePosition = 'left',
   keyPointsLayout = 'grid',
-  padding = 'primary'
+  padding = 'primary',
 }: ProjectSectionV4Props) {
   const { sectionHeading, keyPoints, image, isCard, button } = projectDetails;
   const screenSize = useScreenSize();
   return (
     <section
       className={cn(
-        'overflow-hidden relative isolate',
+        'relative isolate overflow-hidden',
         backgroundColor.light,
         `dark:${backgroundColor.dark}`,
-        padding === 'primary' ? 'section-padding-primary' : 'section-padding-secondary',
+        padding === 'primary'
+          ? 'section-padding-primary'
+          : 'section-padding-secondary',
         // Add gradient fade effect from background color to white/black
         'before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-t before:from-transparent before:via-white/50 before:to-white dark:before:via-black/50 dark:before:to-black'
       )}

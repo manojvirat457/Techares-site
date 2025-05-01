@@ -1,14 +1,11 @@
-'use client'
+'use client';
 import { CustomLink } from '@/src/components/custom-link';
-import Image from 'next/image';
 import Head from 'next/head';
-import { useTheme } from 'next-themes'; // Import useTheme
+import Image from 'next/image';
 
 import logoDark from 'public/assets/images/brand/logo-dark.webp';
 import logoLight from 'public/assets/images/brand/logo-light.webp';
 export function BrandLogo() {
-  const { theme } = useTheme(); // Get the current theme
-
   return (
     <>
       <Head>

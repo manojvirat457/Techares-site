@@ -36,9 +36,13 @@ export default function Page() {
           <div className="relative z-10 flex flex-col items-center lg:flex-row">
             <div className="mb-12 lg:mb-0 lg:w-1/2">
               <SectionHeading
-                title={<span>App <br /> Development <br /> Company</span>}
+                title={
+                  <span>
+                    App <br /> Development <br /> Company
+                  </span>
+                }
                 highlighttitle="Food Delivery  "
-                size='lg'
+                size="lg"
               />
               <br className="my-2" />
               <ContactUsDialog>
@@ -134,7 +138,7 @@ export default function Page() {
         </Container>
       </section>
       <ProjectSectionV4 projectDetails={projectDetails} />
-      <section className="mx-auto py-16 max-w-6xl">
+      <section className="mx-auto max-w-6xl py-16">
         <Container>
           <SectionHeading
             title="Core Features of Our Food Delivery App"
@@ -215,7 +219,11 @@ export default function Page() {
           </AnimatePresence>
         </Container>
       </section>
-      <ProjectSectionV4 projectDetails={uniqueFeatures} alignment="left" padding='secondary' />
+      <ProjectSectionV4
+        projectDetails={uniqueFeatures}
+        alignment="left"
+        padding="secondary"
+      />
       {/* Latest Updates  */}
       <section className="container mx-auto py-16">
         <div className="mx-9 flex flex-col items-start justify-between md:flex-row ">
