@@ -14,3 +14,12 @@
 - `ci` – continuous integration related
 - `build` – changes that affect the build system or external dependencies
 - `revert` – reverts a previous commit
+
+## TODO
+
+- [] deveolopment spacing top
+- image centing with test for development spacing
+- spacing top 80px
+- right left 15px
+- in mobile view 14px sm:
+- FEATURES hide all image in the mobile view

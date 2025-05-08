@@ -1,4 +1,4 @@
-import { PersonProps, blurDataUrl } from '@/src/common-types';
+import { type PersonProps, blurDataUrl } from '@/src/common-types';
 import Image from 'next/image';
 import StarRating from '../rating';
 import { FaQuoteRight } from 'react-icons/fa6';

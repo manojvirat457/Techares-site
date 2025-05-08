@@ -75,7 +75,7 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden py-16">
+      <section className="relative overflow-hidden py-12 md:py-16">
         <Container>
           <div className="my-12 text-center">
             <SectionHeading
@@ -117,7 +117,7 @@ export default function Page() {
                   alt="White Label Solution"
                   width={100}
                   height={100}
-                  className="w-40"
+                  className="h-40 w-40"
                 />
               </div>
               <SectionHeading
@@ -138,7 +138,7 @@ export default function Page() {
         </Container>
       </section>
       <ProjectSectionV4 projectDetails={projectDetails} />
-      <section className="mx-auto max-w-6xl py-16">
+      <section className="mx-auto max-w-6xl py-12 md:py-16">
         <Container>
           <SectionHeading
             title="Core Features of Our Food Delivery App"
@@ -146,7 +146,6 @@ export default function Page() {
             subtitle="FEATURES"
             className="mb-12"
           />
-          {/* Tabs */}
           <div className="relative mb-8 pb-1">
             {' '}
             <div className="relative z-10 flex justify-center space-x-16">
@@ -161,7 +160,7 @@ export default function Page() {
                 </button>
               ))}
             </div>
-            <div className="absolute bottom-0 left-0 right-0 z-20 h-px translate-y-[-4px] bg-gray-200 dark:bg-gray-700" />
+            <div className="absolute bottom-0 left-0 right-0 z-20 h-[2px] translate-y-[-4px] bg-gray-200 dark:bg-gray-700" />
           </div>
           <AnimatePresence mode="wait">
             <motion.div
@@ -185,7 +184,7 @@ export default function Page() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="flex gap-4"
+                      className="flex gap-4 pb-4 "
                     >
                       <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full">
                         {feature.icon}
@@ -225,7 +224,7 @@ export default function Page() {
         padding="secondary"
       />
       {/* Latest Updates  */}
-      <section className="container mx-auto py-16">
+      <section className="container mx-auto py-12 md:py-16">
         <div className="mx-9 flex flex-col items-start justify-between md:flex-row ">
           <div className="max-w-4xl">
             <SectionHeading
@@ -236,7 +235,7 @@ export default function Page() {
             />
           </div>
 
-          <div className="mx-10 mt-0">
+          <div className="mx-10 mt-0 hidden md:block">
             <ContactUsDialog>
               <Button className="rounded-full">
                 <span>Talk To Expert</span>
@@ -245,8 +244,8 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="relative mx-9 mt-8 flex flex-col md:flex-row">
-          <div className="relative z-10 mb-8 md:mb-0 md:w-1/3">
+        <div className="relative mx-9  flex flex-col items-center md:flex-row">
+          <div className="relative z-10 order-2 md:order-1 md:mb-0 md:w-1/3">
             <Image
               src="/assets/images/food-delivery/delivery-illustration.png"
               alt="Food Delivery Illustration"
@@ -256,7 +255,7 @@ export default function Page() {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:w-2/3 md:grid-cols-2">
+          <div className="order-1 grid grid-cols-1 flex-col justify-center gap-6 md:order-2 md:w-2/3 md:grid-cols-2">
             <div className="h-fit rounded-md bg-white p-4 dark:bg-zinc-900">
               <Image
                 src="/assets/images/food-delivery/truck-icon.png"
@@ -267,7 +266,7 @@ export default function Page() {
               />
               <div className="flex items-start gap-4">
                 <div>
-                  <p className="text-sm">
+                  <p className="">
                     Some content will be allocated here for the specific feature
                     and that will have quite few sentences here like this. Add
                     if required more. Some content will be allocated here for
@@ -288,7 +287,7 @@ export default function Page() {
               />
               <div className="flex items-start gap-4">
                 <div>
-                  <p className="text-sm">
+                  <p className="">
                     Some content will be allocated here for the specific feature
                     and that will have quite few sentences here like this. Add
                     if required more. Some content will be allocated here for
@@ -308,7 +307,7 @@ export default function Page() {
 
       <TestimonialSection />
       {/* Work Flow */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
             <SectionHeading
