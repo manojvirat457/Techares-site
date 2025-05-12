@@ -245,7 +245,7 @@ export default function Page() {
       </section>
       {/* Work Flow */}
       <WorkflowSection
-        sectionHeading={{title : 'How We Develop Your Food Delivery App'}}
+        sectionHeading={{ title: 'How We Develop Your Food Delivery App' }}
         steps={workflowSteps}
       />
       {/* Why Choose Us */}

@@ -10,7 +10,7 @@ export interface WorkflowStep {
 }
 
 export interface WorkflowSectionProps {
-  sectionHeading : SectionHeadingProps;
+  sectionHeading: SectionHeadingProps;
   steps: WorkflowStep[];
 }
 

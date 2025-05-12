@@ -51,7 +51,8 @@ export function ProjectSectionV4({
   isFluid = false,
   // padding = 'primary',
 }: ProjectSectionV4Props) {
-  const { sectionHeading, keyPoints, image, button , isCard , isButton  } = projectDetails;
+  const { sectionHeading, keyPoints, image, button, isCard, isButton } =
+    projectDetails;
   const screenSize = useScreenSize();
   return (
     <section
@@ -72,7 +73,8 @@ export function ProjectSectionV4({
               'items-start': alignment === 'left',
               'items-center': alignment === 'center',
               'items-end': alignment === 'right',
-              'lg:flex-row-reverse': imagePosition === 'right' || imagePosition === 'right-edge',
+              'lg:flex-row-reverse':
+                imagePosition === 'right' || imagePosition === 'right-edge',
               'lg:w-full': imagePosition?.endsWith('-edge'),
               'lg:justify-start': imagePosition === 'left-edge',
               'lg:justify-end': imagePosition === 'right-edge',
@@ -82,8 +84,9 @@ export function ProjectSectionV4({
           {!screenSize.equals('xs') && (
             <div
               className={cn('lg:w-[30%]', {
-                'lg:w-[45%]': alignment === 'center' && !imagePosition?.endsWith('-edge'),
-                'lg:w-[25%]': imagePosition?.endsWith('-edge')
+                'lg:w-[45%]':
+                  alignment === 'center' && !imagePosition?.endsWith('-edge'),
+                'lg:w-[25%]': imagePosition?.endsWith('-edge'),
               })}
             >
               {
@@ -173,7 +176,7 @@ export function ProjectSectionV4({
               </div>
             )}
             <div className="flex flex-1 items-center justify-start">
-              {(button && isButton) && (
+              {button && isButton && (
                 <Button asChild className={cn('mt-8 rounded-full')}>
                   <CustomLink
                     aria-label={button.label}
