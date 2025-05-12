@@ -8,15 +8,15 @@ import type { ServiceSectionProps } from '@/src/sections/service/v1';
 import type { TeamSectionProps } from '@/src/sections/team/v2';
 
 import {
- Calendar,
- Clock,
- Code2,
- Crown,
- HandCoins,
- Scale3d,
- SendToBack,
- UserPlus,
- Users,
+  Calendar,
+  Clock,
+  Code2,
+  Crown,
+  HandCoins,
+  Scale3d,
+  SendToBack,
+  UserPlus,
+  Users,
 } from 'lucide-react';
 import Image from 'next/image';
 

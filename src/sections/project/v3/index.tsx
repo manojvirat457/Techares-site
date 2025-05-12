@@ -9,7 +9,7 @@ import styles from './project-v3.module.css';
 import type { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
 import { Button } from '@/src/components/button';
 import { CustomLink } from '@/src/components/custom-link';
-const cursorStyle = cn("cursor-pointer");
+const cursorStyle = cn('cursor-pointer');
 export function ProjectSection({
   projectDetails,
 }: {

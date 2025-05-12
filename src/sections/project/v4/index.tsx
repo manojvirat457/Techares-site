@@ -12,19 +12,19 @@ import type { SectionHeadingWithoutStylingProps } from '@/src/components/section
 import type { LinkProps } from '@/src/common-types';
 const cursorStyle = cn('cursor-pointer');
 export interface ProjectDetailsProps {
- sectionHeading: SectionHeadingWithoutStylingProps;
- // aboutUsPoints: string[];
- keyPoints: {
-   icon?: React.ReactNode;
-   title: string;
-   description?: string;
- }[];
- image: ImageProps;
- description?: string;
- button?: LinkProps;
+  sectionHeading: SectionHeadingWithoutStylingProps;
+  // aboutUsPoints: string[];
+  keyPoints: {
+    icon?: React.ReactNode;
+    title: string;
+    description?: string;
+  }[];
+  image: ImageProps;
+  description?: string;
+  button?: LinkProps;
 
- isCard: boolean;
- isButton?: boolean;
+  isCard: boolean;
+  isButton?: boolean;
 }
 export interface ProjectSectionV4Props {
   projectDetails: ProjectDetailsProps;
@@ -33,12 +33,13 @@ export interface ProjectSectionV4Props {
     dark?: string;
   };
   alignment?: 'left' | 'center' | 'right';
-  imagePosition?: 'left' | 'right';
+  imagePosition?: 'left' | 'right' | 'left-edge' | 'right-edge';
   keyPointsLayout?: 'grid' | 'list';
   isCard: boolean;
   isButton: boolean;
 
   padding?: 'primary' | 'secondary';
+  isFluid?: boolean;
 }
 
 export function ProjectSectionV4({
@@ -51,6 +52,7 @@ export function ProjectSectionV4({
   imagePosition = 'left',
   keyPointsLayout = 'grid',
   isCard = false,
+  isFluid = false,
   // padding = 'primary',
 }: ProjectSectionV4Props) {
   const { sectionHeading, keyPoints, image, button } = projectDetails;
@@ -66,7 +68,7 @@ export function ProjectSectionV4({
         'before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-t before:from-transparent before:via-white/50 before:to-transparent dark:before:via-black/50 dark:before:to-transparent'
       )}
     >
-      <Container>
+      <Container isFluid={isFluid}>
         <div
           className={cn(
             'flex flex-col gap-x-16 gap-y-8 lg:flex-row xl:gap-x-[120px]',
@@ -74,14 +76,20 @@ export function ProjectSectionV4({
               'items-start': alignment === 'left',
               'items-center': alignment === 'center',
               'items-end': alignment === 'right',
-              'lg:flex-row-reverse': imagePosition === 'right',
+              'lg:flex-row-reverse':
+                imagePosition === 'right' || imagePosition === 'right-edge',
+              'lg:w-full': imagePosition?.endsWith('-edge'),
+              'lg:justify-start': imagePosition === 'left-edge',
+              'lg:justify-end': imagePosition === 'right-edge',
             }
           )}
         >
           {!screenSize.equals('xs') && (
             <div
               className={cn('lg:w-[30%]', {
-                'lg:w-[45%]': alignment === 'center',
+                'lg:w-[45%]':
+                  alignment === 'center' && !imagePosition?.endsWith('-edge'),
+                'lg:w-[25%]': imagePosition?.endsWith('-edge'),
               })}
             >
               {

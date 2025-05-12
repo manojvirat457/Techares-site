@@ -60,21 +60,29 @@ export function SectionHeading({
         {title}
       </h3>
       {description && (
-        <p className={cn(
-          'my-2 whitespace-pre-line font-semibold',
-          textPosition === 'start' && 'text-left',
-          textPosition === 'center' && 'text-center',
-          textPosition === 'end' && 'text-right'
-        )}>
+        <p
+          className={cn(
+            'my-2 whitespace-pre-line font-semibold',
+            textPosition === 'start' && 'text-left',
+            textPosition === 'center' && 'text-center',
+            textPosition === 'end' && 'text-right'
+          )}
+        >
           {description}
         </p>
       )}
-      {additionalDesc && <p className={cn(
-        'mt-2',
-        textPosition === 'start' && 'text-left',
-        textPosition === 'center' && 'text-center',
-        textPosition === 'end' && 'text-right'
-      )}>{additionalDesc}</p>}
+      {additionalDesc && (
+        <p
+          className={cn(
+            'mt-2',
+            textPosition === 'start' && 'text-left',
+            textPosition === 'center' && 'text-center',
+            textPosition === 'end' && 'text-right'
+          )}
+        >
+          {additionalDesc}
+        </p>
+      )}
     </div>
   );
 }

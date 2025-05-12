@@ -11,19 +11,19 @@ import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 import {
- faqSectionData,
- projectDetails,
- tabContent,
- tabs,
- uniqueFeatures,
- whyChooseUs,
- workflowSteps,
+  faqSectionData,
+  projectDetails,
+  tabContent,
+  tabs,
+  uniqueFeatures,
+  whyChooseUs,
+  workflowSteps,
 } from './-data';
 
 export const metadata = basicMetadata({
- title: 'TechAres | Food Delivery Development Company',
- description:
-  'TechAres is a food delivery development company specializing in creating custom food delivery apps for businesses. Our team of experts has extensive experience in app development, ensuring your food delivery app is not only functional but also user-friendly and visually appealing.',
+  title: 'TechAres | Food Delivery Development Company',
+  description:
+    'TechAres is a food delivery development company specializing in creating custom food delivery apps for businesses. Our team of experts has extensive experience in app development, ensuring your food delivery app is not only functional but also user-friendly and visually appealing.',
 });
 
 export default function Page() {
@@ -81,7 +81,7 @@ export default function Page() {
               title="Methods"
               highlighttitle="Development "
               alignment="center"
-              textPosition='center'
+              textPosition="center"
               description="We offer two distinct approaches to food delivery app development"
             />
           </div>
@@ -140,10 +140,10 @@ export default function Page() {
       <ProjectSectionV4 projectDetails={projectDetails} />
       <TabSection
         heading={{
-          title: "Core Features of Our Food Delivery App",
-          alignment: "center",
-          subtitle: "FEATURES",
-          textPosition: "center",
+          title: 'Core Features of Our Food Delivery App',
+          alignment: 'center',
+          subtitle: 'FEATURES',
+          textPosition: 'center',
         }}
         tabs={tabs}
         tabContent={tabContent}
@@ -232,13 +232,13 @@ export default function Page() {
           </div>
         </div>
         {/* Road Divider */}
-        <div className="relative h-12 w-full z-20">
-         <Image
-          src="/assets/images/food-delivery/road.jpg"
-          alt="Road Divider"
-          width={1600}
-          height={1000}
-          className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
+        <div className="relative z-20 h-12 w-full">
+          <Image
+            src="/assets/images/food-delivery/road.jpg"
+            alt="Road Divider"
+            width={1600}
+            height={1000}
+            className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
           />
           {/* <div className="absolute left-0 right-0 top-1/2 border-t-4 border-dashed border-white" /> */}
         </div>

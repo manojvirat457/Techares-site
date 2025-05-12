@@ -227,7 +227,6 @@ export const uniqueFeature: TeamSectionProps = {
     'At TechAres, we integrate cutting-edge technology to provide a superior taxi app experience with unique features that set us apart. Our AI-based route optimization ensures drivers take the most efficient routes, reducing travel time and fuel costs. We support multi-payment options, including credit/debit cards, wallets, and digital payments, offering users a seamless and flexible checkout process. To enhance safety, our app includes SOS & emergency features, allowing passengers to send instant alerts to emergency contacts and authorities in case of distress. Additionally, our dynamic surge pricing system adjusts fares based on real-time demand, ensuring fair pricing for drivers while optimizing earnings during peak hours.',
 };
 
-
 export const projectDetails: ProjectDetailsProps = {
   sectionHeading: {
     subtitle: 'Taxi App for All',
@@ -304,5 +303,32 @@ export const methodologies: Methodology[] = [
       number: 'text-red-400',
       iconBg: 'bg-red-900/50',
     },
+  },
+];
+
+export const features = [
+  {
+    id: 1,
+    title: 'Requirement Analysis',
+    description:
+      'Taxi App Development Company provides cutting-edge technology in the form of a super road optimization which helps in reducing the travel time and provides a more efficient path for effective transportation and delivery service.',
+  },
+  {
+    id: 2,
+    title: 'SOS and emergency features',
+    description:
+      "SOS and emergency features are designed with simplicity and speed in mind. The SOS button, when pressed, sends an emergency alert with the user's current location directly to the safety response team, who are provided with the user's location and relevant details by the app.",
+  },
+  {
+    id: 3,
+    title: 'Real-time Tracking',
+    description:
+      'Our advanced GPS technology allows passengers to track their ride in real-time, providing accurate ETAs and route information for a more transparent and reliable service.',
+  },
+  {
+    id: 4,
+    title: 'Cashless Payments',
+    description:
+      'Multiple secure payment options including credit cards, digital wallets, and in-app currency make transactions seamless and convenient for both riders and drivers.',
   },
 ];
