@@ -1,6 +1,7 @@
 'use client';
 
 import { SectionHeading } from '@/src/components/section-heading';
+import type { SectionHeadingProps } from '@/src/components/section-heading/interface';
 
 export interface WorkflowStep {
   id: number;
@@ -9,16 +10,12 @@ export interface WorkflowStep {
 }
 
 export interface WorkflowSectionProps {
-  title?: string;
-  subtitle?: string;
-  textPosition?: 'left' | 'center' | 'right';
+  sectionHeading : SectionHeadingProps;
   steps: WorkflowStep[];
 }
 
 export function WorkflowSection({
-  title = 'How We Work',
-  subtitle = 'WORK FLOW',
-  textPosition = 'center',
+  sectionHeading,
   steps,
 }: WorkflowSectionProps) {
   return (
@@ -26,17 +23,21 @@ export function WorkflowSection({
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
           <SectionHeading
-            title={title}
+            title={sectionHeading.title}
             alignment="center"
-            subtitle={subtitle}
-            textPosition={textPosition}
+            subtitle={sectionHeading.subtitle}
+            textPosition={sectionHeading.textPosition}
+            description={sectionHeading.description}
+            additionalDesc={sectionHeading.additionalDesc}
+            size={sectionHeading.size}
+            className={sectionHeading.className}
           />
         </div>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap items-stretch justify-center gap-10">
           {steps.map((step) => (
             <div
               key={step.id}
-              className="relative flex min-h-[210px] items-stretch"
+              className="relative flex min-h-[210px] w-full items-stretch md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]"
             >
               {/* Number, gradient, left-overlapping */}
               <div className="z-10 flex flex-col items-center justify-center">

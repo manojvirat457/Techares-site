@@ -57,7 +57,7 @@ export function TestimonialSection() {
           >
             {cards.map((card, index) => (
               <CarouselItem
-                key={index}
+                key={card.rating}
                 data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay={index * 100}
