@@ -1,33 +1,32 @@
-'use client';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
+import { TabSection } from '@/src/components/tab-section';
+import { WorkflowSection } from '@/src/components/workflow-section';
 import ContactUsDialog from '@/src/sections/contact/v3';
 import FAQSection from '@/src/sections/faq';
 import { ProjectSectionV4 } from '@/src/sections/project/v4';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
+import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn';
-import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
 import {
-  faqSectionData,
-  tabContent,
-  tabs,
-  projectDetails,
-  uniqueFeatures,
-  workflowSteps,
-  whyChooseUs,
+ faqSectionData,
+ projectDetails,
+ tabContent,
+ tabs,
+ uniqueFeatures,
+ whyChooseUs,
+ workflowSteps,
 } from './-data';
 
-// export const metadata = basicMetadata({
-//  title: 'TechAres | Taxi App Development Company',
-//  description:
-//   'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
-// });
+export const metadata = basicMetadata({
+ title: 'TechAres | Food Delivery Development Company',
+ description:
+  'TechAres is a food delivery development company specializing in creating custom food delivery apps for businesses. Our team of experts has extensive experience in app development, ensuring your food delivery app is not only functional but also user-friendly and visually appealing.',
+});
 
 export default function Page() {
-  const [activeTab, setActiveTab] = useState('customer');
   return (
     <main>
       <section className="relative overflow-hidden pb-16 pt-40">
@@ -82,6 +81,7 @@ export default function Page() {
               title="Methods"
               highlighttitle="Development "
               alignment="center"
+              textPosition='center'
               description="We offer two distinct approaches to food delivery app development"
             />
           </div>
@@ -138,86 +138,18 @@ export default function Page() {
         </Container>
       </section>
       <ProjectSectionV4 projectDetails={projectDetails} />
-      <section className="mx-auto max-w-6xl py-12 md:py-16">
-        <Container>
-          <SectionHeading
-            title="Core Features of Our Food Delivery App"
-            alignment="center"
-            subtitle="FEATURES"
-            className="mb-12"
-          />
-          <div className="relative mb-8 pb-1">
-            {' '}
-            <div className="relative z-10 flex justify-center space-x-16">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  type="button"
-                  className={`relative transform rounded-t-full px-6 py-1 text-sm font-medium transition-colors duration-200 md:text-base ${activeTab === tab.id ? 'bg-primary text-white' : 'bg-gray-200 text-gray-600 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-400 dark:hover:bg-zinc-700'}`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 z-20 h-[2px] translate-y-[-4px] bg-gray-200 dark:bg-gray-700" />
-          </div>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="grid items-center gap-8 md:grid-cols-2"
-            >
-              <div className="space-y-4">
-                <SectionHeading
-                  title={tabContent[activeTab].title}
-                  alignment="start"
-                  size="sm"
-                />
-                <div className="space-y-4">
-                  {tabContent[activeTab].features.map((feature, index) => (
-                    <motion.div
-                      key={feature}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex gap-4 pb-4 "
-                    >
-                      <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full">
-                        {feature.icon}
-                      </div>
-                      <div>
-                        <h4 className="mb-1 font-bold text-primary">
-                          {feature.title}
-                        </h4>
-                        <p>{feature.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="flex justify-center"
-              >
-                <Image
-                  src={tabContent[activeTab].image || '/placeholder.svg'}
-                  alt={`${tabContent[activeTab].title} illustration`}
-                  width={500}
-                  height={500}
-                  className="rounded-lg"
-                />
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
-        </Container>
-      </section>
+      <TabSection
+        heading={{
+          title: "Core Features of Our Food Delivery App",
+          alignment: "center",
+          subtitle: "FEATURES",
+          textPosition: "center",
+        }}
+        tabs={tabs}
+        tabContent={tabContent}
+        defaultActiveTab="customer"
+      />
+      <TestimonialSection />
       <ProjectSectionV4
         projectDetails={uniqueFeatures}
         alignment="left"
@@ -230,7 +162,7 @@ export default function Page() {
             <SectionHeading
               title="Latest Updates of Our Food Delivery App"
               description="We continually update our food delivery app development services with the latest advancements, ensuring
-       compliance with market trends, security protocols, and user expectations."
+                 compliance with market trends, security protocols, and user expectations."
               alignment="start"
             />
           </div>
@@ -300,66 +232,22 @@ export default function Page() {
           </div>
         </div>
         {/* Road Divider */}
-        <div className="relative h-12 w-full bg-black ">
-          <div className="absolute left-0 right-0 top-1/2 border-t-4 border-dashed border-white" />
+        <div className="relative h-12 w-full z-20">
+         <Image
+          src="/assets/images/food-delivery/road.jpg"
+          alt="Road Divider"
+          width={1600}
+          height={1000}
+          className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
+          />
+          {/* <div className="absolute left-0 right-0 top-1/2 border-t-4 border-dashed border-white" /> */}
         </div>
       </section>
-
-      <TestimonialSection />
       {/* Work Flow */}
-      <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="mb-12 text-center">
-            <SectionHeading
-              title="How We Develop Your Food Delivery App"
-              alignment="center"
-              subtitle="WORK FLOW"
-            />
-          </div>
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {workflowSteps.map((step) => (
-              <div
-                key={step.id}
-                className="relative flex min-h-[210px] items-stretch"
-              >
-                {/* Number, gradient, left-overlapping */}
-                <div className="z-10 flex flex-col items-center justify-center">
-                  <span className="bg-white py-4 dark:bg-accent-700">
-                    <span
-                      className="text-[44px] font-extrabold  md:text-[50px]"
-                      style={{
-                        background:
-                          'linear-gradient(180deg, #0364af 25%, #B1C4DB 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        display: 'inline-block',
-                      }}
-                    >
-                      {step.id.toString().padStart(2, '0')}
-                    </span>
-                  </span>
-                </div>
-                {/* Card */}
-                <div
-                  className="ml-[-24px] flex flex-1 items-center rounded-2xl border border-gray-300 bg-white py-8 pl-8 pr-6 shadow-none dark:border-gray-800 dark:bg-accent-700"
-                  style={{
-                    boxShadow: '0 0 0 0 transparent',
-                  }}
-                >
-                  <div>
-                    <h3 className="mb-2 text-md font-extrabold  md:text-lg">
-                      {step.title}
-                    </h3>
-                    <p className="text-[1.05rem] font-[400]">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkflowSection
+        title="How We Develop Your Food Delivery App"
+        steps={workflowSteps}
+      />
       {/* Why Choose Us */}
       <ProjectSectionV4
         projectDetails={whyChooseUs}

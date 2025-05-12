@@ -9,6 +9,7 @@ export interface SectionHeadingProps {
   title: string | JSX.Element;
   description?: string;
   alignment?: Alignment;
+  textPosition?: Alignment;
   hasBottomSpacing?: boolean;
   className?: ClassValue;
   additionalDesc?: string;

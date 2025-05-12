@@ -1,6 +1,6 @@
 'use client';
 
-import { Methodology } from '@/data/methodology/v1';
+import type { Methodology } from '@/data/methodology/v1';
 import { motion } from 'framer-motion';
 
 function MethodologyCard({

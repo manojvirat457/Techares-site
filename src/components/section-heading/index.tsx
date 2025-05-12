@@ -12,6 +12,7 @@ export function SectionHeading({
   title,
   description,
   alignment = 'start',
+  textPosition = 'start',
   hasBottomSpacing = false,
   highlighttitle,
   className,
@@ -30,21 +31,27 @@ export function SectionHeading({
     <div className={wrapperClasses}>
       {subtitle && (
         <p
-          className={
-            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase  tracking-widest text-primary md:text-md'
-          }
+          className={cn(
+            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase tracking-widest text-primary md:text-md',
+            textPosition === 'start' && 'text-left',
+            textPosition === 'center' && 'text-center',
+            textPosition === 'end' && 'text-right'
+          )}
         >
           {subtitle}
         </p>
       )}
       <h3
         className={cn(
-          'whitespace-pre-line font-secondary font-extrabold  text-accent-900 dark:text-white',
+          'whitespace-pre-line font-secondary font-extrabold text-accent-900 dark:text-white',
           size === 'sm' && 'text-lg md:text-xl',
           size === 'md' && 'text-xl md:text-2xl',
           size === 'lg' && 'text-2xl md:text-3xl',
           size === 'xl' && 'text-3xl md:text-4xl',
-          !size && 'text-xl md:text-2xl'
+          !size && 'text-xl md:text-2xl',
+          textPosition === 'start' && 'text-left',
+          textPosition === 'center' && 'text-center',
+          textPosition === 'end' && 'text-right'
         )}
       >
         {highlighttitle && (
@@ -53,11 +60,21 @@ export function SectionHeading({
         {title}
       </h3>
       {description && (
-        <p className={'my-2 whitespace-pre-line font-semibold'}>
+        <p className={cn(
+          'my-2 whitespace-pre-line font-semibold',
+          textPosition === 'start' && 'text-left',
+          textPosition === 'center' && 'text-center',
+          textPosition === 'end' && 'text-right'
+        )}>
           {description}
         </p>
       )}
-      {additionalDesc && <p className="mt-2">{additionalDesc}</p>}
+      {additionalDesc && <p className={cn(
+        'mt-2',
+        textPosition === 'start' && 'text-left',
+        textPosition === 'center' && 'text-center',
+        textPosition === 'end' && 'text-right'
+      )}>{additionalDesc}</p>}
     </div>
   );
 }

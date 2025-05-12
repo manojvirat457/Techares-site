@@ -1,13 +1,11 @@
 import type { Industry } from '@/data/industries/v1';
 import type { Methodology } from '@/data/methodology/v1';
-import type { LinkProps } from '@/src/common-types';
-import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import type { AboutSectionProps } from '@/src/sections/about/v1';
 import type { FAQSectionProps } from '@/src/sections/faq';
+import type { ProjectDetailsProps } from '@/src/sections/project/v4';
 import type { ServiceSectionProps } from '@/src/sections/service/v1';
 import type { TeamSectionProps } from '@/src/sections/team/v2';
 import { Code2, PenTool, Rocket, Search, TestTube2 } from 'lucide-react';
-import type { ImageProps } from 'next/image';
 
 export const whyChooseSectionData: AboutSectionProps = {
   images: {
@@ -229,21 +227,7 @@ export const uniqueFeature: TeamSectionProps = {
     'At TechAres, we integrate cutting-edge technology to provide a superior taxi app experience with unique features that set us apart. Our AI-based route optimization ensures drivers take the most efficient routes, reducing travel time and fuel costs. We support multi-payment options, including credit/debit cards, wallets, and digital payments, offering users a seamless and flexible checkout process. To enhance safety, our app includes SOS & emergency features, allowing passengers to send instant alerts to emergency contacts and authorities in case of distress. Additionally, our dynamic surge pricing system adjusts fares based on real-time demand, ensuring fair pricing for drivers while optimizing earnings during peak hours.',
 };
 
-export interface ProjectDetailsProps {
-  sectionHeading: SectionHeadingWithoutStylingProps;
-  // aboutUsPoints: string[];
-  keyPoints: {
-    icon?: React.ReactNode;
-    title: string;
-    description?: string;
-  }[];
-  image: ImageProps;
-  description?: string;
-  button?: LinkProps;
 
-  isCard: boolean;
-  isButton?: boolean;
-}
 export const projectDetails: ProjectDetailsProps = {
   sectionHeading: {
     subtitle: 'Taxi App for All',
