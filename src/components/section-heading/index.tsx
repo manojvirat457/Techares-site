@@ -53,7 +53,7 @@ export function SectionHeading({
         {title}
       </h3>
       {description && (
-        <p className={'my-2 whitespace-pre-line font-semibold'}>
+        <p className={'my-2'}>
           {description}
         </p>
       )}

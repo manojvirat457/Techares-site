@@ -23,10 +23,10 @@ export function CtaSection({ className }: SectionProps) {
             <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
               {title}
             </h2>
-            <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] md:flex-row">
+            <form className="mt-6 flex flex-col items-center justify-center  gap-[.625rem] md:mt-[1.875rem] md:flex-row ">
               <TextInput
                 placeholder="Enter Email"
-                className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
+                className=" text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
               />
               <Button
                 type="submit"
