@@ -22,7 +22,7 @@ function ServiceCard({ title, description }: ServiceCardProps) {
       className="h-full w-full border border-dashed border-gray-400"
     >
       <Card className="h-full w-full border-zinc-200/50 bg-transparent dark:border-zinc-900/50 dark:bg-zinc-800 ">
-        <div className="space-y-2 p-6  h-100">
+        <div className="h-100 space-y-2  p-6">
           <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </h3>
@@ -53,13 +53,13 @@ function ServiceItem({
   return (
     <button
       onClick={onClick}
-      className={`flex w-5/6 items-center gap-3 rounded-lg p-4 text-left mt-8 transition-all ${
+      className={`mt-8 flex w-5/6 items-center gap-3 rounded-lg p-4 text-left transition-all ${
         isActive
           ? 'gradient-bg-tab'
           : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'
       }`}
     >
-      <div className="grid h-12 w-12 flex-shrink-0 place-items-center h-100">
+      <div className="h-100 grid h-12 w-12 flex-shrink-0 place-items-center">
         <Image src={icon} width={32} height={32} alt="icon" />
       </div>
       <div className="flex flex-col">
@@ -71,7 +71,7 @@ function ServiceItem({
             isActive
               ? 'text-zinc-900 dark:text-stone-500'
               : 'text-zinc-600 dark:text-stone-300'
-          } hidden text-sm md:block mt-2`}
+          } mt-2 hidden text-sm md:block`}
         >
           {description}
         </span>
@@ -96,7 +96,7 @@ export default function ServicesSection({
   const currentService: ServiceDetail = servicesData[activeService];
 
   return (
-    <div className="min-h-screen  section-padding-primary dark:bg-zinc-950 gradient-bg-section">
+    <div className="section-padding-primary  gradient-bg-section min-h-screen dark:bg-zinc-950">
       <Container isFluid={false} isNoPadding={false}>
         <div className="mx-4 max-w-[95rem] lg:mx-auto">
           <div className="grid gap-2 lg:grid-cols-2">

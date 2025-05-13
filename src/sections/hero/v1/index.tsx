@@ -48,7 +48,7 @@ export function Hero() {
             <SwiperSlide key={index}>
               <div className="relative flex items-center justify-center overflow-hidden py-20 lg:min-h-screen">
                 <div className="container relative z-10">
-                  <div className="mx-auto max-w-3xl text-center mt-48">
+                  <div className="mx-auto mt-48 max-w-3xl text-center">
                     <div
                       className="space-y-6"
                       data-aos="fade-up"
@@ -58,7 +58,7 @@ export function Hero() {
                         {item.title}
                       </h1>
                       <p
-                        className="text-base text-accent-900 dark:text-accent-200 md:text-md leading-relaxed"
+                        className="text-base leading-relaxed text-accent-900 dark:text-accent-200 md:text-md"
                         suppressHydrationWarning
                       >
                         {item.description}

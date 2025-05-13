@@ -40,13 +40,27 @@
   @apply bg-primary text-white;
 }
 
-.gradient-bg-tab{
- background: #FFF;
-background: linear-gradient(264deg, rgba(255, 255, 255, 1) 0%, rgba(168, 210, 240, 1) 100%);
+.gradient-bg-tab {
+  background: #fff;
+  background: linear-gradient(
+    264deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(168, 210, 240, 1) 100%
+  );
 }
-.gradient-bg-section{
-background: transparent;
-background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(168, 210, 240, 1) 100%);
-    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 24px 100%;
-    border: 0;
+.gradient-bg-section {
+  background: transparent;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(168, 210, 240, 1) 100%
+  );
+  -webkit-mask: conic-gradient(
+      from -45deg at bottom,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50% / 24px 100%;
+  border: 0;
 }

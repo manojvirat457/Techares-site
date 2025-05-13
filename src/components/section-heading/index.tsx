@@ -52,11 +52,7 @@ export function SectionHeading({
         )}
         {title}
       </h3>
-      {description && (
-        <p className={'my-2'}>
-          {description}
-        </p>
-      )}
+      {description && <p className={'my-2'}>{description}</p>}
       {additionalDesc && <p className="mt-2">{additionalDesc}</p>}
     </div>
   );
