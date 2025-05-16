@@ -1,3 +1,4 @@
+import type { TabContent } from '@/src/components/tab-section';
 import type { FAQSectionProps } from '@/src/sections/faq';
 import type { ProjectDetailsProps } from '@/src/sections/project/v4';
 import type { TeamSectionProps } from '@/src/sections/team/v2';
@@ -255,10 +256,10 @@ export const tabs = [
   { id: 'dispatcher', label: 'Dispatcher Dashboard' },
   { id: 'admin', label: 'Admin Panel' },
   { id: 'corporate', label: 'Corporate Console' },
-];
+] as const
 
 // Content for each tab
-export const tabContent = {
+export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
   driver: {
     title: 'Driver Features',
     features: [
