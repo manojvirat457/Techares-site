@@ -256,7 +256,7 @@ export const tabs = [
   { id: 'dispatcher', label: 'Dispatcher Dashboard' },
   { id: 'admin', label: 'Admin Panel' },
   { id: 'corporate', label: 'Corporate Console' },
-] as const
+] as const;
 
 // Content for each tab
 export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
