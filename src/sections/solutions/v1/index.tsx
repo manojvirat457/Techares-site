@@ -20,9 +20,9 @@ function CategoryButton({ title, isActive, onClick }: CategoryButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-full rounded-lg p-4 text-left transition-all ${
+      className={`w-full rounded-lg border border-gray-300 p-4 text-left transition-all ${
         isActive
-          ? 'bg-primary text-white'
+          ? ' gradient-bg-tab border-0 text-accent-900'
           : 'bg-white text-accent-900 hover:bg-zinc-100'
       }`}
     >
@@ -52,13 +52,13 @@ interface SolutionCardProps {
 function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
   return (
     <CustomLink href={href ?? '/'}>
-      <div className="space-y-2 rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900/50">
-        <div className="relative mb-4 h-16 w-16">
+      <div className="space-y-2 rounded-lg border border-dashed border-gray-400 bg-zinc-100 p-6 dark:bg-zinc-900/50">
+        <div className="relative mb-4">
           <Image
             src={icon || '/placeholder.svg'}
             alt={title}
-            height={70}
-            width={70}
+            height={50}
+            width={50}
             className="object-contain"
           />
         </div>
@@ -129,7 +129,7 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-4 py-20 dark:bg-[#141416]">
+    <div className="section-padding-primary min-h-screen bg-white dark:bg-[#141416]">
       <div className="mx-auto max-w-7xl">
         <div className="xs:mt-10 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Solutions Info - Reordered for mobile */}

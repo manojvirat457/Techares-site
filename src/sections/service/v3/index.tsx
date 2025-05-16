@@ -19,10 +19,10 @@ function ServiceCard({ title, description }: ServiceCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="h-full w-full"
+      className="h-full w-full border border-dashed border-gray-400"
     >
-      <Card className="h-full w-full border-zinc-200/50 bg-white dark:border-zinc-900/50 dark:bg-zinc-800">
-        <div className="space-y-2 p-6">
+      <Card className="h-full w-full border-zinc-200/50 bg-transparent dark:border-zinc-900/50 dark:bg-zinc-800 ">
+        <div className="h-100 space-y-2  p-6">
           <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </h3>
@@ -53,13 +53,13 @@ function ServiceItem({
   return (
     <button
       onClick={onClick}
-      className={`flex w-5/6 items-center gap-3 rounded-lg p-4 text-left transition-all ${
+      className={`mt-8 flex w-5/6 items-center gap-3 rounded-lg p-4 text-left transition-all ${
         isActive
-          ? 'bg-primary-light'
+          ? 'gradient-bg-tab'
           : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'
       }`}
     >
-      <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full bg-zinc-200 dark:bg-zinc-700">
+      <div className="h-100 grid h-12 w-12 flex-shrink-0 place-items-center">
         <Image src={icon} width={32} height={32} alt="icon" />
       </div>
       <div className="flex flex-col">
@@ -69,9 +69,9 @@ function ServiceItem({
         <span
           className={`${
             isActive
-              ? 'text-zinc-900 dark:text-accent-100'
-              : 'text-zinc-600 dark:text-accent-300'
-          } hidden text-sm md:block`}
+              ? 'text-zinc-900 dark:text-stone-500'
+              : 'text-zinc-600 dark:text-stone-300'
+          } mt-2 hidden text-sm md:block`}
         >
           {description}
         </span>
@@ -96,10 +96,10 @@ export default function ServicesSection({
   const currentService: ServiceDetail = servicesData[activeService];
 
   return (
-    <div className="min-h-screen bg-white py-20 dark:bg-zinc-950">
+    <div className="section-padding-primary  gradient-bg-section min-h-screen dark:bg-zinc-950">
       <Container isFluid={false} isNoPadding={false}>
         <div className="mx-4 max-w-[95rem] lg:mx-auto">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-2 lg:grid-cols-2">
             {/* Left Column */}
             <div className="space-y-4">
               <h2 className="text-xl font-bold text-zinc-900 dark:text-white md:text-2xl">
@@ -134,7 +134,7 @@ export default function ServicesSection({
                 <p className="mb-8 text-zinc-600 dark:text-accent-800">
                   {currentService.mainDescription}
                 </p>
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto">
                   <div className="flex flex-wrap justify-center gap-6">
                     {currentService.cards.map((service, index) => (
                       <div

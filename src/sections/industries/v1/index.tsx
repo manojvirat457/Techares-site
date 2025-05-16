@@ -25,7 +25,7 @@ function IndustryCard({
     >
       <Card
         key={index}
-        className="h-full w-full items-center justify-center border-zinc-200 bg-white text-center shadow-sm dark:border-zinc-700 dark:bg-zinc-800"
+        className="justify-centerborder h-full w-full items-center border-dashed border-gray-400  bg-white text-center shadow-sm dark:border-zinc-700 dark:bg-zinc-800"
       >
         <CardContent className="flex flex-col  items-center justify-center  gap-5 p-6">
           {/* <div className="mb-4 text-primary">
@@ -62,9 +62,9 @@ export default function IndustriesSection({
   // const itemsPerRow = 4; // On desktop
 
   return (
-    <section className="bg-zinc-50 px-4 py-20 dark:bg-zinc-900">
+    <section className="section-padding-primary bg-zinc-50 px-4 dark:bg-zinc-900">
       <div className="mx-auto max-w-screen-2xl">
-        <div className="mb-16 text-center">
+        <div className="mb-8 text-center">
           <h2 className="text-xl font-bold md:text-2xl ">
             <span className="text-primary dark:text-primary-light">
               {industriesSectionData.highlightTitle}
@@ -85,9 +85,7 @@ export default function IndustriesSection({
           )}
         </div>
 
-        <div
-          className={`mt-10 flex  flex-wrap content-start justify-center gap-7`}
-        >
+        <div className={`flex  flex-wrap content-start justify-center gap-7`}>
           {industriesSectionData.data.map((industry, index) => (
             <IndustryCard
               title={industry.title}
