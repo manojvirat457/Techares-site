@@ -1,15 +1,14 @@
-import type { ProjectDetailsProps } from '@/app/project/food-delivery/-data';
-import type { Methodology } from '@/data/methodology/v1';
+// import type { ProjectDetailsProps } from '@/app/project/food-delivery/-data';
 import type { TabContent } from '@/src/components/tab-section';
 import type { AboutSectionProps } from '@/src/sections/about/v1';
 import type { FAQSectionProps } from '@/src/sections/faq';
+import type { ProjectDetailsProps } from '@/src/sections/project/v4';
 import {
  BarChart2,
  Blocks,
  Bot,
  Brain,
  ChartNoAxesCombined,
- Code2,
  DollarSign,
  Glasses,
  Handshake,
@@ -17,13 +16,8 @@ import {
  LineChart,
  MessageCircle,
  Monitor,
- PenTool,
- RefreshCcw,
- Rocket,
- Search,
  Share2,
  Shield,
- TestTube2,
  Trophy,
  UserCircle2,
  Users,
@@ -33,7 +27,6 @@ import Image from 'next/image';
 
 export const projectDetails: ProjectDetailsProps = {
  sectionHeading: {
-
   title: 'Fantasy Sports App Development Services for Top Sports',
   description:
    "With Techares' premium fantasy sports app development, you can achieve unprecedented levels of fan engagement. We create custom fantasy sports platforms for major sports, providing seamless, immersive experiences. As a reputable fantasy sports app development company, we guarantee strong, scalable solutions that fulfill your specific vision. Our commitment to quality extends from conceptualizing to implementing, ensuring a superior product.",
@@ -333,7 +326,7 @@ export const workflowSteps = [
   id: 5,
   title: 'Effective Deployment',
   description:
-   'We optimize your app\'s listing for app stores, and manage deployment for a hassle-free experience in fantasy app development.',
+   "We optimize your app's listing for app stores, and manage deployment for a hassle-free experience in fantasy app development.",
  },
  {
   id: 6,
@@ -342,8 +335,6 @@ export const workflowSteps = [
    'We gather user feedback, analyze app data, provide regular updates with new features and bug fixes, and scale your infrastructure as needed.',
  },
 ];
-
-
 
 export const whyChooseUs: ProjectDetailsProps = {
  sectionHeading: {
@@ -418,8 +409,6 @@ export const whyChooseUs: ProjectDetailsProps = {
   height: 578,
  },
 };
-
-
 
 export const tabs = [
  { id: 'user', label: 'User Features' },
@@ -535,7 +524,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
     ),
     title: 'Real-Time Analytics & Reporting',
     description:
-     'You can gain valuable insights with real-time data, to optimize your platform\'s performance with our accurate analytics.',
+     "You can gain valuable insights with real-time data, to optimize your platform's performance with our accurate analytics.",
    },
    {
     icon: (
