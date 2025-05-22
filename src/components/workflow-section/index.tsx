@@ -64,12 +64,13 @@ export function WorkflowSection({
                 }}
               >
                 <div>
-                  <h3 className="mb-2 text-md font-extrabold md:text-lg">
-                    {step.title}
-                  </h3>
-                  <p className="text-[1.05rem] font-[400]">
-                    {step.description}
-                  </p>
+                  <SectionHeading
+                    title={step.title}
+                    alignment="start"
+                    textPosition="start"
+                    description={step.description}
+                    size="sm"
+                  />
                 </div>
               </div>
             </div>

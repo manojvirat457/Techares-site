@@ -157,80 +157,82 @@ export default function Page() {
       />
       {/* Latest Updates  */}
       <section className="container mx-auto py-12 md:py-16">
-        <div className="mx-9 flex flex-col items-start justify-between md:flex-row ">
-          <div className="max-w-4xl">
-            <SectionHeading
-              title="Latest Updates of Our Food Delivery App"
-              description="We continually update our food delivery app development services with the latest advancements, ensuring
+        <Container>
+          <div className="mx-9 flex flex-col items-start justify-between md:flex-row ">
+            <div className="max-w-4xl">
+              <SectionHeading
+                title="Latest Updates of Our Food Delivery App"
+                description="We continually update our food delivery app development services with the latest advancements, ensuring
                  compliance with market trends, security protocols, and user expectations."
-              alignment="start"
-            />
-          </div>
-
-          <div className="mx-10 mt-0 hidden md:block">
-            <ContactUsDialog>
-              <Button className="rounded-full">
-                <span>Talk To Expert</span>
-              </Button>
-            </ContactUsDialog>
-          </div>
-        </div>
-
-        <div className="relative mx-9  flex flex-col items-center md:flex-row">
-          <div className="relative z-10 order-2 md:order-1 md:mb-0 md:w-1/3">
-            <Image
-              src="/assets/images/food-delivery/delivery-illustration.png"
-              alt="Food Delivery Illustration"
-              width={300}
-              height={300}
-              className="object-contain"
-            />
-          </div>
-
-          <div className="order-1 grid grid-cols-1 flex-col justify-center gap-6 md:order-2 md:w-2/3 md:grid-cols-2">
-            <div className="h-fit rounded-md bg-white p-4 dark:bg-zinc-900">
-              <Image
-                src="/assets/images/food-delivery/truck-icon.png"
-                alt="Delivery Truck"
-                width={50}
-                height={50}
-                className="mb-4"
+                alignment="start"
               />
-              <div className="flex items-start gap-4">
-                <div>
-                  <p className="">
-                    Some content will be allocated here for the specific feature
-                    and that will have quite few sentences here like this. Add
-                    if required more. Some content will be allocated here for
-                    the specific feature and that will have quite few sentences
-                    here like this.
-                  </p>
+            </div>
+
+            <div className="mx-10 mt-0 hidden md:block">
+              <ContactUsDialog>
+                <Button className="rounded-full">
+                  <span>Talk To Expert</span>
+                </Button>
+              </ContactUsDialog>
+            </div>
+          </div>
+
+          <div className="relative mx-9  flex flex-col items-center md:flex-row">
+            <div className="relative z-10 order-2 md:order-1 md:mb-0 md:w-1/3">
+              <Image
+                src="/assets/images/food-delivery/delivery-illustration.png"
+                alt="Food Delivery Illustration"
+                width={300}
+                height={300}
+                className="object-contain"
+              />
+            </div>
+
+            <div className="order-1 grid grid-cols-1 flex-col justify-center gap-6 md:order-2 md:w-2/3 md:grid-cols-2">
+              <div className="h-fit rounded-md bg-white p-4 dark:bg-zinc-900">
+                <Image
+                  src="/assets/images/food-delivery/truck-icon.png"
+                  alt="Delivery Truck"
+                  width={50}
+                  height={50}
+                  className="mb-4"
+                />
+                <div className="flex items-start gap-4">
+                  <div>
+                    <p className="">
+                      Some content will be allocated here for the specific
+                      feature and that will have quite few sentences here like
+                      this. Add if required more. Some content will be allocated
+                      here for the specific feature and that will have quite few
+                      sentences here like this.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="h-fit rounded-md bg-white p-4 dark:bg-zinc-900">
+                <Image
+                  src="/assets/images/food-delivery/truck-icon.png"
+                  alt="Delivery Truck"
+                  width={50}
+                  height={50}
+                  className="mb-4"
+                />
+                <div className="flex items-start gap-4">
+                  <div>
+                    <p className="">
+                      Some content will be allocated here for the specific
+                      feature and that will have quite few sentences here like
+                      this. Add if required more. Some content will be allocated
+                      here for the specific feature and that will have quite few
+                      sentences here like this.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="h-fit rounded-md bg-white p-4 dark:bg-zinc-900">
-              <Image
-                src="/assets/images/food-delivery/truck-icon.png"
-                alt="Delivery Truck"
-                width={50}
-                height={50}
-                className="mb-4"
-              />
-              <div className="flex items-start gap-4">
-                <div>
-                  <p className="">
-                    Some content will be allocated here for the specific feature
-                    and that will have quite few sentences here like this. Add
-                    if required more. Some content will be allocated here for
-                    the specific feature and that will have quite few sentences
-                    here like this.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
+        </Container>
         {/* Road Divider */}
         <div className="relative z-20 h-12 w-full">
           <Image

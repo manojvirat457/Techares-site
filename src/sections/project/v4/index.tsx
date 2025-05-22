@@ -134,7 +134,7 @@ export function ProjectSectionV4({
             {keyPoints && keyPoints.length > 0 && (
               <div
                 className={cn(
-                  'mt-4 gap-4 text-accent-900 dark:text-white md:mt-6 md:gap-6',
+                  'mt-4 gap-4 md:mt-6 md:gap-6',
                   keyPointsLayout === 'grid'
                     ? 'grid sm:grid-cols-2'
                     : 'flex flex-col'
@@ -164,14 +164,23 @@ export function ProjectSectionV4({
                     </span>
                     {/* Ensure text is left-aligned */}
                     <div className="flex flex-col gap-2 text-left">
-                      <h2 className="text-md font-bold  leading-[1] md:text-lg">
+                      <SectionHeading
+                        title={keyPoint.title}
+                        size="sm"
+                        description={
+                          !isCard && keyPoint.description
+                            ? keyPoint.description
+                            : ''
+                        }
+                      />
+                      {/* <h2 className="text-md font-bold  leading-[1] md:text-lg">
                         {keyPoint.title}
                       </h2>
                       {!isCard && keyPoint.description && (
                         <p className="mt-2 whitespace-pre-line font-semibold">
                           {keyPoint.description}
                         </p>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 ))}

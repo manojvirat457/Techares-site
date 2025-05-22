@@ -1,10 +1,11 @@
+import { workflowSteps } from '@/app/-data';
 import {
   aboutSectionData,
   whyChooseSectionDataTwo,
 } from '@/data/about-section/v1';
 import { industriesSectionData } from '@/data/industries/v1';
-import { methodologies } from '@/data/methodology/v1';
 import { servicesData } from '@/data/service-section/v3';
+import { WorkflowSection } from '@/src/components/workflow-section';
 import { AboutSection } from '@/src/sections/about/v1';
 import { Hero } from '@/src/sections/hero/v1';
 import { basicMetadata } from '@/src/utils/metadata';
@@ -32,10 +33,7 @@ const TestimonialSection = dynamic(
     ),
   { ssr: true }
 );
-const MethodologiesSection = dynamic(
-  () => import('@/src/sections/methodology/v1'),
-  { ssr: true }
-);
+
 const TechnologiesSection = dynamic(
   () =>
     import('@/src/sections/technologies/v1').then(
@@ -70,12 +68,23 @@ export default function Page() {
         itemsPerRow={4}
       />
       <TestimonialSection />
-      <MethodologiesSection
+      {/* <MethodologiesSection
         methodologies={methodologies}
         heading={{
           title: 'Our Development',
           highlightedTitle: 'Methodologies',
         }}
+      /> */}
+      <WorkflowSection
+        sectionHeading={{
+          title: 'Strategic Workflow Taxi App Development',
+          subtitle: 'WORK FLOW',
+          description:
+            'We follow a well-structured development process at TechAres that ensures the successful delivery of a high-performing taxi app. Our approach is designed in such a way that it meets the requirements of business objectives while providing an unlimited user experience',
+          alignment: 'center',
+          textPosition: 'center',
+        }}
+        steps={workflowSteps}
       />
       <TechnologiesSection />
       <ProjectSection projectDetails={whyChooseSectionDataTwo} />

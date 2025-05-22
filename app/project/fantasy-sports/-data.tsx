@@ -696,3 +696,42 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
     image: '/assets/images/taxi-app/user-feature.png',
   },
 };
+
+export const uniqueFeatures = [
+  {
+    id: 1,
+    title: ' AI-based route optimization',
+    description:
+      'Taxi App Development Company provides cutting-edge technology in the form of AI-based route optimization, which leverages artificial intelligence to determine the most efficient path for effective transportation and delivery service.',
+  },
+  {
+    id: 2,
+    title: 'SOS and emergency features',
+    description:
+      'SOS and emergency features are designed with simplicity and speed in mind. The SOS button, when pressed, sends an immediate alert message to local emergency services and the safety response team, who are provided with the user’s location and relevant details by the app.',
+  },
+  {
+    id: 3,
+    title: 'Dynamic surge pricing system',
+    description:
+      'A pricing strategy called a dynamic surge pricing system is introduced where businesses can adjust prices in real time depending on current market demand, supply and other factors.',
+  },
+  {
+    id: 4,
+    title: 'Voice-Assisted Booking',
+    description:
+      'Voice-assisted booking enables users to book rides using voice commands, making the app more accessible for users with disabilities or those on the go, ensuring a hands-free and user-friendly experience.',
+  },
+  {
+    id: 5,
+    title: 'Multi-Language Support',
+    description:
+      'To serve diverse markets, the app includes multi-language support, allowing users and drivers to navigate and interact with the app in their preferred language, improving usability and inclusivity.',
+  },
+  {
+    id: 6,
+    title: 'Carbon Footprint Tracker',
+    description:
+      'This feature tracks the environmental impact of each ride by calculating the estimated CO₂ emissions, helping eco-conscious users make informed transportation choices and promoting sustainable ride options',
+  },
+];

@@ -71,7 +71,7 @@ export default function Page() {
         isFluid={true}
       />
       <section className="relative overflow-hidden py-16 md:py-16">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-primary/5 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-primary/5 to-transparent" /> */}
         <Container>
           <div className="text-center">
             <SectionHeading
