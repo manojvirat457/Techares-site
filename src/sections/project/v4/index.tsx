@@ -168,7 +168,9 @@ export function ProjectSectionV4({
                         {keyPoint.title}
                       </h2>
                       {!isCard && keyPoint.description && (
-                        <p className="mt-2 whitespace-pre-line font-semibold">{keyPoint.description}</p>
+                        <p className="mt-2 whitespace-pre-line font-semibold">
+                          {keyPoint.description}
+                        </p>
                       )}
                     </div>
                   </div>
