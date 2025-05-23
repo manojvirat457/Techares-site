@@ -3,7 +3,6 @@ import { ServiceCard } from '@/src/components/cards/service/v1';
 import { Container } from '@/src/components/container';
 import { AboutSection } from '@/src/sections/about/v1';
 import FAQSection from '@/src/sections/faq';
-import { HeroSection } from '@/src/sections/hero/v4/index.tsx';
 import MethodologiesSection from '@/src/sections/methodology/v1';
 import { ProjectSection } from '@/src/sections/project/v3';
 import { ServiceSection } from '@/src/sections/service/v1';
@@ -19,6 +18,7 @@ import {
   solutions,
   whyChooseSectionData,
 } from './-data.tsx';
+import { HeroSection } from '@/src/sections/hero/v5/index.tsx';
 
 export const metadata = basicMetadata({
   title: 'TechAres | Ecommerce App Development Company',
@@ -29,13 +29,33 @@ export const metadata = basicMetadata({
 export default function Page() {
   return (
     <main>
-      <HeroSection
-        backgroundImage={'/assets/images/hero/hero-1.webp'}
-        description="Leverage the latest technologies and platforms like Shopify and WooCommerce to ensure your ecommerce solution is robust, scalable, and user-friendly."
-        title="Ecommerce App Development Company"
+     <HeroSection
+        image={{
+          src: '/assets/images/taxi-app/hero-img.png',
+          alt: 'hero image',
+          width: 800,
+          height: 500,
+        }}
+        backgroundImage="/assets/images/ecommerce/mask.png"
+        isDecorated={false}
+        sectionHeading={{
+          title: (
+            <span className="text-start">
+              {' '}
+              Development <br />
+              Company
+            </span>
+          ),
+          highlighttitle: 'Taxi App',
+          size: 'lg',
+          textPosition: 'start',
+          description:
+            'Taxi Booking App Development Company that aims to revolutionize your ride-hailing solutions with its cutting-edge technology',
+          alignment: 'center',
+        }}
         button={{
           href: '',
-          label: 'Get Quote',
+          label: 'Learn More',
           openNewTab: true,
         }}
       />

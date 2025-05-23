@@ -25,18 +25,18 @@ export function HeroSection({
   enableGradient?: boolean;
 }) {
   return (
-    <section className="relative overflow-hidden pb-16 pt-40">
+    <section className="relative overflow-hidden pb-24 pt-40 min-h-[90vh]">
       {backgroundImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
       {enableGradient && (
-        <div className="absolute inset-0 translate-y-1/4 transform bg-gradient-to-t from-primary/50 via-primary/30 to-transparent" />
+        <div className="absolute inset-0 transform bg-gradient-to-t from-primary/40 via-primary/20 to-transparent" />
       )}
       <Container>
-        <div className="relative z-10 flex flex-col items-center lg:flex-row">
+        <div className="flex flex-col items-center lg:flex-row">
           <div className="mb-12 lg:mb-0 lg:w-1/2">
             <SectionHeading
               title={sectionHeading.title}
@@ -70,7 +70,8 @@ export function HeroSection({
                 alt={image.alt}
                 width={image.width}
                 height={image.height}
-                className="mx-auto w-full max-w-lg"
+                className="mx-auto w-full max-w-lg object-contain"
+                priority
               />
             </div>
             {isDecorated && (

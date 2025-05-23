@@ -135,8 +135,8 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="sticky top-0 z-444 w-full border-none bg-gradient-to-b from-white to-transparent sm:z-20">
-      <div className="container bg-transparent py-3">
+    <section className="sticky top-0 z-111 w-full backdrop-blur-sm bg-transparent sm:z-20">
+      <div className="bg-transparent py-3">
         {/* Desktop Menu */}
         <nav className="hidden justify-between bg-transparent lg:flex">
           <div className="flex items-center gap-6">
