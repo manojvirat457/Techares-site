@@ -35,14 +35,10 @@ export default async function RootLayout({ children }: Props) {
       <AOSInit />
       <body>
         <GoogleAnalytics gaId="GTM-W9JNHJXF" />
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <div
-            className={cn(
-              'text-accent-800 dark:text-body'
-            )}
-          >
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className={cn('text-accent-800 dark:text-body')}>
             {/* <MainHeader /> */}
-          <Navbar1  />
+            <Navbar1 />
             <main className={cn('px-5 md:px-0')}>{children}</main>
             <Footer />
           </div>

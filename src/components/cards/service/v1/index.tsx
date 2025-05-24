@@ -1,5 +1,6 @@
 import { Button } from '@/src/components/button';
 import { CustomLink } from '@/src/components/custom-link';
+import { SectionHeading } from '@/src/components/section-heading';
 import { cn } from '@/src/utils/shadcn';
 
 export interface ServiceProps {
@@ -11,7 +12,6 @@ export interface ServiceProps {
 }
 
 export function ServiceCard({
-  icon,
   title,
   description,
   slug,
@@ -21,7 +21,7 @@ export function ServiceCard({
     <article
       className={cn([
         // General
-        'group/service bg-white text-accent-900 shadow-3 transition-transform duration-350 dark:bg-accent-700 dark:text-white  dark:shadow-none',
+        'group/service bg-white  shadow-3 transition-transform duration-350 dark:bg-accent-700   dark:shadow-none',
 
         // Layout
         'relative z-1 block h-full space-y-6 overflow-hidden rounded-5 p-6 md:space-y-7 md:p-10',
@@ -30,15 +30,13 @@ export function ServiceCard({
         'hover:[transform:translateY(-.5rem)]',
       ])}
     >
-      <div className="flex items-center gap-5">
-        <span className="flex-none text-[2.5rem] transition-all duration-300 group-hover/service:scale-90 group-hover/service:text-primary md:text-[4rem]">
-          {icon}
-        </span>
-        <h2 className="text-md font-bold leading-[1.25] md:text-lg">{title}</h2>
-      </div>
-      <p className="text-accent-200">{description}</p>
+     <SectionHeading
+       title={title}
+       description={description}
+       size='sm'
+       textPosition={'start'}
+     />
       {slug && (
-        <>
           <div className="flex flex-1 items-center justify-center">
             <Button
               asChild
@@ -50,10 +48,10 @@ export function ServiceCard({
                 'group-hover/service:border-primary',
 
                 // Light
-                'border-current bg-transparent text-accent-900 hover:border-primary hover:bg-transparent hover:text-primary',
+                'border-current bg-transparent  hover:border-primary hover:bg-transparent ',
 
                 // Dark
-                'dark:border-accent-900 dark:bg-accent-900 dark:text-white group-hover/service:dark:bg-transparent  dark:hover:text-primary',
+                'dark:border-accent-900 dark:bg-accent-900  group-hover/service:dark:bg-transparent  ',
 
                 // stop default button hover effects
                 'before:hidden after:hidden',
@@ -74,9 +72,8 @@ export function ServiceCard({
                 </span>
               </CustomLink>
             </Button>
-            <span className="invisible absolute bottom-0 left-0 h-[2px] w-full scale-x-[30%] bg-primary opacity-0 transition-all duration-400 group-hover/service:visible group-hover/service:scale-x-100  group-hover/service:opacity-100"></span>
+            <span className="invisible absolute bottom-0 left-0 h-[2px] w-full scale-x-[30%] bg-primary opacity-0 transition-all duration-400 group-hover/service:visible group-hover/service:scale-x-100  group-hover/service:opacity-100" />
           </div>
-        </>
       )}
     </article>
   );

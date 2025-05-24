@@ -25,10 +25,10 @@ export function HeroSection({
   enableGradient?: boolean;
 }) {
   return (
-    <section className="relative overflow-hidden pb-24 pt-40 min-h-[90vh]">
+    <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-40">
       {backgroundImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full"
+          className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
