@@ -17,8 +17,9 @@ export function SectionHeading({
   highlighttitle,
   className,
   additionalDesc,
+  specialText,
   size,
-}: SectionHeadingProps) {
+ }: SectionHeadingProps) {
   const wrapperClasses = cn(
     alignment === 'start' && 'text-left',
     alignment === 'center' && 'text-center',
@@ -32,13 +33,27 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase tracking-widest text-primary md:text-md',
+            'mb-[.625rem] block font-secondary text-base	font-bold uppercase tracking-widest text-primary',
+            size === 'md' && 'md:text-md',
+            size === 'lg' && 'md:text-lg',
+            size === 'xl' && 'md:text-xl',
+            size === 'xm' && 'md:text-2xl',
             textPosition === 'start' && 'text-left',
             textPosition === 'center' && 'text-center',
             textPosition === 'end' && 'text-right'
           )}
         >
           {subtitle}
+        </p>
+      )}
+      {specialText && (
+        <p className={cn(
+          'mb-[.625rem] text-primary font-secondary md:text-xl font-bold',
+          textPosition === 'start' && 'text-left',
+          textPosition === 'center' && 'text-center',
+          textPosition === 'end' && 'text-right'
+        )}>
+          {specialText}
         </p>
       )}
       <h3

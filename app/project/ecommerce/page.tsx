@@ -83,7 +83,7 @@ export default function Page() {
                     <div className="top-13 absolute left-3/4 z-99 -translate-y-1/2 transform">
                       {solution.icon}
                     </div>
-                    <Card className="relative h-[300px] w-[650px] overflow-hidden rounded-none border-none">
+                    <Card className="relative h-[300px] w-full max-w-full overflow-hidden rounded-none border-none">
                       <div className="relative h-full bg-blue-50">
                         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
                         <CardContent className="relative z-[1] flex h-full flex-col justify-center p-4 pb-2 pt-6">
@@ -155,7 +155,7 @@ export default function Page() {
               <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
                 <div className="relative h-[460px] w-[500px]">
                   <Image
-                    src={slides[currentSlide].image || '/placeholder.svg'}
+                    src={slides[currentSlide].image }
                     alt="E-commerce illustration"
                     fill
                     className="object-contain"

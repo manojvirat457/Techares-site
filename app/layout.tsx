@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: Props) {
           <div className={cn('text-accent-800 dark:text-body')}>
             {/* <MainHeader /> */}
             <Navbar1 />
-            <main className={cn('px-5 md:px-0')}>{children}</main>
+            {children}
             <Footer />
           </div>
         </ThemeProvider>

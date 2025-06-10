@@ -1,7 +1,8 @@
+'use client';
 import { TabSection } from '@/src/components/tab-section/index.tsx';
 import { WorkflowSection } from '@/src/components/workflow-section/index.tsx';
 import FAQSection from '@/src/sections/faq/index.tsx';
-import { HeroSection } from '@/src/sections/hero/v5/index.tsx';
+import { HeroSection } from '@/src/sections/hero/v6/index.tsx';
 import { ProjectSection } from '@/src/sections/project/v3';
 import { ProjectSectionV4 } from '@/src/sections/project/v4/index.tsx';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
@@ -20,33 +21,27 @@ import { Card, CardContent } from '@/src/components/ui/card.tsx';
 import { SectionHeading } from '@/src/components/section-heading/index.tsx';
 import { Container } from '@/src/components/container/index.tsx';
 
-export const metadata = basicMetadata({
-  title: 'TechAres | Fantasy Sports App Development Company',
-  description:
-    'Transform your sports vision into reality with our cutting-edge fantasy sports app development services',
-});
+// export const metadata = basicMetadata({
+//   title: 'TechAres | Fantasy Sports App Development Company',
+//   description:
+//     'Transform your sports vision into reality with our cutting-edge fantasy sports app development services',
+// });
 
 export default function Page() {
   return (
     <main>
       <HeroSection
         image={{
-          src: '/assets/images/taxi-app/hero-img.png',
+          src: '/assets/images/fantasy-sports/hero-2.png',
           alt: 'hero image',
           width: 800,
           height: 500,
         }}
-        backgroundImage="/assets/images/taxi-app/hero-bg.png"
+        backgroundImage="/assets/images/fantasy-sports/hero-1.png"
         isDecorated={false}
         sectionHeading={{
-          title: (
-            <span className="text-start">
-              {' '}
-              <br />
-              Development Services
-            </span>
-          ),
-          highlighttitle: 'Fantasy Sports App',
+          title: 'Fantasy App Development Services',
+          specialText: 'Create an Immersive  Fantasy Sports App With Our Exceptional',
           size: 'lg',
           textPosition: 'start',
           description:
@@ -59,6 +54,13 @@ export default function Page() {
           openNewTab: true,
         }}
       />
+      <ProjectSectionV4
+      projectDetails={projectDetails}
+      imagePosition="left"
+      alignment="center"
+      backgroundColor={{ dark: 'bg-accent-900', light: 'bg-zinc-50' }}
+      keyPointsLayout="list"
+    />
       <section className="">
         <Container>
           <SectionHeading
@@ -103,7 +105,6 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <ProjectSection projectDetails={projectDetails} />
       {/* {ket feature} */}
       <TabSection
         heading={{

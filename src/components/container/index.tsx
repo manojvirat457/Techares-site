@@ -1,4 +1,4 @@
-import { IContainer } from './interface';
+import type { IContainer } from './interface';
 import Styles from './container.module.css';
 import { cn } from '@/src/utils/shadcn';
 
@@ -13,5 +13,5 @@ export function Container({
     { [Styles['full-width']]: isFluid },
     { [Styles['no-padding']]: isNoPadding }
   );
-  return <div className={containerClasses}>{children}</div>;
+  return <div className={cn(containerClasses , 'px-8 md:px-0')}>{children}</div>;
 }
