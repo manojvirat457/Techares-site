@@ -155,7 +155,7 @@ export default function Page() {
               <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
                 <div className="relative h-[460px] w-[500px]">
                   <Image
-                    src={slides[currentSlide].image }
+                    src={slides[currentSlide].image}
                     alt="E-commerce illustration"
                     fill
                     className="object-contain"

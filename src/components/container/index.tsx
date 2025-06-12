@@ -13,5 +13,5 @@ export function Container({
     { [Styles['full-width']]: isFluid },
     { [Styles['no-padding']]: isNoPadding }
   );
-  return <div className={cn(containerClasses , 'px-8 md:px-0')}>{children}</div>;
+  return <div className={cn(containerClasses, 'px-8 md:px-0')}>{children}</div>;
 }

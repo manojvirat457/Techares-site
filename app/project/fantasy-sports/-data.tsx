@@ -27,10 +27,23 @@ import Image from 'next/image';
 
 export const projectDetails: ProjectDetailsProps = {
   sectionHeading: {
-    title: 'Fantasy Sports App Development Services for Top Sports',
+    title: (
+      <>
+        Fantasy Sports App Development <br /> Services for Top Sports
+      </>
+    ),
+    size: 'md',
+    textPosition: 'start',
     description:
       "With Techares' premium fantasy sports app development, you can achieve unprecedented levels of fan engagement. We create custom fantasy sports platforms for major sports, providing seamless, immersive experiences. As a reputable fantasy sports app development company, we guarantee strong, scalable solutions that fulfill your specific vision. Our commitment to quality extends from conceptualizing to implementing, ensuring a superior product.",
   },
+  button: {
+    href: '',
+    label: 'Get in touch',
+    openNewTab: true,
+  },
+  isCard: false,
+  isButton: true,
   keyPoints: [],
   image: {
     src: '/assets/images/fantasy-sports/hero-3.png',
@@ -435,7 +448,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Easy Registration & Login',
-        description: 'Our intuitive user interface provides users with a quick and seamless signup and login experience.',
+        description:
+          'Our intuitive user interface provides users with a quick and seamless signup and login experience.',
       },
       {
         icon: (
@@ -448,7 +462,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'League Management',
-        description: 'Users can create or join leagues, manage teams, and engage with fellow fans using our robust league tools.',
+        description:
+          'Users can create or join leagues, manage teams, and engage with fellow fans using our robust league tools.',
       },
       {
         icon: (
@@ -461,7 +476,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Team Selection & Player Drafting',
-        description: 'Players can plan the ideal team for their with real-time statistics and expert insights.',
+        description:
+          'Players can plan the ideal team for their with real-time statistics and expert insights.',
       },
       {
         icon: (
@@ -474,7 +490,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Live Match Tracking & Score Updates',
-        description: 'Stay updated with the instant scores and live match tracking provides an exceptional sports experience.',
+        description:
+          'Stay updated with the instant scores and live match tracking provides an exceptional sports experience.',
       },
       {
         icon: (
@@ -487,7 +504,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Multiple Payment Options & Reward System',
-        description: 'With our flexible and robust systems the transactions and exciting rewards are safe and secured.',
+        description:
+          'With our flexible and robust systems the transactions and exciting rewards are safe and secured.',
       },
     ],
     image: '/assets/images/taxi-app/user-feature.png',
@@ -506,7 +524,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'User & Contest Management',
-        description: 'Admin can efficiently manage users and contests with our comprehensive web interface, ensuring smooth operations.',
+        description:
+          'Admin can efficiently manage users and contests with our comprehensive web interface, ensuring smooth operations.',
       },
       {
         icon: (
@@ -519,7 +538,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Real-Time Analytics & Reporting',
-        description: 'You can gain valuable insights with real-time data, to optimize your platform\'s performance with our accurate analytics.',
+        description:
+          "You can gain valuable insights with real-time data, to optimize your platform's performance with our accurate analytics.",
       },
       {
         icon: (
@@ -532,7 +552,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Fraud Detection & Security Measures',
-        description: 'Protect your platform with advanced security, ensuring a safe and fair environment for the user.',
+        description:
+          'Protect your platform with advanced security, ensuring a safe and fair environment for the user.',
       },
       {
         icon: (
@@ -545,7 +566,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Revenue Tracking & Monetization Control',
-        description: 'Our revenue tracking features maximize revenue with detailed tracking and flexible monetization.',
+        description:
+          'Our revenue tracking features maximize revenue with detailed tracking and flexible monetization.',
       },
     ],
     image: '/assets/images/taxi-app/user-feature.png',
@@ -564,7 +586,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'AI-Driven Player Predictions',
-        description: 'Integration of AI for accurate player predictions, gives users a competitive edge with advanced technology.',
+        description:
+          'Integration of AI for accurate player predictions, gives users a competitive edge with advanced technology.',
       },
       {
         icon: (
@@ -577,7 +600,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Social Media Integration for User Engagement',
-        description: 'With seamless social sharing, and connecting users within the community you can promote app engagement.',
+        description:
+          'With seamless social sharing, and connecting users within the community you can promote app engagement.',
       },
       {
         icon: (
@@ -590,7 +614,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Geolocation Features',
-        description: 'Enhance the user experience and increase app engagement with our exclusive geo-specific leagues and events.',
+        description:
+          'Enhance the user experience and increase app engagement with our exclusive geo-specific leagues and events.',
       },
       {
         icon: (
@@ -603,7 +628,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'In-App Chat & Push Notifications',
-        description: 'Foster communication and engagement with real-time chat and push notifications.',
+        description:
+          'Foster communication and engagement with real-time chat and push notifications.',
       },
       {
         icon: (
@@ -616,7 +642,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Multi-Game & Multi-Platform Compatibility',
-        description: 'Reach a wider audience with versatile, cross-platform, and cross-game compatibility features.',
+        description:
+          'Reach a wider audience with versatile, cross-platform, and cross-game compatibility features.',
       },
     ],
     image: '/assets/images/taxi-app/user-feature.png',
@@ -635,7 +662,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Blockchain-Powered Transparency & Security',
-        description: 'Get a secure and reliable experience with integrated blockchain technology throughout the application.',
+        description:
+          'Get a secure and reliable experience with integrated blockchain technology throughout the application.',
       },
       {
         icon: (
@@ -648,7 +676,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'NFT Integration for Digital Collectibles',
-        description: 'Incorporate unique digital assets with NFT integration, in trading with NFT-based player card achievements, and many more.',
+        description:
+          'Incorporate unique digital assets with NFT integration, in trading with NFT-based player card achievements, and many more.',
       },
       {
         icon: (
@@ -661,7 +690,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'Augmented Reality (AR) for an Immersive Experience',
-        description: 'Elevate gameplay with AR features, creating engaging and interactive visual experiences through 3D.',
+        description:
+          'Elevate gameplay with AR features, creating engaging and interactive visual experiences through 3D.',
       },
       {
         icon: (
@@ -674,7 +704,8 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           />
         ),
         title: 'AI-Based Game Strategies & Insights',
-        description: 'Enhance the user gameplay with AI-driven strategy insights, improving user engagement through comprehensive technology.',
+        description:
+          'Enhance the user gameplay with AI-driven strategy insights, improving user engagement through comprehensive technology.',
       },
     ],
     image: '/assets/images/taxi-app/user-feature.png',
@@ -685,30 +716,35 @@ export const uniqueFeatures = [
   {
     id: 1,
     title: 'Fantasy Football App',
+    image: '/assets/images/fantasy-sports/p1.png',
     description:
       'Our Fantasy football app assists in building virtual teams of actual football players, playing against each other based on how the players play in real games. Our Fantasy football app development involves player stats, live scoring, and league management tools. Our app development services get maximum traction during the period of popular football leagues and keep the supporters engaged and energized throughout the season.',
   },
   {
     id: 2,
     title: 'Fantasy Basketball App',
+    image: '/assets/images/fantasy-sports/p2.png',
     description:
       'With our fantasy basketball app, the users can pick their preferred NBA or overseas basketball superstars to assemble a winning team. The game points are gained depending on actual-game statistics such as rebounds, assists, and points made. Our outstanding app development provides a quick, interactive experience that works best for both daily fantasy games and long seasons.',
   },
   {
     id: 3,
     title: 'Fantasy Baseball App',
+    image: '/assets/images/fantasy-sports/p3.png',
     description:
-      'Design your fantasy baseball app with our stunning fantasy app development services that offer fans the opportunity to control their teams by means of player choices, trades, and lineup settings. The game\'s success is based on everyday or weekly performance statistics like home runs, RBIs, and strikeouts. Based on detailed data tracking features, apps are dedicated to game success for dedicated players.',
+      "Design your fantasy baseball app with our stunning fantasy app development services that offer fans the opportunity to control their teams by means of player choices, trades, and lineup settings. The game's success is based on everyday or weekly performance statistics like home runs, RBIs, and strikeouts. Based on detailed data tracking features, apps are dedicated to game success for dedicated players.",
   },
   {
     id: 4,
     title: 'Fantasy Rugby App',
+    image: '/assets/images/fantasy-sports/p4.png',
     description:
       'We develop stable and bug-free fantasy rugby applications that provide an engaging means for fantasy rugby users to immerse themselves in rugby leagues. Fantasy rugby app development is growing fast across the globe, offering a real experience for fantasy rugby enthusiasts. Contact our skilled developers to develop a captivating Fantasy rugby app with easy-to-use features.',
   },
   {
     id: 5,
     title: 'Fantasy Cricket App',
+    image: '/assets/images/fantasy-sports/p5.png',
     description:
       'Fantasy cricket app development is very trending among cricket-supportive nations. Fantasy cricket apps enable users to line up their team prior to match-ups and gain points with real-time performances such as runs, wickets, and catches. We assist you to develop an impeccable fantasy cricket app with packed-in player and admin-centric features. These features support a bug-free experience both for the player as well as for the admin.',
   },

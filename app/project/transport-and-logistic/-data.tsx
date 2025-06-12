@@ -1,35 +1,35 @@
 import { ProjectDetailsProps } from '@/app/project/food-delivery/-data';
 import { Methodology } from '@/data/methodology/v1';
-import { AboutSectionProps } from '@/src/sections/about/v1';
+import { TabContent } from '@/src/components/tab-section';
 import { FAQSectionProps } from '@/src/sections/faq';
 import { ServiceSectionProps } from '@/src/sections/service/v1';
 import {
-  Activity,
-  BarChart,
-  Box,
-  Boxes,
-  Brain,
-  Car,
-  Cog,
-  Cpu,
-  FileSearch,
-  Handshake,
-  HeartPulse,
-  LineChart,
-  MapPin,
-  Navigation2,
-  Network,
-  Pencil,
-  Radio,
-  Rocket,
-  Route,
-  ShoppingCart,
-  TestTube,
-  Timer,
-  Truck,
-  Users,
-  Warehouse,
+ Activity,
+ Box,
+ Boxes,
+ Brain,
+ Car,
+ Cog,
+ Cpu,
+ FileSearch,
+ HeartPulse,
+ LineChart,
+ MapPin,
+ Navigation2,
+ Network,
+ Pencil,
+ Radio,
+ Rocket,
+ Route,
+ ShoppingCart,
+ TestTube,
+ Timer,
+ Truck,
+ Users,
+ Warehouse
 } from 'lucide-react';
+import Image from 'next/image';
+
 
 export const projectDetails: ProjectDetailsProps = {
   sectionHeading: {
@@ -140,72 +140,67 @@ export const servicesData = {
   },
 };
 
-export const whyChooseSectionData: AboutSectionProps = {
-  sectionHeading: {
-    title: 'What Makes Us Your Ideal Logistics Software Development Company?',
-    description:
-      'Techares specializes in delivering end-to-end logistics software solutions tailored to your business needs. With a strong focus on automation, real-time tracking, and seamless integration, we help optimize your logistics operations for maximum efficiency and cost savings.',
-  },
-  keyPoints: [
-    {
-      title: 'Industry Expertise',
-      description:
-        'Years of experience in logistics software development, ensuring top-notch solutions.',
-      icon: <BarChart />,
-    },
-    {
-      title: 'Scalable Solutions',
-      description: 'Custom-built software that grows with your business needs.',
-      icon: <LineChart />,
-    },
-    {
-      title: 'Advanced Technology',
-      description:
-        'Integration of AI, IoT, and automation for efficient logistics management.',
-      icon: <Cpu />,
-    },
-    {
-      title: 'Reliable Support',
-      description:
-        '24/7 technical assistance and regular updates to keep your system optimized.',
-      icon: <Handshake />,
-    },
-  ],
-  isCard: false,
-  images: {
-    image1: {
-      src: '/assets/images/about/about-1.webp',
-      alt: 'about one',
-      width: 195,
-      height: 132,
-    },
-    image2: {
-      src: '/assets/images/about/about-2.webp',
-      alt: 'about two',
-      width: 312,
-      height: 304,
-    },
-    image3: {
-      src: '/assets/images/about/about-3.webp',
-      alt: 'about three',
-      width: 250,
-      height: 265,
-    },
-    image4: {
-      src: '/assets/images/about/about-4.webp',
-      alt: 'about four',
-      width: 250,
-      height: 265,
-    },
-  },
-  isButton: true,
-  button: {
-    href: '',
-    label: 'Get Quote',
-    openNewTab: true,
-  },
-  description: '',
+
+export const whyChooseUs: ProjectDetailsProps = {
+ sectionHeading: {
+   title: 'What Makes Us Your Ideal Logistics Software Development Company',
+   description:
+     "As a trusted logistics software development company, Techares stands out by delivering time-bound results through a proven agile development process. Our dedicated team of experts ensures seamless execution, while our round-the-clock support guarantees uninterrupted operations. Whether you're seeking full-cycle logistics software development or specialized software application development for logistics, we build solutions that are scalable, secure, and results-driven",
+ },
+ isCard: false,
+ keyPoints: [
+   {
+     title: 'Zero-Cost Evaluation',
+     icon: (
+       <Image
+         src="/assets/images/food-delivery/fock-outline.png"
+         alt="Feature 1"
+         width={20}
+         height={20}
+       />
+     ),
+     description:
+       'We begin with a free consultation and provide a transparent estimate tailored to your logistics software needs.',
+   },
+   {
+     title: 'Data Security & IP Protection',
+     icon: (
+       <Image
+         src="/assets/images/food-delivery/fock-outline.png"
+         alt="Feature 1"
+         width={20}
+         height={20}
+       />
+     ),
+     description:
+       'Your data is safeguarded through strict security protocols, NDA agreements, and internal IP protection policies.',
+   },
+   {
+     title: 'Full Code Ownership',
+     icon: (
+       <Image
+         src="/assets/images/food-delivery/fock-outline.png"
+         alt="Feature 1"
+         width={20}
+         height={20}
+       />
+     ),
+     description:
+       "You receive 100% ownership of your software's source code upon project completion, ensuring full transparency and control.",
+   },
+ ],
+ button: {
+   label: 'TALK TO EXPERTS',
+   href: '/contact',
+ },
+ image: {
+   src: '/assets/images/taxi-app/hero-3.png',
+   alt: 'about image five',
+   width: 540,
+   height: 578,
+ },
 };
+
 
 type FeatureSectionProps = {
   title: string;
@@ -217,72 +212,72 @@ export const features: FeatureSectionProps[] = [
   {
     title: 'Transportation Management',
     description:
-      'Automate and streamline transportation planning, execution, and tracking.',
+      'Gain end-to-end visibility with logistics software development that automates carrier selection, load planning, and real-time shipment tracking.',
     icon: <Truck />,
   },
   {
     title: 'Route Optimization',
     description:
-      'Find the most efficient routes to reduce fuel costs and delivery times.',
+      'Our logistics software development company cuts fuel costs by dynamically choosing the fastest, most economical routes.',
     icon: <Route />,
   },
   {
     title: 'Fleet Management',
     description:
-      "Monitor and manage your fleet's performance, maintenance, and fuel consumption.",
+      'Monitor every vehicle’s health through software application development for logistics that fuses telematics with predictive maintenance.',
     icon: <Car />,
   },
   {
     title: 'Warehouse Management',
     description:
-      'Optimize warehouse operations with automated inventory control and tracking.',
+      'Streamline inbound and outbound workflows using logistics software development tuned for multi-warehouse coordination.',
     icon: <Warehouse />,
   },
   {
     title: 'Inventory Management',
     description:
-      'Keep real-time stock updates and prevent shortages or overstocking.',
+      'Balance stock levels via software application development for logistics that syncs demand, supply, and replenishment in real time.',
     icon: <Boxes />,
   },
   {
     title: 'Asset Tracking',
     description:
-      'Gain visibility over your valuable assets with GPS-enabled tracking solutions.',
+      'Protect high-value goods worldwide with GPS-enabled logistics software development for 24/7 asset visibility.',
     icon: <MapPin />,
   },
   {
     title: 'Order Management',
     description:
-      'Automate order processing and tracking for seamless deliveries.',
+      'Centralize orders from every channel on a single logistics software development company platform for faster fulfillment.',
     icon: <ShoppingCart />,
   },
   {
     title: 'Customer Experience',
     description:
-      'Enhance customer satisfaction with real-time tracking and support.',
+      'Delight shippers and consignees with self-service portals built through software application development for logistics, offering live ETAs and status alerts.',
     icon: <Users />,
   },
   {
-    title: 'Supply Chain Management',
+    title: 'Supply Chain Management (SCM)',
     description:
-      'Streamline your end-to-end supply chain for maximum efficiency.',
+      'Integrate procurement, production, and delivery on one logistics software development backbone for true supply-chain orchestration.',
     icon: <Network />,
   },
   {
-    title: 'Navigation Tracking',
-    description: 'Enable real-time navigation and tracking for accurate ETAs.',
+    title: 'Navigation & Real-Time Tracking',
+    description: "Turn drivers' smartphones into smart copilots with software application development for logistics that provides live navigation and ETA updates.",
     icon: <Navigation2 />,
   },
   {
-    title: 'Telematics and Connected Vehicles',
+    title: 'Telematics & Connected Vehicles',
     description:
-      'Improve fleet efficiency with IoT-powered vehicle monitoring.',
+      'Harvest vehicle data in logistics software development company dashboards to improve safety and cut downtime.',
     icon: <Radio />,
   },
   {
     title: 'Delivery Management Solutions',
     description:
-      'Automate and optimize last-mile deliveries for faster, more reliable service.',
+      'Ensure on-time, last-mile excellence through software application development for logistics that automates dispatch, proof-of-delivery, and feedback loops.',
     icon: <Timer />,
   },
 ];
@@ -437,4 +432,307 @@ export const latestUpdate: ServiceSectionProps = {
         'Continuous monitoring, updates, and improvements to keep your logistics software running smoothly.',
     },
   ],
+};
+
+export const workflowSteps = [
+  {
+    id: 1,
+    title: 'Discovery & Requirement Analysis',
+    description:
+      'As a leading logistics software development company, we begin by understanding your unique challenges and goals to tailor the perfect solution.',
+  },
+  {
+    id: 2,
+    title: 'Solution Design & Planning',
+    description:
+      'Our team creates a detailed blueprint, leveraging best practices in logistics software development to ensure scalability and efficiency.',
+  },
+  {
+    id: 3,
+    title: 'Agile Development & Iteration',
+    description:
+      'We apply agile principles to our software application development for logistics, delivering functional modules quickly and incorporating your feedback.',
+  },
+  {
+    id: 4,
+    title: 'Quality Assurance & Testing',
+    description:
+      'Robust testing protocols guarantee your logistics software is secure, reliable, and optimized for real-world logistics operations.',
+  },
+  {
+    id: 5,
+    title: 'Deployment & Integration',
+    description:
+      'Our experts deploy your custom solution smoothly, integrating with existing platforms to maintain seamless logistics workflows.',
+  },
+  {
+    id: 6,
+    title: 'Ongoing Support & Enhancement',
+    description:
+      'As your trusted logistics software development company, we provide continuous support and enhancements to keep your system future-ready.',
+  },
+];
+
+// Tab data
+export const tabs = [
+ { id: 'admin', label: 'Admin Panel' },
+ { id: 'driver', label: 'Driver/Fleet App' },
+ { id: 'warehouse', label: 'Warehouse Module' },
+ { id: 'customer', label: 'Customer Portal' },
+] as const;
+
+// Content for each tab
+export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
+ admin: {
+   title: 'Admin Panel',
+   description: 'Techares is a logistics software development company that empowers admins with full control over supply chain and transport operations.',
+   features: [
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Transportation Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Transportation Management',
+       description:
+         'Plan, track, and streamline operations with custom-built logistics software development solutions.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Fleet Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Fleet Management',
+       description:
+         'Monitor vehicles, schedules, and driver performance from a central dashboard.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Route Optimization"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Route Optimization',
+       description:
+         'Reduce delivery time and fuel usage with intelligent route planning.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Supply Chain Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Supply Chain Management (SCM)',
+       description:
+         'Integrate all supply chain activities using our tailored software application development for logistics.',
+     },
+   ],
+   image: '/assets/images/taxi-app/user-feature.png',
+ },
+ driver: {
+   title: 'Driver/Fleet App',
+   description: "As part of our end-to-end logistics software development, we equip drivers with mobile tools for efficient, real-time operations.",
+   features: [
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Navigation & Live Tracking"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Navigation & Live Tracking',
+       description:
+         'Enable GPS-based tracking and real-time updates for precise ETAs.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Telematics & Connected Vehicles"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Telematics & Connected Vehicles',
+       description:
+         'Leverage our software application development for logistics to gather and use vehicle health data.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Proof of Delivery"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Proof of Delivery (POD)',
+       description:
+         'Digitally capture signatures, photos, and confirmations on the spot.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Delivery Task Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Delivery Task Management',
+       description:
+         'Assign tasks and receive updates via the driver app, built by a top logistics software development company.',
+     },
+   ],
+   image: '/assets/images/taxi-app/user-feature.png',
+ },
+ warehouse: {
+   title: 'Warehouse Module',
+   description: "Our logistics software development services optimize warehouse operations through automation and real-time visibility.",
+   features: [
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Warehouse Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Warehouse Management',
+       description:
+         'Digitize picking, packing, and shipping processes for faster turnaround.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Inventory Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Inventory Management',
+       description:
+         'Monitor stock in real time and automate replenishment.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Asset Tracking"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Asset Tracking',
+       description:
+         'Locate goods and equipment across facilities using GPS and RFID.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Demand Forecasting"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Demand Forecasting',
+       description:
+         'Use predictive analytics from our software application development for logistics to plan better.',
+     },
+   ],
+   image: '/assets/images/taxi-app/user-feature.png',
+ },
+ customer: {
+   title: 'Customer Portal',
+   description: "We build intuitive portals through logistics software development that enhance customer satisfaction and transparency.",
+   features: [
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Order Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Order Management',
+       description:
+         'Let clients place, manage, and track orders from a single interface.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Customer Experience Optimization"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Customer Experience Optimization',
+       description:
+         'Keep customers updated with real-time notifications and delivery insights.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Delivery Management"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Delivery Management',
+       description:
+         'Provide seamless coordination and live visibility into every delivery.',
+     },
+     {
+       icon: (
+         <Image
+           src="/assets/images/food-delivery/fock.png"
+           alt="Support & Feedback"
+           width={100}
+           height={100}
+           className="w-full"
+         />
+       ),
+       title: 'Support & Feedback',
+       description:
+         'Enable two-way communication with helpdesk and feedback tools—powered by our logistics software development company expertise.',
+     },
+   ],
+   image: '/assets/images/taxi-app/user-feature.png',
+ },
 };

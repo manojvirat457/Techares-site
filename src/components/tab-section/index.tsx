@@ -21,6 +21,7 @@ export interface Feature {
 
 export interface TabContent {
   title: string;
+  description?: string;
   features: Feature[];
   image?: string;
 }
@@ -88,6 +89,9 @@ export function TabSection<T extends string>({
                 alignment="start"
                 size="sm"
               />
+              {tabContent[activeTab].description && (
+                <p className="text-gray-600">{tabContent[activeTab].description}</p>
+              )}
               <div className="space-y-4">
                 {tabContent[activeTab].features.map((feature, index) => (
                   <motion.div

@@ -19,7 +19,7 @@ export function SectionHeading({
   additionalDesc,
   specialText,
   size,
- }: SectionHeadingProps) {
+}: SectionHeadingProps) {
   const wrapperClasses = cn(
     alignment === 'start' && 'text-left',
     alignment === 'center' && 'text-center',
@@ -47,12 +47,14 @@ export function SectionHeading({
         </p>
       )}
       {specialText && (
-        <p className={cn(
-          'mb-[.625rem] text-primary font-secondary md:text-xl font-bold',
-          textPosition === 'start' && 'text-left',
-          textPosition === 'center' && 'text-center',
-          textPosition === 'end' && 'text-right'
-        )}>
+        <p
+          className={cn(
+            'mb-[.625rem] font-secondary font-bold text-primary md:text-lg',
+            textPosition === 'start' && 'text-left',
+            textPosition === 'center' && 'text-center',
+            textPosition === 'end' && 'text-right'
+          )}
+        >
           {specialText}
         </p>
       )}

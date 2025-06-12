@@ -62,7 +62,7 @@ export function ProjectSectionV4({
         `dark:${backgroundColor.dark}`,
         'py-16',
         // Add gradient fade effect from background color to white/black
-        'before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-t before:from-transparent before:via-white/50 before:to-transparent dark:before:via-black/50 dark:before:to-transparent'
+        `before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-t before:from-transparent before:via-${backgroundColor.light}/50 before:to-transparent dark:before:via-${backgroundColor.dark}/50 dark:before:to-transparent`
       )}
     >
       <Container isFluid={isFluid}>
