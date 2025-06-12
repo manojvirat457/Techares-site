@@ -38,7 +38,7 @@ export function HeroSection({
                 alt="background image"
                 width={600}
                 height={600}
-                className="-left-4 absolute top-10  object-cover md:left-16 md:top-10"
+                className="absolute -left-4 top-10  object-cover md:left-16 md:top-10"
               />
             )}
             <SectionHeading
@@ -68,16 +68,15 @@ export function HeroSection({
           </div>
           <div className="relative flex items-center justify-end lg:w-1/2">
             <div className="bg-blue absolute left-1/2 top-1/2 -z-10 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 transform rounded-full md:h-[400px] md:w-[400px]" />
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={500}
-                height={500}
-                className="absolute object-cover -top-48"
-                priority
-              />
-            <div className="relative z-10">
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={500}
+              height={500}
+              className="absolute -top-48 object-cover"
+              priority
+            />
+            <div className="relative z-10"></div>
             {isDecorated && (
               <div className="absolute -left-28 top-48 z-10 w-[150px]">
                 <Image

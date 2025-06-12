@@ -90,7 +90,9 @@ export function TabSection<T extends string>({
                 size="sm"
               />
               {tabContent[activeTab].description && (
-                <p className="text-gray-600">{tabContent[activeTab].description}</p>
+                <p className="text-gray-600">
+                  {tabContent[activeTab].description}
+                </p>
               )}
               <div className="space-y-4">
                 {tabContent[activeTab].features.map((feature, index) => (

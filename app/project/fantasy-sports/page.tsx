@@ -77,11 +77,14 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {uniqueFeatures?.map((feature, idx) => {
                 const isLastOdd =
-                  uniqueFeatures.length % 2 === 1 && idx === uniqueFeatures.length - 1;
+                  uniqueFeatures.length % 2 === 1 &&
+                  idx === uniqueFeatures.length - 1;
                 return (
                   <div
                     className={`relative flex justify-center pt-16 md:pt-0 ${
-                      isLastOdd ? "md:col-span-2 md:mx-auto md:max-w-[650px]" : "max-w-[650px]"
+                      isLastOdd
+                        ? 'md:col-span-2 md:mx-auto md:max-w-[650px]'
+                        : 'max-w-[650px]'
                     }`}
                     key={feature.id}
                   >

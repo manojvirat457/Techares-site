@@ -1,4 +1,8 @@
-import { tabContent, tabs, workflowSteps } from '@/app/project/transport-and-logistic/-data.tsx';
+import {
+  tabContent,
+  tabs,
+  workflowSteps,
+} from '@/app/project/transport-and-logistic/-data.tsx';
 import { Container } from '@/src/components/container/index.tsx';
 import { SectionHeading } from '@/src/components/section-heading/index.tsx';
 import { TabSection } from '@/src/components/tab-section/index.tsx';
@@ -9,11 +13,7 @@ import { ProjectSectionV4 } from '@/src/sections/project/v4/index.tsx';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
 import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn.ts';
-import {
- faqSectionData,
- features,
- whyChooseUs
-} from './-data.tsx';
+import { faqSectionData, features, whyChooseUs } from './-data.tsx';
 
 export const metadata = basicMetadata({
   title: 'TechAres | Transport and Logistics Software Development Company',
@@ -65,7 +65,7 @@ const Feature = ({
 export default function Page() {
   return (
     <>
-   <HeroSection
+      <HeroSection
         image={{
           src: '/assets/images/taxi-app/hero-img.png',
           alt: 'hero image',
@@ -95,26 +95,28 @@ export default function Page() {
           openNewTab: true,
         }}
       />
-      <section className='relative overflow-hidden py-16 md:py-16'>
-       <Container>
-       <SectionHeading title="Transport and Logistics Software Development Services"
+      <section className="relative overflow-hidden py-16 md:py-16">
+        <Container>
+          <SectionHeading
+            title="Transport and Logistics Software Development Services"
             subtitle="All in One"
             description="At Techares, we specialize in building custom logistics software solutions that simplify complex transport and supply chain operations. From fleet and warehouse management to route optimization and real-time tracking, our all-in-one services help logistics businesses boost efficiency, reduce costs, and deliver a seamless customer experience."
             alignment="center"
             textPosition="center"
             size="sm"
           />
-        <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => (
-            <Feature key={feature.title} {...feature} index={index} />
-          ))}
-        </div>
+          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature, index) => (
+              <Feature key={feature.title} {...feature} index={index} />
+            ))}
+          </div>
         </Container>
       </section>
       {/* Services Section */}
       <TabSection
         heading={{
-          title: 'Cutting-Edge Features That Set Your Transport and Logistics App Apart ',
+          title:
+            'Cutting-Edge Features That Set Your Transport and Logistics App Apart ',
           alignment: 'center',
           subtitle: 'FEATURES WE OFFER',
           textPosition: 'center',
