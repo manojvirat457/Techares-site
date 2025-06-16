@@ -23,3 +23,7 @@
 - right left 15px
 - in mobile view 14px sm:
 - FEATURES hide all image in the mobile view
+- One section responsive pending in ecommers
+- Footer Need to Change
+- Font and Color should be Consistent
+- 

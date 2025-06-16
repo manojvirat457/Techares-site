@@ -1,4 +1,4 @@
-import { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
+import { ProjectDetailsProps } from '@/app/services/taxi-booking/-data';
 import { AboutSectionProps } from '@/src/sections/about/v1';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
 

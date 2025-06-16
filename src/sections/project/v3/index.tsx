@@ -6,7 +6,7 @@ import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 import { FaCircleCheck } from 'react-icons/fa6';
 import styles from './project-v3.module.css';
-import type { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
+import type { ProjectDetailsProps } from '@/app/services/taxi-booking/-data';
 import { Button } from '@/src/components/button';
 import { CustomLink } from '@/src/components/custom-link';
 const cursorStyle = cn('cursor-pointer');

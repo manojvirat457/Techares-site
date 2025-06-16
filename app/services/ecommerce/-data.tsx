@@ -1,4 +1,4 @@
-import type { ProjectDetailsProps } from '@/app/project/food-delivery/-data';
+import type { ProjectDetailsProps } from '@/app/services/food-delivery/-data';
 import type { TabContent } from '@/src/components/tab-section';
 import type { AboutSectionProps } from '@/src/sections/about/v1';
 import {

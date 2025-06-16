@@ -1,4 +1,4 @@
-import { ProjectDetailsProps } from '@/app/project/food-delivery/-data';
+import { ProjectDetailsProps } from '@/app/services/food-delivery/-data';
 import { Methodology } from '@/data/methodology/v1';
 import { TabContent } from '@/src/components/tab-section';
 import { FAQSectionProps } from '@/src/sections/faq';

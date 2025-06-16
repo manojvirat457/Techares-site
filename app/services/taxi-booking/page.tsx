@@ -161,10 +161,10 @@ export default function Page() {
             }
             alignment="start"
             size="md"
-            className="pb-16 pl-28"
+            className="md:pb-16 md:pl-28"
           />
           <div className="mb-6 flex flex-col gap-4 md:flex-row">
-            <div className="w-2/3 pl-28">
+            <div className="md:w-2/3 md:pl-28">
               <InfiniteSlider
                 speedOnHover={20}
                 direction={'horizontal'}
@@ -198,7 +198,7 @@ export default function Page() {
                 ))}
               </InfiniteSlider>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/3 hidden md:block">
               <Image
                 src="/assets/images/taxi-app/taxi-4.png"
                 alt="Vector Image"

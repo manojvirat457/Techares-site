@@ -2,7 +2,7 @@ import {
   tabContent,
   tabs,
   workflowSteps,
-} from '@/app/project/transport-and-logistic/-data.tsx';
+} from '@/app/services/transport-and-logistic/-data.tsx';
 import { Container } from '@/src/components/container/index.tsx';
 import { SectionHeading } from '@/src/components/section-heading/index.tsx';
 import { TabSection } from '@/src/components/tab-section/index.tsx';
