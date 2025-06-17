@@ -83,7 +83,7 @@ export default function Page() {
                     <div className="top-13 absolute left-3/4 z-99 -translate-y-1/2 transform">
                       {solution.icon}
                     </div>
-                    <Card className="relative md:h-[350px] w-full h-full max-w-full overflow-hidden rounded-none border-none">
+                    <Card className="relative h-full w-full max-w-full overflow-hidden rounded-none border-none md:h-[350px]">
                       <div className="relative h-full bg-blue-50">
                         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
                         <CardContent className="relative z-[1] flex h-full flex-col justify-center p-4 pb-2 pt-6">

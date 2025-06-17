@@ -23,7 +23,7 @@ import {
 import { BrandLogo } from '@/src/layout/brand-logo';
 import ContactUsDialog from '@/src/sections/contact/v3';
 import { cn } from '@/utils/utils';
-import { Menu, Sunset } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Image from 'next/image';
 
 interface MenuItem {
@@ -95,7 +95,7 @@ const Navbar1 = ({
           title: 'Transport and Logistics App',
           description: 'Transport and Logistics App Development',
           // icon: <Zap className="size-5 shrink-0" />,
-          url: '/services/transport-logistics',
+          url: '/services/transport-and-logistic',
         },
       ],
     },

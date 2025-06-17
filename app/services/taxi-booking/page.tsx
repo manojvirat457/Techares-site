@@ -198,7 +198,7 @@ export default function Page() {
                 ))}
               </InfiniteSlider>
             </div>
-            <div className="w-1/3 hidden md:block">
+            <div className="hidden w-1/3 md:block">
               <Image
                 src="/assets/images/taxi-app/taxi-4.png"
                 alt="Vector Image"

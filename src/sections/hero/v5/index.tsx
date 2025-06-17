@@ -16,13 +16,15 @@ export function HeroSection({
   isDecorated,
   backgroundImage,
   enableGradient,
-}: {
+  isLeftSide = true,
+ }: {
   sectionHeading: SectionHeadingProps;
   button: LinkProps;
   image: ImageProps;
   isDecorated: boolean;
   backgroundImage?: string;
   enableGradient?: boolean;
+  isLeftSide?: boolean;
 }) {
   return (
     <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-40">
@@ -37,7 +39,11 @@ export function HeroSection({
       )}
       <Container>
         <div className="flex flex-col items-center lg:flex-row">
-          <div className="mb-12 lg:mb-0 lg:w-1/2">
+          {/* Content Side */}
+          <div className={cn(
+            "mb-12 lg:mb-0 lg:w-1/2",
+            !isLeftSide && "lg:order-2"
+          )}>
             <SectionHeading
               title={sectionHeading.title}
               highlighttitle={sectionHeading.highlighttitle}
@@ -62,7 +68,11 @@ export function HeroSection({
               </Button>
             </ContactUsDialog>
           </div>
-          <div className="relative lg:w-1/2">
+          {/* Image Side */}
+          <div className={cn(
+            "relative lg:w-1/2",
+            !isLeftSide && "lg:order-1"
+          )}>
             <div className="bg-blue absolute left-1/2 top-1/2 -z-10 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 transform rounded-full md:h-[350px] md:w-[350px]" />
             <div className="relative z-10">
               <Image
@@ -75,7 +85,11 @@ export function HeroSection({
               />
             </div>
             {isDecorated && (
-              <div className="absolute -left-28 top-48 z-10 w-[150px]">
+              <div className={cn(
+                "absolute z-10 w-[150px]",
+                isLeftSide ? "-left-28" : "-right-28",
+                "top-48"
+              )}>
                 <Image
                   src="/assets/images/food-delivery/dots.png"
                   alt="Food Delivery App Development"

@@ -26,4 +26,7 @@
 - One section responsive pending in ecommers
 - Footer Need to Change
 - Font and Color should be Consistent
+- Food Delivery Latest Update
+- (Ecommers )Why Choose Us for Ecommerce App Development? - too many points issue
+- (Ecommers) Advanced Feature Responsive
 - 

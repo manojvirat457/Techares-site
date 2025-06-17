@@ -81,7 +81,7 @@ export default function Page() {
                   idx === uniqueFeatures.length - 1;
                 return (
                   <div
-                    className={`relative flex justify-center pt-16 md:pt-0 ${
+                    className={`relative flex justify-center pt-16 md:pt-0  ${
                       isLastOdd
                         ? 'md:col-span-2 md:mx-auto md:max-w-[650px]'
                         : 'max-w-[650px]'
@@ -96,7 +96,7 @@ export default function Page() {
                       className="absolute -right-8 top-20 z-99 -translate-x-1/2 -translate-y-1/2 transform md:left-3/4 md:top-1 md:-translate-x-0"
                     />
                     <Card className="relative h-auto w-full overflow-hidden rounded-none border-none">
-                      <div className="relative h-full bg-blue-50">
+                      <div className="relative h-full bg-blue-50 py-10 md:py-0">
                         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
                         <CardContent className="relative z-[1] flex h-full flex-col justify-center p-4 pb-2 pt-6">
                           <SectionHeading
