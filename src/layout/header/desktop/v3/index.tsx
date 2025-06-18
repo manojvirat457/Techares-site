@@ -114,7 +114,7 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="sticky top-0 z-111 w-full bg-transparent backdrop-blur-sm sm:z-20">
+    <section className="sticky top-0 z-111 w-full bg-transparent  sm:z-20">
       <div className="bg-transparent py-3">
         {/* Desktop Menu */}
         <nav className="hidden justify-between bg-transparent lg:flex">
@@ -126,7 +126,7 @@ const Navbar1 = ({
           </div>
           <div className="absolute left-1/2 -translate-x-1/2 transform">
             <NavigationMenu>
-              <NavigationMenuList className="bg-transparent">
+              <NavigationMenuList className="bg-transparent text-zinc-950 dark:dark:text-zinc-50">
                 {menu.map((item) => renderMenuItem(item))}
               </NavigationMenuList>
             </NavigationMenu>
@@ -159,7 +159,7 @@ const Navbar1 = ({
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto bg-white dark:bg-zinc-950">
+              <SheetContent className="overflow-y-auto dark:text-zinc-950 text-zinc-50 dark:bg-zinc-950">
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
@@ -203,7 +203,7 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem className="bg-transparent" key={item.title}>
-        <NavigationMenuTrigger className="bg-transparent">
+        <NavigationMenuTrigger className="bg-transparent text-zinc-950 dark:text-zinc-50">
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
@@ -221,7 +221,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary  dark:bg-zinc-950"
       >
         {item.title}
       </NavigationMenuLink>
@@ -259,7 +259,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   return (
     <a
-      className="flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+      className="flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-primary"
       href={item.url}
     >
       <div className="text-zinc-950 dark:text-zinc-50">{item.icon}</div>

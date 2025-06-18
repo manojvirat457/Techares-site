@@ -25,7 +25,7 @@ export function HeroSection({
   enableGradient?: boolean;
 }) {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-16">
+    <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-16 ">
       {enableGradient && (
         <div className="absolute inset-0 transform bg-gradient-to-t from-primary/40 via-primary/20 to-transparent" />
       )}

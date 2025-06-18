@@ -25,7 +25,8 @@
     @apply max-w-full;
   }
   &.no-padding {
-    --padding-x: 0px;
+    --padding-x: 0px !important;
+    --padding-y: 0px !important;
   }
 
   @screen sm {

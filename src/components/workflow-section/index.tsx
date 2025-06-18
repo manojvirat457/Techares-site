@@ -18,6 +18,7 @@ export function WorkflowSection({
   sectionHeading,
   steps,
 }: WorkflowSectionProps) {
+ // TODO: liner gradent  will white  font 700
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4">

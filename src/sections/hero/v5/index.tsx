@@ -27,7 +27,7 @@ export function HeroSection({
   isLeftSide?: boolean;
 }) {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-40">
+    <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-40 -mt-20">
       {backgroundImage && (
         <div
           className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"

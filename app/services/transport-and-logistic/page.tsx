@@ -68,15 +68,15 @@ const Feature = ({
 export default function Page() {
   return (
     <>
-      <section className="relative min-h-[90vh] overflow-hidden pb-24 pt-40">
+      <section className="relative min-h-[90vh] overflow-hidden pt-10 -mt-20">
         <div
-          className="absolute inset-0 -z-40 h-full w-full bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 -z-40 h-full  bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${'/assets/images/transport-and-logistic/hero-bg.png'})`,
           }}
         />
         <Container isFluid isNoPadding={true}>
-          <div className="flex flex-col items-center lg:flex-row">
+          <div className="flex flex-col items-center  lg:flex-row">
             {/* Image Side */}
             <div className="relative lg:w-1/2">
               <div className="bg-blue absolute left-1/2 top-1/2 -z-10 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 transform rounded-full md:h-[350px] md:w-[350px]" />
@@ -85,7 +85,7 @@ export default function Page() {
                   src="/assets/images/transport-and-logistic/hero-1.png"
                   alt="hero image"
                   width={800}
-                  height={500}
+                  height={800}
                   className="object-center"
                   priority
                 />
@@ -119,7 +119,7 @@ export default function Page() {
       <section className="relative overflow-hidden pb-16">
         <Container>
           <div className="mb-10 flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:gap-4">
-            <div className="w-full md:w-2/3 text-center md:text-left">
+            <div className="w-full text-center md:w-2/3 md:text-left">
               <SectionHeading
                 title="All in One Transport and Logistics Software Development Services"
                 description="At Techares, we specialize in building custom logistics software solutions that simplify complex transport and supply chain operations. From fleet and warehouse management to route optimization and real-time tracking, our all-in-one services help logistics businesses boost efficiency, reduce costs, and deliver a seamless customer experience."
@@ -128,13 +128,13 @@ export default function Page() {
                 size="md"
               />
             </div>
-            <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+            <div className="flex w-full justify-center md:w-1/3 md:justify-end">
               <Image
                 src="/assets/images/transport-and-logistic/hero-2.png"
                 alt="hero image"
                 width={800}
                 height={500}
-                className="object-contain max-w-[350px] md:max-w-full"
+                className="max-w-[350px] object-contain md:max-w-full"
               />
             </div>
           </div>
