@@ -1,4 +1,3 @@
-'use client';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
@@ -21,12 +20,13 @@ import {
   whyChooseUs,
   workflowSteps,
 } from './-data';
+import { basicMetadata } from '@/src/utils/metadata';
 
-// export const metadata = basicMetadata({
-//  title: 'TechAres | Taxi App Development Company',
-//  description:
-//   'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
-// });
+export const metadata = basicMetadata({
+ title: 'TechAres | Taxi App Development Company',
+ description:
+  'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
+});
 
 export default function Page() {
   return (

@@ -1,4 +1,3 @@
-'use client';
 import { Container } from '@/src/components/container/index.tsx';
 import { SectionHeading } from '@/src/components/section-heading/index.tsx';
 import { TabSection } from '@/src/components/tab-section/index.tsx';
@@ -18,12 +17,12 @@ import {
   whyChooseUs,
   workflowSteps,
 } from './-data.tsx';
-
-// export const metadata = basicMetadata({
-//   title: 'TechAres | Fantasy Sports App Development Company',
-//   description:
-//     'Transform your sports vision into reality with our cutting-edge fantasy sports app development services',
-// });
+import { basicMetadata } from '@/src/utils/metadata.ts';
+export const metadata = basicMetadata({
+  title: 'TechAres | Fantasy Sports App Development Company',
+  description:
+    'Transform your sports vision into reality with our cutting-edge fantasy sports app development services',
+});
 
 export default function Page() {
   return (

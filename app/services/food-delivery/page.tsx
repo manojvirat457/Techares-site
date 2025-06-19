@@ -40,7 +40,8 @@ export default function Page() {
                     App <br /> Development <br /> Company
                   </span>
                 }
-                highlighttitle="Food Delivery  "
+                highlighttitle="Food Delivery"
+                description='Expand your reach beyond the physical locations through a tailored food delivery app with TechAres. Let your customers satisfy cravings at their fingertips!'
                 size="lg"
               />
               <br className="my-2" />

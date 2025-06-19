@@ -709,6 +709,6 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Companies can set travel policies—such as ride time limits, vehicle types, or budget caps—to ensure compliance with corporate travel guidelines and control costs.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/taxi-app/corporate-feature.png',
   },
 };
