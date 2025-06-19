@@ -216,7 +216,7 @@ export default function Page() {
         <Container>
           <div className="relative">
             {/* Image Section */}
-            <div className="mb-10 hidden flex-col items-center justify-between px-16 md:absolute md:inset-0 md:flex md:flex-row md:-top-72">
+            <div className="mb-10 hidden flex-col items-center justify-between px-16 md:absolute md:inset-0 md:-top-72 md:flex md:flex-row">
               <div className="flex w-full justify-center md:w-1/3 md:justify-start">
                 <div className="relative h-64 w-64">
                   <Image

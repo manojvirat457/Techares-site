@@ -42,8 +42,8 @@ export function TabSection<T extends string>({
   const [activeTab, setActiveTab] = useState(defaultActiveTab || tabs[0]?.id);
 
   return (
-   <section className={cn('mx-auto max-w-6xl py-12 md:py-16', className)}>
-       <Container isNoPadding>
+    <section className={cn('mx-auto max-w-6xl py-12 md:py-16', className)}>
+      <Container isNoPadding>
         {heading && <SectionHeading {...heading} className="mb-12" />}
         <div className="relative mb-8 pb-1">
           <div className="relative z-10 grid grid-cols-2 gap-3 divide-x divide-gray-300 md:flex md:justify-center md:space-x-16 md:divide-x-0">

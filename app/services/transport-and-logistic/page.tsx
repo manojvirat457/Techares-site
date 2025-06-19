@@ -131,7 +131,7 @@ export default function Page() {
               />
             </div>
           </div>
-          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1  md:grid-cols-2 lg:grid-cols-4 mb-16">
+          <div className="relative z-10 mx-auto mb-16  grid max-w-7xl  grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <Feature key={feature.title} {...feature} index={index} />
             ))}
