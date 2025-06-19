@@ -64,7 +64,7 @@ export default function Page() {
         backgroundColor={{ dark: 'bg-accent-900', light: 'bg-white' }}
         keyPointsLayout="list"
       />
-      <section className="">
+      <section className="py-8 md:py-16">
         <Container>
           <SectionHeading
             title="Types Of Fantasy Sports App"
@@ -73,7 +73,7 @@ export default function Page() {
             alignment="center"
             textPosition="center"
           />
-          <div className="container mx-auto px-4 py-12">
+          <div className="container mx-auto pt-12">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {uniqueFeatures?.map((feature, idx) => {
                 const isLastOdd =

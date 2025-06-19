@@ -10,7 +10,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     description:
       'A genuine commitment is made by TechAres to deliver innovative and reliable solutions that inspire businesses to thrive in an ever-evolving digital world. Our expertise surrounds mobility solutions, flexible customization, and scalable architecture which are encouraged by round-the-clock support. TechAres is the perfect partner for your business for the following reasons',
     size: 'sm',
-     },
+  },
   isButton: true,
   isCard: false,
   keyPoints: [
@@ -349,7 +349,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'A detailed log of completed trips, including routes, earnings, and trip duration. Useful for tracking performance and simplifying record-keeping for tax or personal analysis.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/taxi-app/driver-feature.png',
   },
   user: {
     title: 'User Features',
@@ -529,7 +529,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Real-time alerts for delays, route deviations, or emergencies help dispatchers take immediate action, enhancing safety and service reliability.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/taxi-app/dispatcher-feature.png',
   },
   admin: {
     title: 'Admin Panel',
@@ -619,7 +619,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'A dedicated interface to manage complaints, trip disputes, and refund requests with access to trip details, communication logs, and automated resolution workflows.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/taxi-app/admin-feature.png',
   },
   corporate: {
     title: 'Corporate Console',

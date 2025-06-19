@@ -65,7 +65,7 @@ export default function Page() {
         }}
       />
       {/* Solution We offer */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full overflow-hidden py-8 md:py-16">
         <Container>
           <div className="relative w-full">
             <SectionHeading

@@ -69,6 +69,7 @@ export default function Page() {
         alignment="right"
         keyPointsLayout="list"
         isFluid={true}
+        isNoPadding={true}
       />
       <section className="relative overflow-hidden py-16 md:py-16">
         {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-primary/5 to-transparent" /> */}
@@ -151,7 +152,7 @@ export default function Page() {
       />
       {/* Unique Feature */}
       <section className="relative py-16">
-        <Container isFluid>
+        <Container isFluid isNoPadding>
           <SectionHeading
             title={
               <span>
@@ -215,7 +216,7 @@ export default function Page() {
         <Container>
           <div className="relative">
             {/* Image Section */}
-            <div className="-top-72 mb-10 hidden flex-col items-center justify-between px-16 md:absolute md:inset-0 md:flex md:flex-row">
+            <div className="mb-10 hidden flex-col items-center justify-between px-16 md:absolute md:inset-0 md:flex md:flex-row md:-top-72">
               <div className="flex w-full justify-center md:w-1/3 md:justify-start">
                 <div className="relative h-64 w-64">
                   <Image

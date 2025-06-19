@@ -76,16 +76,16 @@ export default function Page() {
           }}
         />
         <Container isFluid isNoPadding={true}>
-          <div className="flex flex-col-reverse mt-16 md:mt-0 items-center justify-end lg:flex-row">
-                <Image
-                  src="/assets/images/transport-and-logistic/hero-1.png"
-                  alt="hero image"
-                  width={800}
-                  height={800}
-                  className="object-center"
-                  priority
-                />
-            <div className={cn('mb-12 lg:mb-0 lg:w-1/2 md:px-20 px-10')}>
+          <div className="mt-16 flex flex-col-reverse items-center justify-end md:mt-0 lg:flex-row">
+            <Image
+              src="/assets/images/transport-and-logistic/hero-1.png"
+              alt="hero image"
+              width={800}
+              height={800}
+              className="object-center"
+              priority
+            />
+            <div className={cn('mb-12 px-10 md:px-20 lg:mb-0 lg:w-1/2')}>
               <SectionHeading
                 title="Streamline Operations with a Top Logistics Software Development Company"
                 size="md"
@@ -109,7 +109,7 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden -mt-3 lg:-mt-3 md:mt-0">
+      <section className="relative -mt-3 overflow-hidden md:mt-0 lg:-mt-3">
         <Container>
           <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:gap-4">
             <div className="w-full text-center md:w-2/3 md:text-left">
@@ -121,7 +121,7 @@ export default function Page() {
                 size="md"
               />
             </div>
-            <div className="flex w-full justify-center md:w-1/3 md:justify-end md:hidden lg:block">
+            <div className="flex w-full justify-center md:hidden md:w-1/3 md:justify-end lg:block">
               <Image
                 src="/assets/images/transport-and-logistic/hero-2.png"
                 alt="hero image"
@@ -131,7 +131,7 @@ export default function Page() {
               />
             </div>
           </div>
-          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1  md:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1  md:grid-cols-2 lg:grid-cols-4 mb-16">
             {features.map((feature, index) => (
               <Feature key={feature.title} {...feature} index={index} />
             ))}

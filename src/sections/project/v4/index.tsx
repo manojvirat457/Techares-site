@@ -37,6 +37,7 @@ export interface ProjectSectionV4Props {
   keyPointsLayout?: 'grid' | 'list';
   padding?: 'primary' | 'secondary';
   isFluid?: boolean;
+  isNoPadding?: boolean;
 }
 
 export function ProjectSectionV4({
@@ -49,6 +50,7 @@ export function ProjectSectionV4({
   imagePosition = 'left',
   keyPointsLayout = 'grid',
   isFluid = false,
+  isNoPadding = false,
   // padding = 'primary',
 }: ProjectSectionV4Props) {
   const { sectionHeading, keyPoints, image, button, isCard, isButton } =
@@ -65,7 +67,7 @@ export function ProjectSectionV4({
         `before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-t before:from-transparent before:via-${backgroundColor.light}/50 before:to-transparent dark:before:via-${backgroundColor.dark}/50 dark:before:to-transparent`
       )}
     >
-      <Container isFluid={isFluid}>
+      <Container isFluid={isFluid} isNoPadding={isNoPadding}>
         <div
           className={cn(
             'flex flex-col gap-x-16 gap-y-8 lg:flex-row xl:gap-x-[120px]',
@@ -134,7 +136,7 @@ export function ProjectSectionV4({
             {keyPoints && keyPoints.length > 0 && (
               <div
                 className={cn(
-                  'mt-4 gap-4 md:mt-6 md:gap-6',
+                  'mt-4 gap-4 md:mt-6',
                   keyPointsLayout === 'grid'
                     ? 'grid sm:grid-cols-2'
                     : 'flex flex-col'

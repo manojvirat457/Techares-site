@@ -198,11 +198,9 @@ export default function Page() {
                 />
                 <div className="flex items-start gap-4">
                   <p className="whitespace-pre-line">
-                    Some content will be allocated here for the specific feature
-                    and that will have quite few sentences here like this. Add
-                    if required more. Some content will be allocated here for
-                    the specific feature and that will have quite few sentences
-                    here like this.
+                    Enhanced Route Optimization
+
+                    Our latest update includes advanced route optimization algorithms that help drivers find the most efficient delivery paths, reducing delivery times and fuel consumption while improving customer satisfaction.
                   </p>
                 </div>
               </div>
@@ -217,11 +215,9 @@ export default function Page() {
                 />
                 <div className="flex items-start gap-4">
                   <p className="whitespace-pre-line">
-                    Some content will be allocated here for the specific feature
-                    and that will have quite few sentences here like this. Add
-                    if required more. Some content will be allocated here for
-                    the specific feature and that will have quite few sentences
-                    here like this.
+                    Real-time Order Tracking
+
+                    We&apos;ve improved our real-time tracking system with more accurate GPS integration and predictive ETA calculations, giving customers better visibility into their delivery status and estimated arrival times.
                   </p>
                 </div>
               </div>

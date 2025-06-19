@@ -32,7 +32,7 @@
 }
 
 .section-padding-primary {
-  @apply py-[4rem] sm:py-[3rem];
+  @apply md:py-[4rem] py-[3rem];
 }
 
 ::selection {

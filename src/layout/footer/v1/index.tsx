@@ -71,7 +71,7 @@ export function Footer({ className }: SectionProps) {
         className
       )}
     >
-      <div className="py-8 md:py-20">
+      <div className="py-8 md:py-16">
         <Container>
           <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-4">
             {/* About  */}

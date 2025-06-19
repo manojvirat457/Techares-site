@@ -127,7 +127,7 @@ export const workflowSteps = [
     id: 3,
     title: 'Interface',
     description:
-      'While designing the app\'s UI/UX interface, we ensure that it is intuitive and user-friendly.',
+      "While designing the app's UI/UX interface, we ensure that it is intuitive and user-friendly.",
   },
   {
     id: 4,
@@ -153,9 +153,9 @@ export const whyChooseUs: ProjectDetailsProps = {
   sectionHeading: {
     title: 'Why Choose TechAres ?',
     description:
-      "At TechAres, our experts are qualified to offer the best on-demand food delivery app services exclusively meant for your business. With a solid track record and experience of many years, we strive to provide highly secured and scalable apps equipped with advanced technologies. Our inclusive services include everything, right from creating high quality app to its deployment and support. Our commitment to offering enhanced user experiences, TechAres ensures long lasting business growth. Whether you are planning to start your food delivery business or update your existing brand, trust us to create strategies that ensure success.",
+      'At TechAres, our experts are qualified to offer the best on-demand food delivery app services exclusively meant for your business. With a solid track record and experience of many years, we strive to provide highly secured and scalable apps equipped with advanced technologies. Our inclusive services include everything, right from creating high quality app to its deployment and support. Our commitment to offering enhanced user experiences, TechAres ensures long lasting business growth. Whether you are planning to start your food delivery business or update your existing brand, trust us to create strategies that ensure success.',
     size: 'sm',
-     },
+  },
   isButton: false,
   isCard: false,
   keyPoints: [
@@ -226,12 +226,14 @@ export const faqSectionData: FAQSectionProps = {
   },
   faqItems: [
     {
-      question: 'What are the services offered by TechAres in on-demand food delivery app development?',
+      question:
+        'What are the services offered by TechAres in on-demand food delivery app development?',
       answer:
         'TechAres is the leading food delivery app development company that offers a wide range of services to fulfill your business needs. We offer app development services, right from the design and development of the app. Also, our experts ensure effortless integration of your app with the latest systems. Trust us to stand out in this dynamically changing food delivery sector.',
     },
     {
-      question: 'Can you explain the post development support and maintenance services offered by TechAres?',
+      question:
+        'Can you explain the post development support and maintenance services offered by TechAres?',
       answer:
         'At TechAres, we strive to offer top-notch post development support and maintenance to ensure that your app attains the desired success. Our inclusive services include enhancing performance, regular updates, and troubleshooting. We offer round-the-clock support to make sure any issues you find are addressed in no time!',
     },
@@ -505,7 +507,7 @@ export const tabContent = {
         ),
         title: 'Order & Menu Management',
         description:
-          'Easily manage online orders across mobile and web platforms. Update menus in real time with item availability, pricing, and personalized descriptions—ensuring customers always see what\'s fresh and ready to serve.',
+          "Easily manage online orders across mobile and web platforms. Update menus in real time with item availability, pricing, and personalized descriptions—ensuring customers always see what's fresh and ready to serve.",
       },
       {
         icon: (
