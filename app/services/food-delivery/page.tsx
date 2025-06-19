@@ -41,7 +41,7 @@ export default function Page() {
                   </span>
                 }
                 highlighttitle="Food Delivery"
-                description='Expand your reach beyond the physical locations through a tailored food delivery app with TechAres. Let your customers satisfy cravings at their fingertips!'
+                description="Expand your reach beyond the physical locations through a tailored food delivery app with TechAres. Let your customers satisfy cravings at their fingertips!"
                 size="lg"
               />
               <br className="my-2" />

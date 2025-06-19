@@ -23,9 +23,9 @@ import {
 import { basicMetadata } from '@/src/utils/metadata';
 
 export const metadata = basicMetadata({
- title: 'TechAres | Taxi App Development Company',
- description:
-  'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
+  title: 'TechAres | Taxi App Development Company',
+  description:
+    'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
 });
 
 export default function Page() {
