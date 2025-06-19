@@ -1,7 +1,7 @@
-import { ProjectDetailsProps } from '@/app/services/food-delivery/-data';
 import { Methodology } from '@/data/methodology/v1';
 import { TabContent } from '@/src/components/tab-section';
 import { FAQSectionProps } from '@/src/sections/faq';
+import { ProjectDetailsProps } from '@/src/sections/project/v4';
 import { ServiceSectionProps } from '@/src/sections/service/v1';
 import {
   Activity,
@@ -29,20 +29,6 @@ import {
   Warehouse,
 } from 'lucide-react';
 import Image from 'next/image';
-
-export const projectDetails: ProjectDetailsProps = {
-  sectionHeading: {
-    subtitle: 'Smart Logistics Solutions',
-    title: 'All-in-One Transport and Logistics Software Development Services',
-    description:
-      'Techares delivers powerful logistics software solutions that optimize your entire supply chain. From fleet management to real-time tracking, our innovative technologies ensure seamless operations, cost efficiency, and enhanced customer satisfaction.',
-  },
-  keyPoints: [],
-  image: {
-    src: '/assets/images/about/whychoose.webp',
-    alt: 'logistics software development',
-  },
-};
 
 // export const solutions = {
 //   title: 'Key Solutions',
@@ -144,6 +130,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     title: 'What Makes Us Your Ideal Logistics Software Development Company',
     description:
       "As a trusted logistics software development company, Techares stands out by delivering time-bound results through a proven agile development process. Our dedicated team of experts ensures seamless execution, while our round-the-clock support guarantees uninterrupted operations. Whether you're seeking full-cycle logistics software development or specialized software application development for logistics, we build solutions that are scalable, secure, and results-driven",
+    size: 'sm',
   },
   isCard: false,
   keyPoints: [
@@ -192,7 +179,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     href: '/contact',
   },
   image: {
-    src: '/assets/images/taxi-app/hero-3.png',
+    src: '/assets/images/transport-and-logistic/hero-3.png',
     alt: 'about image five',
     width: 540,
     height: 578,
@@ -543,7 +530,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Integrate all supply chain activities using our tailored software application development for logistics.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/transport-and-logistic/admin-panel.png',
   },
   driver: {
     title: 'Driver/Fleet App',
@@ -607,7 +594,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Assign tasks and receive updates via the driver app, built by a top logistics software development company.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/transport-and-logistic/driver-app.png',
   },
   warehouse: {
     title: 'Warehouse Module',
@@ -670,7 +657,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Use predictive analytics from our software application development for logistics to plan better.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/transport-and-logistic/warehouse-panel.png',
   },
   customer: {
     title: 'Customer Portal',
@@ -734,6 +721,6 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Enable two-way communication with helpdesk and feedback tools—powered by our logistics software development company expertise.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/transport-and-logistic/customer-portal.png',
   },
 };

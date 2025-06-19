@@ -40,7 +40,7 @@ export default function Page() {
         sectionHeading={{
           title: (
             <>
-              Fantasy App <br /> Development Services
+              Fantasy Sports App <br /> Development Services
             </>
           ),
           specialText:
@@ -118,7 +118,7 @@ export default function Page() {
       {/* {ket feature} */}
       <TabSection
         heading={{
-          title: 'Core Features of Our Taxi App',
+          title: 'Key Features of Fantasy Sports App',
           alignment: 'center',
           subtitle: 'KEY FEATURES',
           textPosition: 'center',

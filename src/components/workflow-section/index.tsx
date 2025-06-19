@@ -18,7 +18,6 @@ export function WorkflowSection({
   sectionHeading,
   steps,
 }: WorkflowSectionProps) {
- // TODO: liner gradent  will white  font 700
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4">
@@ -44,10 +43,10 @@ export function WorkflowSection({
               <div className="z-10 flex flex-col items-center justify-center">
                 <span className="bg-white py-4 dark:bg-accent-700">
                   <span
-                    className="text-[44px] font-extrabold md:text-[50px]"
+                    className="text-[44px] font-bold md:text-[50px]"
                     style={{
                       background:
-                        'linear-gradient(180deg, #0364af 25%, #B1C4DB 100%)',
+                        'linear-gradient(180deg, #0364af 25%, #ffffff 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       display: 'inline-block',

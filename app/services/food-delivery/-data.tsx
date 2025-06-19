@@ -28,13 +28,16 @@ export const projectDetails: ProjectDetailsProps = {
 
 export const uniqueFeatures: ProjectDetailsProps = {
   sectionHeading: {
-    title: 'Unique Features',
+    title: 'That Set Us Apart',
+    highlighttitle: 'Advanced Features ',
+    description:
+      'At TechAres, we focus on building a next-generation food delivery app that delivers exceptional user experience, operational efficiency, and long-term customer retention. Here are the standout features that make our platform truly unique',
   },
   isButton: false,
   isCard: false,
   keyPoints: [
     {
-      title: 'AI-based order recommendations',
+      title: 'AI-Based Order Recommendations',
       icon: (
         <Image
           src="/assets/images/food-delivery/hot-pot.png"
@@ -44,10 +47,10 @@ export const uniqueFeatures: ProjectDetailsProps = {
         />
       ),
       description:
-        'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+        'Leverage artificial intelligence to analyze customer behavior, order history, and preferences. Provide smart, personalized food suggestions that help users discover new dishes effortlessly—driving engagement and satisfaction.',
     },
     {
-      title: 'Multi-language support',
+      title: 'Multi-Language Support',
       icon: (
         <Image
           src="/assets/images/food-delivery/lang.png"
@@ -57,10 +60,10 @@ export const uniqueFeatures: ProjectDetailsProps = {
         />
       ),
       description:
-        'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+        'Cater to a diverse audience with built-in multi-language functionality. By offering a localized app experience, you can expand your customer base and build stronger, more inclusive relationships with users from different regions.',
     },
     {
-      title: 'Geo-fencing for better delivery zones ',
+      title: 'Geo-Fencing for Smarter Deliveries',
       icon: (
         <Image
           src="/assets/images/food-delivery/thumbs.png"
@@ -70,10 +73,10 @@ export const uniqueFeatures: ProjectDetailsProps = {
         />
       ),
       description:
-        'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+        'Use GPS-powered geo-fencing to define delivery zones, improve route accuracy, and notify users of real-time order updates. This feature ensures faster, more reliable deliveries and streamlined operations.',
     },
     {
-      title: 'Loyalty programs and referral rewards',
+      title: 'Loyalty Programs & Referral Rewards',
       icon: (
         <Image
           src="/assets/images/food-delivery/cup.png"
@@ -83,8 +86,21 @@ export const uniqueFeatures: ProjectDetailsProps = {
         />
       ),
       description:
-        'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+        'Boost retention and organic growth with customizable loyalty programs and referral incentives. Reward repeat customers with discounts or giveaways, and motivate users to bring in new business through easy-to-share referral links.',
     },
+    // {
+    //   title: 'Continuous Innovation & Security',
+    //   icon: (
+    //     <Image
+    //       src="/assets/images/food-delivery/secure.png"
+    //       alt="Feature 1"
+    //       width={50}
+    //       height={50}
+    //     />
+    //   ),
+    //   description:
+    //     'Our team is constantly evolving the app with the latest technologies. We prioritize seamless integrations, top-tier data security, and secure payment systems. Regular updates and multilingual support ensure the app remains adaptable, user-friendly, and future-ready.',
+    // },
   ],
   image: {
     src: '/assets/images/food-delivery/hero-4.png',
@@ -97,39 +113,39 @@ export const uniqueFeatures: ProjectDetailsProps = {
 export const workflowSteps = [
   {
     id: 1,
-    title: 'Requirement Analysis',
+    title: 'From Scratch',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'If you have unique business requirements, we develop custom built food delivery apps from scratch. Have a look at the step-by-step method –',
   },
   {
     id: 2,
-    title: 'UI/UX Design & Prototyping',
+    title: 'Developing prototype',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'We create user flows and prototypes according to your demands. Our team ensures all green check marks for a successful app development.',
   },
   {
     id: 3,
-    title: 'App Development',
+    title: 'Interface',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'While designing the app\'s UI/UX interface, we ensure that it is intuitive and user-friendly.',
   },
   {
     id: 4,
-    title: 'Testing & Quality Assurance',
+    title: 'Development',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'Front-end and back-end development to create basic components.',
   },
   {
     id: 5,
-    title: 'Requirement Analysis',
+    title: 'Rigorous testing',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'Our team performs rigorous testing to ensure the app does not have any technical issues or bugs.',
   },
   {
     id: 6,
-    title: 'Delivery',
+    title: 'Successful deployment',
     description:
-      'We begin by understanding your business needs, target audience, and market goals. Our team gathers technical and functional requirements',
+      'Once the app listing is optimized and tested, it is successfully deployed to Android or iOS.',
   },
 ];
 
@@ -137,13 +153,14 @@ export const whyChooseUs: ProjectDetailsProps = {
   sectionHeading: {
     title: 'Why Choose TechAres ?',
     description:
-      "At TechAres, we specialize in developing custom food delivery apps tailored to your business needs. With years of expertise, we craft feature-rich, scalable, and secure solutions using the latest technologies. Our end-to-end services cover everything from app design to deployment and ongoing support. We focus on delivering high-quality user experiences and business efficiency, ensuring long-term value and growth for your food delivery platform. Whether you're a startup or an established brand, we collaborate closely with you to create solutions that drive success and exceed expectations.",
-  },
+      "At TechAres, our experts are qualified to offer the best on-demand food delivery app services exclusively meant for your business. With a solid track record and experience of many years, we strive to provide highly secured and scalable apps equipped with advanced technologies. Our inclusive services include everything, right from creating high quality app to its deployment and support. Our commitment to offering enhanced user experiences, TechAres ensures long lasting business growth. Whether you are planning to start your food delivery business or update your existing brand, trust us to create strategies that ensure success.",
+    size: 'sm',
+     },
   isButton: false,
   isCard: false,
   keyPoints: [
     {
-      title: 'Experienced Developers',
+      title: 'Experienced team',
       icon: (
         <Image
           src="/assets/images/food-delivery/fock-outline.png"
@@ -153,22 +170,10 @@ export const whyChooseUs: ProjectDetailsProps = {
         />
       ),
       description:
-        'Our team has expertise in developing high-performing food delivery apps.',
+        'Our team of professionals has a solid knowledge of designing high-quality food delivery apps catered to your business requirements.',
     },
     {
-      title: 'End-to-End Solutions',
-      icon: (
-        <Image
-          src="/assets/images/food-delivery/fock-outline.png"
-          alt="Feature 1"
-          width={20}
-          height={20}
-        />
-      ),
-      description: 'From design to launch, we handle everything',
-    },
-    {
-      title: 'Scalable Architecture',
+      title: 'Comprehensive solutions',
       icon: (
         <Image
           src="/assets/images/food-delivery/fock-outline.png"
@@ -178,10 +183,10 @@ export const whyChooseUs: ProjectDetailsProps = {
         />
       ),
       description:
-        'Grow your business without worrying about technology limitations.',
+        'We know how to deliver a high-performance app by following each step, right from the design to its launch.',
     },
     {
-      title: 'Cost-Effective Development',
+      title: 'Scalable',
       icon: (
         <Image
           src="/assets/images/food-delivery/fock-outline.png"
@@ -190,7 +195,21 @@ export const whyChooseUs: ProjectDetailsProps = {
           height={20}
         />
       ),
-      description: 'Affordable plans with high ROI',
+      description:
+        'We enable you to have a wide reach without any technology constraints.',
+    },
+    {
+      title: 'Reasonable',
+      icon: (
+        <Image
+          src="/assets/images/food-delivery/fock-outline.png"
+          alt="Feature 1"
+          width={20}
+          height={20}
+        />
+      ),
+      description:
+        'Choose our reasonable food delivery app development services that ensure higher ROI.',
     },
   ],
   image: {
@@ -207,18 +226,19 @@ export const faqSectionData: FAQSectionProps = {
   },
   faqItems: [
     {
-      question: 'How long does it take to develop a food delivery app?',
+      question: 'What are the services offered by TechAres in on-demand food delivery app development?',
       answer:
-        'The development timeline depends on features, customization, and integrations. On average, it takes 3-6 months.',
+        'TechAres is the leading food delivery app development company that offers a wide range of services to fulfill your business needs. We offer app development services, right from the design and development of the app. Also, our experts ensure effortless integration of your app with the latest systems. Trust us to stand out in this dynamically changing food delivery sector.',
     },
     {
-      question: 'Can I integrate third-party payment gateways?',
+      question: 'Can you explain the post development support and maintenance services offered by TechAres?',
       answer:
-        'Yes, we integrate secure payment gateways like PayPal, Stripe, and Razorpay.',
+        'At TechAres, we strive to offer top-notch post development support and maintenance to ensure that your app attains the desired success. Our inclusive services include enhancing performance, regular updates, and troubleshooting. We offer round-the-clock support to make sure any issues you find are addressed in no time!',
     },
     {
-      question: 'What payment options can be integrated?',
-      answer: 'Credit/debit cards, wallets, UPI, and more.',
+      question: 'How can I make money with my food delivery app?',
+      answer:
+        'You can monetize your food delivery app by charging the user for the facility of delivering food to their doorsteps. You can also make a commission fee from each order placed through app if you are a restaurant partner.',
     },
   ],
 };
@@ -255,9 +275,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'User management dashboard',
+        title: 'Centralized Dashboard',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Manage the entire platform from a single, intuitive dashboard. Track live orders, monitor delivery operations, and oversee customer and restaurant activities in real time.',
       },
       {
         icon: (
@@ -269,9 +289,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Real-time analytics',
+        title: 'Customer Management',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Access and manage customer profiles, view order history, preferences, and support queries to enhance user satisfaction and retention.',
       },
       {
         icon: (
@@ -283,9 +303,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Revenue tracking',
+        title: 'Restaurant Management',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Onboard, monitor, and support restaurant partners. Control listings, menu updates, and performance metrics to ensure quality and consistency.',
       },
       {
         icon: (
@@ -297,9 +317,23 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'System configuration',
+        title: 'Payment & Revenue Monitoring',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Track all financial transactions, including customer payments and partner payouts. Generate real-time reports for accurate revenue analysis and planning.',
+      },
+      {
+        icon: (
+          <Image
+            src="/assets/images/food-delivery/fock.png"
+            alt="White Label Solution"
+            width={100}
+            height={100}
+            className="w-full "
+          />
+        ),
+        title: 'Business Analytics & Reporting',
+        description:
+          'Analyze sales trends, customer behavior, and feedback to make informed business decisions. Use data insights to optimize operations and drive growth.',
       },
     ],
     image: '/assets/images/food-delivery/m1.png',
@@ -317,9 +351,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'User-friendly interface for quick ordering',
+        title: 'Tailored push notifications',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Want to draw the attention of your customers by offering promotions, giveaways or discounts? We offer apps equipped with customized push notifications to increase user engagement.',
       },
       {
         icon: (
@@ -331,9 +365,23 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Real-time order tracking',
+        title: 'User-friendly interface',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'The food delivery apps offered by our experts ensure an intuitive interface to keep your customers loyal to your brand',
+      },
+      {
+        icon: (
+          <Image
+            src="/assets/images/food-delivery/fock.png"
+            alt="White Label Solution"
+            width={100}
+            height={100}
+            className="w-full "
+          />
+        ),
+        title: 'Live order tracking',
+        description:
+          'We understand how much customers value real-time order tracking. They need transparency when it comes to their orders',
       },
       {
         icon: (
@@ -347,7 +395,7 @@ export const tabContent = {
         ),
         title: 'Secure multiple payment options',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'We integrate popular and secure payment options to offer customers a hassle-free way to pay for their orders',
       },
       {
         icon: (
@@ -361,7 +409,7 @@ export const tabContent = {
         ),
         title: 'Personalized recommendations',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'With our top-notch app development services, we enable users to rate and review your food delivery app. They can also add personalized recommendations that will increase brand recognition and help you draw more customers',
       },
     ],
     image: '/assets/images/food-delivery/m2.png',
@@ -379,9 +427,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Efficient route optimization',
+        title: 'Smart Navigation for Fast Deliveries',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Real-time GPS and traffic-aware routing help drivers reach destinations quickly and efficiently, reducing delays and fuel usage.',
       },
       {
         icon: (
@@ -393,9 +441,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Delivery status updates',
+        title: 'Instant Order Alerts',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Get notified instantly when new delivery requests arrive, with clear pickup and drop-off details for a smooth workflow.',
       },
       {
         icon: (
@@ -407,9 +455,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Earnings tracking',
+        title: 'Earnings & Performance Dashboard',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Track daily earnings, bonuses, and delivery stats all in one place. Stay motivated with insights into your performance and ratings.',
       },
       {
         icon: (
@@ -421,9 +469,23 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Customer communication',
+        title: 'Secure In-App Communication',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Call or message customers safely through the app without sharing personal contact details—ensuring privacy and professionalism.',
+      },
+      {
+        icon: (
+          <Image
+            src="/assets/images/food-delivery/fock.png"
+            alt="White Label Solution"
+            width={100}
+            height={100}
+            className="w-full "
+          />
+        ),
+        title: 'Flexible Scheduling & Support',
+        description:
+          'Set your own availability and get help when needed through a responsive in-app support center.',
       },
     ],
     image: '/assets/images/food-delivery/m3.png',
@@ -441,9 +503,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Order management system',
+        title: 'Order & Menu Management',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Easily manage online orders across mobile and web platforms. Update menus in real time with item availability, pricing, and personalized descriptions—ensuring customers always see what\'s fresh and ready to serve.',
       },
       {
         icon: (
@@ -455,9 +517,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Menu customization',
+        title: 'Inventory Tracking',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Track stock levels automatically to prevent shortages and reduce food waste. Receive alerts for low inventory and manage your kitchen more efficiently with real-time insights.',
       },
       {
         icon: (
@@ -469,9 +531,9 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Sales reporting',
+        title: 'Analytics & Reporting',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Gain valuable insights into customer preferences, peak ordering times, and top-selling dishes. Use data-driven reports to optimize your menu, forecast demand, and plan marketing strategies effectively.',
       },
       {
         icon: (
@@ -483,9 +545,23 @@ export const tabContent = {
             className="w-full "
           />
         ),
-        title: 'Inventory management',
+        title: 'Third-Party Integrations',
         description:
-          'Some content will be allocated here for the specific feature and that will have quite few sentences here like this. Add if required more.',
+          'Seamlessly integrate with trusted payment gateways and external services for delivery, marketing, and accounting—making operations smoother and more scalable.',
+      },
+      {
+        icon: (
+          <Image
+            src="/assets/images/food-delivery/fock.png"
+            alt="White Label Solution"
+            width={100}
+            height={100}
+            className="w-full "
+          />
+        ),
+        title: 'Real-Time Control & Customization',
+        description:
+          'Update menu items, manage active orders, set prep times, and control service availability—all in real time from a single dashboard designed for busy kitchens.',
       },
     ],
     image: '/assets/images/food-delivery/m4.png',

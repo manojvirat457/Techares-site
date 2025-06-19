@@ -159,7 +159,7 @@ const Navbar1 = ({
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto dark:text-zinc-950 text-zinc-50 dark:bg-zinc-950">
+              <SheetContent className="overflow-y-auto text-zinc-50 dark:bg-zinc-950 dark:text-zinc-950">
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">

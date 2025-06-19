@@ -68,7 +68,7 @@ const Feature = ({
 export default function Page() {
   return (
     <>
-      <section className="relative min-h-[90vh] overflow-hidden pt-10 -mt-20">
+      <section className="relative -mt-20 min-h-[90vh] overflow-hidden pt-10">
         <div
           className="absolute inset-0 -z-40 h-full  bg-cover bg-center bg-no-repeat"
           style={{
@@ -76,11 +76,7 @@ export default function Page() {
           }}
         />
         <Container isFluid isNoPadding={true}>
-          <div className="flex flex-col items-center  lg:flex-row">
-            {/* Image Side */}
-            <div className="relative lg:w-1/2">
-              <div className="bg-blue absolute left-1/2 top-1/2 -z-10 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 transform rounded-full md:h-[350px] md:w-[350px]" />
-              <div className="relative z-10 h-full">
+          <div className="flex flex-col-reverse mt-16 md:mt-0 items-center justify-end lg:flex-row">
                 <Image
                   src="/assets/images/transport-and-logistic/hero-1.png"
                   alt="hero image"
@@ -89,10 +85,7 @@ export default function Page() {
                   className="object-center"
                   priority
                 />
-              </div>
-            </div>
-            {/* Content Side */}
-            <div className={cn('mb-12 lg:mb-0 lg:w-1/2')}>
+            <div className={cn('mb-12 lg:mb-0 lg:w-1/2 md:px-20 px-10')}>
               <SectionHeading
                 title="Streamline Operations with a Top Logistics Software Development Company"
                 size="md"
@@ -116,9 +109,9 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden pb-16">
+      <section className="relative overflow-hidden -mt-3 lg:-mt-3 md:mt-0">
         <Container>
-          <div className="mb-10 flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:gap-4">
+          <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:gap-4">
             <div className="w-full text-center md:w-2/3 md:text-left">
               <SectionHeading
                 title="All in One Transport and Logistics Software Development Services"
@@ -128,7 +121,7 @@ export default function Page() {
                 size="md"
               />
             </div>
-            <div className="flex w-full justify-center md:w-1/3 md:justify-end">
+            <div className="flex w-full justify-center md:w-1/3 md:justify-end md:hidden lg:block">
               <Image
                 src="/assets/images/transport-and-logistic/hero-2.png"
                 alt="hero image"
@@ -138,7 +131,7 @@ export default function Page() {
               />
             </div>
           </div>
-          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1  md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <Feature key={feature.title} {...feature} index={index} />
             ))}

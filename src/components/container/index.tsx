@@ -15,10 +15,7 @@ export function Container({
   );
 
   return (
-    <div className={cn(
-      containerClasses,
-      !isNoPadding && 'px-8 md:px-8'
-    )}>
+    <div className={cn(containerClasses, !isNoPadding && 'px-8 md:px-8')}>
       {children}
     </div>
   );

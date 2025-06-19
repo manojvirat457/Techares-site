@@ -363,7 +363,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Responsive design for all devices"
             width={100}
             height={100}
@@ -377,7 +377,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Advanced search and filtering options"
             width={100}
             height={100}
@@ -391,7 +391,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Secure payment gateways"
             width={100}
             height={100}
@@ -405,7 +405,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Product reviews and ratings"
             width={100}
             height={100}
@@ -419,7 +419,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="SEO-friendly structure"
             width={100}
             height={100}
@@ -431,7 +431,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'The SEO-friendly structure of the website prioritizes clear organisation, fast loading times, and a user-friendly experience which improves search engine rankings.',
       },
     ],
-    image: '/assets/images/ecommerce/slide-1.png',
+    image: '/assets/images/ecommerce/website-panel.png',
   },
   user: {
     title: 'User Features',
@@ -439,7 +439,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Easy registration and login"
             width={100}
             height={100}
@@ -453,7 +453,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Wishlist and saved items"
             width={100}
             height={100}
@@ -467,7 +467,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Order history and tracking"
             width={100}
             height={100}
@@ -481,7 +481,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Personalized recommendations"
             width={100}
             height={100}
@@ -495,7 +495,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/taxi-app/p4.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Multiple payment options"
             width={100}
             height={100}
@@ -507,7 +507,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'It provides multiple payment options for customers to pay for products or services purchased online.',
       },
     ],
-    image: '/assets/images/ecommerce/slide-1.png',
+    image: '/assets/images/ecommerce/user-panel.png',
   },
   vendor: {
     title: 'Vendor Features',
@@ -515,7 +515,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Vendor dashboard for managing products and orders"
             width={100}
             height={100}
@@ -529,7 +529,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Commission and earnings tracking"
             width={100}
             height={100}
@@ -543,7 +543,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Inventory management"
             width={100}
             height={100}
@@ -557,7 +557,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Sales analytics and reports"
             width={100}
             height={100}
@@ -571,7 +571,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Easy product upload and management"
             width={100}
             height={100}
@@ -583,7 +583,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'The information of the product included in an ecommerce platform or inventory system is accurately added, updated and organised.',
       },
     ],
-    image: '/assets/images/ecommerce/slide-1.png',
+    image: '/assets/images/ecommerce/vendor-panel.png',
   },
   admin: {
     title: 'Admin Features',
@@ -591,7 +591,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Centralized control panel"
             width={100}
             height={100}
@@ -605,7 +605,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="User and vendor management"
             width={100}
             height={100}
@@ -619,7 +619,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Sales and revenue tracking"
             width={100}
             height={100}
@@ -633,7 +633,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Product and category management"
             width={100}
             height={100}
@@ -647,7 +647,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
       {
         icon: (
           <Image
-            src="/assets/images/food-delivery/fock.png"
+            src="/assets/images/ecommerce/keypoint.png"
             alt="Customizable admin settings"
             width={100}
             height={100}
@@ -659,7 +659,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'It allows administrators to tailor various aspects of an application or system to better fit their organisation’s needs and preferences.',
       },
     ],
-    image: '/assets/images/ecommerce/slide-1.png',
+    image: '/assets/images/ecommerce/admin-panel.png',
   },
 };
 
@@ -677,7 +677,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Experienced Team',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -690,7 +690,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Custom Solutions',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -703,7 +703,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Cutting-Edge Technology',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -716,7 +716,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Client-Centric Approach',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -729,7 +729,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Affordable Pricing',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}

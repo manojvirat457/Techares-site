@@ -356,6 +356,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     title: 'Why Choose TechAres ?',
     description:
       'Techares stands out as the ideal partner for your fantasy sports app development needs, offering a unique blend of expertise and commitment. As a reliable fantasy sports app development company our comprehensive services eases the process of app development.',
+    size: 'sm',
   },
   isButton: true,
   isCard: false,
@@ -364,7 +365,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Industry Expertise',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -377,7 +378,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Scalable & Secure Solutions',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -390,7 +391,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Pioneering Innovative Features',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -403,7 +404,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Comprehensive Support',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -418,10 +419,10 @@ export const whyChooseUs: ProjectDetailsProps = {
     href: '/contact',
   },
   image: {
-    src: '/assets/images/taxi-app/hero-3.png',
+    src: '/assets/images/fantasy-sports/hero-4.png',
     alt: 'about image five',
-    width: 540,
-    height: 578,
+    width: 600,
+    height: 600,
   },
 };
 
@@ -508,7 +509,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'With our flexible and robust systems the transactions and exciting rewards are safe and secured.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/fantasy-sports/user-panel.png',
   },
   admin: {
     title: 'Admin Panel',
@@ -570,7 +571,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Our revenue tracking features maximize revenue with detailed tracking and flexible monetization.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/fantasy-sports/admin-panel.png',
   },
   advance: {
     title: 'Advanced Features',
@@ -646,7 +647,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Reach a wider audience with versatile, cross-platform, and cross-game compatibility features.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/fantasy-sports/advance-panel.png',
   },
   trending: {
     title: 'Trending Features',
@@ -708,7 +709,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
           'Enhance the user gameplay with AI-driven strategy insights, improving user engagement through comprehensive technology.',
       },
     ],
-    image: '/assets/images/taxi-app/user-feature.png',
+    image: '/assets/images/fantasy-sports/trending-panel.png',
   },
 };
 

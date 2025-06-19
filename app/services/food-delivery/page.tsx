@@ -241,7 +241,14 @@ export default function Page() {
       </section>
       {/* Work Flow */}
       <WorkflowSection
-        sectionHeading={{ title: 'How We Develop Your Food Delivery App' }}
+        sectionHeading={{
+          title: 'How We Develop Your Food Delivery App',
+          subtitle: 'WORK FLOW',
+          description:
+            ' At TechAres, we follow a systematic procedure to ensure the successful development of the app. Have an insight into the two strategies',
+          alignment: 'center',
+          textPosition: 'center',
+        }}
         steps={workflowSteps}
       />
       {/* Why Choose Us */}

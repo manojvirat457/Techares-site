@@ -9,7 +9,8 @@ export const whyChooseUs: ProjectDetailsProps = {
     title: 'Why Choose TechAres ?',
     description:
       'A genuine commitment is made by TechAres to deliver innovative and reliable solutions that inspire businesses to thrive in an ever-evolving digital world. Our expertise surrounds mobility solutions, flexible customization, and scalable architecture which are encouraged by round-the-clock support. TechAres is the perfect partner for your business for the following reasons',
-  },
+    size: 'sm',
+     },
   isButton: true,
   isCard: false,
   keyPoints: [
@@ -17,7 +18,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Expertise in Mobility Solutions',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -30,7 +31,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Custom & White-Label Options',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -43,7 +44,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: 'Scalable Architecture',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}
@@ -56,7 +57,7 @@ export const whyChooseUs: ProjectDetailsProps = {
       title: '24/7 Technical Support',
       icon: (
         <Image
-          src="/assets/images/food-delivery/fock-outline.png"
+          src="/assets/images/keypoint.png"
           alt="Feature 1"
           width={20}
           height={20}

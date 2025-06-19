@@ -20,7 +20,7 @@ export function HeroSection({
   backgroundImage,
 }: HeroSectionProps) {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-[9.375rem] lg:min-h-screen -mt-20">
+    <section className="relative -mt-20 flex items-center justify-center overflow-hidden py-[9.375rem] lg:min-h-screen">
       <div
         className={cn(
           'absolute inset-0  bg-accent-700 bg-cover bg-no-repeat bg-blend-luminosity [background-position:top_center] [transform:scale(1)] [transition:7000ms_ease,opacity_1500ms_ease-in]',

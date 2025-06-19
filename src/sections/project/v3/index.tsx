@@ -1,14 +1,14 @@
 'use client';
+import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
+import { CustomLink } from '@/src/components/custom-link';
 import { SectionHeading } from '@/src/components/section-heading';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 import { FaCircleCheck } from 'react-icons/fa6';
 import styles from './project-v3.module.css';
-import type { ProjectDetailsProps } from '@/app/services/taxi-booking/-data';
-import { Button } from '@/src/components/button';
-import { CustomLink } from '@/src/components/custom-link';
+import type { ProjectDetailsProps } from '@/src/sections/project/v4';
 const cursorStyle = cn('cursor-pointer');
 export function ProjectSection({
   projectDetails,
@@ -107,10 +107,10 @@ export function ProjectSection({
                   keyPoints.map((keyPoint, index) => (
                     <li className="my-3 lg:order-2" key={index}>
                       <h3 className="flex items-center gap-3 lg:gap-4">
-                        <span className="text-lg text-primary">
+                        <span className="text-md text-primary">
                           <FaCircleCheck />
                         </span>
-                        <span className="block font-secondary text-md font-bold leading-[1] text-accent-900 dark:text-white">
+                        <span className="block whitespace-pre-line font-normal text-accent-900 dark:text-white">
                           {keyPoint.title}
                         </span>
                       </h3>

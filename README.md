@@ -29,5 +29,5 @@
 - Food Delivery Latest Update
 - (Ecommers )Why Choose Us for Ecommerce App Development? - too many points issue
 - (Ecommers) Advanced Feature Responsive
--About us -> Semi Bold issues home page (all page uniform wight)
+  -About us -> Semi Bold issues home page (all page uniform wight)
 - All in One Transport and Logistics Gap should be uniform
