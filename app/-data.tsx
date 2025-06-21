@@ -1,3 +1,5 @@
+import { ProjectDetailsProps } from "@/src/sections/project/v4";
+
 export const workflowSteps = [
   {
     id: 1,
@@ -30,3 +32,46 @@ export const workflowSteps = [
       'Once tested, we launch the app on Google Play Store and Apple App Store. Post-launch, we provide regular updates, bug fixes, and performance optimizations. Our team ensures continuous support to keep your app running smoothly.',
   },
 ];
+
+
+export const whyChooseSectionData: ProjectDetailsProps = {
+ sectionHeading: {
+   subtitle: 'WHY US',
+   highlighttitle: 'TechAres ',
+   title: '– Your Trusted Partner for Digital Excellence',
+   description:
+     'At TechAres, we go beyond being just a digital agency—we are your innovation- driven IT consultancy committed to delivering exceptional, scalable, and cost- effective solutions across industries.By seamlessly blending creativity, technology, and strategy, we empower businesses to achieve digital transformation with confidence.With a team of highly skilled professionals, we ensure seamless project execution, helping you stay ahead in a rapidly evolving digital world.',
+ },
+ isCard: false,
+ isButton: true,
+ keyPoints: [
+   {
+     title:
+       'Unmatched Technical Expertise – Versatile solutions tailored to your unique needs',
+   },
+   {
+     title:
+       'Client-Centric Approach – We listen, adapt, and deliver with precision',
+   },
+   {
+     title:
+       'Optimized & Efficient Operations – Fast, cost-effective, and result-driven processes',
+   },
+   {
+     title:
+       'Complete Transparency & Traceability – Clear workflows and measurable outcomes',
+   },
+   {
+     title:
+       'Proven Reliability – Consistent excellence and unwavering support',
+   },
+ ],
+ image: {
+   src: '/assets/images/about/whychoose.png',
+   alt: 'about image five',
+   width: 1200,
+   height: 1200,
+ },
+ description:
+   'It is a long established fact that a reader will be distracted by the readablejk content of a page when looking at its layout.',
+};

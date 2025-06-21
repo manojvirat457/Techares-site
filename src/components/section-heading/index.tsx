@@ -81,7 +81,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'my-2 whitespace-pre-line ',
+            'my-2 whitespace-pre-line text-accent-800 dark:text-body',
             textPosition === 'start' && 'text-left',
             textPosition === 'center' && 'text-center',
             textPosition === 'end' && 'text-right'

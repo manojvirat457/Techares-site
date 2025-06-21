@@ -11,14 +11,13 @@ import { CustomLink } from '@/src/components/custom-link';
 import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import type { LinkProps } from '@/src/common-types';
 const cursorStyle = cn('cursor-pointer');
+export interface KeyPoint extends SectionHeadingWithoutStylingProps {
+  icon?: React.ReactNode;
+}
 export interface ProjectDetailsProps {
   sectionHeading: SectionHeadingWithoutStylingProps;
   // aboutUsPoints: string[];
-  keyPoints: {
-    icon?: React.ReactNode;
-    title: string;
-    description?: string;
-  }[];
+  keyPoints: KeyPoint[];
   image: ImageProps;
   description?: string;
   button?: LinkProps;
@@ -168,7 +167,7 @@ export function ProjectSectionV4({
                     <div className="flex flex-col gap-2 text-left">
                       <SectionHeading
                         title={keyPoint.title}
-                        size="xs"
+                        size={keyPoint.size ? keyPoint.size : 'xs'}
                         description={
                           !isCard && keyPoint.description
                             ? keyPoint.description

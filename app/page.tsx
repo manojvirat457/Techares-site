@@ -1,13 +1,13 @@
-import { workflowSteps } from '@/app/-data';
+import { whyChooseSectionData, workflowSteps } from '@/app/-data';
 import {
-  aboutSectionData,
-  whyChooseSectionDataTwo,
+ aboutSectionData
 } from '@/data/about-section/v1';
 import { industriesSectionData } from '@/data/industries/v1';
 import { servicesData } from '@/data/service-section/v3';
 import { WorkflowSection } from '@/src/components/workflow-section';
 import { AboutSection } from '@/src/sections/about/v1';
 import { Hero } from '@/src/sections/hero/v1';
+import { ProjectSectionV4 } from '@/src/sections/project/v4';
 import { basicMetadata } from '@/src/utils/metadata';
 import dynamic from 'next/dynamic';
 
@@ -41,10 +41,6 @@ const TechnologiesSection = dynamic(
     ),
   { ssr: true }
 );
-const ProjectSection = dynamic(
-  () => import('@/src/sections/project/v3').then((mod) => mod.ProjectSection),
-  { ssr: true }
-);
 const ContactSection = dynamic(
   () => import('@/src/sections/contact/v1').then((mod) => mod.ContactSection),
   { ssr: true }
@@ -68,14 +64,7 @@ export default function Page() {
         itemsPerRow={4}
       />
       <TestimonialSection />
-      {/* <MethodologiesSection
-        methodologies={methodologies}
-        heading={{
-          title: 'Our Development',
-          highlightedTitle: 'Methodologies',
-        }}
-      /> */}
-      <WorkflowSection
+     <WorkflowSection
         sectionHeading={{
           title: 'Strategic Workflow Taxi App Development',
           subtitle: 'WORK FLOW',
@@ -87,7 +76,13 @@ export default function Page() {
         steps={workflowSteps}
       />
       <TechnologiesSection />
-      <ProjectSection projectDetails={whyChooseSectionDataTwo} />
+      <ProjectSectionV4
+        projectDetails={whyChooseSectionData}
+        imagePosition="left"
+        alignment="center"
+        backgroundColor={{ dark: 'bg-accent-900', light: 'bg-zinc-50' }}
+        keyPointsLayout="list"
+      />
       <ContactSection />
     </>
   );

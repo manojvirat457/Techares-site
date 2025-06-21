@@ -31,3 +31,19 @@
 - (Ecommers) Advanced Feature Responsive
   -About us -> Semi Bold issues home page (all page uniform wight)
 - All in One Transport and Logistics Gap should be uniform
+
+
+position: relative;
+    height: 100%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    padding: 1rem 2rem;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    border-radius: 12px;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
