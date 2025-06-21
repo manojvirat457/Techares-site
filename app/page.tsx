@@ -1,9 +1,4 @@
-import { whyChooseSectionData, workflowSteps } from '@/app/-data';
-import {
- aboutSectionData
-} from '@/data/about-section/v1';
-import { industriesSectionData } from '@/data/industries/v1';
-import { servicesData } from '@/data/service-section/v3';
+import { aboutSectionData, contactSectionData, ctaSectionData, heroData, industriesSectionData, servicesData, whyChooseSectionData, workflowSteps } from '@/app/-data';
 import { WorkflowSection } from '@/src/components/workflow-section';
 import { AboutSection } from '@/src/sections/about/v1';
 import { Hero } from '@/src/sections/hero/v1';
@@ -51,20 +46,20 @@ export const metadata = basicMetadata({});
 export default function Page() {
   return (
     <>
-      <Hero />
+      <Hero items={heroData.items} />
       <AboutSection aboutSectionData={aboutSectionData} />
       <ServicesSection
         servicesData={servicesData}
         title={{ title: "Techares's", highlightedTitle: 'Services' }}
       />
       <SolutionsSection />
-      <CtaSection />
+      <CtaSection title={ctaSectionData.title} description={ctaSectionData.description} />
       <IndustriesSection
         industriesSectionData={industriesSectionData}
         itemsPerRow={4}
       />
       <TestimonialSection />
-     <WorkflowSection
+      <WorkflowSection
         sectionHeading={{
           title: 'Strategic Workflow Taxi App Development',
           subtitle: 'WORK FLOW',
@@ -83,7 +78,7 @@ export default function Page() {
         backgroundColor={{ dark: 'bg-accent-900', light: 'bg-zinc-50' }}
         keyPointsLayout="list"
       />
-      <ContactSection />
+      <ContactSection sectionHeading={contactSectionData.sectionHeading} image={contactSectionData.image} />
     </>
   );
 }

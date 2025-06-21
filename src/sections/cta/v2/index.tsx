@@ -15,11 +15,7 @@ export interface CtaSectionProps {
   description: string;
 }
 
-const ctaSectionData: CtaSectionProps = {
-  title: 'Schedule a Meeting',
-  description:
-    'Connect with our experts for a personalized one-on-one consultation. Discuss your business requirements, explore tailored solutions, and get expert guidance to drive your project forward.',
-};
+
 
 const inputCommonClasses = cn(
   'border-white/60 text-white placeholder:text-white/80 focus:border-white dark:border-accent-200 dark:border-opacity-60 dark:text-accent-100 dark:placeholder:text-accent-200/80'
@@ -30,8 +26,10 @@ const validationSchema = Yup.object({
   email: Yup.string().email().required('Email is required'),
 });
 
-export function CtaSection() {
-  const { title, description } = ctaSectionData;
+export function CtaSection({
+  title,
+  description,
+}: CtaSectionProps) {
   const router = useRouter();
   return (
     <section
@@ -56,7 +54,6 @@ export function CtaSection() {
               onSubmit={async (values, { resetForm }) => {
                 const timezone =
                   Intl.DateTimeFormat().resolvedOptions().timeZone;
-                console.log('🚀 ~ onSubmit={ ~ values:', values);
                 const result = await contactUsFormSubmit({
                   name: values.name,
                   email: values.email,

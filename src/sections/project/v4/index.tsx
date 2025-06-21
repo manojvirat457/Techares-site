@@ -77,7 +77,7 @@ export function ProjectSectionV4({
               'lg:flex-row-reverse':
                 imagePosition === 'right' || imagePosition === 'right-edge',
               'lg:w-full': imagePosition?.endsWith('-edge'),
-              'lg:justify-start': imagePosition === 'left-edge',
+              'lg:justify-start px-8 md:px-0': imagePosition === 'left-edge',
               'lg:justify-end': imagePosition === 'right-edge',
             }
           )}

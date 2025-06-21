@@ -42,7 +42,7 @@ export function TabSection<T extends string>({
   const [activeTab, setActiveTab] = useState(defaultActiveTab || tabs[0]?.id);
 
   return (
-    <section className={cn('mx-auto max-w-6xl py-12 md:py-16', className)}>
+    <section className={cn('mx-auto max-w-6xl py-12 px-8 md:px-0 md:py-16', className)}>
       <Container isNoPadding>
         {heading && <SectionHeading {...heading} className="mb-12" />}
         <div className="relative mb-8 pb-1">

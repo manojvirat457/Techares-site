@@ -21,8 +21,9 @@ export interface HeroProps {
   }[];
 }
 
-export function Hero() {
-  const { items } = heroData;
+export function Hero({
+  items,
+}: HeroProps) {
 
   return (
     <section className="relative -mt-20">

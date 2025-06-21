@@ -21,7 +21,7 @@ export default function AdvanceFeature() {
       <Container>
         <div className="relative h-auto w-full overflow-hidden md:h-[500px]">
           {/* SVG Background */}
-          <div className="absolute inset-0 flex h-full w-full">
+          <div className="lg:absolute inset-0 lg:flex h-full w-full hidden">
             <svg
               viewBox="0 0 1555 465"
               fill="transparent"
@@ -52,10 +52,11 @@ export default function AdvanceFeature() {
           </div>
 
           {/* Carousel Content */}
-          <div className="relative z-10 flex h-full items-center justify-end">
+          <div className="relative z-10 flex h-full items-center lg:justify-end justify-center">
+            <div className="absolute lg:hidden inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
             {/* Image */}
             <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
-              <div className="relative h-[460px] w-[500px]">
+              <div className="relative h-[445px] w-[500px] hidden xl:block">
                 <Image
                   src={slides[currentSlide].image}
                   alt="E-commerce illustration"
@@ -65,17 +66,17 @@ export default function AdvanceFeature() {
               </div>
             </div>
             {/* Content */}
-            <div className="mr-56 max-w-2xl items-center justify-center">
+            <div className="max-w-2xl items-center lg:justify-end lg:mr-20 mr-0 justify-center">
               <h3
                 className={
-                  'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-accent-100 dark:text-accent-700 md:text-xl'
+                  'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-primary-light  lg:text-accent-100 dark:text-accent-700 md:text-xl'
                 }
               >
                 {slides[currentSlide].title}
               </h3>
               <p
                 className={
-                  'my-2 whitespace-pre-line text-left font-semibold text-accent-200 dark:text-accent-700'
+                  'my-2 whitespace-pre-line text-left font-semibold lg:text-accent-200 dark:text-accent-700'
                 }
               >
                 {slides[currentSlide].description}
@@ -90,18 +91,18 @@ export default function AdvanceFeature() {
               <button
                 onClick={prevSlide}
                 type="button"
-                className="rounded-full bg-white/20 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-white/30 md:p-3"
+                className="rounded-full bg-white md:p-3"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="h-5 w-5 text-white md:h-6 md:w-6" />
+                <ChevronLeft className="h-5 w-5 text-primary md:h-6 md:w-6" />
               </button>
               <button
                 onClick={nextSlide}
-                className="rounded-full bg-white/20 p-2 backdrop-blur-sm transition-all duration-200 hover:bg-white/30 md:p-3"
+                className="rounded-full bg-white md:p-3"
                 aria-label="Next slide"
                 type="button"
               >
-                <ChevronRight className="h-5 w-5 text-white md:h-6 md:w-6" />
+                <ChevronRight className="h-5 w-5 text-primary md:h-6 md:w-6" />
               </button>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { ProjectDetailsProps } from '@/app/services/taxi-booking/-data';
 import { AboutSectionProps } from '@/src/sections/about/v1';
+import { ProjectDetailsProps } from '@/src/sections/project/v4';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
 
 export const aboutSectionData: AboutSectionProps = {
@@ -125,6 +125,8 @@ export const whyChooseSectionDataTwo: ProjectDetailsProps = {
     description:
       'At TechAres, we go beyond being just a digital agency—we are your innovation- driven IT consultancy committed to delivering exceptional, scalable, and cost- effective solutions across industries.By seamlessly blending creativity, technology, and strategy, we empower businesses to achieve digital transformation with confidence.With a team of highly skilled professionals, we ensure seamless project execution, helping you stay ahead in a rapidly evolving digital world.',
   },
+  isCard: false,
+  isButton: false,
   keyPoints: [
     {
       title:

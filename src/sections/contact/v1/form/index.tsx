@@ -28,7 +28,6 @@ const validationMessages = {
   tooShort: 'Must be at least ${min} characters',
   tooLong: 'Must be at most ${max} characters',
   phoneNo: 'Must be minium of ${} numbers',
-  required: 'This field is required',
   email: 'Invalid email format',
 };
 
@@ -36,22 +35,22 @@ const ContactUsSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, validationMessages.tooShort)
     .max(50, validationMessages.tooLong)
-    .required(validationMessages.required),
+    .required('Name is required'),
   email: Yup.string()
     .email(validationMessages.email)
-    .required(validationMessages.required),
+    .required('Email is required'),
   phoneNo: Yup.string()
-    .required(validationMessages.required)
+    .required('Phone number is required')
     .min(10, validationMessages.phoneNo)
     .default(null),
   subject: Yup.string()
     .min(2, validationMessages.tooShort)
     .max(50, validationMessages.tooLong)
-    .required(validationMessages.required),
+    .required('Subject is required'),
   message: Yup.string()
     .min(2, validationMessages.tooShort)
     .max(300, validationMessages.tooLong)
-    .required(validationMessages.required),
+    .required('Message is required'),
 });
 
 export type ContactUsSchemaType = Yup.InferType<typeof ContactUsSchema>;

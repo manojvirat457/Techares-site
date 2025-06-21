@@ -151,7 +151,7 @@ export default function Page() {
         defaultActiveTab="user"
       />
       {/* Unique Feature */}
-      <section className="relative py-16">
+      <section className="relative py-16 px-8 md:px-0">
         <Container isFluid isNoPadding>
           <SectionHeading
             title={
@@ -199,7 +199,7 @@ export default function Page() {
                 ))}
               </InfiniteSlider>
             </div>
-            <div className="hidden w-1/3 md:block">
+            <div className="hidden w-1/3 md:flex  items-center">
               <Image
                 src="/assets/images/taxi-app/taxi-4.png"
                 alt="Vector Image"

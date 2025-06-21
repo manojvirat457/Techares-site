@@ -12,8 +12,10 @@ export interface ContactSectionProps {
   image: Omit<ImageProps, 'width' | 'height'>;
 }
 
-export function ContactSection() {
-  const { sectionHeading, image } = contactSectionData;
+export function ContactSection({
+  sectionHeading,
+  image,
+}: ContactSectionProps) {
   return (
     <section className="section-padding-primary bg-gray-50 dark:bg-accent-900">
       <div className="relative py-[60px]">

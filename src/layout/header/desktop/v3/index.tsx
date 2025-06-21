@@ -159,7 +159,7 @@ const Navbar1 = ({
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto text-zinc-50 dark:bg-zinc-950 dark:text-zinc-950">
+              <SheetContent className="overflow-y-auto text-zinc-50 bg-zinc-50 dark:bg-zinc-950 dark:text-zinc-950">
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
@@ -203,7 +203,7 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem className="bg-transparent" key={item.title}>
-        <NavigationMenuTrigger className="bg-transparent text-zinc-950 dark:text-zinc-50">
+        <NavigationMenuTrigger className="bg-transparent text-zinc-950 dark:text-zinc-50 transition-colors [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]">
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
@@ -221,7 +221,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group  px-4 py-2 text-sm font-medium transition-colors hover:text-primary hover:dark:text-primary"
+        className="group relative h-full flex justify-center items-center text-sm font-medium text-center px-8 py-2 text-black dark:text-white hover:text-primary hover:dark:text-primary transition-colors [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]"
       >
         {item.title}
       </NavigationMenuLink>

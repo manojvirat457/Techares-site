@@ -222,7 +222,7 @@ export function Footer({ className }: SectionProps) {
                 <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] ">
                   <TextInput
                     placeholder="Enter Email"
-                    className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
+                    className="border-white border-opacity-60 text-white placeholder:text-accent-900 focus:border-white dark:border-white dark:border-opacity-60 dark:text-accent-900 dark:placeholder:text-accent-100"
                   />
                   <Button
                     type="button"
