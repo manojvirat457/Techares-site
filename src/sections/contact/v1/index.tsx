@@ -1,4 +1,3 @@
-import { contactSectionData } from '@/data/contact-section/v1';
 import { ImageProps, blurDataUrl } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
@@ -12,10 +11,7 @@ export interface ContactSectionProps {
   image: Omit<ImageProps, 'width' | 'height'>;
 }
 
-export function ContactSection({
-  sectionHeading,
-  image,
-}: ContactSectionProps) {
+export function ContactSection({ sectionHeading, image }: ContactSectionProps) {
   return (
     <section className="section-padding-primary bg-gray-50 dark:bg-accent-900">
       <div className="relative py-[60px]">

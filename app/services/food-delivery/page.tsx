@@ -29,7 +29,7 @@ export const metadata = basicMetadata({
 export default function Page() {
   return (
     <main>
-      <section className="relative overflow-hidden pb-16 pt-40 -mt-20">
+      <section className="relative -mt-20 overflow-hidden pb-16 pt-40">
         <div className="absolute inset-0 translate-y-1/4 transform bg-gradient-to-t from-primary/50 via-primary/30 to-transparent" />
         <Container>
           <div className="relative z-10 flex flex-col items-center lg:flex-row">

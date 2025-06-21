@@ -1,6 +1,5 @@
 'use client';
 
-import { heroData } from '@/data/hero/v1';
 import type { ImageProps, LinkProps } from '@/src/common-types';
 import { Button } from '@/src/components/button';
 import { Autoplay, EffectFade, Pagination } from 'swiper';
@@ -21,10 +20,7 @@ export interface HeroProps {
   }[];
 }
 
-export function Hero({
-  items,
-}: HeroProps) {
-
+export function Hero({ items }: HeroProps) {
   return (
     <section className="relative -mt-20">
       {items && items.length > 0 && (

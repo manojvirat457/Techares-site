@@ -21,7 +21,7 @@ export default function AdvanceFeature() {
       <Container>
         <div className="relative h-auto w-full overflow-hidden md:h-[500px]">
           {/* SVG Background */}
-          <div className="lg:absolute inset-0 lg:flex h-full w-full hidden">
+          <div className="inset-0 hidden h-full w-full lg:absolute lg:flex">
             <svg
               viewBox="0 0 1555 465"
               fill="transparent"
@@ -52,11 +52,11 @@ export default function AdvanceFeature() {
           </div>
 
           {/* Carousel Content */}
-          <div className="relative z-10 flex h-full items-center lg:justify-end justify-center">
-            <div className="absolute lg:hidden inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
+          <div className="relative z-10 flex h-full items-center justify-center lg:justify-end">
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent lg:hidden" />
             {/* Image */}
             <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
-              <div className="relative h-[445px] w-[500px] hidden xl:block">
+              <div className="relative hidden h-[445px] w-[500px] xl:block">
                 <Image
                   src={slides[currentSlide].image}
                   alt="E-commerce illustration"
@@ -66,17 +66,17 @@ export default function AdvanceFeature() {
               </div>
             </div>
             {/* Content */}
-            <div className="max-w-2xl items-center lg:justify-end lg:mr-20 mr-0 justify-center">
+            <div className="mr-0 max-w-2xl items-center justify-center lg:mr-20 lg:justify-end">
               <h3
                 className={
-                  'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-primary-light  lg:text-accent-100 dark:text-accent-700 md:text-xl'
+                  'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-primary-light  dark:text-accent-700 md:text-xl lg:text-accent-100'
                 }
               >
                 {slides[currentSlide].title}
               </h3>
               <p
                 className={
-                  'my-2 whitespace-pre-line text-left font-semibold lg:text-accent-200 dark:text-accent-700'
+                  'my-2 whitespace-pre-line text-left font-semibold dark:text-accent-700 lg:text-accent-200'
                 }
               >
                 {slides[currentSlide].description}

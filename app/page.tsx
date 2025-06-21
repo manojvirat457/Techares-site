@@ -1,4 +1,13 @@
-import { aboutSectionData, contactSectionData, ctaSectionData, heroData, industriesSectionData, servicesData, whyChooseSectionData, workflowSteps } from '@/app/-data';
+import {
+  aboutSectionData,
+  contactSectionData,
+  ctaSectionData,
+  heroData,
+  industriesSectionData,
+  servicesData,
+  whyChooseSectionData,
+  workflowSteps,
+} from '@/app/-data';
 import { WorkflowSection } from '@/src/components/workflow-section';
 import { AboutSection } from '@/src/sections/about/v1';
 import { Hero } from '@/src/sections/hero/v1';
@@ -53,7 +62,10 @@ export default function Page() {
         title={{ title: "Techares's", highlightedTitle: 'Services' }}
       />
       <SolutionsSection />
-      <CtaSection title={ctaSectionData.title} description={ctaSectionData.description} />
+      <CtaSection
+        title={ctaSectionData.title}
+        description={ctaSectionData.description}
+      />
       <IndustriesSection
         industriesSectionData={industriesSectionData}
         itemsPerRow={4}
@@ -78,7 +90,10 @@ export default function Page() {
         backgroundColor={{ dark: 'bg-accent-900', light: 'bg-zinc-50' }}
         keyPointsLayout="list"
       />
-      <ContactSection sectionHeading={contactSectionData.sectionHeading} image={contactSectionData.image} />
+      <ContactSection
+        sectionHeading={contactSectionData.sectionHeading}
+        image={contactSectionData.image}
+      />
     </>
   );
 }

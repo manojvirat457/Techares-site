@@ -15,8 +15,6 @@ export interface CtaSectionProps {
   description: string;
 }
 
-
-
 const inputCommonClasses = cn(
   'border-white/60 text-white placeholder:text-white/80 focus:border-white dark:border-accent-200 dark:border-opacity-60 dark:text-accent-100 dark:placeholder:text-accent-200/80'
 );
@@ -26,10 +24,7 @@ const validationSchema = Yup.object({
   email: Yup.string().email().required('Email is required'),
 });
 
-export function CtaSection({
-  title,
-  description,
-}: CtaSectionProps) {
+export function CtaSection({ title, description }: CtaSectionProps) {
   const router = useRouter();
   return (
     <section
