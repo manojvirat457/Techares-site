@@ -114,7 +114,7 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="sticky top-0 z-111 w-full bg-transparent  sm:z-20">
+    <section className="sticky top-0 z-111 w-full bg-transparent  sm:z-20 menu-bg-blur">
       <div className="bg-transparent py-3">
         {/* Desktop Menu */}
         <nav className="hidden justify-between bg-transparent lg:flex">
@@ -203,7 +203,7 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem className="bg-transparent" key={item.title}>
-        <NavigationMenuTrigger className="bg-transparent text-zinc-950 transition-colors [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] dark:text-zinc-50">
+        <NavigationMenuTrigger className="bg-transparent text-zinc-950 transition-colors dark:text-zinc-50">
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
@@ -221,7 +221,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group relative flex h-full items-center justify-center px-8 py-2 text-center text-sm font-medium text-black transition-colors [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] hover:text-primary dark:text-white hover:dark:text-primary"
+        className="group relative flex h-full items-center justify-center px-8 py-2 text-center text-sm font-medium text-black transition-colors  hover:text-primary dark:text-white hover:dark:text-primary"
       >
         {item.title}
       </NavigationMenuLink>
