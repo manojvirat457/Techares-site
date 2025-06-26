@@ -1,7 +1,6 @@
 'use client';
 
 import { solutions } from '@/data/solution-section/v1';
-import { CustomLink } from '@/src/components/custom-link';
 import { SectionHeading } from '@/src/components/section-heading';
 import { Card } from '@/src/components/ui/card';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
@@ -50,7 +49,7 @@ interface SolutionCardProps {
   href?: string;
 }
 
-function SolutionCard({ title, description, icon}: SolutionCardProps) {
+function SolutionCard({ title, description, icon }: SolutionCardProps) {
   return (
     <div className="space-y-2 rounded-lg border border-dashed border-gray-400 bg-zinc-100 p-6 dark:bg-zinc-900/50">
       <div className="relative mb-4">
@@ -65,8 +64,8 @@ function SolutionCard({ title, description, icon}: SolutionCardProps) {
       <SectionHeading
         title={title}
         size="xs"
-        alignment='start'
-        textPosition='start'
+        alignment="start"
+        textPosition="start"
         description={description}
       />
     </div>

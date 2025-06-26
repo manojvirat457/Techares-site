@@ -69,31 +69,36 @@ const Navbar1 = ({
       items: [
         {
           title: 'Ecommerce App Development',
-          description: 'Comprehensive ecommerce app development services tailored to your business needs.',
+          description:
+            'Comprehensive ecommerce app development services tailored to your business needs.',
           icon: <ShoppingCart className="size-5 shrink-0" />,
           url: '/services/ecommerce',
         },
         {
           title: 'Food Delivery App Development',
-          description: 'On-demand food delivery apps with live order tracking and secure payments.',
+          description:
+            'On-demand food delivery apps with live order tracking and secure payments.',
           icon: <Utensils className="size-5 shrink-0" />,
           url: '/services/food-delivery',
         },
         {
           title: 'Taxi App for All',
-          description: 'Reliable, scalable taxi booking solutions for commuters and businesses.',
+          description:
+            'Reliable, scalable taxi booking solutions for commuters and businesses.',
           icon: <Car className="size-5 shrink-0" />,
           url: '/services/taxi-booking',
         },
         {
           title: 'Fantasy Sports App Development',
-          description: 'Custom fantasy sports platforms for immersive fan engagement.',
+          description:
+            'Custom fantasy sports platforms for immersive fan engagement.',
           icon: <Trophy className="size-5 shrink-0" />,
           url: '/services/fantasy-sports',
         },
         {
           title: 'Transport and Logistics App',
-          description: 'Automate and streamline logistics with advanced software solutions.',
+          description:
+            'Automate and streamline logistics with advanced software solutions.',
           icon: <Truck className="size-5 shrink-0" />,
           url: '/services/transport-and-logistic',
         },
@@ -133,7 +138,12 @@ const Navbar1 = ({
           </div>
           <div className="flex gap-2">
             <ContactUsDialog>
-              <Button className={cn('mr-5 rounded-full px-5  text-[13px] min-h-[15px] capitalize')} size="small">
+              <Button
+                className={cn(
+                  'mr-5 min-h-[15px] rounded-full  px-5 text-[13px] capitalize'
+                )}
+                size="small"
+              >
                 <span>{'Get in Touch'}</span>
               </Button>
             </ContactUsDialog>
@@ -206,7 +216,7 @@ const renderMenuItem = (item: MenuItem) => {
         <NavigationMenuTrigger className="bg-transparent text-zinc-950 transition-colors [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] dark:text-zinc-50">
           {item.title}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 shadow-lg">
+        <NavigationMenuContent className="bg-white text-zinc-950 shadow-lg dark:bg-zinc-950 dark:text-zinc-50">
           {item.items.map((subItem) => (
             <NavigationMenuLink asChild key={subItem.title} className="w-80">
               <SubMenuLink item={subItem} />
@@ -262,7 +272,9 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
       className="flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-primary"
       href={item.url}
     >
-      <div className="text-zinc-950 dark:text-zinc-50 flex items-center">{item.icon}</div>
+      <div className="flex items-center text-zinc-950 dark:text-zinc-50">
+        {item.icon}
+      </div>
       <div className="flex-1">
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (
@@ -270,7 +282,7 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
             <p className="text-sm leading-snug text-zinc-500 dark:text-zinc-400">
               {item.description}
             </p>
-            <div className="border-b border-zinc-200 dark:border-zinc-700 my-2 w-full" />
+            <div className="my-2 w-full border-b border-zinc-200 dark:border-zinc-700" />
           </>
         )}
       </div>

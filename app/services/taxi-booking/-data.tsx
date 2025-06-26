@@ -22,7 +22,7 @@ export const whyChooseUs: ProjectDetailsProps = {
           alt="Feature 1"
           width={18}
           height={18}
-          className='mt-4'
+          className="mt-4"
         />
       ),
       description:
@@ -36,7 +36,7 @@ export const whyChooseUs: ProjectDetailsProps = {
           alt="Feature 1"
           width={18}
           height={18}
-          className='mt-4'
+          className="mt-4"
         />
       ),
       description:
@@ -50,7 +50,7 @@ export const whyChooseUs: ProjectDetailsProps = {
           alt="Feature 1"
           width={18}
           height={18}
-          className='mt-4'
+          className="mt-4"
         />
       ),
       description:
@@ -62,9 +62,9 @@ export const whyChooseUs: ProjectDetailsProps = {
         <Image
           src="/assets/images/keypoint.png"
           alt="Feature 1"
-           width={18}
+          width={18}
           height={18}
-          className='mt-4'
+          className="mt-4"
         />
       ),
       description:

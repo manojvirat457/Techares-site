@@ -36,14 +36,14 @@ export function CtaSection({ title, description }: CtaSectionProps) {
       <Container>
         <div className="relative z-10 grid items-center gap-30px xl:grid-cols-12">
           <div className="text-white dark:text-accent-100 xl:col-span-5">
-           <SectionHeading
-            title={title}
-            description={description}
-            size="sm"
-            alignment='start'
-            textPosition='start'
-            invertColor={true}
-           />
+            <SectionHeading
+              title={title}
+              description={description}
+              size="sm"
+              alignment="start"
+              textPosition="start"
+              invertColor={true}
+            />
           </div>
           <div className="xl:col-span-7">
             <Formik

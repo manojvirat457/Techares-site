@@ -16,16 +16,17 @@
 - `revert` – reverts a previous commit
 
 ## Issues
-- [X] Home Button Padding 20px header and font-size 13 px and min-height 15px and text-transform capitalize
-- [X] About us line Height 40px and parage hhih on all landing page okay, and to all the sub headings
-- [X] change the icon desction remove border and add icons from iconify
-- [X] services card heading size should match other card size
-- [X] Techonoglies we use Gap Remove
-- [X] why chose use points font weight 700 and font-size 18px
-- [X] tick icon should be 18px and height 18px, and replace it with the logo icons
-- [X] update footer link
-- [X] update the header sub menus with the icons and drop shadows
-- sub heading font should be heading font and the each one should have the border , add box shadows 
+
+- [x] Home Button Padding 20px header and font-size 13 px and min-height 15px and text-transform capitalize
+- [x] About us line Height 40px and parage hhih on all landing page okay, and to all the sub headings
+- [x] change the icon desction remove border and add icons from iconify
+- [x] services card heading size should match other card size
+- [x] Techonoglies we use Gap Remove
+- [x] why chose use points font weight 700 and font-size 18px
+- [x] tick icon should be 18px and height 18px, and replace it with the logo icons
+- [x] update footer link
+- [x] update the header sub menus with the icons and drop shadows
+- sub heading font should be heading font and the each one should have the border , add box shadows
 
 position: relative;
 height: 100%;

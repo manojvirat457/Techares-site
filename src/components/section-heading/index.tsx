@@ -41,7 +41,7 @@ export function SectionHeading({
             size === 'xm' && 'md:text-2xl',
             textPosition === 'start' && 'text-left',
             textPosition === 'center' && 'text-center',
-            textPosition === 'end' && 'text-right',
+            textPosition === 'end' && 'text-right'
           )}
         >
           {subtitle}
@@ -70,7 +70,7 @@ export function SectionHeading({
           size === 'lg' && 'xm:text-4xl text-2xl md:text-3xl',
           size === 'xl' && 'xm:text-5xl text-3xl md:text-4xl',
           size === 'xm' && 'xm:text-4xl text-2xl md:text-3xl',
-          !size && 'xm:text-3xl text-xl md:text-2xl leading-10',
+          !size && 'xm:text-3xl text-xl leading-10 md:text-2xl',
           textPosition === 'start' && 'text-left',
           textPosition === 'center' && 'text-center',
           textPosition === 'end' && 'text-right'
@@ -84,7 +84,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'my-2 whitespace-pre-lin',
+            'whitespace-pre-lin my-2',
             invertColor && 'text-white dark:text-accent-900',
             !invertColor && 'text-accent-800 dark:text-body',
             textPosition === 'start' && 'text-left',

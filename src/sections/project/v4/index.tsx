@@ -161,7 +161,9 @@ export function ProjectSectionV4({
                           : 'flex-none'
                       )}
                     >
-                      {keyPoint.icon || <FaCircleCheck size={18} className='mt-4' />}
+                      {keyPoint.icon || (
+                        <FaCircleCheck size={18} className="mt-4" />
+                      )}
                     </span>
                     {/* Ensure text is left-aligned */}
                     <div className="flex flex-col gap-2 text-left">
