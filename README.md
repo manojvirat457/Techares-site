@@ -14,4 +14,3 @@
 - `ci` – continuous integration related
 - `build` – changes that affect the build system or external dependencies
 - `revert` – reverts a previous commit
-
