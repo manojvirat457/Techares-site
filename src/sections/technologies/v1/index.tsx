@@ -48,13 +48,12 @@ function TechnologyCard({
 export function TechnologiesSection({}: SectionProps) {
   const { title } = ctaSectionData;
   return (
-    // <section className={cn(className)}>
     <Container isFluid={true}>
       <div className="relative overflow-hidden rounded-5 bg-primary px-6 py-14 dark:bg-primary/90">
         <div className="relative z-10 mx-auto rounded-5  text-center">
-          <h2 className="mx-auto max-w-[490px] pb-16 font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
-            {title}
-          </h2>
+           <h2 className="mx-auto max-w-[490px] pb-8 font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
+             {title}
+           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:mx-20 lg:grid-cols-4">
             {techCategory.map((category, index) => (
               <TechnologyCard
@@ -77,6 +76,5 @@ export function TechnologiesSection({}: SectionProps) {
         />
       </div>
     </Container>
-    // </section>
   );
 }

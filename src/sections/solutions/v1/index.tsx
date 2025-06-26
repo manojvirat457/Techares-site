@@ -2,6 +2,7 @@
 
 import { solutions } from '@/data/solution-section/v1';
 import { CustomLink } from '@/src/components/custom-link';
+import { SectionHeading } from '@/src/components/section-heading';
 import { Card } from '@/src/components/ui/card';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
 import { motion } from 'framer-motion';
@@ -49,27 +50,26 @@ interface SolutionCardProps {
   href?: string;
 }
 
-function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
+function SolutionCard({ title, description, icon}: SolutionCardProps) {
   return (
-    <CustomLink href={href ?? '/'}>
-      <div className="space-y-2 rounded-lg border border-dashed border-gray-400 bg-zinc-100 p-6 dark:bg-zinc-900/50">
-        <div className="relative mb-4">
-          <Image
-            src={icon || '/placeholder.svg'}
-            alt={title}
-            height={50}
-            width={50}
-            className="object-contain"
-          />
-        </div>
-        <h3 className="text-xl font-semibold leading-[1.2] text-zinc-900 dark:text-white">
-          {title}
-        </h3>
-        <p className="leading-relaxed text-zinc-600 dark:text-zinc-400">
-          {description}
-        </p>
+    <div className="space-y-2 rounded-lg border border-dashed border-gray-400 bg-zinc-100 p-6 dark:bg-zinc-900/50">
+      <div className="relative mb-4">
+        <Image
+          src={icon || '/placeholder.svg'}
+          alt={title}
+          height={50}
+          width={50}
+          className="object-contain"
+        />
       </div>
-    </CustomLink>
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment='start'
+        textPosition='start'
+        description={description}
+      />
+    </div>
   );
 }
 

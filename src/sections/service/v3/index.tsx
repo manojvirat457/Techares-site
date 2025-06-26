@@ -2,6 +2,7 @@
 
 import { ServiceData, ServiceDetail } from '@/data/service-section/v3';
 import { Container } from '@/src/components/container';
+import { SectionHeading } from '@/src/components/section-heading';
 import { Card } from '@/src/components/ui/card';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -23,12 +24,13 @@ function ServiceCard({ title, description }: ServiceCardProps) {
     >
       <Card className="h-full w-full border-zinc-200/50 bg-transparent dark:border-zinc-900/50 dark:bg-zinc-800 ">
         <div className="h-100 space-y-2  p-6">
-          <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
+         <SectionHeading title={title} description={description} size="xs" />
+          {/* <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </h3>
           <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-500">
             {description}
-          </p>
+          </p> */}
         </div>
       </Card>
     </motion.div>
@@ -63,9 +65,9 @@ function ServiceItem({
         <Image src={icon} width={32} height={32} alt="icon" />
       </div>
       <div className="flex flex-col">
-        <h2 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
-          {title}
-        </h2>
+      <h2 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
+            {title}
+      </h2>
         <span
           className={`${
             isActive

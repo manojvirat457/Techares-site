@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
+import { SectionHeading } from '@/src/components/section-heading';
 import { TextInput } from '@/src/components/inputs/text-input';
 import { contactUsFormSubmit } from '@/src/sections/contact/v1/form/server/contact-us-form-submit';
 import { SmartDatetimeInput } from '@/src/sections/cta/v2/smart-date-time';
@@ -35,12 +36,14 @@ export function CtaSection({ title, description }: CtaSectionProps) {
       <Container>
         <div className="relative z-10 grid items-center gap-30px xl:grid-cols-12">
           <div className="text-white dark:text-accent-100 xl:col-span-5">
-            <h2 className="h2 max-w-[410px] font-secondary capitalize leading-[1.25] ">
-              {title}
-            </h2>
-            <p className="mt-5 text-base leading-[1.875] text-white/90 dark:text-accent-200">
-              {description}
-            </p>
+           <SectionHeading
+            title={title}
+            description={description}
+            size="sm"
+            alignment='start'
+            textPosition='start'
+            invertColor={true}
+           />
           </div>
           <div className="xl:col-span-7">
             <Formik

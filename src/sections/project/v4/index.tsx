@@ -161,27 +161,18 @@ export function ProjectSectionV4({
                           : 'flex-none'
                       )}
                     >
-                      {keyPoint.icon || <FaCircleCheck />}
+                      {keyPoint.icon || <FaCircleCheck size={18} className='mt-4' />}
                     </span>
                     {/* Ensure text is left-aligned */}
                     <div className="flex flex-col gap-2 text-left">
-                      <SectionHeading
-                        title={keyPoint.title}
-                        size={keyPoint.size ? keyPoint.size : 'xs'}
-                        description={
-                          !isCard && keyPoint.description
-                            ? keyPoint.description
-                            : ''
-                        }
-                      />
-                      {/* <h2 className="text-md font-bold  leading-[1] md:text-lg">
+                      <h2 className="text-md font-bold leading-[1] ">
                         {keyPoint.title}
                       </h2>
                       {!isCard && keyPoint.description && (
                         <p className="mt-2 whitespace-pre-line font-semibold">
                           {keyPoint.description}
                         </p>
-                      )} */}
+                      )}
                     </div>
                   </div>
                 ))}

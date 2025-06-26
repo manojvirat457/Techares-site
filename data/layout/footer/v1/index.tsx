@@ -23,33 +23,28 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Explore Our Services ',
     links: [
       {
-        label: 'Software Development',
-        href: '/',
+        label: 'Ecommerce',
+        href: '/services/ecommerce',
         openNewTab: false,
       },
       {
-        label: 'Data Analytics',
-        href: '/',
+        label: 'Food Delivery App',
+        href: '/services/food-delivery',
         openNewTab: false,
       },
       {
-        label: 'IT Consulting',
-        href: '/',
+        label: 'Taxi Booking App',
+        href: '/services/taxi-booking',
         openNewTab: false,
       },
       {
-        label: 'UI/UX Design',
-        href: '/',
+        label: 'Fantasy Sports App',
+        href: '/services/fantasy-sports',
         openNewTab: false,
       },
       {
-        label: 'Network Solutions',
-        href: '/',
-        openNewTab: false,
-      },
-      {
-        label: 'Others',
-        href: '/',
+        label: 'Transport and Logistics App',
+        href: '/services/transport-and-logistic',
         openNewTab: false,
       },
     ],

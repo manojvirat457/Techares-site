@@ -15,6 +15,7 @@ export interface SectionHeadingProps {
   additionalDesc?: string;
   size?: TitleSize;
   specialText?: string | JSX.Element;
+  invertColor?: boolean;
 }
 
 export type SectionHeadingWithoutStylingProps = Omit<

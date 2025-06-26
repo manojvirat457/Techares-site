@@ -6,6 +6,7 @@ import { HeroProps } from '@/src/sections/hero/v1';
 import { ProjectDetailsProps } from '@/src/sections/project/v4';
 import { ContactSectionProps } from '@/src/sections/contact/v1';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export const heroData: HeroProps = {
   items: [
@@ -114,19 +115,19 @@ export const aboutSectionData: AboutSectionProps = {
   isCard: true,
   keyPoints: [
     {
-      icon: <Hourglass />,
+      icon: <div className="rounded-full bg-primary p-3"><Hourglass /></div>,
       title: '10+ Managers',
     },
     {
-      icon: <Trophy />,
+      icon: <div className="rounded-full bg-primary p-3"><Trophy /></div>,
       title: '100+ Web Projects',
     },
     {
-      icon: <UserCheck />,
+      icon: <div className="rounded-full bg-primary p-3"><UserCheck /></div>,
       title: '40+ Tech Experts',
     },
     {
-      icon: <Star />,
+      icon: <div className="rounded-full bg-primary p-3"><Star /></div>,
       title: '4.7 Client Ratings',
     },
   ],
@@ -439,23 +440,33 @@ export const whyChooseSectionData: ProjectDetailsProps = {
     {
       title:
         'Unmatched Technical Expertise – Versatile solutions tailored to your unique needs',
+     icon : <Image src='/assets/images/keypoint.png' alt='why choose' width={18} height={18} />,
+     size:'xs'
     },
     {
       title:
         'Client-Centric Approach – We listen, adapt, and deliver with precision',
+      icon : <Image src='/assets/images/keypoint.png' alt='why choose' width={18} height={18} />,
+      size:'xs'
     },
     {
       title:
         'Optimized & Efficient Operations – Fast, cost-effective, and result-driven processes',
+      icon : <Image src='/assets/images/keypoint.png' alt='why choose' width={18} height={18} />,
+      size:'xs'
     },
     {
       title:
         'Complete Transparency & Traceability – Clear workflows and measurable outcomes',
+      icon : <Image src='/assets/images/keypoint.png' alt='why choose' width={18} height={18} />,
+      size:'xs'
     },
     {
       title:
         'Proven Reliability – Consistent excellence and unwavering support',
-    },
+      icon : <Image src='/assets/images/keypoint.png' alt='why choose' width={18} height={18} />,
+      size:'xs'
+     },
   ],
   image: {
     src: '/assets/images/about/whychoose.png',

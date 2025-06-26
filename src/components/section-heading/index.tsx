@@ -19,6 +19,7 @@ export function SectionHeading({
   additionalDesc,
   specialText,
   size,
+  invertColor = false,
 }: SectionHeadingProps) {
   const wrapperClasses = cn(
     alignment === 'start' && 'text-left',
@@ -40,7 +41,7 @@ export function SectionHeading({
             size === 'xm' && 'md:text-2xl',
             textPosition === 'start' && 'text-left',
             textPosition === 'center' && 'text-center',
-            textPosition === 'end' && 'text-right'
+            textPosition === 'end' && 'text-right',
           )}
         >
           {subtitle}
@@ -60,14 +61,16 @@ export function SectionHeading({
       )}
       <h3
         className={cn(
-          'whitespace-pre-line font-secondary font-extrabold text-accent-900 dark:text-white',
+          'whitespace-pre-line font-secondary font-extrabold',
+          !invertColor && 'text-accent-900 dark:text-white',
+          invertColor && 'text-white dark:text-accent-900',
           size === 'xs' && 'xm:text-xl text-base md:text-lg',
           size === 'sm' && 'xm:text-2xl text-lg md:text-xl',
           size === 'md' && 'xm:text-3xl text-xl md:text-2xl',
           size === 'lg' && 'xm:text-4xl text-2xl md:text-3xl',
           size === 'xl' && 'xm:text-5xl text-3xl md:text-4xl',
           size === 'xm' && 'xm:text-4xl text-2xl md:text-3xl',
-          !size && 'xm:text-3xl text-xl md:text-2xl',
+          !size && 'xm:text-3xl text-xl md:text-2xl leading-10',
           textPosition === 'start' && 'text-left',
           textPosition === 'center' && 'text-center',
           textPosition === 'end' && 'text-right'
@@ -81,7 +84,9 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'my-2 whitespace-pre-line text-accent-800 dark:text-body',
+            'my-2 whitespace-pre-lin',
+            invertColor && 'text-white dark:text-accent-900',
+            !invertColor && 'text-accent-800 dark:text-body',
             textPosition === 'start' && 'text-left',
             textPosition === 'center' && 'text-center',
             textPosition === 'end' && 'text-right'

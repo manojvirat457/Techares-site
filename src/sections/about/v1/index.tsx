@@ -52,7 +52,7 @@ export function AboutSection({
                   keyPoints.map((keyPoint, index) => (
                     <div
                       key={index}
-                      className="group flex min-h-[64px] items-center gap-5 rounded-5 border border-primary px-6 py-2 md:min-h-[85px] md:px-[1.875rem] md:py-3 "
+                      className="group flex min-h-[64px] items-center gap-5 rounded-5  px-6 py-2 md:min-h-[85px] md:px-[1.875rem] md:py-3 "
                     >
                       <span className="duration flex-none scale-100 transition-transform ease-linear group-hover:scale-90">
                         {keyPoint.icon}
