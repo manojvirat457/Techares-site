@@ -36,6 +36,7 @@ export const projectDetails: ProjectDetailsProps = {
     textPosition: 'start',
     description:
       "With Techares' premium fantasy sports app development, you can achieve unprecedented levels of fan engagement. We create custom fantasy sports platforms for major sports, providing seamless, immersive experiences. As a reputable fantasy sports app development company, we guarantee strong, scalable solutions that fulfill your specific vision. Our commitment to quality extends from conceptualizing to implementing, ensuring a superior product.",
+    heading: 'h2',
   },
   button: {
     href: '',
@@ -218,6 +219,7 @@ export const whyChooseSectionData: AboutSectionProps = {
     title: 'Why Choose TechAres as a Fantasy Sports App Development Company?',
     description:
       'At TechAres, we specialize in creating dynamic, scalable, and secure fantasy sports apps tailored to your business needs. Our experienced developers integrate cutting-edge technologies like AI, blockchain, and AR to provide an unparalleled gaming experience.',
+    heading: 'h2',
   },
   keyPoints: [
     {
@@ -282,6 +284,7 @@ export const faqSectionData: FAQSectionProps = {
   sectionHeading: {
     subtitle: 'Our FAQ',
     title: 'Frequently Asked Questions',
+    heading: 'h2',
   },
   faqItems: [
     {

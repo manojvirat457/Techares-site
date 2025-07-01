@@ -56,6 +56,7 @@ export function HeroSection({
               alignment={sectionHeading.alignment}
               hasBottomSpacing={sectionHeading.hasBottomSpacing}
               className={sectionHeading.className}
+              heading={sectionHeading.heading}
             />
             <br className="my-2" />
             <ContactUsDialog>

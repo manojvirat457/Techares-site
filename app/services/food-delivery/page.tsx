@@ -43,6 +43,7 @@ export default function Page() {
                 highlighttitle="Food Delivery"
                 description="Expand your reach beyond the physical locations through a tailored food delivery app with TechAres. Let your customers satisfy cravings at their fingertips!"
                 size="lg"
+                heading="h1"
               />
               <br className="my-2" />
               <ContactUsDialog>
@@ -84,6 +85,7 @@ export default function Page() {
               alignment="center"
               textPosition="center"
               description="We offer two distinct approaches to food delivery app development"
+              heading="h2"
             />
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -102,6 +104,7 @@ export default function Page() {
                 description="For businesses looking for a unique solution, we develop custom food delivery apps from scratch, ensuring complete control over features, UI/UX, and integrations."
                 alignment="center"
                 size="sm"
+                heading="h3"
               />
               <div className="mt-3 flex justify-center">
                 <ContactUsDialog>
@@ -126,6 +129,7 @@ export default function Page() {
                 description="Our ready-made white-label food delivery app solutions help businesses launch faster with pre-built features, customized branding, and seamless integrations."
                 alignment="center"
                 size="sm"
+                heading="h3"
               />
               <div className="mt-3 flex justify-center">
                 <ContactUsDialog>
@@ -166,6 +170,7 @@ export default function Page() {
                 description="We continually update our food delivery app development services with the latest advancements, ensuring
                  compliance with market trends, security protocols, and user expectations."
                 alignment="start"
+                heading="h2"
               />
             </div>
 

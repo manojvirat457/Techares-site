@@ -20,6 +20,7 @@ export function SectionHeading({
   specialText,
   size,
   invertColor = false,
+  heading = 'h2',
 }: SectionHeadingProps) {
   const wrapperClasses = cn(
     alignment === 'start' && 'text-left',
@@ -28,6 +29,46 @@ export function SectionHeading({
     { 'mb-10 md:mb-[3.75rem]': hasBottomSpacing },
     className
   );
+
+  const headingClasses = cn(
+    'whitespace-pre-line font-secondary font-extrabold',
+    !invertColor && 'text-accent-900 dark:text-white',
+    invertColor && 'text-white dark:text-accent-900',
+    size === 'xs' && 'xm:text-xl text-base md:text-lg',
+    size === 'sm' && 'xm:text-2xl text-lg md:text-xl',
+    size === 'md' && 'xm:text-3xl text-xl md:text-2xl',
+    size === 'lg' && 'xm:text-4xl text-2xl md:text-3xl',
+    size === 'xl' && 'xm:text-5xl text-3xl md:text-4xl',
+    size === 'xm' && 'xm:text-4xl text-2xl md:text-3xl',
+    !size && 'xm:text-3xl text-xl leading-10 md:text-2xl',
+    textPosition === 'start' && 'text-left',
+    textPosition === 'center' && 'text-center',
+    textPosition === 'end' && 'text-right'
+  );
+
+  const renderHeading = () => {
+    const headingContent = (
+      <>
+        {highlighttitle && (
+          <span className="text-primary">{highlighttitle}</span>
+        )}
+        {title}
+      </>
+    );
+
+    switch (heading) {
+      case 'h1':
+        return <h1 className={headingClasses}>{headingContent}</h1>;
+      case 'h2':
+        return <h2 className={headingClasses}>{headingContent}</h2>;
+      case 'h3':
+        return <h3 className={headingClasses}>{headingContent}</h3>;
+      case 'h4':
+        return <h4 className={headingClasses}>{headingContent}</h4>;
+      default:
+        return <h3 className={headingClasses}>{headingContent}</h3>;
+    }
+  };
 
   return (
     <div className={wrapperClasses}>
@@ -59,28 +100,7 @@ export function SectionHeading({
           {specialText}
         </p>
       )}
-      <h3
-        className={cn(
-          'whitespace-pre-line font-secondary font-extrabold',
-          !invertColor && 'text-accent-900 dark:text-white',
-          invertColor && 'text-white dark:text-accent-900',
-          size === 'xs' && 'xm:text-xl text-base md:text-lg',
-          size === 'sm' && 'xm:text-2xl text-lg md:text-xl',
-          size === 'md' && 'xm:text-3xl text-xl md:text-2xl',
-          size === 'lg' && 'xm:text-4xl text-2xl md:text-3xl',
-          size === 'xl' && 'xm:text-5xl text-3xl md:text-4xl',
-          size === 'xm' && 'xm:text-4xl text-2xl md:text-3xl',
-          !size && 'xm:text-3xl text-xl leading-10 md:text-2xl',
-          textPosition === 'start' && 'text-left',
-          textPosition === 'center' && 'text-center',
-          textPosition === 'end' && 'text-right'
-        )}
-      >
-        {highlighttitle && (
-          <span className="text-primary">{highlighttitle}</span>
-        )}
-        {title}
-      </h3>
+      {renderHeading()}
       {description && (
         <p
           className={cn(

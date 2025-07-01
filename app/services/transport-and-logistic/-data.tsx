@@ -131,6 +131,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     description:
       "As a trusted logistics software development company, Techares stands out by delivering time-bound results through a proven agile development process. Our dedicated team of experts ensures seamless execution, while our round-the-clock support guarantees uninterrupted operations. Whether you're seeking full-cycle logistics software development or specialized software application development for logistics, we build solutions that are scalable, secure, and results-driven",
     size: 'sm',
+    heading: 'h2',
   },
   isCard: false,
   keyPoints: [
@@ -208,7 +209,7 @@ export const features: FeatureSectionProps[] = [
   {
     title: 'Fleet Management',
     description:
-      'Monitor every vehicle’s health through software application development for logistics that fuses telematics with predictive maintenance.',
+      "Monitor every vehicle's health through software application development for logistics that fuses telematics with predictive maintenance.",
     icon: <Car />,
   },
   {
@@ -271,6 +272,7 @@ export const faqSectionData: FAQSectionProps = {
   sectionHeading: {
     subtitle: 'Our FAQ',
     title: 'Frequently Asked Questions',
+    heading: 'h2',
   },
   faqItems: [
     {

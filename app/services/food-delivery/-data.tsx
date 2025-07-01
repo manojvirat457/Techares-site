@@ -10,6 +10,7 @@ export const projectDetails: ProjectDetailsProps = {
     description:
       'TechAres offers an on-demand food delivery app development that is aimed at making the process of ordering, delivery, and communication hassle-free. With a solid track record, we create apps that perfectly cater to your specific business requirements. We provide seamless solutions that feature live order tracking and secure payment options to help businesses flourish with innovation. These features strive to keep your customers engaged with customized services.',
     size: 'md',
+    heading: 'h2',
   },
   isCard: false,
   isButton: true,
@@ -32,6 +33,7 @@ export const uniqueFeatures: ProjectDetailsProps = {
     highlighttitle: 'Advanced Features ',
     description:
       'At TechAres, we focus on building a next-generation food delivery app that delivers exceptional user experience, operational efficiency, and long-term customer retention. Here are the standout features that make our platform truly unique',
+    heading: 'h2',
   },
   isButton: false,
   isCard: false,
@@ -155,6 +157,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     description:
       'At TechAres, our experts are qualified to offer the best on-demand food delivery app services exclusively meant for your business. With a solid track record and experience of many years, we strive to provide highly secured and scalable apps equipped with advanced technologies. Our inclusive services include everything, right from creating high quality app to its deployment and support. Our commitment to offering enhanced user experiences, TechAres ensures long lasting business growth. Whether you are planning to start your food delivery business or update your existing brand, trust us to create strategies that ensure success.',
     size: 'sm',
+    heading: 'h2',
   },
   isButton: false,
   isCard: false,
@@ -223,6 +226,7 @@ export const faqSectionData: FAQSectionProps = {
   sectionHeading: {
     subtitle: 'Our faq',
     title: 'Frequently Asked Questions',
+    heading: 'h2',
   },
   faqItems: [
     {
@@ -249,6 +253,7 @@ export const uniqueFeature: TeamSectionProps = {
   sectionHeading: {
     subtitle: 'Unique Features',
     title: 'Enhancing the Ride-Hailing Experience',
+    heading: 'h2',
   },
   description:
     'At TechAres, we integrate cutting-edge technology to provide a superior taxi app experience with unique features that set us apart. Our AI-based route optimization ensures drivers take the most efficient routes, reducing travel time and fuel costs. We support multi-payment options, including credit/debit cards, wallets, and digital payments, offering users a seamless and flexible checkout process. To enhance safety, our app includes SOS & emergency features, allowing passengers to send instant alerts to emergency contacts and authorities in case of distress. Additionally, our dynamic surge pricing system adjusts fares based on real-time demand, ensuring fair pricing for drivers while optimizing earnings during peak hours.',

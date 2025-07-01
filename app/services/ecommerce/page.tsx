@@ -44,6 +44,7 @@ export default function Page() {
           description:
             'We ensure that your e-commerce solution is leveraged by our latest technologies and platforms like Shopify and WooCommerce.',
           alignment: 'center',
+          heading: 'h1',
         }}
         button={{
           href: '',
@@ -62,6 +63,7 @@ export default function Page() {
               alignment="center"
               textPosition="center"
               size="md"
+              heading='h2'
             />
             {solutions && solutions.solutionCard.length > 0 && (
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
@@ -79,6 +81,7 @@ export default function Page() {
                             description={solution.description}
                             textPosition="start"
                             size="sm"
+                            heading='h3'
                           />
                         </CardContent>
                       </div>
@@ -97,7 +100,8 @@ export default function Page() {
           alignment: 'center',
           subtitle: 'KEY FEATURES',
           textPosition: 'center',
-        }}
+          heading: 'h2',
+         }}
         tabs={tabs}
         tabContent={tabContent}
         defaultActiveTab="user"
@@ -112,6 +116,7 @@ export default function Page() {
             'We follow a well-structured development process at TechAres that ensures the successful delivery of a high-performing taxi app. Our approach is designed in such a way that it meets the requirements of business objectives while providing an unlimited user experience',
           alignment: 'center',
           textPosition: 'center',
+          heading: 'h2',
         }}
         steps={workflowSteps}
       />

@@ -757,7 +757,7 @@ export const workflowSteps = [
     title: 'Discovery & Planning',
     description:
       'We understand the goals, target audience, and specific requirements of your business. A project roadmap is created to prioritise features which define the scope, timeline, and budget. It is possible by going through detailed discussions and market research. A clear direction is laid out for your ecommerce app development.',
-  },
+     },
   {
     id: 2,
     title: 'Design & Prototyping',

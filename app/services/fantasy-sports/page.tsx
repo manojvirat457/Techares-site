@@ -43,12 +43,13 @@ export default function Page() {
             </>
           ),
           specialText:
-            'Create an Immersive  Fantasy Sports App With Our Exceptional',
+            'Create an Immersive  Fantasy Sports App With Our Exceptional',
           size: 'md',
           textPosition: 'start',
           description:
             'Searching for an avenue to develop an engaging fantasy sports software development company. We help create interactive platforms, increasing fan engagement and market reach',
           alignment: 'center',
+          heading: 'h1',
         }}
         button={{
           href: '',
@@ -71,6 +72,7 @@ export default function Page() {
             description="At Teachers, we specialize in providing comprehensive ecommerce app development services tailored to meet your business needs. Whether you're looking to build a custom ecommerce website, a B2C or B2B app, or a multi-vendor marketplace, our team of experts is here to help. We leverage the latest technologies and platforms like Shopify and WooCommerce to ensure your ecommerce solution is robust, scalable, and user-friendly."
             alignment="center"
             textPosition="center"
+            heading="h2"
           />
           <div className="container mx-auto pt-12">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -103,6 +105,7 @@ export default function Page() {
                             description={feature.description}
                             textPosition="start"
                             size="sm"
+                            heading="h3"
                           />
                         </CardContent>
                       </div>

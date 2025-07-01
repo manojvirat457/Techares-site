@@ -90,6 +90,7 @@ export function TabSection<T extends string>({
                 title={tabContent[activeTab].title}
                 alignment="start"
                 size="sm"
+                heading='h3'
               />
               {tabContent[activeTab].description && (
                 <p className="text-gray-600">

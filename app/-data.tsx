@@ -111,6 +111,7 @@ export const aboutSectionData: AboutSectionProps = {
     title: ' Web Development Company',
     description:
       'Techares is at the forefront of modern technologies including blockchain, AI, IoT, DevOps, and more. As an innovative digital agency, we propel in offering cutting-edge IT solutions to businesses of all sizes. By leveraging innovative technologies, we empower businesses to achieve their goals through intelligent, efficient, and tailored applications.',
+      heading : 'h2'
   },
   isCard: true,
   keyPoints: [
@@ -539,6 +540,7 @@ export const contactSectionData: ContactSectionProps = {
   sectionHeading: {
     subtitle: 'Get a Personalized Quote',
     title: 'Let’s Talk Tech ',
+    heading: 'h2',
   },
   image: {
     src: '/assets/images/contact/section-half-bg-1.png',

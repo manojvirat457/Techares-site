@@ -5,9 +5,15 @@ import { Container } from '@/src/components/container';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import { ChevronLeft } from 'lucide-react';
+import { CarouselNavigation } from '@/src/components/carousel/sub-components/navigation';
+import { cn } from '@/src/utils/shadcn';
 
 export default function AdvanceFeature() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  const btnPrevNextClasses = cn(
+   'bg-primary-light/10 text-primary-light hover:text-white hover:bg-primary-light'
+ );
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -17,8 +23,49 @@ export default function AdvanceFeature() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
   return (
-    <section className="mx-10 py-16">
+    <section className="py-16">
       <Container>
+          <div className="items-center space-x-4 md:flex lg:hidden">
+            {/* Navigation Arrows */}
+            <div className="flex space-x-5  mb-8">
+              {/* <button
+                onClick={prevSlide}
+                type="button"
+                className="rounded-full bg-white md:p-3"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="h-5 w-5 text-primary md:h-6 md:w-6" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="rounded-full bg-white md:p-3"
+                aria-label="Next slide"
+                type="button"
+              >
+                <ChevronRight className="h-5 w-5 text-primary md:h-6 md:w-6" />
+              </button> */}
+          <CarouselNavigation
+              direction="prev"
+              onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
+                e.stopPropagation();
+                prevSlide();
+              }}
+              isDisabled={currentSlide === 0}
+              navigationPrevBtnClassName={btnPrevNextClasses}
+            />
+            <CarouselNavigation
+              direction="next"
+              onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
+                e.stopPropagation();
+                nextSlide();
+              }}
+              isDisabled={
+                currentSlide === slides.length - 1
+              }
+              navigationNextBtnClassName={btnPrevNextClasses}
+            />
+            </div>
+          </div>
         <div className="relative h-auto w-full overflow-hidden md:h-[500px]">
           {/* SVG Background */}
           <div className="inset-0 hidden h-full w-full lg:absolute lg:flex">
@@ -53,7 +100,7 @@ export default function AdvanceFeature() {
 
           {/* Carousel Content */}
           <div className="relative z-10 flex h-full items-center justify-center lg:justify-end">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent lg:hidden " />
             {/* Image */}
             <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
               <div className="relative hidden h-[445px] w-[500px] xl:block">
@@ -66,7 +113,7 @@ export default function AdvanceFeature() {
               </div>
             </div>
             {/* Content */}
-            <div className="mr-0 max-w-2xl items-center justify-center lg:mr-20 lg:justify-end">
+            <div className="mr-0 max-w-2xl items-center justify-center lg:mr-20 lg:justify-end p-10">
               <h3
                 className={
                   'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-primary-light  dark:text-accent-700 md:text-xl lg:text-accent-100'
@@ -85,7 +132,7 @@ export default function AdvanceFeature() {
           </div>
 
           {/* Slide Indicators and Navigation Arrows Container */}
-          <div className="absolute bottom-24 right-32 z-20 flex items-center space-x-4">
+          <div className="absolute bottom-24 right-32 z-20 items-center space-x-4 hidden lg:flex">
             {/* Navigation Arrows */}
             <div className="flex space-x-2">
               <button

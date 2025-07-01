@@ -76,7 +76,6 @@ export function Form() {
         }}
         validationSchema={ContactUsSchema}
         onSubmit={async (values, { resetForm }) => {
-          console.log('🚀 ~ onSubmit={ ~ values:', values);
           const result = await contactUsFormSubmit(values);
           if (result.data === null) {
             toast.error(result.message);
@@ -153,32 +152,6 @@ export function Form() {
                 </p>
               )}
             </div>
-            {/* <div className="lg:col-span-2">
-       <TextInput
-        placeholder="Subject"
-        type="text"
-        name="subject"
-        value={values.subject}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        disabled={isSubmitting}
-        icon={<FaSpeakap />}
-        className={cn(
-         fieldCommonClasses,
-         errors.subject && touched.subject && errorClasses
-        )}
-       />
-       {errors.subject && touched.subject && (
-        <p
-         title={errors.subject}
-         aria-live="polite"
-         role="error message"
-         className={errorMessageClasses}
-        >
-         {errors.subject}
-        </p>
-       )}
-      </div> */}
             <div className="lg:col-span-2">
               <Select
                 name="subject"
@@ -250,18 +223,6 @@ export function Form() {
                   errors.phoneNo && touched.phoneNo && errorClasses
                 )}
               />
-              {/* <PhoneInput
-        placeholder="Placeholder"
-        defaultCountry="IN"
-        name='phoneNo'
-        onChange={(value) => setFieldValue('phoneNo', Number(value))}
-        value={String(values.phoneNo)}
-        className={cn(
-         fieldCommonClasses,
-         'w-full h-16 border-zinc-600',
-         errors.phoneNo && touched.phoneNo && errorClasses
-        )}
-       /> */}
               {errors.phoneNo && touched.phoneNo && (
                 <p
                   title={errors.phoneNo}
@@ -299,7 +260,7 @@ export function Form() {
               )}
             </div>
             <div className="lg:col-span-2">
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" className="w-full" aria-label='submit-form' disabled={isSubmitting}>
                 <span>Get Quote</span>
               </Button>
             </div>

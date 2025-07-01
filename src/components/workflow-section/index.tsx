@@ -31,6 +31,7 @@ export function WorkflowSection({
             additionalDesc={sectionHeading.additionalDesc}
             size={sectionHeading.size}
             className={sectionHeading.className}
+            heading={sectionHeading.heading}
           />
         </div>
         <div className="flex flex-wrap items-stretch justify-center gap-10">
@@ -70,6 +71,7 @@ export function WorkflowSection({
                     textPosition="start"
                     description={step.description}
                     size="sm"
+                    heading='h3'
                   />
                 </div>
               </div>

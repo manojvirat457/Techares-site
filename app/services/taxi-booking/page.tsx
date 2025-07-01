@@ -54,6 +54,7 @@ export default function Page() {
           description:
             'Taxi Booking App Development Company that aims to revolutionize your ride-hailing solutions with its cutting-edge technology',
           alignment: 'center',
+          heading: 'h1',
         }}
         button={{
           href: '',
@@ -81,6 +82,7 @@ export default function Page() {
               alignment="center"
               size="md"
               description="At TechAres, we offer two distinct development approaches to help you launch a taxi booking app that aligns with your business needs. Whether you require a fully customized solution or a fast, ready-to-deploy platform, we have the right option for you."
+              heading="h2"
             />
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -98,9 +100,10 @@ export default function Page() {
               <SectionHeading
                 title="Development from scratch"
                 textPosition="center"
-                description="Our development method starts from scratch which is ideal for businesses looking for a fully customized taxi app suited to their brand identity, specific features, and unique operational needs. This initiative taken by the Taxi app development company gives you complete control over the app’s design functionality, and scalability ensuring that your solution stands out in the competitive ride-hailing market. "
+                description="Our development method starts from scratch which is ideal for businesses looking for a fully customized taxi app suited to their brand identity, specific features, and unique operational needs. This initiative taken by the Taxi app development company gives you complete control over the app's design functionality, and scalability ensuring that your solution stands out in the competitive ride-hailing market. "
                 alignment="center"
                 size="sm"
+                heading="h3"
               />
               <div className="mt-6 flex justify-center">
                 <ContactUsDialog>
@@ -126,6 +129,7 @@ export default function Page() {
                 description="White Label Taxi App designed by the taxi app development company offers a faster, cost-effective solution with pre-built features that can be customized with your branding. This ready-made platform provided by the taxi app development allows for quick deployment making it an excellent choice for startups and businesses that want to make a swift entry into the market without extensive development time."
                 alignment="center"
                 size="sm"
+                heading="h3"
               />
               <div className="mt-6 flex justify-center">
                 <ContactUsDialog>
@@ -163,6 +167,7 @@ export default function Page() {
             alignment="start"
             size="md"
             className="md:pb-16 md:pl-28"
+            heading="h2"
           />
           <div className="mb-6 flex flex-col gap-4 md:flex-row">
             <div className="md:w-2/3 md:pl-28">
@@ -191,6 +196,7 @@ export default function Page() {
                             description={feature.description}
                             textPosition="start"
                             size="sm"
+                            heading="h3"
                           />
                         </CardContent>
                       </div>
@@ -257,6 +263,7 @@ export default function Page() {
                   textPosition="center"
                   alignment="center"
                   size="md"
+                  heading="h2"
                 />
               </div>
             </div>

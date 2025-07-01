@@ -92,6 +92,7 @@ export default function Page() {
                 alignment="center"
                 hasBottomSpacing={true}
                 className="text-start"
+                heading="h1"
               />
               <br className="my-2" />
               <ContactUsDialog>
@@ -119,6 +120,7 @@ export default function Page() {
                 alignment="start"
                 textPosition="start"
                 size="md"
+                heading="h2"
               />
             </div>
             <div className="flex w-full justify-center md:hidden md:w-1/3 md:justify-end lg:block">

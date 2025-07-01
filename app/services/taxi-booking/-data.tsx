@@ -10,6 +10,7 @@ export const whyChooseUs: ProjectDetailsProps = {
     description:
       'A genuine commitment is made by TechAres to deliver innovative and reliable solutions that inspire businesses to thrive in an ever-evolving digital world. Our expertise surrounds mobility solutions, flexible customization, and scalable architecture which are encouraged by round-the-clock support. TechAres is the perfect partner for your business for the following reasons',
     size: 'sm',
+    heading: 'h2',
   },
   isButton: true,
   isCard: false,
@@ -40,7 +41,7 @@ export const whyChooseUs: ProjectDetailsProps = {
         />
       ),
       description:
-        'TechAres provides flexible solutions that satisfy a brand’s identity and operational requirements',
+        'TechAres provides flexible solutions that satisfy a brand\'s identity and operational requirements',
     },
     {
       title: 'Scalable Architecture',
@@ -87,6 +88,7 @@ export const faqSectionData: FAQSectionProps = {
   sectionHeading: {
     subtitle: 'Our faq',
     title: 'Frequently asked question',
+    heading: 'h2',
   },
   faqItems: [
     {
@@ -116,6 +118,7 @@ export const uniqueFeature: TeamSectionProps = {
   sectionHeading: {
     subtitle: 'Unique Features',
     title: 'Enhancing the Ride-Hailing Experience',
+    heading: 'h2',
   },
   description:
     'At TechAres, we integrate cutting-edge technology to provide a superior taxi app experience with unique features that set us apart. Our AI-based route optimization ensures drivers take the most efficient routes, reducing travel time and fuel costs. We support multi-payment options, including credit/debit cards, wallets, and digital payments, offering users a seamless and flexible checkout process. To enhance safety, our app includes SOS & emergency features, allowing passengers to send instant alerts to emergency contacts and authorities in case of distress. Additionally, our dynamic surge pricing system adjusts fares based on real-time demand, ensuring fair pricing for drivers while optimizing earnings during peak hours.',
@@ -126,6 +129,7 @@ export const projectDetails: ProjectDetailsProps = {
     subtitle: 'Solution We Offer',
     title: 'Taxi App for All',
     size: 'md',
+    heading: 'h2',
   },
   isCard: false,
   isButton: false,
@@ -163,7 +167,7 @@ export const projectDetails: ProjectDetailsProps = {
     {
       title: 'Startup Solutions',
       description:
-        'TechAres’ Taxi Booking App Development supports emerging taxi service providers with scalable and cost-effective app solutions. Our Startup Taxi Solutions are designed to help new ventures launch quickly, manage operations efficiently, and grow sustainably with features like driver-partner onboarding, real-time tracking, and revenue analytics.',
+        'TechAres\' Taxi Booking App Development supports emerging taxi service providers with scalable and cost-effective app solutions. Our Startup Taxi Solutions are designed to help new ventures launch quickly, manage operations efficiently, and grow sustainably with features like driver-partner onboarding, real-time tracking, and revenue analytics.',
       icon: (
         <Image
           src="/assets/images/taxi-app/p3.png"
@@ -193,7 +197,7 @@ export const uniqueFeatures = [
     id: 2,
     title: 'SOS and emergency features',
     description:
-      'SOS and emergency features are designed with simplicity and speed in mind. The SOS button, when pressed, sends an immediate alert message to local emergency services and the safety response team, who are provided with the user’s location and relevant details by the app.',
+      "SOS and emergency features are designed with simplicity and speed in mind. The SOS button, when pressed, sends an immediate alert message to local emergency services and the safety response team, who are provided with the user's location and relevant details by the app.",
   },
   {
     id: 3,
@@ -280,7 +284,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
         ),
         title: 'Trip Requests & Navigation',
         description:
-          'Trip requests refer to riders who use an app to request a ride and navigation guides the driver to the rider’s pickup location and destination.',
+          "Trip requests refer to riders who use an app to request a ride and navigation guides the driver to the rider's pickup location and destination." ,
       },
       {
         icon: (
@@ -294,7 +298,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
         ),
         title: 'Earnings Tracking',
         description:
-          'Earnings Tracking is a safe and secure way of viewing someone’s AdSense and AdMob earnings. Google Sign is used which does not save a person’s password or any personal information to anyone’s iPhone.',
+          "Earnings Tracking is a safe and secure way of viewing someone's AdSense and AdMob earnings. Google Sign is used which does not save a person's password or any personal information to anyone's iPhone.",
       },
       {
         icon: (
@@ -370,7 +374,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
         ),
         title: 'Ride Booking & Real-Time Tracking',
         description:
-          'Ride booking allows a request or schedule a ride with a driver using an app or platform while real-time tracking allows passengers to see the driver’s location and progress on a map in real-time.',
+          "Ride booking allows a request or schedule a ride with a driver using an app or platform while real-time tracking allows passengers to see the driver's location and progress on a map in real-time.",
       },
       {
         icon: (
