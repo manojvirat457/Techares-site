@@ -41,7 +41,7 @@ export const whyChooseUs: ProjectDetailsProps = {
         />
       ),
       description:
-        'TechAres provides flexible solutions that satisfy a brand\'s identity and operational requirements',
+        "TechAres provides flexible solutions that satisfy a brand's identity and operational requirements",
     },
     {
       title: 'Scalable Architecture',
@@ -167,7 +167,7 @@ export const projectDetails: ProjectDetailsProps = {
     {
       title: 'Startup Solutions',
       description:
-        'TechAres\' Taxi Booking App Development supports emerging taxi service providers with scalable and cost-effective app solutions. Our Startup Taxi Solutions are designed to help new ventures launch quickly, manage operations efficiently, and grow sustainably with features like driver-partner onboarding, real-time tracking, and revenue analytics.',
+        "TechAres' Taxi Booking App Development supports emerging taxi service providers with scalable and cost-effective app solutions. Our Startup Taxi Solutions are designed to help new ventures launch quickly, manage operations efficiently, and grow sustainably with features like driver-partner onboarding, real-time tracking, and revenue analytics.",
       icon: (
         <Image
           src="/assets/images/taxi-app/p3.png"
@@ -284,7 +284,7 @@ export const tabContent: Record<(typeof tabs)[number]['id'], TabContent> = {
         ),
         title: 'Trip Requests & Navigation',
         description:
-          "Trip requests refer to riders who use an app to request a ride and navigation guides the driver to the rider's pickup location and destination." ,
+          "Trip requests refer to riders who use an app to request a ride and navigation guides the driver to the rider's pickup location and destination.",
       },
       {
         icon: (

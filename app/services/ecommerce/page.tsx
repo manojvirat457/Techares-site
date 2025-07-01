@@ -63,7 +63,7 @@ export default function Page() {
               alignment="center"
               textPosition="center"
               size="md"
-              heading='h2'
+              heading="h2"
             />
             {solutions && solutions.solutionCard.length > 0 && (
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
@@ -81,7 +81,7 @@ export default function Page() {
                             description={solution.description}
                             textPosition="start"
                             size="sm"
-                            heading='h3'
+                            heading="h3"
                           />
                         </CardContent>
                       </div>
@@ -101,7 +101,7 @@ export default function Page() {
           subtitle: 'KEY FEATURES',
           textPosition: 'center',
           heading: 'h2',
-         }}
+        }}
         tabs={tabs}
         tabContent={tabContent}
         defaultActiveTab="user"

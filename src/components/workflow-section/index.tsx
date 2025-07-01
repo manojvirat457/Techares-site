@@ -71,7 +71,7 @@ export function WorkflowSection({
                     textPosition="start"
                     description={step.description}
                     size="sm"
-                    heading='h3'
+                    heading="h3"
                   />
                 </div>
               </div>

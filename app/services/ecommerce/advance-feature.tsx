@@ -12,8 +12,8 @@ export default function AdvanceFeature() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const btnPrevNextClasses = cn(
-   'bg-primary-light/10 text-primary-light hover:text-white hover:bg-primary-light'
- );
+    'bg-primary-light/10 text-primary-light hover:text-white hover:bg-primary-light'
+  );
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -25,10 +25,10 @@ export default function AdvanceFeature() {
   return (
     <section className="py-16">
       <Container>
-          <div className="items-center space-x-4 md:flex lg:hidden">
-            {/* Navigation Arrows */}
-            <div className="flex space-x-5  mb-8">
-              {/* <button
+        <div className="items-center space-x-4 md:flex lg:hidden">
+          {/* Navigation Arrows */}
+          <div className="mb-8 flex  space-x-5">
+            {/* <button
                 onClick={prevSlide}
                 type="button"
                 className="rounded-full bg-white md:p-3"
@@ -44,7 +44,7 @@ export default function AdvanceFeature() {
               >
                 <ChevronRight className="h-5 w-5 text-primary md:h-6 md:w-6" />
               </button> */}
-          <CarouselNavigation
+            <CarouselNavigation
               direction="prev"
               onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
                 e.stopPropagation();
@@ -59,13 +59,11 @@ export default function AdvanceFeature() {
                 e.stopPropagation();
                 nextSlide();
               }}
-              isDisabled={
-                currentSlide === slides.length - 1
-              }
+              isDisabled={currentSlide === slides.length - 1}
               navigationNextBtnClassName={btnPrevNextClasses}
             />
-            </div>
           </div>
+        </div>
         <div className="relative h-auto w-full overflow-hidden md:h-[500px]">
           {/* SVG Background */}
           <div className="inset-0 hidden h-full w-full lg:absolute lg:flex">
@@ -113,7 +111,7 @@ export default function AdvanceFeature() {
               </div>
             </div>
             {/* Content */}
-            <div className="mr-0 max-w-2xl items-center justify-center lg:mr-20 lg:justify-end p-10">
+            <div className="mr-0 max-w-2xl items-center justify-center p-10 lg:mr-20 lg:justify-end">
               <h3
                 className={
                   'whitespace-pre-line text-left font-secondary text-lg font-extrabold text-primary-light  dark:text-accent-700 md:text-xl lg:text-accent-100'
@@ -132,7 +130,7 @@ export default function AdvanceFeature() {
           </div>
 
           {/* Slide Indicators and Navigation Arrows Container */}
-          <div className="absolute bottom-24 right-32 z-20 items-center space-x-4 hidden lg:flex">
+          <div className="absolute bottom-24 right-32 z-20 hidden items-center space-x-4 lg:flex">
             {/* Navigation Arrows */}
             <div className="flex space-x-2">
               <button

@@ -67,7 +67,7 @@ function SolutionCard({ title, description, icon }: SolutionCardProps) {
         alignment="start"
         textPosition="start"
         description={description}
-        heading='h3'
+        heading="h3"
       />
     </div>
   );

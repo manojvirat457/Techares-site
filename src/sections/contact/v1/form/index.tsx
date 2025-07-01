@@ -260,7 +260,12 @@ export function Form() {
               )}
             </div>
             <div className="lg:col-span-2">
-              <Button type="submit" className="w-full" aria-label='submit-form' disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full"
+                aria-label="submit-form"
+                disabled={isSubmitting}
+              >
                 <span>Get Quote</span>
               </Button>
             </div>
