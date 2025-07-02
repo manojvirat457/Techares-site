@@ -104,7 +104,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'whitespace-pre-lin my-2',
+            'whitespace-pre-lin my-3',
             invertColor && 'text-white dark:text-accent-900',
             !invertColor && 'text-accent-800 dark:text-body',
             textPosition === 'start' && 'text-left',

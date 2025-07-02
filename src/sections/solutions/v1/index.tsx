@@ -26,7 +26,13 @@ function CategoryButton({ title, isActive, onClick }: CategoryButtonProps) {
           : 'bg-white text-accent-900 hover:bg-zinc-100'
       }`}
     >
-      {title}
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment="start"
+        textPosition="start"
+        heading="h3"
+      />
     </button>
   );
 }
@@ -37,7 +43,13 @@ function CategoryCard({ title, isActive, onClick }: CategoryButtonProps) {
       onClick={onClick}
       className={`flex h-16 w-[33%] items-center justify-center rounded-lg p-2 text-center   transition-all ${isActive ? 'bg-primary text-white' : 'bg-white text-accent-900 '}`}
     >
-      <p className="text-center text-xs">{title}</p>
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment="start"
+        textPosition="start"
+        heading="h3"
+      />
     </Card>
   );
 }

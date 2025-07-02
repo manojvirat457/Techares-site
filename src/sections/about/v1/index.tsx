@@ -47,12 +47,12 @@ export function AboutSection({
           <div className="lg:order-2" data-aos="fade-left" data-aos-delay="200">
             <SectionHeading {...sectionHeading} additionalDesc={description} />
             {keyPoints && keyPoints.length > 0 && (
-              <div className="mt-7 grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-10 md:gap-[1.875rem] ">
+              <div className="grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-5 md:gap-[1.875rem] ">
                 {isCard &&
                   keyPoints.map((keyPoint, index) => (
                     <div
                       key={index}
-                      className="group flex min-h-[64px] items-center gap-5 rounded-5  px-6 py-2 md:min-h-[85px] md:px-[1.875rem] md:py-3 "
+                      className="group flex min-h-[64px] items-center gap-5 rounded-5  md:min-h-[85px]"
                     >
                       <span className="duration flex-none scale-100 transition-transform ease-linear group-hover:scale-90">
                         {keyPoint.icon}

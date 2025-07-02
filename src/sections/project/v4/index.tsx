@@ -167,14 +167,18 @@ export function ProjectSectionV4({
                     </span>
                     {/* Ensure text is left-aligned */}
                     <div className="flex flex-col gap-2 text-left">
-                      <h2 className="text-md font-bold leading-[1] text-primary ">
-                        {keyPoint.title}
-                      </h2>
-                      {!isCard && keyPoint.description && (
-                        <p className="mt-2 whitespace-pre-line font-semibold">
-                          {keyPoint.description}
-                        </p>
-                      )}
+                      <SectionHeading
+                        title={keyPoint.title}
+                        size="xs"
+                        alignment="start"
+                        textPosition="start"
+                        heading="h3"
+                        description={
+                          !isCard && keyPoint.description
+                            ? keyPoint.description
+                            : undefined
+                        }
+                      />
                     </div>
                   </div>
                 ))}

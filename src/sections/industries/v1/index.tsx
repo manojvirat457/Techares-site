@@ -38,7 +38,7 @@ function IndustryCard({
             width={70}
             className="object-contain"
           />
-          <p className="mb-2 text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
+          <p className="mb-2 text-md font-medium leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </p>
           {description && (

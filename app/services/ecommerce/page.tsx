@@ -66,16 +66,16 @@ export default function Page() {
               heading="h2"
             />
             {solutions && solutions.solutionCard.length > 0 && (
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 mt-8">
                 {solutions.solutionCard.map((solution) => (
-                  <div className="relative pt-16" key={solution.title}>
+                  <div className="relative pt-12 h-full" key={solution.title}>
                     <div className="top-13 absolute left-3/4 z-99 -translate-y-1/2 transform">
                       {solution.icon}
                     </div>
-                    <Card className="relative h-full w-full max-w-full overflow-hidden rounded-none border-none md:h-[350px]">
+                    <Card className="relative h-full w-full max-w-full overflow-hidden rounded-none border-none">
                       <div className="relative h-full bg-blue-50">
                         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent" />
-                        <CardContent className="relative z-[1] flex h-full flex-col justify-center p-4 pb-2 pt-6">
+                        <CardContent className="relative z-[1] flex h-full flex-col justify-center p-4 pb-2 pt-6 md:pt-10">
                           <SectionHeading
                             title={solution.title}
                             description={solution.description}

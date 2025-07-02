@@ -27,7 +27,7 @@ export default function AdvanceFeature() {
       <Container>
         <div className="items-center space-x-4 md:flex lg:hidden">
           {/* Navigation Arrows */}
-          <div className="mb-8 flex  space-x-5">
+          <div className="mb-5 flex  space-x-5">
             {/* <button
                 onClick={prevSlide}
                 type="button"
@@ -98,7 +98,7 @@ export default function AdvanceFeature() {
 
           {/* Carousel Content */}
           <div className="relative z-10 flex h-full items-center justify-center lg:justify-end">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent lg:hidden " />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-800/70 via-blue-800/5 to-transparent lg:hidden " />
             {/* Image */}
             <div className="absolute -left-24 -top-4 ml-8 hidden flex-shrink-0 lg:block">
               <div className="relative hidden h-[445px] w-[500px] xl:block">

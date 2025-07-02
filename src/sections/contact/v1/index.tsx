@@ -30,7 +30,7 @@ export function ContactSection({ sectionHeading, image }: ContactSectionProps) {
 
         <Container>
           <div className="ml-auto md:w-1/2">
-            <div className="relative z-[2] rounded-5 bg-white p-10 shadow-1 dark:bg-accent-700 dark:shadow-accent-800 lg:p-[60px]">
+            <div className="relative z-[2] rounded-5 border-2 border-gray-200 bg-white p-10 shadow-1 dark:border-zinc-700 dark:bg-accent-700 dark:shadow-accent-800  lg:p-[60px]">
               <div className="mb-30px">
                 <SectionHeading {...sectionHeading} />
               </div>

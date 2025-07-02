@@ -59,7 +59,7 @@ export function WorkflowSection({
               </div>
               {/* Card */}
               <div
-                className="ml-[-24px] flex flex-1 items-center rounded-2xl border border-gray-300 bg-white py-8 pl-8 pr-6 shadow-none dark:border-gray-800 dark:bg-accent-700"
+                className="ml-[-20px] flex flex-1 items-center rounded-2xl border border-gray-300 bg-white py-8 pl-8 pr-6 shadow-none dark:border-gray-800 dark:bg-accent-700"
                 style={{
                   boxShadow: '0 0 0 0 transparent',
                 }}
@@ -70,7 +70,7 @@ export function WorkflowSection({
                     alignment="start"
                     textPosition="start"
                     description={step.description}
-                    size="sm"
+                    size="xs"
                     heading="h3"
                   />
                 </div>

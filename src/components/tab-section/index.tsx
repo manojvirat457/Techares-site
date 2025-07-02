@@ -45,10 +45,10 @@ export function TabSection<T extends string>({
     <section
       className={cn('mx-auto max-w-6xl px-8 py-12 md:px-0 md:py-16', className)}
     >
-      <Container isNoPadding>
+      <Container >
         {heading && <SectionHeading {...heading} className="mb-12" />}
         <div className="relative mb-8 pb-1">
-          <div className="relative z-10 grid grid-cols-2 gap-3 divide-x divide-gray-300 md:flex md:justify-center md:space-x-16 md:divide-x-0">
+          <div className="relative z-10 grid grid-cols-2 gap-3 divide-x divide-gray-300 md:flex md:justify-center lg:space-x-16 md:space-x-0 md:divide-x-0">
             {tabs.map((tab, idx) => {
               const isLastOdd =
                 tabs.length % 2 === 1 && idx === tabs.length - 1;
@@ -57,7 +57,7 @@ export function TabSection<T extends string>({
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   type="button"
-                  className={`inline-block w-full transform rounded-none px-4 py-2 text-sm font-medium transition-colors duration-200 md:w-auto md:rounded-t-full md:text-base
+                  className={`inline-block w-full transform rounded-none px-6 py-3 text-sm font-medium transition-colors duration-200 md:w-auto md:rounded-t-full md:text-base
               ${
                 activeTab === tab.id
                   ? 'bg-primary text-white'
@@ -83,7 +83,7 @@ export function TabSection<T extends string>({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="grid items-center gap-8 md:grid-cols-2"
+            className="flex items-center gap-8 lg:grid md:grid-cols-2"
           >
             <div className="space-y-4">
               <SectionHeading
@@ -124,7 +124,7 @@ export function TabSection<T extends string>({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center"
+              className="lg:flex justify-center hidden "
             >
               <Image
                 src={tabContent[activeTab].image || '/placeholder.svg'}
