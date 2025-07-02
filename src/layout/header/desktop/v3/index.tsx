@@ -140,7 +140,7 @@ const Navbar1 = ({
             <ContactUsDialog>
               <Button
                 className={cn(
-                  'mr-5 md:min-h-9 rounded-full text-[13px] capitalize px-3 py-2 '
+                  'mr-5 rounded-full px-3 py-2 text-[13px] capitalize md:min-h-9 '
                 )}
                 size="small"
               >

@@ -45,10 +45,10 @@ export function TabSection<T extends string>({
     <section
       className={cn('mx-auto max-w-6xl px-8 py-12 md:px-0 md:py-16', className)}
     >
-      <Container >
+      <Container>
         {heading && <SectionHeading {...heading} className="mb-12" />}
         <div className="relative mb-8 pb-1">
-          <div className="relative z-10 grid grid-cols-2 gap-3 divide-x divide-gray-300 md:flex md:justify-center lg:space-x-16 md:space-x-0 md:divide-x-0">
+          <div className="relative z-10 grid grid-cols-2 gap-3 divide-x divide-gray-300 md:flex md:justify-center md:space-x-0 md:divide-x-0 lg:space-x-16">
             {tabs.map((tab, idx) => {
               const isLastOdd =
                 tabs.length % 2 === 1 && idx === tabs.length - 1;
@@ -83,7 +83,7 @@ export function TabSection<T extends string>({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center gap-8 lg:grid md:grid-cols-2"
+            className="flex items-center gap-8 md:grid-cols-2 lg:grid"
           >
             <div className="space-y-4">
               <SectionHeading
@@ -124,7 +124,7 @@ export function TabSection<T extends string>({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="lg:flex justify-center hidden "
+              className="hidden justify-center lg:flex "
             >
               <Image
                 src={tabContent[activeTab].image || '/placeholder.svg'}

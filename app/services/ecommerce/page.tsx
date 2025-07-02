@@ -66,9 +66,9 @@ export default function Page() {
               heading="h2"
             />
             {solutions && solutions.solutionCard.length > 0 && (
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 mt-8">
+              <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
                 {solutions.solutionCard.map((solution) => (
-                  <div className="relative pt-12 h-full" key={solution.title}>
+                  <div className="relative h-full pt-12" key={solution.title}>
                     <div className="top-13 absolute left-3/4 z-99 -translate-y-1/2 transform">
                       {solution.icon}
                     </div>
