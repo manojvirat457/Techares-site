@@ -1,10 +1,10 @@
-import { Industry, IndustriesSectionData } from '@/data/industries/v1';
-import { ServiceData } from '@/data/service-section/v3';
-import { AboutSectionProps } from '@/src/sections/about/v1';
-import { CtaSectionProps } from '@/src/sections/cta/v2';
-import { HeroProps } from '@/src/sections/hero/v1';
-import { ProjectDetailsProps } from '@/src/sections/project/v4';
-import { ContactSectionProps } from '@/src/sections/contact/v1';
+import type { Industry, IndustriesSectionData } from '@/data/industries/v1';
+import type { ServiceData } from '@/data/service-section/v3';
+import type { AboutSectionProps } from '@/src/sections/about/v1';
+import type { CtaSectionProps } from '@/src/sections/cta/v2';
+import type { HeroProps } from '@/src/sections/hero/v1';
+import type { ProjectDetailsProps } from '@/src/sections/project/v4';
+import type { ContactSectionProps } from '@/src/sections/contact/v1';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
 import Image from 'next/image';
 
@@ -20,7 +20,7 @@ export const heroData: HeroProps = {
         'We specialize in on-demand development, delivering scalable and high-performance solutions tailored to your business needs.',
       button: {
         label: 'Explore',
-        href: '/',
+        href: '/contact',
       },
     },
     {
@@ -33,7 +33,7 @@ export const heroData: HeroProps = {
         'We specialize in custom software development, creating solutions that meet your unique business needs and exceed your expectations.',
       button: {
         label: 'Explore',
-        href: '/',
+        href: '/contact',
       },
     },
     {
@@ -46,7 +46,7 @@ export const heroData: HeroProps = {
         'We offer a range of IT consultancy and development services, including web development, mobile app development, and cloud solutions.',
       button: {
         label: 'Explore',
-        href: '/',
+        href: '/contact',
       },
     },
     {
@@ -59,7 +59,7 @@ export const heroData: HeroProps = {
         'We specialize in blockchain solutions, providing secure and decentralized solutions for various industries.',
       button: {
         label: 'Explore',
-        href: '/',
+        href: '/contact',
       },
     },
     {

@@ -57,7 +57,7 @@ export default function ContactUsDialog({
                 business with cutting-edge technology solutions.
               </DialogDescription>
             </DialogHeader>
-            <Form />
+            <Form setIsDialogOpen={() => setOpen(false)} />
           </div>
         </div>
       </DialogContent>

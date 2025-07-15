@@ -1,7 +1,8 @@
-import { ImageProps, blurDataUrl } from '@/src/common-types';
+'use client';
+import { type ImageProps, blurDataUrl } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
-import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import { BREAKPOINTS } from '@/src/themes/interface';
 import Image from 'next/image';
 import { Form } from './form';
@@ -34,7 +35,7 @@ export function ContactSection({ sectionHeading, image }: ContactSectionProps) {
               <div className="mb-30px">
                 <SectionHeading {...sectionHeading} />
               </div>
-              <Form />
+              <Form setIsDialogOpen={() => {}} />
             </div>
           </div>
         </Container>

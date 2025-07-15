@@ -10,6 +10,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 export interface HeroProps {
   items: {
@@ -42,7 +43,7 @@ export function Hero({ items }: HeroProps) {
           className="hero-swiper"
         >
           {items.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={item.title}>
               <div className="relative flex items-center justify-center overflow-hidden py-20 lg:min-h-screen">
                 <div className="container relative z-10">
                   <div className="mx-auto mt-48 max-w-3xl text-center">
@@ -60,9 +61,11 @@ export function Hero({ items }: HeroProps) {
                       >
                         {item.description}
                       </p>
-                      <Button className="rounded-full">
-                        {item.button.label}
-                      </Button>
+                      <Link href={item.button.href} className="inline-block">
+                        <Button className="rounded-full" asChild>
+                          {item.button.label}
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
