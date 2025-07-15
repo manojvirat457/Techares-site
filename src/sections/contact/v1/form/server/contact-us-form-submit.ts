@@ -35,7 +35,7 @@ export async function contactUsFormSubmit(
       `,
     };
 
-    const result =  await transporter.sendMail(mailOptions);
+    const result = await transporter.sendMail(mailOptions);
     if (result.rejected.length > 0 || result.accepted.length === 0) {
       return {
         isSuccess: false,

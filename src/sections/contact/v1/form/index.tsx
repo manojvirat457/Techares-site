@@ -66,213 +66,213 @@ export function Form({
 }) {
   const router = useRouter();
   return (
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          phoneNo: '',
-          subject: '',
-          message: '',
-        }}
-        validationSchema={ContactUsSchema}
-        onSubmit={async (values, { resetForm }) => {
-          const result = await contactUsFormSubmit(values);
-          if (result.data === null) {
-            toast.error(result.message);
-          } else {
-            setIsDialogOpen(true);
-            router.push('/thank-you');
-            resetForm();
-            toast.success(result.message);
-          }
-        }}
-      >
-        {({
-          errors,
-          touched,
-          values,
-          handleChange,
-          handleBlur,
-          isSubmitting,
-          handleSubmit,
-          setFieldValue,
-        }) => (
-          <form
-            onSubmit={handleSubmit}
-            className="grid grid-cols-1 gap-x-30px gap-y-5 lg:grid-cols-2"
-          >
-            <div>
-              <TextInput
-                placeholder="Your Name"
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                disabled={isSubmitting}
-                icon={<FaUser />}
-                className={cn(
-                  fieldCommonClasses,
-                  errors.name && touched.name && errorClasses
-                )}
-              />
-              {errors.name && touched.name && (
-                <p
-                  title={errors.name}
-                  aria-live="polite"
-                  role="alert"
-                  className={errorMessageClasses}
-                >
-                  {errors.name}
-                </p>
+    <Formik
+      initialValues={{
+        name: '',
+        email: '',
+        phoneNo: '',
+        subject: '',
+        message: '',
+      }}
+      validationSchema={ContactUsSchema}
+      onSubmit={async (values, { resetForm }) => {
+        const result = await contactUsFormSubmit(values);
+        if (result.data === null) {
+          toast.error(result.message);
+        } else {
+          setIsDialogOpen(true);
+          router.push('/thank-you');
+          resetForm();
+          toast.success(result.message);
+        }
+      }}
+    >
+      {({
+        errors,
+        touched,
+        values,
+        handleChange,
+        handleBlur,
+        isSubmitting,
+        handleSubmit,
+        setFieldValue,
+      }) => (
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 gap-x-30px gap-y-5 lg:grid-cols-2"
+        >
+          <div>
+            <TextInput
+              placeholder="Your Name"
+              type="text"
+              name="name"
+              value={values.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              disabled={isSubmitting}
+              icon={<FaUser />}
+              className={cn(
+                fieldCommonClasses,
+                errors.name && touched.name && errorClasses
               )}
-            </div>
-            <div>
-              <TextInput
-                placeholder="Your Email"
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                disabled={isSubmitting}
-                icon={<SendIcon />}
-                className={cn(
-                  fieldCommonClasses,
-                  errors.email && touched.email && errorClasses
-                )}
-              />
-              {errors.email && touched.email && (
-                <p
-                  title={errors.email}
-                  aria-live="polite"
-                  role="alert"
-                  className={errorMessageClasses}
-                >
-                  {errors.email}
-                </p>
-              )}
-            </div>
-            <div className="lg:col-span-2">
-              <Select
-                name="subject"
-                value={values.subject}
-                disabled={isSubmitting}
-                onValueChange={(value) => setFieldValue('subject', value)}
+            />
+            {errors.name && touched.name && (
+              <p
+                title={errors.name}
+                aria-live="polite"
+                role="alert"
+                className={errorMessageClasses}
               >
-                <SelectTrigger
-                  className={cn(
-                    'h-16 border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white',
-                    errors.message && touched.message && errorClasses
-                  )}
-                >
-                  <SelectValue
-                    placeholder="How can we help you ?"
-                    onBlur={handleBlur}
-                  />
-                </SelectTrigger>
-                <SelectContent className="border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white">
-                  <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="custom-software-development">
-                      Custom Software Development
-                    </SelectItem>
-                    <SelectItem value="it-consultancy-development">
-                      IT Consultancy & Development
-                    </SelectItem>
-                    <SelectItem value="hire-offshore-developers">
-                      Hire Offshore Developers
-                    </SelectItem>
-                    <SelectItem value="blockchain-solutions">
-                      Blockchain Solutions
-                    </SelectItem>
-                    <SelectItem value="crypto-solutions">
-                      Crypto Solutions
-                    </SelectItem>
-                    <SelectItem value="ai-ml-solutions">
-                      AI & ML Solutions
-                    </SelectItem>
-                    <SelectItem value="digital-marketing">
-                      Digital Marketing
-                    </SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              {errors.subject && touched.subject && (
-                <p
-                  title={errors.subject}
-                  aria-live="polite"
-                  role="alert"
-                  className={errorMessageClasses}
-                >
-                  {errors.subject}
-                </p>
+                {errors.name}
+              </p>
+            )}
+          </div>
+          <div>
+            <TextInput
+              placeholder="Your Email"
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              disabled={isSubmitting}
+              icon={<SendIcon />}
+              className={cn(
+                fieldCommonClasses,
+                errors.email && touched.email && errorClasses
               )}
-            </div>
-            <div className="lg:col-span-2">
-              <TextInput
-                placeholder="Mobile Number"
-                type="tel"
-                name="phoneNo"
-                value={values.phoneNo}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                disabled={isSubmitting}
-                icon={<Phone size={18} />}
+            />
+            {errors.email && touched.email && (
+              <p
+                title={errors.email}
+                aria-live="polite"
+                role="alert"
+                className={errorMessageClasses}
+              >
+                {errors.email}
+              </p>
+            )}
+          </div>
+          <div className="lg:col-span-2">
+            <Select
+              name="subject"
+              value={values.subject}
+              disabled={isSubmitting}
+              onValueChange={(value) => setFieldValue('subject', value)}
+            >
+              <SelectTrigger
                 className={cn(
-                  fieldCommonClasses,
-                  errors.phoneNo && touched.phoneNo && errorClasses
-                )}
-              />
-              {errors.phoneNo && touched.phoneNo && (
-                <p
-                  title={errors.phoneNo}
-                  aria-live="polite"
-                  role="alert"
-                  className={errorMessageClasses}
-                >
-                  {errors.phoneNo}
-                </p>
-              )}
-            </div>
-            <div className="lg:col-span-2">
-              <TextAreaInput
-                placeholder="Write Message..."
-                name="message"
-                value={values.message}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                disabled={isSubmitting}
-                icon={<MessageIcon />}
-                className={cn(
-                  fieldCommonClasses,
+                  'h-16 border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white',
                   errors.message && touched.message && errorClasses
                 )}
-              />
-              {errors.message && touched.message && (
-                <p
-                  title={errors.message}
-                  aria-live="polite"
-                  role="alert"
-                  className={errorMessageClasses}
-                >
-                  {errors.message}
-                </p>
-              )}
-            </div>
-            <div className="lg:col-span-2">
-              <Button
-                type="submit"
-                className="w-full"
-                aria-label="submit-form"
-                disabled={isSubmitting}
               >
-                <span>Get Quote</span>
-              </Button>
-            </div>
-          </form>
-        )}
-      </Formik>
+                <SelectValue
+                  placeholder="How can we help you ?"
+                  onBlur={handleBlur}
+                />
+              </SelectTrigger>
+              <SelectContent className="border-zinc-200 bg-white text-accent-900 dark:border-accent-700 dark:bg-accent-900 dark:text-white">
+                <SelectGroup>
+                  <SelectLabel>Select a Service</SelectLabel>
+                  <SelectItem value="custom-software-development">
+                    Custom Software Development
+                  </SelectItem>
+                  <SelectItem value="it-consultancy-development">
+                    IT Consultancy & Development
+                  </SelectItem>
+                  <SelectItem value="hire-offshore-developers">
+                    Hire Offshore Developers
+                  </SelectItem>
+                  <SelectItem value="blockchain-solutions">
+                    Blockchain Solutions
+                  </SelectItem>
+                  <SelectItem value="crypto-solutions">
+                    Crypto Solutions
+                  </SelectItem>
+                  <SelectItem value="ai-ml-solutions">
+                    AI & ML Solutions
+                  </SelectItem>
+                  <SelectItem value="digital-marketing">
+                    Digital Marketing
+                  </SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            {errors.subject && touched.subject && (
+              <p
+                title={errors.subject}
+                aria-live="polite"
+                role="alert"
+                className={errorMessageClasses}
+              >
+                {errors.subject}
+              </p>
+            )}
+          </div>
+          <div className="lg:col-span-2">
+            <TextInput
+              placeholder="Mobile Number"
+              type="tel"
+              name="phoneNo"
+              value={values.phoneNo}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              disabled={isSubmitting}
+              icon={<Phone size={18} />}
+              className={cn(
+                fieldCommonClasses,
+                errors.phoneNo && touched.phoneNo && errorClasses
+              )}
+            />
+            {errors.phoneNo && touched.phoneNo && (
+              <p
+                title={errors.phoneNo}
+                aria-live="polite"
+                role="alert"
+                className={errorMessageClasses}
+              >
+                {errors.phoneNo}
+              </p>
+            )}
+          </div>
+          <div className="lg:col-span-2">
+            <TextAreaInput
+              placeholder="Write Message..."
+              name="message"
+              value={values.message}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              disabled={isSubmitting}
+              icon={<MessageIcon />}
+              className={cn(
+                fieldCommonClasses,
+                errors.message && touched.message && errorClasses
+              )}
+            />
+            {errors.message && touched.message && (
+              <p
+                title={errors.message}
+                aria-live="polite"
+                role="alert"
+                className={errorMessageClasses}
+              >
+                {errors.message}
+              </p>
+            )}
+          </div>
+          <div className="lg:col-span-2">
+            <Button
+              type="submit"
+              className="w-full"
+              aria-label="submit-form"
+              disabled={isSubmitting}
+            >
+              <span>Get Quote</span>
+            </Button>
+          </div>
+        </form>
+      )}
+    </Formik>
   );
 }
 
@@ -304,7 +304,7 @@ function MessageIcon() {
       aria-label="message-icon"
     >
       <title>Message Icon</title>
-       <path d="M12.6875 0.5C13.3984 0.5 14 1.10156 14 1.8125C14 2.25 13.7812 2.63281 13.4531 2.87891L7.51953 7.33594C7.19141 7.58203 6.78125 7.58203 6.45312 7.33594L0.519531 2.87891C0.191406 2.63281 0 2.25 0 1.8125C0 1.10156 0.574219 0.5 1.3125 0.5H12.6875ZM5.93359 8.04688C6.5625 8.51172 7.41016 8.51172 8.03906 8.04688L14 3.5625V9.25C14 10.2344 13.207 11 12.25 11H1.75C0.765625 11 0 10.2344 0 9.25V3.5625L5.93359 8.04688Z" />
+      <path d="M12.6875 0.5C13.3984 0.5 14 1.10156 14 1.8125C14 2.25 13.7812 2.63281 13.4531 2.87891L7.51953 7.33594C7.19141 7.58203 6.78125 7.58203 6.45312 7.33594L0.519531 2.87891C0.191406 2.63281 0 2.25 0 1.8125C0 1.10156 0.574219 0.5 1.3125 0.5H12.6875ZM5.93359 8.04688C6.5625 8.51172 7.41016 8.51172 8.03906 8.04688L14 3.5625V9.25C14 10.2344 13.207 11 12.25 11H1.75C0.765625 11 0 10.2344 0 9.25V3.5625L5.93359 8.04688Z" />
     </svg>
   );
 }
