@@ -4,7 +4,7 @@ export const heroData: HeroProps = {
   items: [
     {
       image: {
-        src: '/assets/images/hero/hero-1.webp',
+        src: '/assets/images/hero/hero-1.png',
         alt: 'hero 1',
       },
       title: 'On-demand Development Solutions',
@@ -17,7 +17,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-2.webp',
+        src: '/assets/images/hero/hero-2.png',
         alt: 'hero 1',
       },
       title: 'Custom Software development',
@@ -30,7 +30,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-3.webp',
+        src: '/assets/images/hero/hero-3.png',
         alt: 'hero 1',
       },
       title: 'IT consultancy & Development Services',
@@ -43,7 +43,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-4.webp',
+        src: '/assets/images/hero/hero-4.png',
         alt: 'hero 1',
       },
       title: 'Blockchain Solutions',
@@ -56,7 +56,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-5.webp',
+        src: '/assets/images/hero/hero-5.png',
         alt: 'hero 1',
       },
       title: 'Hire Developers',

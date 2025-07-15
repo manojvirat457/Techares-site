@@ -1,54 +1,55 @@
-import { HeaderProps } from '@/src/layout/header/desktop/v1';
+import type { HeaderProps } from '@/src/layout/header/desktop/v1';
 
 export const menuItemsProps: HeaderProps['menuItems'] = [
   {
-    label: 'Services',
-    href: '/services',
+    title: 'Services',
+    url: '/services',
   },
   {
-    label: 'Expertises',
-    href: '/expertises',
+    title: 'Expertises',
+    url: '/expertises',
   },
   {
-    label: 'White Label',
-    href: '/white-lable',
+    title: 'White Label',
+    url: '/white-lable',
   },
   {
     title: 'Insights',
-    subMenuItems: [
+    url: '/insights',
+    items: [
       {
-        label: 'blog',
-        href: '/insights',
+        title: 'blog',
+        url: '/insights',
       },
       {
-        label: 'Live',
-        href: '/insights/live',
+        title: 'Live',
+        url: '/insights/live',
       },
       {
-        label: 'Demo',
-        href: '/insights/demo',
+        title: 'Demo',
+        url: '/insights/demo',
       },
       {
-        label: 'Case',
-        href: '/insights/case',
+        title: 'Case',
+        url: '/insights/case',
       },
       {
-        label: 'Studies',
-        href: '/insights/studies',
+        title: 'Studies',
+        url: '/insights/studies',
       },
       {
-        label: 'Events',
-        href: '/insights/events',
+        title: 'Events',
+        url: '/insights/events',
       },
       {
-        label: 'News',
-        href: '/insights/news',
+        title: 'News',
+        url: '/insights/news',
       },
     ],
   },
   {
-    label: 'About',
-    href: '/about',
+    title: 'About',
+    url: '/about',
   },
   // {
   //  label: 'Get in Touch',

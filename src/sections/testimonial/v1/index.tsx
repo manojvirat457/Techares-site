@@ -1,9 +1,9 @@
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
-import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import {
   TestimonialCard,
-  TestimonialCardProps,
+  type TestimonialCardProps,
 } from 'src/components/cards/testimonial/v1';
 import { Carousel } from '@/src/components/carousel';
 import { CarouselItem } from '@/src/components/carousel/sub-components/item';
@@ -22,9 +22,13 @@ export interface TestimonialSectionProps {
 export function TestimonialSection() {
   const { sectionHeading, cards } = testimonialSectionData;
   return (
-    <section className="section-padding-primary overflow-hidden py-20">
+    <section className="section-padding-primary overflow-hidden ">
       <Container>
-        <div className="mb-10 mr-30px max-w-[680px] md:mb-[3.75rem] md:pr-[140px]">
+        <div
+          className="mb-10 mr-30px max-w-[680px] md:mb-[2.75rem] md:pr-[140px]"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <SectionHeading {...sectionHeading} />
         </div>
         {cards && cards.length > 0 && (
@@ -52,7 +56,12 @@ export function TestimonialSection() {
             navigationNextBtnClassName={btnPrevNextClasses}
           >
             {cards.map((card, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem
+                key={card.rating}
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay={index * 100}
+              >
                 <TestimonialCard {...card} />
               </CarouselItem>
             ))}

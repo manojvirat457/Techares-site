@@ -1,6 +1,5 @@
 'use client';
 
-import { heroData } from '@/data/hero/v1';
 import type { ImageProps, LinkProps } from '@/src/common-types';
 import { Button } from '@/src/components/button';
 import { Autoplay, EffectFade, Pagination } from 'swiper';
@@ -11,6 +10,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 export interface HeroProps {
   items: {
@@ -21,11 +21,9 @@ export interface HeroProps {
   }[];
 }
 
-export function Hero() {
-  const { items } = heroData;
-
+export function Hero({ items }: HeroProps) {
   return (
-    <section className="relative">
+    <section className="relative -mt-20">
       {items && items.length > 0 && (
         <Swiper
           effect="fade"
@@ -45,27 +43,29 @@ export function Hero() {
           className="hero-swiper"
         >
           {items.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={item.title}>
               <div className="relative flex items-center justify-center overflow-hidden py-20 lg:min-h-screen">
                 <div className="container relative z-10">
-                  <div className="mx-auto max-w-3xl text-center">
+                  <div className="mx-auto mt-48 max-w-3xl text-center">
                     <div
                       className="space-y-6"
                       data-aos="fade-up"
                       data-aos-delay="100"
                     >
-                      <h1 className="font-secondary text-2xl font-semibold uppercase leading-tight md:text-3xl">
+                      <h1 className="font-secondary text-2xl  font-bold uppercase  text-accent-900 dark:text-white md:text-3xl">
                         {item.title}
                       </h1>
                       <p
-                        className="text-base text-accent-200 md:text-lg"
+                        className="text-base leading-relaxed text-accent-900 dark:text-accent-200 md:text-md"
                         suppressHydrationWarning
                       >
                         {item.description}
                       </p>
-                      <Button className="rounded-full">
-                        {item.button.label}
-                      </Button>
+                      <Link href={item.button.href} className="inline-block">
+                        <Button className="rounded-full" asChild>
+                          {item.button.label}
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -77,10 +77,10 @@ export function Hero() {
                     alt={item.image.alt || ''}
                     fill
                     priority={index === 0}
-                    className="hidden object-cover lg:block"
+                    className=" object-cover lg:block"
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />
-                  <div className="absolute inset-0 bg-[#EDF8FE] opacity-80 dark:bg-accent-900" />
+                  {/* <div className="absolute inset-0 bg-[#EDF8FE] opacity-80 dark:bg-accent-900" /> */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-accent-900" />
                 </div>
               </div>

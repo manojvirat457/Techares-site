@@ -2,6 +2,7 @@
 
 import { ServiceData, ServiceDetail } from '@/data/service-section/v3';
 import { Container } from '@/src/components/container';
+import { SectionHeading } from '@/src/components/section-heading';
 import { Card } from '@/src/components/ui/card';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -19,14 +20,22 @@ function ServiceCard({ title, description }: ServiceCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="h-full w-full"
+      className="h-full w-full border border-dashed border-gray-400"
     >
-      <Card className="h-full  w-full border-zinc-900/50 bg-zinc-800">
-        <div className="space-y-2 p-6">
-          <h3 className="text-md font-bold leading-[1.25] text-accent-900 dark:text-white md:text-lg">
+      <Card className="h-full w-full border-zinc-200/50 bg-transparent dark:border-zinc-900/50 dark:bg-zinc-800 ">
+        <div className="h-100 space-y-2  p-6">
+          <SectionHeading
+            title={title}
+            description={description}
+            size="xs"
+            heading="h4"
+          />
+          {/* <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
             {title}
           </h3>
-          <p className="text-sm leading-relaxed text-zinc-500">{description}</p>
+          <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-500">
+            {description}
+          </p> */}
         </div>
       </Card>
     </motion.div>
@@ -51,22 +60,25 @@ function ServiceItem({
   return (
     <button
       onClick={onClick}
-      className={`flex w-5/6 items-center gap-3 rounded-lg p-4 text-left transition-all ${
-        isActive ? 'bg-primary-light' : 'hover:bg-zinc-800'
+      className={`mt-8 flex w-5/6 items-center gap-3 rounded-lg p-4 text-left transition-all ${
+        isActive
+          ? 'gradient-bg-tab'
+          : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'
       }`}
     >
-      <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full bg-zinc-700">
+      <div className="h-100 grid h-12 w-12 flex-shrink-0 place-items-center">
         <Image src={icon} width={32} height={32} alt="icon" />
-        {/* <QuestionMarkCircle className="w-5 h-5 text-zinc-300" /> */}
       </div>
       <div className="flex flex-col">
-        <h2 className="text-md font-bold leading-[1.25] text-white dark:text-white md:text-lg">
+        <h3 className="text-md font-bold leading-[1.25] text-zinc-900 dark:text-white md:text-lg">
           {title}
-        </h2>
+        </h3>
         <span
           className={`${
-            isActive ? 'text-accent-100 ' : 'text-accent-300'
-          } hidden text-sm md:block`}
+            isActive
+              ? 'text-zinc-900 dark:text-stone-500'
+              : 'text-zinc-600 dark:text-stone-300'
+          } mt-2 hidden text-sm md:block`}
         >
           {description}
         </span>
@@ -91,13 +103,13 @@ export default function ServicesSection({
   const currentService: ServiceDetail = servicesData[activeService];
 
   return (
-    <div className="min-h-screen bg-zinc-950  py-20">
+    <div className="section-padding-primary  gradient-bg-section min-h-screen dark:bg-zinc-950">
       <Container isFluid={false} isNoPadding={false}>
         <div className="mx-4 max-w-[95rem] lg:mx-auto">
-          <div className="grid gap-8 lg:grid-cols-2 ">
+          <div className="grid gap-2 lg:grid-cols-2">
             {/* Left Column */}
             <div className="space-y-4">
-              <h2 className="text-xl font-bold text-white md:text-2xl">
+              <h2 className="text-xl font-bold text-zinc-900 dark:text-white md:text-2xl">
                 {title.title && title.title}{' '}
                 {title.highlightedTitle && (
                   <span className="text-primary">{title.highlightedTitle}</span>
@@ -126,17 +138,10 @@ export default function ServicesSection({
                 transition={{ duration: 0.3 }}
                 className="space-y-6"
               >
-                {/* <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{currentService.title}</h2> */}
-                <p className="mb-8 text-accent-800">
+                <p className="mb-8 text-zinc-600 dark:text-accent-800">
                   {currentService.mainDescription}
                 </p>
-                {/*
-       <div className="grid sm:grid-cols-2 gap-4">
-       {currentService.cards.map((card, index) => (
-        <ServiceCard key={`${activeService}-${index}`} title={card.title} description={card.description} />
-        ))}
-        </div> */}
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto">
                   <div className="flex flex-wrap justify-center gap-6">
                     {currentService.cards.map((service, index) => (
                       <div

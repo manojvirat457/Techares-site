@@ -1,8 +1,8 @@
 'use server';
 
-import { ServerActionResponse } from '@/src/common-types';
+import type { ServerActionResponse } from '@/src/common-types';
 import nodemailer from 'nodemailer';
-import { ContactUsSchemaType } from '..';
+import type { ContactUsSchemaType } from '..';
 
 export async function contactUsFormSubmit(
   values: ContactUsSchemaType
@@ -21,8 +21,8 @@ export async function contactUsFormSubmit(
     });
 
     const mailOptions = {
-      from: email,
-      to: process.env.CONTACT_MAIL_ADDRESS,
+      from: process.env.SMTP_USER,
+      to: process.env.TO_MAIL_ADDRESS,
       subject: `New Form Submission regarding ${subject} | Techares`,
       html: `
         <h3 style="margin-bottom:8px">Name:</h3>
@@ -36,7 +36,14 @@ export async function contactUsFormSubmit(
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    const result = await transporter.sendMail(mailOptions);
+    if (result.rejected.length > 0 || result.accepted.length === 0) {
+      return {
+        isSuccess: false,
+        data: null,
+        message: 'Email not sent',
+      };
+    }
 
     return {
       isSuccess: true,

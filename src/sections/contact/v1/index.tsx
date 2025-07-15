@@ -1,8 +1,8 @@
-import { contactSectionData } from '@/data/contact-section/v1';
-import { ImageProps, blurDataUrl } from '@/src/common-types';
+'use client';
+import { type ImageProps, blurDataUrl } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
-import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import { BREAKPOINTS } from '@/src/themes/interface';
 import Image from 'next/image';
 import { Form } from './form';
@@ -12,10 +12,9 @@ export interface ContactSectionProps {
   image: Omit<ImageProps, 'width' | 'height'>;
 }
 
-export function ContactSection() {
-  const { sectionHeading, image } = contactSectionData;
+export function ContactSection({ sectionHeading, image }: ContactSectionProps) {
   return (
-    <section className="section-padding-primary">
+    <section className="section-padding-primary bg-gray-50 dark:bg-accent-900">
       <div className="relative py-[60px]">
         {/* Image area  */}
         <div className="absolute left-0 top-0 z-1 h-full w-full overflow-hidden bg-red-500 md:w-[56%] md:rounded-r-5">
@@ -32,11 +31,11 @@ export function ContactSection() {
 
         <Container>
           <div className="ml-auto md:w-1/2">
-            <div className="relative z-[2] rounded-5 bg-white p-10 shadow-1 dark:bg-accent-700 lg:p-[60px]">
+            <div className="relative z-[2] rounded-5 border-2 border-gray-200 bg-white p-10 shadow-1 dark:border-zinc-700 dark:bg-accent-700 dark:shadow-accent-800  lg:p-[60px]">
               <div className="mb-30px">
                 <SectionHeading {...sectionHeading} />
               </div>
-              <Form />
+              <Form setIsDialogOpen={() => {}} />
             </div>
           </div>
         </Container>

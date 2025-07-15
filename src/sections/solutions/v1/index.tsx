@@ -1,7 +1,7 @@
 'use client';
 
 import { solutions } from '@/data/solution-section/v1';
-import { CustomLink } from '@/src/components/custom-link';
+import { SectionHeading } from '@/src/components/section-heading';
 import { Card } from '@/src/components/ui/card';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
 import { motion } from 'framer-motion';
@@ -20,13 +20,19 @@ function CategoryButton({ title, isActive, onClick }: CategoryButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-full rounded-lg p-4 text-left transition-all ${
+      className={`w-full rounded-lg border border-gray-300 p-4 text-left transition-all ${
         isActive
-          ? 'bg-primary text-white'
+          ? ' gradient-bg-tab border-0 text-accent-900'
           : 'bg-white text-accent-900 hover:bg-zinc-100'
       }`}
     >
-      {title}
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment="start"
+        textPosition="start"
+        heading="h3"
+      />
     </button>
   );
 }
@@ -37,7 +43,13 @@ function CategoryCard({ title, isActive, onClick }: CategoryButtonProps) {
       onClick={onClick}
       className={`flex h-16 w-[33%] items-center justify-center rounded-lg p-2 text-center   transition-all ${isActive ? 'bg-primary text-white' : 'bg-white text-accent-900 '}`}
     >
-      <p className="text-center text-xs">{title}</p>
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment="start"
+        textPosition="start"
+        heading="h3"
+      />
     </Card>
   );
 }
@@ -49,25 +61,27 @@ interface SolutionCardProps {
   href?: string;
 }
 
-function SolutionCard({ title, description, icon, href }: SolutionCardProps) {
+function SolutionCard({ title, description, icon }: SolutionCardProps) {
   return (
-    <CustomLink href={href ?? '/'}>
-      <div className="space-y-2 rounded-lg bg-zinc-900/50 p-6">
-        <div className="relative mb-4 h-16 w-16">
-          <Image
-            src={icon || '/placeholder.svg'}
-            alt={title}
-            height={70}
-            width={70}
-            className="object-contain"
-          />
-        </div>
-        <h3 className="text-xl font-semibold leading-[1.2] text-white">
-          {title}
-        </h3>
-        <p className="leading-relaxed text-zinc-400">{description}</p>
+    <div className="space-y-2 rounded-lg border border-dashed border-gray-400 bg-zinc-100 p-6 dark:bg-zinc-900/50">
+      <div className="relative mb-4">
+        <Image
+          src={icon || '/placeholder.svg'}
+          alt={title}
+          height={50}
+          width={50}
+          className="object-contain"
+        />
       </div>
-    </CustomLink>
+      <SectionHeading
+        title={title}
+        size="xs"
+        alignment="start"
+        textPosition="start"
+        description={description}
+        heading="h3"
+      />
+    </div>
   );
 }
 
@@ -127,16 +141,16 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#141416] p-4  py-20">
+    <div className="section-padding-primary min-h-screen bg-white dark:bg-[#141416]">
       <div className="mx-auto max-w-7xl">
         <div className="xs:mt-10 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Solutions Info - Reordered for mobile */}
           <div className="order-1 h-max space-y-6 lg:sticky lg:top-8 lg:order-2">
             <div>
-              <h2 className="mb-2 text-xl font-bold text-white md:text-2xl">
+              <h2 className="mb-2 text-xl font-bold text-zinc-900 dark:text-white md:text-2xl">
                 Our <span className="text-primary">Solutions</span>
               </h2>
-              <p className="mb-8 text-zinc-400">
+              <p className="mb-8 text-zinc-600 dark:text-zinc-400">
                 Quick and customizable software solutions designed for
                 businesses requiring immediate deployment and scalability. Our
                 on-demand applications cater to a variety of industries with a

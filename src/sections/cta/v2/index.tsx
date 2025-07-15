@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
+import { SectionHeading } from '@/src/components/section-heading';
 import { TextInput } from '@/src/components/inputs/text-input';
 import { contactUsFormSubmit } from '@/src/sections/contact/v1/form/server/contact-us-form-submit';
 import { SmartDatetimeInput } from '@/src/sections/cta/v2/smart-date-time';
@@ -15,14 +16,8 @@ export interface CtaSectionProps {
   description: string;
 }
 
-const ctaSectionData: CtaSectionProps = {
-  title: 'Schedule a Meeting',
-  description:
-    'Connect with our experts for a personalized one-on-one consultation. Discuss your business requirements, explore tailored solutions, and get expert guidance to drive your project forward.',
-};
-
 const inputCommonClasses = cn(
-  'border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white'
+  'border-white/60 text-white placeholder:text-white/80 focus:border-white dark:border-accent-200 dark:border-opacity-60 dark:text-accent-100 dark:placeholder:text-accent-200/80'
 );
 
 const validationSchema = Yup.object({
@@ -30,18 +25,25 @@ const validationSchema = Yup.object({
   email: Yup.string().email().required('Email is required'),
 });
 
-export function CtaSection() {
-  const { title, description } = ctaSectionData;
+export function CtaSection({ title, description }: CtaSectionProps) {
   const router = useRouter();
   return (
-    <section className={cn('relative overflow-hidden bg-primary py-20')}>
+    <section
+      className={cn(
+        'relative overflow-hidden bg-primary py-20 dark:bg-accent-900'
+      )}
+    >
       <Container>
         <div className="relative z-10 grid items-center gap-30px xl:grid-cols-12">
-          <div className="text-white xl:col-span-5">
-            <h2 className="h2 max-w-[410px] font-secondary capitalize leading-[1.25] ">
-              {title}
-            </h2>
-            <p className="mt-5 text-base leading-[1.875]">{description}</p>
+          <div className="text-white dark:text-accent-100 xl:col-span-5">
+            <SectionHeading
+              title={title}
+              description={description}
+              size="sm"
+              alignment="start"
+              textPosition="start"
+              invertColor={true}
+            />
           </div>
           <div className="xl:col-span-7">
             <Formik
@@ -50,7 +52,6 @@ export function CtaSection() {
               onSubmit={async (values, { resetForm }) => {
                 const timezone =
                   Intl.DateTimeFormat().resolvedOptions().timeZone;
-                console.log('🚀 ~ onSubmit={ ~ values:', values);
                 const result = await contactUsFormSubmit({
                   name: values.name,
                   email: values.email,
@@ -128,7 +129,7 @@ export function CtaSection() {
                       type="submit"
                       disabled={isSubmitting}
                       className={cn(
-                        'w-full flex-none bg-white after:bg-[#003e70] after:text-accent-200 hover:text-accent-200 dark:hover:text-accent-200 sm:flex-1 md:min-w-[190px] md:max-w-[190px]'
+                        'w-full flex-none bg-white after:bg-[#003e70] after:text-accent-200 hover:text-accent-200 dark:bg-accent-100 dark:after:bg-accent-800 dark:hover:text-accent-800 sm:flex-1 md:min-w-[190px] md:max-w-[190px]'
                       )}
                     >
                       <span className="text-black">Schedule</span>

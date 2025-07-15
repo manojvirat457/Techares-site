@@ -40,10 +40,15 @@ const buttonVariants = cva(
         default: 'rounded-5',
         circle: 'rounded-full',
       },
+      size: {
+        default: 'px-5',
+        small: 'px-3',
+      },
     },
     defaultVariants: {
       colorScheme: 'primary',
       shape: 'default',
+      size: 'default',
     },
   }
 );

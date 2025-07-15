@@ -1,18 +1,16 @@
-import { serviceSectionData } from '@/data/service-section/v1/service-list-page';
-import { MainHeader } from '@/src/layout/header';
+import { projectSectionData } from '@/data/project-section/v1/list-page';
 import { HeroSection } from '@/src/sections/hero/v3';
-import { ServiceSection } from '@/src/sections/service/v1';
+import { ProjectSection } from '@/src/sections/project/v1';
 import { basicMetadata } from '@/src/utils/metadata';
 
 export const metadata = basicMetadata({
-  title: 'TechAres | Services',
+  title: 'TechAres | Project',
   description: 'TechAres - IT Solutions and Services React Nextjs Template',
 });
 
 export default function Page() {
   return (
     <>
-      <MainHeader version="2" />
       <HeroSection
         title="Services"
         breadcrumbItems={[
@@ -21,11 +19,11 @@ export default function Page() {
             href: '/',
           },
           {
-            label: 'Service',
+            label: 'Services',
           },
         ]}
       />
-      <ServiceSection {...serviceSectionData} />
+      <ProjectSection {...projectSectionData} />
     </>
   );
 }

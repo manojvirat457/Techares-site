@@ -12,24 +12,61 @@
     @apply font-secondary;
   }
   .h1 {
-    @apply text-2xl font-bold leading-[1.15] md:text-3xl;
+    @apply text-2xl font-bold  md:text-3xl;
   }
   .h2 {
-    @apply text-xl font-bold leading-[1.25]  md:text-2xl;
+    @apply text-xl font-bold   md:text-2xl;
   }
   .h3 {
-    @apply text-md font-bold leading-[1.25] md:text-lg;
+    @apply text-md font-bold  md:text-lg;
   }
   :root {
     --radius: 0.5rem;
   }
+  html {
+    line-height: 1.2;
+  }
+  p {
+    line-height: 1.5;
+  }
 }
 
 .section-padding-primary {
-  @apply py-[3.75rem] md:py-[6.25rem] xl:py-[7.5rem];
+  @apply py-[3rem] md:py-[4rem];
 }
 
 ::selection {
   text-shadow: none;
   @apply bg-primary text-white;
+}
+
+.gradient-bg-tab {
+  background: #fff;
+  background: linear-gradient(
+    264deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(168, 210, 240, 1) 100%
+  );
+}
+.gradient-bg-section {
+  background: transparent;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(168, 210, 240, 1) 100%
+  );
+  -webkit-mask: conic-gradient(
+      from -45deg at bottom,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50% / 24px 100%;
+  border: 0;
+}
+.menu-bg-blur {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

@@ -1,29 +1,29 @@
-import { ProjectDetailsProps } from '@/app/project/taxi-booking/-data';
 import { AboutSectionProps } from '@/src/sections/about/v1';
+import { ProjectDetailsProps } from '@/src/sections/project/v4';
 import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
 
 export const aboutSectionData: AboutSectionProps = {
   images: {
     image1: {
-      src: '/assets/images/about/about-1.webp',
+      src: '/assets/images/about/about-1.png',
       alt: 'about one',
       width: 195,
       height: 132,
     },
     image2: {
-      src: '/assets/images/about/about-2.webp',
+      src: '/assets/images/about/about-2.png',
       alt: 'about two',
       width: 312,
       height: 304,
     },
     image3: {
-      src: '/assets/images/about/about-3.webp',
+      src: '/assets/images/about/about-3.png',
       alt: 'about three',
       width: 250,
       height: 265,
     },
     image4: {
-      src: '/assets/images/about/about-4.webp',
+      src: '/assets/images/about/about-4.png',
       alt: 'about four',
       width: 250,
       height: 265,
@@ -125,6 +125,8 @@ export const whyChooseSectionDataTwo: ProjectDetailsProps = {
     description:
       'At TechAres, we go beyond being just a digital agency—we are your innovation- driven IT consultancy committed to delivering exceptional, scalable, and cost- effective solutions across industries.By seamlessly blending creativity, technology, and strategy, we empower businesses to achieve digital transformation with confidence.With a team of highly skilled professionals, we ensure seamless project execution, helping you stay ahead in a rapidly evolving digital world.',
   },
+  isCard: false,
+  isButton: false,
   keyPoints: [
     {
       title:

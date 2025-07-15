@@ -1,12 +1,17 @@
 import {
   aboutSectionData,
-  whyChooseSectionDataTwo,
-} from '@/data/about-section/v1';
-import { industriesSectionData } from '@/data/industries/v1';
-import { methodologies } from '@/data/methodology/v1';
-import { servicesData } from '@/data/service-section/v3';
+  contactSectionData,
+  ctaSectionData,
+  heroData,
+  industriesSectionData,
+  servicesData,
+  whyChooseSectionData,
+  workflowSteps,
+} from '@/app/-data';
+import { WorkflowSection } from '@/src/components/workflow-section';
 import { AboutSection } from '@/src/sections/about/v1';
 import { Hero } from '@/src/sections/hero/v1';
+import { ProjectSectionV4 } from '@/src/sections/project/v4';
 import { basicMetadata } from '@/src/utils/metadata';
 import dynamic from 'next/dynamic';
 
@@ -32,19 +37,12 @@ const TestimonialSection = dynamic(
     ),
   { ssr: true }
 );
-const MethodologiesSection = dynamic(
-  () => import('@/src/sections/methodology/v1'),
-  { ssr: true }
-);
+
 const TechnologiesSection = dynamic(
   () =>
     import('@/src/sections/technologies/v1').then(
       (mod) => mod.TechnologiesSection
     ),
-  { ssr: true }
-);
-const ProjectSection = dynamic(
-  () => import('@/src/sections/project/v3').then((mod) => mod.ProjectSection),
   { ssr: true }
 );
 const ContactSection = dynamic(
@@ -57,29 +55,45 @@ export const metadata = basicMetadata({});
 export default function Page() {
   return (
     <>
-      <Hero />
+      <Hero items={heroData.items} />
       <AboutSection aboutSectionData={aboutSectionData} />
       <ServicesSection
         servicesData={servicesData}
         title={{ title: "Techares's", highlightedTitle: 'Services' }}
       />
       <SolutionsSection />
-      <CtaSection />
+      <CtaSection
+        title={ctaSectionData.title}
+        description={ctaSectionData.description}
+      />
       <IndustriesSection
         industriesSectionData={industriesSectionData}
         itemsPerRow={4}
       />
       <TestimonialSection />
-      <MethodologiesSection
-        methodologies={methodologies}
-        heading={{
-          title: 'Our Development',
-          highlightedTitle: 'Methodologies',
+      <WorkflowSection
+        sectionHeading={{
+          title: 'Strategic Workflow Taxi App Development',
+          subtitle: 'WORK FLOW',
+          description:
+            'We follow a well-structured development process at TechAres that ensures the successful delivery of a high-performing taxi app. Our approach is designed in such a way that it meets the requirements of business objectives while providing an unlimited user experience',
+          alignment: 'center',
+          textPosition: 'center',
         }}
+        steps={workflowSteps}
       />
       <TechnologiesSection />
-      <ProjectSection projectDetails={whyChooseSectionDataTwo} />
-      <ContactSection />
+      <ProjectSectionV4
+        projectDetails={whyChooseSectionData}
+        imagePosition="left"
+        alignment="center"
+        backgroundColor={{ dark: 'bg-accent-900', light: 'bg-zinc-50' }}
+        keyPointsLayout="list"
+      />
+      <ContactSection
+        sectionHeading={contactSectionData.sectionHeading}
+        image={contactSectionData.image}
+      />
     </>
   );
 }

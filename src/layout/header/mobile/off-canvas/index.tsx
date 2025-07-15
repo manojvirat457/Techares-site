@@ -19,7 +19,7 @@ import {
   FaTwitter,
 } from 'react-icons/fa6';
 import { MdMenu } from 'react-icons/md';
-import { HeaderProps } from '../../desktop/v1';
+import type { HeaderProps } from '../../desktop/v1';
 import { Navigation } from '../navigation';
 
 const mainTitleClasses = cn(

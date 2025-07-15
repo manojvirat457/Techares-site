@@ -1,4 +1,4 @@
-import { PersonProps, blurDataUrl } from '@/src/common-types';
+import { type PersonProps, blurDataUrl } from '@/src/common-types';
 import Image from 'next/image';
 import StarRating from '../rating';
 import { FaQuoteRight } from 'react-icons/fa6';
@@ -25,7 +25,7 @@ export function TestimonialCard({
             height={180}
             placeholder="blur"
             blurDataURL={blurDataUrl}
-            className="rounded-5 object-cover mix-blend-luminosity"
+            className="rounded-5 object-cover"
           />
           <span className="absolute left-1/2 grid h-[50px] w-[50px] -translate-x-1/2 -translate-y-1/2 place-items-center  rounded-full border-2 border-primary-light bg-primary text-lg/[1] text-white">
             <FaQuoteRight />

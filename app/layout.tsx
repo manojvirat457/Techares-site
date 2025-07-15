@@ -2,7 +2,7 @@ import { primary, secondary } from '@/fonts';
 import { ScrollToTopButton } from '@/src/components/scroll-to-top';
 import { ThemeProvider } from '@/src/components/theme-provider';
 import { Footer } from '@/src/layout/footer/v1';
-import { MainHeader } from '@/src/layout/header';
+import { Navbar1 } from '@/src/layout/header/desktop/v3';
 import { AOSInit } from '@/src/utils/aos';
 import { basicMetadata } from '@/src/utils/metadata';
 import { cn } from '@/src/utils/shadcn';
@@ -28,21 +28,18 @@ export default async function RootLayout({ children }: Props) {
         'dark',
         primary.variable,
         secondary.variable,
-        'text-base leading-[1.875]  text-accent-800 [&.dark]:text-body'
+        'text-base  text-accent-800 [&.dark]:text-body'
       )}
     >
-      <head></head>
+      <head />
       <AOSInit />
       <body>
         <GoogleAnalytics gaId="GTM-W9JNHJXF" />
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <div
-            className={cn(
-              'bg-white text-accent-800 dark:bg-accent-900 dark:text-body'
-            )}
-          >
-            <MainHeader />
-            <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className={cn('text-accent-800 dark:text-body')}>
+            {/* <MainHeader /> */}
+            <Navbar1 />
+            {children}
             <Footer />
           </div>
         </ThemeProvider>

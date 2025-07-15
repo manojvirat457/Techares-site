@@ -1,10 +1,10 @@
 'use client';
-import { ImageProps, LinkProps } from '@/src/common-types';
+import type { ImageProps, LinkProps } from '@/src/common-types';
 import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
 import { CustomLink } from '@/src/components/custom-link';
 import { SectionHeading } from '@/src/components/section-heading';
-import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import type { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
 import { useScreenSize } from '@/src/hooks/use-screen-size';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
@@ -47,12 +47,12 @@ export function AboutSection({
           <div className="lg:order-2" data-aos="fade-left" data-aos-delay="200">
             <SectionHeading {...sectionHeading} additionalDesc={description} />
             {keyPoints && keyPoints.length > 0 && (
-              <div className="mt-7 grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-10 md:gap-[1.875rem] ">
+              <div className="grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-5 md:gap-[1.875rem] ">
                 {isCard &&
                   keyPoints.map((keyPoint, index) => (
                     <div
                       key={index}
-                      className="group flex min-h-[64px] items-center gap-5 rounded-5 border border-primary px-6 py-2 md:min-h-[85px] md:px-[1.875rem] md:py-3 "
+                      className="group flex min-h-[64px] items-center gap-5 rounded-5  md:min-h-[85px]"
                     >
                       <span className="duration flex-none scale-100 transition-transform ease-linear group-hover:scale-90">
                         {keyPoint.icon}
@@ -116,7 +116,7 @@ export function AboutSection({
                       data-aos="fade-up"
                       data-aos-delay="200"
                     >
-                      <span className="absolute -left-2.5 -top-2.5 -z-1 h-full w-full rounded-tl-[60px] bg-highlight"></span>
+                      <span className="absolute -left-2.5 -top-2.5 -z-1 h-full w-full rounded-tl-[60px] bg-highlight" />
                       <div className="relative z-[4] overflow-hidden">
                         <Image
                           src={images.image1.src}

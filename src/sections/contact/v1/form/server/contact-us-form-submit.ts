@@ -1,8 +1,8 @@
 'use server';
 
-import { ServerActionResponse } from '@/src/common-types';
+import type { ServerActionResponse } from '@/src/common-types';
 import nodemailer from 'nodemailer';
-import { ContactUsSchemaType } from '..';
+import type { ContactUsSchemaType } from '..';
 
 export async function contactUsFormSubmit(
   values: ContactUsSchemaType
@@ -19,9 +19,8 @@ export async function contactUsFormSubmit(
         pass: process.env.SMTP_PASS, // SMTP password
       },
     });
-    console.log(process.env.CONTACT_MAIL_ADDRESS);
     const mailOptions = {
-      from: email,
+      from: process.env.SMTP_USER,
       to: process.env.TO_MAIL_ADDRESS,
       subject: subject,
       html: `
@@ -36,8 +35,14 @@ export async function contactUsFormSubmit(
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-
+    const result = await transporter.sendMail(mailOptions);
+    if (result.rejected.length > 0 || result.accepted.length === 0) {
+      return {
+        isSuccess: false,
+        data: null,
+        message: 'Email not sent',
+      };
+    }
     return {
       isSuccess: true,
       data: true,

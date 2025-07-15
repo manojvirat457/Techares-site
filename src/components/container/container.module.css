@@ -17,15 +17,16 @@
   --container-width: 100%;
 
   @apply mx-auto w-full;
-  padding-left: var(--padding-left);
-  padding-right: var(--padding-right);
+  /* padding-left: var(--padding-left);
+  padding-right: var(--padding-right); */
   max-width: calc(var(--container-width) + var(--padding));
 
   &.full-width {
     @apply max-w-full;
   }
   &.no-padding {
-    --padding-x: 0px;
+    --padding-x: 0px !important;
+    --padding-y: 0px !important;
   }
 
   @screen sm {

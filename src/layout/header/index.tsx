@@ -1,11 +1,11 @@
-import { Header as HeaderV1 } from './desktop/v1';
-import { MobileHeader } from './mobile';
+import { Navbar1 } from '@/src/layout/header/desktop/v3';
 
 export function MainHeader() {
   return (
     <>
-      <HeaderV1 />
-      <MobileHeader />
+      {/* <HeaderV1 /> */}
+      <Navbar1 />
+      {/* <MobileHeader /> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { footerSectionData } from '@/data/layout/footer/v1';
-import { ImageProps, LinkProps, SectionProps } from '@/src/common-types';
+import type { ImageProps, LinkProps, SectionProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { CustomLink } from '@/src/components/custom-link';
 import { cn } from '@/src/utils/shadcn';
@@ -67,15 +67,15 @@ export function Footer({ className }: SectionProps) {
   return (
     <footer
       className={cn(
-        'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
+        'overflow-hidden bg-accent-100 px-5 text-accent-800 dark:bg-accent-900 dark:text-body md:px-0',
         className
       )}
     >
-      <div className="py-8 md:py-20">
+      <div className="py-8 md:py-16">
         <Container>
           <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-4">
             {/* About  */}
-            <div data-aos="fade-up" data-aos-delay="200">
+            <div>
               <BrandLogo />
               <p className="mb-7 mt-3">{about.description}</p>
               {about.socialLinks && about.socialLinks.length > 0 && (
@@ -99,7 +99,7 @@ export function Footer({ className }: SectionProps) {
             </div>
 
             {/* Column one  */}
-            <div data-aos="fade-up" data-aos-delay="400">
+            <div>
               <h3 className={titleClasses}>{columnOne.title}</h3>
               {columnOne.links && columnOne.links.length > 0 && (
                 <nav aria-label="footer links navigation">
@@ -126,7 +126,7 @@ export function Footer({ className }: SectionProps) {
               )}
             </div>
 
-            {/* <div data-aos="fade-up" data-aos-delay="600">
+            {/* <div>
               <h3 className={titleClasses}>{columnTwo.title}</h3>
               <ul aria-label="addresses" className="grid gap-5">
                 <li className={addressItemClasses}>
@@ -176,7 +176,7 @@ export function Footer({ className }: SectionProps) {
             </div> */}
 
             {/* Column two  */}
-            <div data-aos="fade-up" data-aos-delay="800">
+            <div>
               <h3 className={titleClasses}>{columnThree.title}</h3>
               {columnThree.blogs && columnThree.blogs.length > 0 && (
                 <div className="grid gap-6">
@@ -222,7 +222,7 @@ export function Footer({ className }: SectionProps) {
                 <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] ">
                   <TextInput
                     placeholder="Enter Email"
-                    className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
+                    className="border-white border-opacity-60 text-white placeholder:text-accent-900 focus:border-white dark:border-white dark:border-opacity-60 dark:text-accent-900 dark:placeholder:text-accent-100"
                   />
                   <Button
                     type="button"

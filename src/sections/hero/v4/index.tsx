@@ -4,7 +4,7 @@ import { CustomLink } from '@/src/components/custom-link';
 import { H1 } from '@/src/components/ui/doc/h-tag';
 import { cn } from '@/src/utils/shadcn';
 import styles from './hero-v4.module.css';
-import { LinkProps } from '@/src/common-types';
+import type { LinkProps } from '@/src/common-types';
 
 export interface HeroSectionProps {
   title: string;
@@ -20,7 +20,7 @@ export function HeroSection({
   backgroundImage,
 }: HeroSectionProps) {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-[9.375rem] lg:min-h-screen">
+    <section className="relative -mt-20 flex items-center justify-center overflow-hidden py-[9.375rem] lg:min-h-screen">
       <div
         className={cn(
           'absolute inset-0  bg-accent-700 bg-cover bg-no-repeat bg-blend-luminosity [background-position:top_center] [transform:scale(1)] [transition:7000ms_ease,opacity_1500ms_ease-in]',
@@ -42,7 +42,7 @@ export function HeroSection({
             )}
           >
             <div className="space-y-6 py-52 md:space-y-8">
-              <H1 className="font-secondary text-2xl font-semibold uppercase leading-[1.1] md:text-3xl">
+              <H1 className="font-secondary text-2xl font-semibold uppercase  md:text-3xl">
                 {title}
               </H1>
               <p className="text-accent-200">{description}</p>
