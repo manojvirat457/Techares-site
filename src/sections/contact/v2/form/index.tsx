@@ -60,13 +60,16 @@ export function Form() {
         }}
         validationSchema={ContactUsSchema}
         onSubmit={async (values, { resetForm }) => {
-          const response = await fetch("https://api.techares.com/api/users/add-contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(values),
-          });
+          const response = await fetch(
+            'https://api.techares.com/api/users/add-contact',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(values),
+            }
+          );
 
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

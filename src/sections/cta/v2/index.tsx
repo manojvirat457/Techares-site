@@ -59,13 +59,16 @@ export function CtaSection({ title, description }: CtaSectionProps) {
                   subject: 'Requesting Schedule Meeting',
                 };
 
-                const response = await fetch("https://api.techares.com/api/users/add-contact", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(meetingSchedule),
-                });
+                const response = await fetch(
+                  'https://api.techares.com/api/users/add-contact',
+                  {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(meetingSchedule),
+                  }
+                );
 
                 if (!response.ok) {
                   throw new Error(`HTTP error! Status: ${response.status}`);
