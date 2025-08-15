@@ -20,7 +20,6 @@ import { Phone } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import * as Yup from 'yup';
-import { contactUsFormSubmit } from './server/contact-us-form-submit';
 
 const validationMessages = {
   tooShort: 'Must be at least ${min} characters',
@@ -72,11 +71,24 @@ export function Form({
         email: '',
         phoneNo: '',
         subject: '',
+        randomText: '',
         message: '',
       }}
       validationSchema={ContactUsSchema}
       onSubmit={async (values, { resetForm }) => {
-        const result = await contactUsFormSubmit(values);
+        const response = await fetch("https://api.techares.com/api/users/add-contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
         if (result.data === null) {
           toast.error(result.message);
         } else {

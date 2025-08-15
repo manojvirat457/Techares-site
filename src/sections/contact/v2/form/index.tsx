@@ -6,7 +6,6 @@ import { TextAreaInput } from '@/src/components/inputs/textarea-input';
 import { cn } from '@/src/utils/shadcn';
 
 import * as Yup from 'yup';
-import { contactUsFormSubmit } from './server/contact-us-form-submit';
 import { toast } from 'sonner';
 import { Formik } from 'formik';
 
@@ -61,7 +60,19 @@ export function Form() {
         }}
         validationSchema={ContactUsSchema}
         onSubmit={async (values, { resetForm }) => {
-          const result = await contactUsFormSubmit(values);
+          const response = await fetch("https://api.techares.com/api/users/add-contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(values),
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          const result = await response.json();
 
           if (result.data === null) {
             toast.error(result.message);

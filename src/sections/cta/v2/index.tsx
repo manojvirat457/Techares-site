@@ -3,7 +3,6 @@ import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
 import { TextInput } from '@/src/components/inputs/text-input';
-import { contactUsFormSubmit } from '@/src/sections/contact/v1/form/server/contact-us-form-submit';
 import { SmartDatetimeInput } from '@/src/sections/cta/v2/smart-date-time';
 import { cn } from '@/src/utils/shadcn';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
@@ -52,17 +51,31 @@ export function CtaSection({ title, description }: CtaSectionProps) {
               onSubmit={async (values, { resetForm }) => {
                 const timezone =
                   Intl.DateTimeFormat().resolvedOptions().timeZone;
-                const result = await contactUsFormSubmit({
+                const meetingSchedule = {
                   name: values.name,
                   email: values.email,
                   message: `Requesting meeting at ${values.datetime} , from timezone : ${timezone}`,
                   phoneNo: '',
                   subject: 'Requesting Schedule Meeting',
+                };
+
+                const response = await fetch("https://api.techares.com/api/users/add-contact", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(meetingSchedule),
                 });
+
+                if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const result = await response.json();
                 if (result.data === null) {
                   toast.error(result.message);
                 } else {
-                  // setIsDialogOpen(true);
+                  toast.success(result.message);
                   router.push('/thank-you');
                   resetForm();
                 }
