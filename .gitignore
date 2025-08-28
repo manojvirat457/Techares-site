@@ -1,2 +1,5 @@
 node_modules
 .next
+./vscode
+pnpm-lock.yaml
+pnpm-workspace.yaml
