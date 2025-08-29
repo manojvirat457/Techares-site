@@ -9,5 +9,8 @@
     "transformative",
     "whychoose",
     "wireframes"
-  ]
+  ],
+  "debug.javascript.defaultRuntimeExecutable": {
+   "pwa-node": "/home/vijay/.local/share/mise/shims/node"
+  }
 }
