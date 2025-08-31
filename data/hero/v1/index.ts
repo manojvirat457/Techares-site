@@ -1,11 +1,12 @@
 import { HeroProps } from '@/src/sections/hero/v1';
 
 export const heroData: HeroProps = {
+  side: 'right',
   items: [
     {
       image: {
-        src: '/assets/images/hero/hero-1.png',
-        alt: 'hero 1',
+        src: '/assets/images/service/custom-software.png',
+        alt: 'Custom Software Development',
       },
       title: 'On-demand Development Solutions',
       description:
@@ -17,8 +18,8 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-2.png',
-        alt: 'hero 1',
+        src: '/assets/images/service/consulting-service.png',
+        alt: 'IT Consultancy Services',
       },
       title: 'Custom Software development',
       description:
@@ -30,8 +31,8 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-3.png',
-        alt: 'hero 1',
+        src: '/assets/images/service/hire-developer.png',
+        alt: 'Hire Developers',
       },
       title: 'IT consultancy & Development Services',
       description:
@@ -43,8 +44,8 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-4.png',
-        alt: 'hero 1',
+        src: '/assets/images/service/bitcoin.png',
+        alt: 'Blockchain Solutions',
       },
       title: 'Blockchain Solutions',
       description:
@@ -56,8 +57,8 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/hero-5.png',
-        alt: 'hero 1',
+        src: '/assets/images/service/ai-machine.png',
+        alt: 'AI & Machine Learning',
       },
       title: 'Hire Developers',
       description:

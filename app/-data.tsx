@@ -1,79 +1,84 @@
-import type { Industry, IndustriesSectionData } from '@/data/industries/v1';
+import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
+import Image from 'next/image';
+import type { IndustriesSectionData, Industry } from '@/data/industries/v1';
 import type { ServiceData } from '@/data/service-section/v3';
 import type { AboutSectionProps } from '@/src/sections/about/v1';
+import type { ContactSectionProps } from '@/src/sections/contact/v1';
 import type { CtaSectionProps } from '@/src/sections/cta/v2';
 import type { HeroProps } from '@/src/sections/hero/v1';
 import type { ProjectDetailsProps } from '@/src/sections/project/v4';
-import type { ContactSectionProps } from '@/src/sections/contact/v1';
-import { Hourglass, Star, Trophy, UserCheck } from 'lucide-react';
-import Image from 'next/image';
 
 export const heroData: HeroProps = {
-  items: [
-    {
+ items: [
+  {
       image: {
-        src: '/assets/images/hero/hero-1.png',
-        alt: 'hero 1',
+       src: '/assets/images/hero/hero-1.png',
+        alt: 'Custom Software Development',
       },
-      title: 'On-demand Development Solutions',
+      title: 'IT consultancy & Development Services',
       description:
-        'We specialize in on-demand development, delivering scalable and high-performance solutions tailored to your business needs.',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
-        label: 'Explore',
-        href: '/contact',
+       label: 'Get in Touch',
+       href: '/contact',
       },
+      side: 'left',
     },
     {
       image: {
         src: '/assets/images/hero/hero-2.png',
-        alt: 'hero 1',
+        alt: 'IT Consultancy Services',
       },
-      title: 'Custom Software development',
+      title: 'Ondemand Soluttions',
       description:
-        'We specialize in custom software development, creating solutions that meet your unique business needs and exceed your expectations.',
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
-        label: 'Explore',
+        label: 'Get in Touch',
         href: '/contact',
       },
+      side : "right"
     },
     {
       image: {
         src: '/assets/images/hero/hero-3.png',
-        alt: 'hero 1',
+        alt: 'Hire Developers',
       },
-      title: 'IT consultancy & Development Services',
+      title: 'Hire Developers',
       description:
-        'We offer a range of IT consultancy and development services, including web development, mobile app development, and cloud solutions.',
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
-        label: 'Explore',
+        label: 'Get in Touch',
         href: '/contact',
       },
+       side : "left"
     },
     {
       image: {
         src: '/assets/images/hero/hero-4.png',
-        alt: 'hero 1',
+        alt: 'Blockchain Solutions',
       },
-      title: 'Blockchain Solutions',
+      title: 'Custom Software Development',
       description:
-        'We specialize in blockchain solutions, providing secure and decentralized solutions for various industries.',
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
-        label: 'Explore',
+        label: 'Get in Touch',
         href: '/contact',
       },
+      side : "left"
     },
     {
       image: {
         src: '/assets/images/hero/hero-5.png',
-        alt: 'hero 1',
+        alt: 'AI & Machine Learning',
       },
-      title: 'Hire Developers',
+      title: 'BlockChain Solution',
       description:
-        'We specialize in hiring top developers who bring innovative ideas to life. Our team of experienced professionals is dedicated to delivering high-quality results that exceed your expectations.',
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
-        label: 'Explore',
+        label: 'Get in Touch',
         href: '/',
       },
+      side : "right"
     },
   ],
 };
