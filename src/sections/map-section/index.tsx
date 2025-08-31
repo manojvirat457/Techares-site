@@ -1,4 +1,4 @@
-import { mapSectionData } from '@/data/map-section';
+import { mapSectionData } from '@/src/data/map-section';
 
 export interface MapSectionProps {
   embedUrl: string;

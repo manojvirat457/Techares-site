@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "data/technologies/v1/index.txs"
+    "src/data/technologies/v1/index.txs"
   ],
   "exclude": ["node_modules"]
 }
