@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FaCalendarDays, FaChevronRight } from "react-icons/fa6";
-import { footerSectionData } from "@/data/layout/footer/v1";
 import type { ImageProps, LinkProps, SectionProps } from "@/src/common-types";
 import { BrandLogo } from "@/src/components/brand-logo";
 import { Button } from "@/src/components/button";
 import { Container } from "@/src/components/container";
 import { CustomLink } from "@/src/components/custom-link";
 import { TextInput } from "@/src/components/inputs/text-input";
+import { footerSectionData } from "@/src/data/footer/index";
 import { cn } from "@/src/utils/shadcn";
 
 interface RecentBlog {
