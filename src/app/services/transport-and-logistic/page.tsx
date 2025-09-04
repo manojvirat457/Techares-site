@@ -68,7 +68,7 @@ const Feature = ({
 export default function Page() {
 	return (
 		<>
-			<section className="relative -mt-20 min-h-[90vh] overflow-hidden pt-10">
+			<section className="relative min-h-[90vh] overflow-hidden pt-16">
 				<div
 					className="absolute inset-0 -z-40 h-full  bg-cover bg-center bg-no-repeat"
 					style={{
