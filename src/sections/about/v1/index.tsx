@@ -46,7 +46,7 @@ export function AboutSection({
 					<div className="lg:order-2" data-aos="fade-left" data-aos-delay="200">
 						<SectionHeading {...sectionHeading} additionalDesc={description} />
 						{keyPoints && keyPoints.length > 0 && (
-							<div className="grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-5 md:gap-[1.875rem] ">
+							<div className="grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-5 md:gap-[1rem] ">
 								{isCard &&
 									keyPoints.map((keyPoint, index) => (
 										<div
@@ -67,7 +67,7 @@ export function AboutSection({
 						{
 							<ul
 								aria-label="about us point"
-								className="mt-10 grid items-center gap-3 lg:grid-cols-[.92fr_1fr] 2xl:gap-10"
+								className="mt-10 grid items-center gap-3 lg:grid-cols-[.92fr_1fr] 2xl:gap-15"
 							>
 								{!isCard &&
 									keyPoints.length > 0 &&

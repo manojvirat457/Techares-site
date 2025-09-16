@@ -595,8 +595,8 @@ export function Header() {
 						{/* Get Started Button (desktop only) */}
 						<div className="flex flex-col gap-3">
 							<ContactUsDialog>
-								<Button className={cn("mr-5 rounded-full")} size="small">
-									<span>{"Get in Touch"}</span>
+								<Button className={cn("px-2 py-1 text-sm rounded-full capitalize")} size="default">
+									<span className="text-sm">{"Get in Touch"}</span>
 								</Button>
 							</ContactUsDialog>
 						</div>

@@ -24,18 +24,18 @@ export default async function RootLayout({ children }: Props) {
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={cn(
-				"dark",
-				primary.variable,
-				secondary.variable,
-				"text-base  text-accent-800 [&.dark]:text-body",
-			)}
+			// className={cn(
+			// 	"dark",
+			// 	primary.variable,
+			// 	secondary.variable,
+			// 	"text-base  text-accent-800 [&.dark]:text-body",
+			// )}
 		>
 			<head />
 			<AOSInit />
 			<body>
 				<GoogleAnalytics gaId="GTM-W9JNHJXF" />
-				<ThemeProvider attribute="class" defaultTheme="light">
+				{/* <ThemeProvider attribute="class" defaultTheme="light"> */}
 					<div className={cn("text-accent-800 dark:text-body")}>
 						{/* <MainHeader /> */}
 						{/* <Navbar1 /> */}
@@ -43,7 +43,7 @@ export default async function RootLayout({ children }: Props) {
 						{children}
 						<Footer />
 					</div>
-				</ThemeProvider>
+				{/* </ThemeProvider> */}
 				<Toaster
 					richColors
 					position="top-right"

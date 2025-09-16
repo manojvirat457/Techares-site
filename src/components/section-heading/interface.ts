@@ -2,7 +2,7 @@ import type { ClassValue } from 'clsx';
 
 type Alignment = 'start' | 'center' | 'end';
 export type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xm';
-export type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4';
+export type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'P';
 
 export interface SectionHeadingProps {
   subtitle?: string;
