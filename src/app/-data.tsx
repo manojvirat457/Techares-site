@@ -13,9 +13,11 @@ export const heroData: HeroProps = {
   {
       image: {
        src: '/assets/images/hero/hero-1.png',
-        alt: 'Custom Software Development',
+       alt: 'Custom Software Development',
+       width : 700,
+       height : 700,
       },
-      title: 'IT consultancy & Development Services',
+      title: <span>IT consultancy & <br /> Development Services</span>,
       description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       button: {
@@ -28,6 +30,8 @@ export const heroData: HeroProps = {
       image: {
         src: '/assets/images/hero/hero-2.png',
         alt: 'IT Consultancy Services',
+        width : 700,
+        height : 700,
       },
       title: 'Ondemand Soluttions',
       description:
@@ -42,6 +46,8 @@ export const heroData: HeroProps = {
       image: {
         src: '/assets/images/hero/hero-3.png',
         alt: 'Hire Developers',
+       width : 1000,
+       height : 1000,
       },
       title: 'Hire Developers',
       description:
@@ -56,6 +62,8 @@ export const heroData: HeroProps = {
       image: {
         src: '/assets/images/hero/hero-4.png',
         alt: 'Blockchain Solutions',
+       width : 1000,
+       height : 1000,
       },
       title: 'Custom Software Development',
       description:
@@ -70,6 +78,8 @@ export const heroData: HeroProps = {
       image: {
         src: '/assets/images/hero/hero-5.png',
         alt: 'AI & Machine Learning',
+       width : 700,
+       height : 700,
       },
       title: 'BlockChain Solution',
       description:
