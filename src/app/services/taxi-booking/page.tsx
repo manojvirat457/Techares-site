@@ -23,9 +23,12 @@ import {
 import { basicMetadata } from '@/src/utils/metadata';
 
 export const metadata = basicMetadata({
-  title: 'TechAres | Taxi App Development Company',
+  title:
+    'Taxi App Development Company | Custom & White-Label Taxi Booking Solutions – TechAres',
   description:
-    'Revolutionizing Ride-Hailing Solutions with Cutting-Edge Technology',
+    'TechAres is a leading taxi app development company delivering custom and white-label taxi booking app solutions. From startups to enterprises, our apps feature real-time tracking, secure payments, AI-based route optimization, SOS alerts, and corporate ride management for a scalable and future-ready ride-hailing experience.',
+  keywords:
+    'taxi app development company, taxi booking app solutions, custom taxi app development, white label taxi booking app, ride-hailing app development, corporate taxi booking solutions, Uber-like app development company, taxi dispatch software solutions, scalable taxi booking system, real-time taxi tracking app, AI-based taxi booking software, on-demand transportation app development',
 });
 
 export default function Page() {

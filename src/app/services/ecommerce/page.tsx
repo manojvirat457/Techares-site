@@ -19,9 +19,12 @@ import {
 } from './-data.tsx';
 
 export const metadata = basicMetadata({
-  title: 'TechAres | Ecommerce App Development Company',
+  title:
+    'E-commerce App Development Company | Custom Shopify & WooCommerce Solutions',
   description:
-    'Custom ecommerce solutions with cutting-edge technology for your business growth',
+    'TechAres is a leading e-commerce app development company specializing in custom solutions, B2B, B2C, multi-vendor marketplaces, and social commerce apps. We build scalable, user-friendly e-commerce websites and mobile apps using Shopify, WooCommerce, and the latest technologies to boost sales and customer engagement.',
+  keywords:
+    'e-commerce app development company, custom ecommerce development, Shopify app development, WooCommerce development, B2B ecommerce apps, B2C ecommerce solutions, multi-vendor marketplace development, social commerce apps, ecommerce website development, ecommerce mobile app development, ecommerce software solutions, online store app development',
 });
 
 export default function Page() {

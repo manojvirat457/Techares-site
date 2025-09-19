@@ -19,9 +19,12 @@ import {
 } from './-data.tsx';
 import { basicMetadata } from '@/src/utils/metadata.ts';
 export const metadata = basicMetadata({
-  title: 'TechAres | Fantasy Sports App Development Company',
+  title:
+    'Fantasy Sports App Development Company | Custom Fantasy App Solutions',
   description:
-    'Transform your sports vision into reality with our cutting-edge fantasy sports app development services',
+    'TechAres is a leading fantasy sports app development company delivering custom, scalable, and secure solutions for fantasy cricket, football, basketball, baseball, and rugby. With AI-driven insights, blockchain integration, AR features, and real-time data APIs, we create immersive platforms to boost fan engagement and revenue.',
+  keywords:
+    'fantasy sports app development, fantasy sports software development company, fantasy cricket app development, fantasy football app development, fantasy basketball app development, fantasy baseball app development, fantasy rugby app development, custom fantasy sports app, AI fantasy sports app, fantasy app development company, fantasy sports platform development, multi-vendor fantasy app solutions, blockchain fantasy sports apps, AR fantasy app development',
 });
 
 export default function Page() {

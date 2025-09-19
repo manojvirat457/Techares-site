@@ -14,9 +14,9 @@ export type MetadataProps = {
 // export const metadata = basicMetadata();
 export function basicMetadata(metadata?: MetadataProps): Metadata {
   const title =
-    'TechAres | Expert Software Development & IT Solutions for Businesses';
+    'TechAres | Custom Software, Web & Mobile App Development Company';
   const description =
-    'TechAres is a leading software development company offering IT solutions, AI integration, business development, and resource management services to help entrepreneurs scale and succeed.';
+    'TechAres is a reliable software development company offering custom software, web & mobile app development, blockchain, AI, IoT, ERP, IT consultancy, and digital marketing services. We help businesses streamline operations, boost growth, and innovate with cutting-edge technology solutions.';
 
   return {
     metadataBase: new URL('https://techares.com/'),
@@ -39,7 +39,7 @@ export function basicMetadata(metadata?: MetadataProps): Metadata {
     },
     keywords: metadata?.keywords
       ? metadata?.keywords
-      : 'Software development company, IT solutions for businesses, AI integration services, Business development solutions, Resource management software, Custom software development ,Enterprise software solutions, Tech solutions for startups, IT consulting services, Digital transformation services',
+      : 'TechAres software development, custom software development company, web development services, mobile app development company, blockchain development solutions, IoT development services, AI & machine learning solutions, IT consultancy services, enterprise software solutions, ERP software development, hire developers for startups, digital marketing for businesses',
     creator: 'Techares',
     applicationName: 'Techares',
     openGraph: {

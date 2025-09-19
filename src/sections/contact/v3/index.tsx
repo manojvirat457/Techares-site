@@ -27,7 +27,7 @@ export default function ContactUsDialog({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="h-fit max-w-7xl border-0 bg-transparent p-0">
-        <div className="grid grid-cols-1 overflow-hidden [clip-path:polygon(0%_0%,100%_0%,98%_98%,2%_100%)] md:grid-cols-2">
+        <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2">
           {/* Left side - Image */}
           <div className="relative min-h-[400px] md:min-h-[600px]">
             <Image
