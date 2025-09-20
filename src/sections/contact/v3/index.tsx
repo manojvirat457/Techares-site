@@ -26,16 +26,16 @@ export default function ContactUsDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="h-fit max-w-7xl border-0 bg-transparent p-0">
+      <DialogContent className="h-fit max-w-7xl border-0 bg-transparent p-0 mx-4 sm:mx-6 md:mx-8 lg:mx-12">
         <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2">
-          {/* Left side - Image */}
-          <div className="relative min-h-[400px] md:min-h-[600px]">
+          {/* Left side - Image - Hidden on mobile, visible on tablet and up */}
+          <div className="hidden md:block relative min-h-[400px] md:min-h-[600px]">
             <Image
               src={image.src}
               alt={image.alt}
               fill
               className="object-cover"
-              sizes={`(min-width: ${BREAKPOINTS.md}) 60vw, 100vw`}
+              sizes={`(min-width: ${BREAKPOINTS.md}) 50vw, 100vw`}
               placeholder="blur"
               blurDataURL={blurDataUrl}
             />
@@ -44,15 +44,15 @@ export default function ContactUsDialog({
           </div>
 
           {/* Right side - Form */}
-          <div className="bg-white p-8 dark:bg-black">
-            <DialogHeader className="mb-6">
-              <div className="mb-2 font-medium text-primary-light">
+          <div className="bg-white p-4 sm:p-6 md:p-8 dark:bg-black max-h-[90vh] overflow-y-auto">
+            <DialogHeader className="mb-4 sm:mb-6">
+              <div className="mb-2 font-medium text-primary-light text-sm sm:text-base">
                 TALK TO US
               </div>
-              <DialogTitle className="mb-2 text-xl  font-bold">
+              <DialogTitle className="mb-2 text-lg sm:text-xl font-bold">
                 Unleash the Power of Technology
               </DialogTitle>
-              <DialogDescription className="mb-6 text-gray-600 dark:text-gray-400">
+              <DialogDescription className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-600 dark:text-gray-400">
                 Get in touch with us to discuss how we can help transform your
                 business with cutting-edge technology solutions.
               </DialogDescription>

@@ -1,7 +1,10 @@
 'use client';
 
 import { IndustriesSectionData } from '@/data/industries/v1';
+import { Button } from '@/src/components/button';
 import { Card, CardContent } from '@/src/components/ui/card';
+import ContactUsDialog from '@/src/sections/contact/v3';
+import { cn } from '@/src/utils/shadcn';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -95,6 +98,18 @@ export default function IndustriesSection({
               key={index}
             />
           ))}
+        </div>
+        <div className="flex justify-center">
+      <ContactUsDialog>
+														<Button
+															className={cn(
+																"px-4 py-2 text-sm rounded-full capitalize w-full sm:w-auto mt-10",
+															)}
+															size="small"
+														>
+															<span className="text-sm">{"Talk to Experts"}</span>
+														</Button>
+													</ContactUsDialog>
         </div>
       </div>
     </section>

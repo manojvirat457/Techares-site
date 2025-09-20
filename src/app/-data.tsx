@@ -543,6 +543,11 @@ export const whyChooseSectionData: ProjectDetailsProps = {
   },
   description:
     'It is a long established fact that a reader will be distracted by the readablejk content of a page when looking at its layout.',
+  button : {
+    label: 'TALK TO EXPERTS',
+    href: '/contact',
+    openNewTab: false,
+  }
 };
 
 export const ctaSectionData: CtaSectionProps = {

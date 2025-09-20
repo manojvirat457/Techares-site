@@ -60,7 +60,7 @@ export function HeroSection({
 						/>
 						<br className="my-2" />
 						<ContactUsDialog>
-							<Button className={cn("mr-5 rounded-full")}>
+							<Button type="button" className={cn("mr-5 rounded-full")}>
 								<CustomLink
 									aria-label={button.label}
 									href={button.href}

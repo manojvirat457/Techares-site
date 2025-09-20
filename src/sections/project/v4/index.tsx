@@ -1,14 +1,14 @@
 "use client";
-import Image, { type ImageProps } from "next/image";
-import { FaCircleCheck } from "react-icons/fa6";
 import type { LinkProps } from "@/src/common-types";
 import { Button } from "@/src/components/button";
 import { Container } from "@/src/components/container";
-import { CustomLink } from "@/src/components/custom-link";
 import { SectionHeading } from "@/src/components/section-heading";
 import type { SectionHeadingWithoutStylingProps } from "@/src/components/section-heading/interface";
 import { useScreenSize } from "@/src/hooks/use-screen-size";
 import { cn } from "@/src/utils/shadcn";
+import Image, { type ImageProps } from "next/image";
+import { FaCircleCheck } from "react-icons/fa6";
+import ContactUsDialog from "../../contact/v3";
 import styles from "./project-v3.module.css";
 
 const cursorStyle = cn("cursor-pointer");
@@ -187,15 +187,18 @@ export function ProjectSectionV4({
 						)}
 						<div className="flex flex-1 items-center justify-start">
 							{button && isButton && (
-								<Button asChild className={cn("mt-8 rounded-full")}>
-									<CustomLink
-										aria-label={button.label}
-										href={button.href}
-										openNewTab={button.openNewTab}
-									>
-										<span>{button.label}</span>
-									</CustomLink>
-								</Button>
+								<div className="flex justify-center">
+									<ContactUsDialog>
+										<Button
+											className={cn(
+												"px-4 py-2 text-sm rounded-full capitalize w-full sm:w-auto mt-10",
+											)}
+											size="small"
+										>
+											<span className="text-sm">{"Talk to Experts"}</span>
+										</Button>
+									</ContactUsDialog>
+								</div>
 							)}
 						</div>
 					</div>
