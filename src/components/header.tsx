@@ -719,7 +719,7 @@ export function Header() {
 			{/* Desktop floating mega menu */}
 			{activeMenu && (
 				<div
-					className="pointer-events-none absolute inset-x-0 z-50 mt-3"
+					className="pointer-events-none absolute inset-x-0 z-50 "
 					style={{ top: "calc(100% + 12px)" }}
 					onMouseEnter={handleMegaMenuEnter}
 					onMouseLeave={handleMenuLeave}

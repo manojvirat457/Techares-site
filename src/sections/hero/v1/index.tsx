@@ -26,7 +26,7 @@ export interface HeroProps {
 
 export function Hero({ items }: HeroProps) {
 	return (
-		<section className="relative min-h-[90vh] h-full w-full overflow-hidden pb-24 px-10 lg:-mt-20">
+		<section className="relative min-h-[90vh]  h-full w-full overflow-hidden pt-24 px-10 lg:-mt-20">
 			{items && items.length > 0 && (
 				<Container isFluid isNoPadding>
 					<Swiper
@@ -37,17 +37,13 @@ export function Hero({ items }: HeroProps) {
 							delay: 4000,
 							disableOnInteraction: true,
 						}}
-						pagination={{
-							clickable: true,
-							bulletClass: "swiper-pagination-bullet custom-bullet",
-							bulletActiveClass:
-								"swiper-pagination-bullet-active custom-bullet-active",
-						}}
-						modules={[EffectFade, Autoplay, Pagination]}
+						autoHeight={true}
+						shortSwipes={false}
+						modules={[EffectFade, Autoplay]}
 						className="hero-swiper h-full w-full"
 					>
 						{items.map((item, index) => (
-							<SwiperSlide key={index} className="h-full w-full">
+							<SwiperSlide key={item.description} className="h-full w-full">
 								<div
 									className="absolute inset-0  h-full w-full bg-cover bg-center bg-no-repeat bg-origin-content"
 									style={{
@@ -55,7 +51,7 @@ export function Hero({ items }: HeroProps) {
 									}}
 								/>
 								<div
-									className={`relative flex min-h-screen  items-center overflow-hidden flex-col ${item.side === "right" ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+									className={`relative flex   items-center overflow-hidden flex-col ${item.side === "right" ? "lg:flex-row-reverse" : "lg:flex-row"}`}
 								>
 									<div className="flex w-full  flex-1 self-center justify-around">
 										<div className="max-w-lg text-center ">
@@ -93,8 +89,8 @@ export function Hero({ items }: HeroProps) {
 										<Image
 											src={item.image.src}
 											alt={item.image.alt || ""}
-											width={item.image.width || 700}
-											height={item.image.height || 700}
+											width={item.image.width || 1000}
+											height={item.image.height || 1000}
 											priority={index === 0}
 											className="z-10 object-cover items-end "
 											loading={index === 0 ? "eager" : "lazy"}
