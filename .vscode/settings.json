@@ -12,5 +12,10 @@
   ],
   "debug.javascript.defaultRuntimeExecutable": {
    "pwa-node": "/home/vijay/.local/share/mise/shims/node"
+  },
+  "go.goroot": "/home/vijay/.local/share/mise/installs/go/1.25.1",
+  "go.alternateTools": {
+    "go": "/home/vijay/.local/share/mise/shims/go",
+    "gopls": "/home/vijay/.local/share/mise/shims/gopls"
   }
 }

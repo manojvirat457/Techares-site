@@ -66,7 +66,11 @@ export function SectionHeading({
 			case "h4":
 				return <h4 className={headingClasses}>{headingContent}</h4>;
 			case "P":
-				return <p className="font-semibold font-secondary text-base text-black">{headingContent}</p>;
+				return (
+					<p className="font-semibold font-secondary text-base text-black">
+						{headingContent}
+					</p>
+				);
 			default:
 				return <h3 className={headingClasses}>{headingContent}</h3>;
 		}
